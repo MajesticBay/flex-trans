@@ -151,10 +151,25 @@ body, p {
   width: 100%;
   height: auto; }
 
-.navbar {
+.navbar-mobile {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center; }
+
+.navbar-desktop {
+  display: none;
+  height: 40px;
+  flex-direction: row;
+  align-items: center; }
+
+.navbar-desktop__logo-container {
+  width: 300px; }
+
+@media only screen and (min-width: 768px) {
+  .navbar-mobile {
+    display: none; }
+
+  .navbar-desktop {
+    display: flex; } }
 
 /*# sourceMappingURL=main.css.map */
