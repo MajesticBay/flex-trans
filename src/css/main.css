@@ -5,13 +5,15 @@
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 /* Fix the bug that causes body go out of screen border and because of that horizontal scrolling. */
 /* https://stackoverflow.com/a/42798283/5184474 */
 html,
 body {
-  position: relative; }
+  position: relative;
+}
 
 /* http://meyerweb.com/eric/tools/css/reset/
     v2.0 | 20110126
@@ -103,7 +105,8 @@ video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 /* HTML5 display-role reset for older browsers */
 article,
@@ -117,59 +120,78 @@ hgroup,
 menu,
 nav,
 section {
-  display: block; }
+  display: block;
+}
 
 body {
-  line-height: 1; }
+  line-height: 1;
+}
 
 ol,
 ul {
-  list-style: none; }
+  list-style: none;
+}
 
 blockquote,
 q {
-  quotes: none; }
+  quotes: none;
+}
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
-  content: none; }
+  content: "";
+  content: none;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 body, p {
-  margin: 0; }
+  margin: 0;
+}
 
 .img-fluid {
   width: 100%;
-  height: auto; }
+  height: auto;
+}
+
+.pointer {
+  cursor: pointer;
+}
 
 .navbar-mobile {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+}
 
 .navbar-desktop {
   display: none;
   height: 40px;
   flex-direction: row;
-  align-items: center; }
+  align-items: center;
+}
 
 .navbar-desktop__logo-container {
-  width: 300px; }
+  width: 300px;
+}
 
 @media only screen and (min-width: 768px) {
   .navbar-mobile {
-    display: none; }
+    display: none;
+  }
 
   .navbar-desktop {
-    display: flex; } }
+    display: flex;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */

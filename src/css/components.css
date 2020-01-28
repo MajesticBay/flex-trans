@@ -1,3 +1,14 @@
+body, p {
+  margin: 0;
+}
 
+.img-fluid {
+  width: 100%;
+  height: auto;
+}
+
+.pointer {
+  cursor: pointer;
+}
 
 /*# sourceMappingURL=components.css.map */
