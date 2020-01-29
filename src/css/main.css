@@ -193,5 +193,12 @@ body, p {
     display: flex;
   }
 }
+.footer {
+  display: grid;
+}
+
+.footer__payment-logo-container {
+  width: 100px;
+}
 
 /*# sourceMappingURL=main.css.map */

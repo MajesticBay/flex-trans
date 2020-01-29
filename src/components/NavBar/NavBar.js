@@ -3,7 +3,7 @@ import logo from '../../images/logo.jpg';
 
 function NavBar() {
     return (
-        <div className="navbar">
+        <div>
             <div className="navbar-mobile">
                 <img className="img-fluid" src={logo} alt="company logo"/>
                 <p>(425) 260 2121</p>
