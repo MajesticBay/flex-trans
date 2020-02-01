@@ -1,7 +1,40 @@
+@import 'placeholders';
+
 .footer {
+    position: fixed;
+    bottom: 0;
     display: grid;
+    width: 100%;
+    background-color: $color-gray;
+    padding: 16px;
+    color: $color-white;
+}
+
+.footer-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer__payment-logo-container {
     width: 100px;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-info__desktop {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .footer-info__mobile {
+        display: none;
+    }
+
+    .footer-info__desktop {
+        display: block;
+    }
 }

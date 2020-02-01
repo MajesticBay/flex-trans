@@ -13,11 +13,11 @@ function NavBar() {
                     <img className="img-fluid" src={logo} alt="company logo"/>
                 </div>
                 <p>(425) 260 2121</p>
-                <a>Home</a>
-                <a>About Us</a>
-                <a>Reservation</a>
-                <a>Services</a>
-                <a>Contact Us</a>
+                <a href="/home">Home</a>
+                <a href="/about-us">About Us</a>
+                <a href="/reservation">Reservation</a>
+                <a href="/services">Services</a>
+                <a href="/contact-us">Contact Us</a>
             </div>
         </div>
     );
