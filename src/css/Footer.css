@@ -3,38 +3,30 @@
   bottom: 0;
   display: grid;
   width: 100%;
-  background-color: gray;
+  background-color: #232121;
   padding: 16px;
-  color: white;
-}
+  color: #FFFFFF; }
 
 .footer-logos {
   display: flex;
   justify-content: center;
-  align-items: center;
-}
+  align-items: center; }
 
 .footer__payment-logo-container {
-  width: 100px;
-}
+  width: 100px; }
 
 .footer-info {
   display: flex;
-  flex-direction: column;
-}
+  flex-direction: column; }
 
 .footer-info__desktop {
-  display: none;
-}
+  display: none; }
 
 @media only screen and (min-width: 768px) {
   .footer-info__mobile {
-    display: none;
-  }
+    display: none; }
 
   .footer-info__desktop {
-    display: block;
-  }
-}
+    display: block; } }
 
 /*# sourceMappingURL=Footer.css.map */
