@@ -3,11 +3,19 @@
 .footer {
     position: fixed;
     bottom: 0;
+    // display: flex;
+    // justify-content: center;
     display: grid;
+    place-items: center;
     width: 100%;
     background-color: $color-footer;
     padding: 16px;
     color: $color-white;
+}
+
+.footer__content {
+    display: grid;
+    max-width: 1440px;
 }
 
 .footer-logos {
@@ -23,6 +31,7 @@
 .footer-info {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .footer-info__desktop {
@@ -30,11 +39,28 @@
 }
 
 @media only screen and (min-width: 768px) {
+    .footer__content {
+        grid-template-columns: 4fr 1fr;
+    }
+
     .footer-info__mobile {
         display: none;
     }
 
     .footer-info__desktop {
         display: block;
+    }
+
+    .footer-info {
+        // grid-column-start: 1;
+        // grid-column-end: 2;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    .footer-logos {
+        // grid-column-start: 2;
+        // grid-column-end: 3;
+        grid-column: 2 / 3;
     }
 }
