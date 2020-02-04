@@ -167,6 +167,12 @@ body, p {
   cursor: pointer;
 }
 
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .navbar-mobile {
   display: flex;
   flex-direction: column;
@@ -177,10 +183,15 @@ body, p {
   height: 45px;
 }
 
+.navbar-mobile__menu {
+  display: none;
+}
+
 .navbar-desktop {
   display: none;
   flex-direction: row;
   align-items: center;
+  max-width: 1280px;
 }
 
 .navbar-desktop__logo-container {

@@ -1,18 +1,29 @@
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .navbar-mobile {
     display: flex;
     flex-direction: column;
     align-items: center;
+    // width: 100%;
 }
 
 .navbar-mobile__logo-container {
     height: 45px;
 }
 
+.navbar-mobile__menu {
+    display: none;
+}
+
 .navbar-desktop {
     display: none;
-    // height: 40px;
     flex-direction: row;
     align-items: center;
+    max-width: 1280px;
 }
 
 .navbar-desktop__logo-container {

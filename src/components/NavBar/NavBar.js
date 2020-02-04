@@ -3,12 +3,14 @@ import logo from '../../images/logo-cabulance.png';
 
 function NavBar() {
     return (
-        <div>
+        <div className="navbar">
             <div className="navbar-mobile">
                 <div className="navbar-mobile__logo-container">
                     <img className="img-fluid" src={logo} alt="company logo"/>
                 </div>
-                <p>(425) 260 2121</p>
+                <div className="navbar-mobile__menu">
+                    <p>(425) 260 2121</p>
+                </div>
             </div>
             <div className="navbar-desktop">
                 <div className="navbar-desktop__logo-container pointer">

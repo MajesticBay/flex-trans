@@ -4,7 +4,7 @@ function Content() {
     return (
         <div className="content">
             <div className="background">
-        1
+                <p> </p>
             </div>
         </div>
     );
