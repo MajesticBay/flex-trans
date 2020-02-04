@@ -17,15 +17,17 @@ function NavBar() {
                 <div className="navbar-desktop__logo-container pointer">
                     <img className="img-fluid" src={logo} alt="company logo"/>
                 </div>
-                <div className="call-btn rounded">
+                <div className="call-btn rounded pointer">
                     <img className="call-btn__phone-img" src={phone} alt="Press to call us"/>
                     <span className="call-btn__text">(425) 260 2121</span>
                 </div>
-                <a href="/home">Home</a>
-                <a href="/about-us">About Us</a>
-                <a href="/reservation">Reservation</a>
-                <a href="/services">Services</a>
-                <a href="/contact-us">Contact Us</a>
+                <div className="navbar__navbar-links">
+                    <a className="navbar-links__navbar-link" href="/home">Home</a>
+                    <a className="navbar-links__navbar-link" href="/about-us">About Us</a>
+                    <a className="navbar-links__navbar-link" href="/reservation">Reservation</a>
+                    <a className="navbar-links__navbar-link" href="/services">Services</a>
+                    <a className="navbar-links__navbar-link" href="/contact-us">Contact Us</a>
+                </div>
             </div>
         </div>
     );

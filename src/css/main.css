@@ -197,6 +197,8 @@ body, p {
   flex-direction: row;
   align-items: center;
   max-width: 1280px;
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
 
 .navbar-desktop__logo-container {
@@ -209,6 +211,7 @@ body, p {
   align-items: center;
   background-color: #DF2C21;
   padding: 8px 16px;
+  margin-left: 74px;
 }
 
 .call-btn__phone-img {
@@ -218,6 +221,17 @@ body, p {
 .call-btn__text {
   font-size: 22px;
   color: #FFFFFF;
+}
+
+.navbar__navbar-links {
+  display: flex;
+  margin-left: 174px;
+}
+
+.navbar-links__navbar-link {
+  color: #1F1D1D;
+  text-decoration: underline;
+  padding-right: 40px;
 }
 
 @media only screen and (min-width: 768px) {
