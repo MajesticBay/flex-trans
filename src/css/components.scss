@@ -1,5 +1,6 @@
 body, p {
     margin: 0;
+    font-family: Lato;
 }
 
 .img-fluid {
@@ -9,4 +10,8 @@ body, p {
 
 .pointer {
     cursor: pointer;
+}
+
+.rounded {
+    border-radius: 6px;
 }

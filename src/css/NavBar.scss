@@ -1,3 +1,5 @@
+@import 'placeholders';
+
 .navbar {
     width: 100%;
     display: flex;
@@ -28,6 +30,23 @@
 
 .navbar-desktop__logo-container {
     height: 45px;
+}
+
+.call-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-red;
+    padding: 8px 16px;
+}
+
+.call-btn__phone-img {
+    height: 24px;
+}
+
+.call-btn__text {
+    font-size: $font-22;
+    color: $color-white;
 }
 
 @media only screen and (min-width: 768px) {

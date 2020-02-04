@@ -156,6 +156,7 @@ a {
 
 body, p {
   margin: 0;
+  font-family: Lato;
 }
 
 .img-fluid {
@@ -165,6 +166,10 @@ body, p {
 
 .pointer {
   cursor: pointer;
+}
+
+.rounded {
+  border-radius: 6px;
 }
 
 .navbar {
@@ -196,6 +201,23 @@ body, p {
 
 .navbar-desktop__logo-container {
   height: 45px;
+}
+
+.call-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #DF2C21;
+  padding: 8px 16px;
+}
+
+.call-btn__phone-img {
+  height: 24px;
+}
+
+.call-btn__text {
+  font-size: 22px;
+  color: #FFFFFF;
 }
 
 @media only screen and (min-width: 768px) {
