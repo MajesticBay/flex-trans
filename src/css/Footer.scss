@@ -1,8 +1,8 @@
 @import 'placeholders';
 
 .footer {
-    position: fixed;
-    bottom: 0;
+    // position: fixed;
+    // bottom: 0;
     // display: flex;
     // justify-content: center;
     display: grid;
@@ -25,7 +25,7 @@
 }
 
 .footer__payment-logo-container {
-    width: 100px;
+    width: 80px;
 }
 
 .footer-info {

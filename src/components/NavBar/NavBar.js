@@ -1,11 +1,13 @@
 import React from 'react';
-import logo from '../../images/logo.jpg';
+import logo from '../../images/logo-cabulance.png';
 
 function NavBar() {
     return (
         <div>
             <div className="navbar-mobile">
-                <img className="img-fluid" src={logo} alt="company logo"/>
+                <div className="navbar-mobile__logo-container">
+                    <img className="img-fluid" src={logo} alt="company logo"/>
+                </div>
                 <p>(425) 260 2121</p>
             </div>
             <div className="navbar-desktop">
