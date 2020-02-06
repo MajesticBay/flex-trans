@@ -17,7 +17,7 @@ function Home() {
                         </div>
                     </div>
                 </div>
-                <div>
+                <div className="home__content">
                     <p>Flex-Trans is a family-owned business that offers Non-Emergency Medical Transportation for seniors and disabled passengers. We are located in Bellevue but we offer our services anywhere in the entire Washington State.</p>
                 </div>
             </div>
