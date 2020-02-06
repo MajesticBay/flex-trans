@@ -38,7 +38,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $color-red;
+    background-color: var(--color-red);
     padding: 8px 16px;
     margin-left: 74px;
 }
@@ -48,17 +48,20 @@
 }
 
 .call-btn__text {
-    font-size: $font-22;
-    color: $color-white;
+    font-size: var(--font-22);
+    font-weight: bold;
+    color: var(--color-white);
+    margin-left: 10px;
 }
 
 .navbar__navbar-links {
     display: flex;
-    margin-left: 174px;
+    // margin-left: 174px;
 }
 
 .navbar-links__navbar-link {
-    color: $color-button;
+    font-size: var(--font-22);
+    color: var(--color-button);
     text-decoration: underline;
     padding-right: 40px;
 }
