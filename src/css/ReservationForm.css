@@ -1,0 +1,29 @@
+.reservation-form {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  background-color: var(--color-white);
+}
+
+.reservation-form__input {
+  width: 425px;
+  padding: 16px 26px;
+  border: 1px solid var(--color-input-border);
+  font-size: var(--font-22);
+  background-color: var(--color-input-background);
+}
+
+.reservation-form__submit-btn {
+  display: flex;
+  justify-content: center;
+  width: 425px;
+  padding: 16px 26px;
+  background-color: var(--color-red);
+}
+
+.reservation-form__submit-text {
+  color: var(--color-white);
+  font-size: var(--font-26);
+}
+
+/*# sourceMappingURL=ReservationForm.css.map */
