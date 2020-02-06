@@ -1,6 +1,5 @@
 import React from 'react';
-import ReservationForm from '../ReservationForm/ReservaitonForm';
-import fordtransit from '../../images/ford-transit-home-page.png';
+
 
 function Content() {
     return (
