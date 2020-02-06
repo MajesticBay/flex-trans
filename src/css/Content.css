@@ -2,7 +2,7 @@
   width: 100%;
 }
 
-.background {
+.top {
   background-image: url("../images/bg.jpg");
   height: 547px;
   width: 100%;
@@ -11,13 +11,13 @@
   justify-items: center;
 }
 
-.content__floating-wrapper {
+.top__floating-wrapper {
   position: absolute;
   bottom: -50px;
   display: flex;
 }
 
-.content__car-photo-wrapper {
+.top__car-photo-wrapper {
   width: 500px;
   margin-left: 50px;
 }

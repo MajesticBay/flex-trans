@@ -2,7 +2,7 @@
     width: 100%;
 }
 
-.background {
+.top {
     // background-image: url('/bg.jpg');
     background-image: url('../images/bg.jpg');
     height: 547px;
@@ -14,7 +14,7 @@
     // align-items: center;
 }
 
-.content__floating-wrapper {
+.top__floating-wrapper {
     position: absolute;
     bottom: -50px;
     display: flex;
@@ -24,7 +24,7 @@
     // right: 0;
 }
 
-.content__car-photo-wrapper {
+.top__car-photo-wrapper {
     width: 500px;
     margin-left: 50px;
 }
