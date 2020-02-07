@@ -5,15 +5,13 @@
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 /* Fix the bug that causes body go out of screen border and because of that horizontal scrolling. */
 /* https://stackoverflow.com/a/42798283/5184474 */
 html,
 body {
-  position: relative;
-}
+  position: relative; }
 
 /* http://meyerweb.com/eric/tools/css/reset/
     v2.0 | 20110126
@@ -105,8 +103,7 @@ video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
 article,
@@ -120,57 +117,46 @@ hgroup,
 menu,
 nav,
 section {
-  display: block;
-}
+  display: block; }
 
 body {
-  line-height: 1;
-}
+  line-height: 1; }
 
 ol,
 ul {
-  list-style: none;
-}
+  list-style: none; }
 
 blockquote,
 q {
-  quotes: none;
-}
+  quotes: none; }
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
-  content: none;
-}
+  content: '';
+  content: none; }
 
 table {
   border-collapse: collapse;
-  border-spacing: 0;
-}
+  border-spacing: 0; }
 
 a {
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 body, p {
   margin: 0;
-  font-family: Lato;
-}
+  font-family: Lato; }
 
 .img-fluid {
   width: 100%;
-  height: auto;
-}
+  height: auto; }
 
 .pointer {
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 .rounded {
-  border-radius: 6px;
-}
+  border-radius: 6px; }
 
 :root {
   --color-description: #9E9E9E;
@@ -184,24 +170,20 @@ body, p {
   --color-input-background: #F6F6F6;
   --font-16: 16px;
   --font-22: 22px;
-  --font-26: 26px;
-}
+  --font-26: 26px; }
 
 .mb-16 {
-  margin-bottom: 16px;
-}
+  margin-bottom: 16px; }
 
 .mb-45 {
-  margin-bottom: 45px;
-}
+  margin-bottom: 45px; }
 
 .home {
   position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
+  align-items: center; }
 
 .top {
   height: 265px;
@@ -211,75 +193,60 @@ body, p {
   /* Center the image */
   background-repeat: no-repeat;
   /* Do not repeat the image */
-  background-size: cover;
-}
+  background-size: cover; }
 
 .top__floating-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 1280px;
-}
+  max-width: 1280px; }
 
 .top__car-photo-wrapper {
-  display: none;
-}
+  display: none; }
 
 .home__home-content {
   width: 100%;
   display: flex;
-  flex-direction: column;
-}
+  flex-direction: column; }
 
 .home-content__welcome-wrapper {
   display: flex;
-  flex-direction: column;
-}
+  flex-direction: column; }
 
 .welcome-wrapper {
   display: flex;
-  flex-direction: column;
-}
+  flex-direction: column; }
 
 .home-content__mission-container {
   display: flex;
-  flex-direction: column;
-}
+  flex-direction: column; }
 
 @media only screen and (min-width: 768px) {
   .top {
     height: 547px;
-    background-image: url("../images/bg.jpg");
-  }
-}
+    background-image: url("../images/bg.jpg"); } }
 @media only screen and (min-width: 1024px) {
   .top__floating-wrapper {
     position: absolute;
     top: 300px;
     flex-direction: row;
     justify-content: space-between;
-    width: 80%;
-  }
+    width: 80%; }
 
   .top__car-photo-wrapper {
     display: block;
-    width: 500px;
-  }
+    width: 500px; }
 
   .home__home-content {
     width: 80%;
-    padding-top: 80px;
-  }
+    padding-top: 80px; }
 
   .welcome-wrapper {
-    flex-direction: row;
-  }
+    flex-direction: row; }
 
   .home-content__mission-container {
-    flex-direction: row;
-  }
-}
+    flex-direction: row; } }
 :root {
   --color-description: #9E9E9E;
   --color-button: #1F1D1D;
@@ -292,38 +259,31 @@ body, p {
   --color-input-background: #F6F6F6;
   --font-16: 16px;
   --font-22: 22px;
-  --font-26: 26px;
-}
+  --font-26: 26px; }
 
 .mb-16 {
-  margin-bottom: 16px;
-}
+  margin-bottom: 16px; }
 
 .mb-45 {
-  margin-bottom: 45px;
-}
+  margin-bottom: 45px; }
 
 .navbar {
   width: 100%;
   display: flex;
-  justify-content: center;
-}
+  justify-content: center; }
 
 .navbar-mobile {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 16px;
-}
+  padding: 16px; }
 
 .navbar-mobile__logo-container {
-  height: 45px;
-}
+  height: 45px; }
 
 .navbar-mobile__menu {
-  display: none;
-}
+  display: none; }
 
 .navbar-desktop {
   display: none;
@@ -331,12 +291,10 @@ body, p {
   align-items: center;
   max-width: 1280px;
   padding-top: 18px;
-  padding-bottom: 18px;
-}
+  padding-bottom: 18px; }
 
 .navbar-desktop__logo-container {
-  height: 45px;
-}
+  height: 45px; }
 
 .call-btn {
   display: flex;
@@ -344,100 +302,78 @@ body, p {
   align-items: center;
   background-color: var(--color-red);
   padding: 8px 16px;
-  margin-left: 16px;
-}
+  margin-left: 16px; }
 
 .call-btn--mobile {
-  display: none;
-}
+  display: none; }
 
 .call-btn__phone-img {
-  height: 24px;
-}
+  height: 24px; }
 
 .call-btn__text {
   font-size: var(--font-22);
   font-weight: bold;
   color: var(--color-white);
-  margin-left: 10px;
-}
+  margin-left: 10px; }
 
 .navbar__navbar-links {
   display: flex;
-  margin-left: 16px;
-}
+  margin-left: 16px; }
 
 .navbar-links__navbar-link {
   font-size: var(--font-16);
   color: var(--color-button);
   text-decoration: underline;
-  padding-right: 16px;
-}
+  padding-right: 16px; }
 
 @media only screen and (min-width: 768px) {
   .call-btn--mobile {
-    display: block;
-  }
-}
+    display: block; } }
 @media only screen and (min-width: 1024px) {
   .navbar-mobile {
-    display: none;
-  }
+    display: none; }
 
   .navbar-desktop {
-    display: flex;
-  }
-}
+    display: flex; } }
 @media only screen and (min-width: 1280px) {
   .navbar-links__navbar-link {
     font-size: var(--font-22);
-    padding-right: 40px;
-  }
-}
+    padding-right: 40px; } }
 .reservation-form {
   display: flex;
   flex-direction: column;
   width: 100%;
   padding: 16px;
-  background-color: var(--color-white);
-}
+  background-color: var(--color-white); }
 
 .reservation-form__input {
   width: 100%;
   padding: 16px 26px;
   border: 1px solid var(--color-input-border);
   font-size: var(--font-22);
-  background-color: var(--color-input-background);
-}
+  background-color: var(--color-input-background); }
 
 .reservation-form__submit-btn {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 16px;
-  background-color: var(--color-red);
-}
+  background-color: var(--color-red); }
 
 .reservation-form__submit-text {
   color: var(--color-white);
-  font-size: 1.2em;
-}
+  font-size: 1.2em; }
 
 @media only screen and (min-width: 400px) {
   .reservation-form__submit-btn {
-    padding: 16px 26px;
-  }
+    padding: 16px 26px; }
 
   .reservation-form__submit-text {
-    font-size: 1.35em;
-  }
-}
+    font-size: 1.35em; } }
 @media only screen and (min-width: 768px) {
   .reservation-form {
     width: 425px;
-    padding: 40px;
-  }
-}
+    padding: 40px; } }
 :root {
   --color-description: #9E9E9E;
   --color-button: #1F1D1D;
@@ -450,16 +386,13 @@ body, p {
   --color-input-background: #F6F6F6;
   --font-16: 16px;
   --font-22: 22px;
-  --font-26: 26px;
-}
+  --font-26: 26px; }
 
 .mb-16 {
-  margin-bottom: 16px;
-}
+  margin-bottom: 16px; }
 
 .mb-45 {
-  margin-bottom: 45px;
-}
+  margin-bottom: 45px; }
 
 .footer {
   display: grid;
@@ -467,55 +400,43 @@ body, p {
   width: 100%;
   background-color: var(--color-footer);
   padding: 16px;
-  color: var(--color-white);
-}
+  color: var(--color-white); }
 
 .footer__content {
   display: grid;
-  max-width: 1440px;
-}
+  max-width: 1440px; }
 
 .footer-logos {
   display: flex;
   justify-content: center;
-  align-items: center;
-}
+  align-items: center; }
 
 .footer__payment-logo-container {
-  width: 80px;
-}
+  width: 80px; }
 
 .footer-info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-}
+  justify-content: center; }
 
 .footer-info__desktop {
-  display: none;
-}
+  display: none; }
 
 @media only screen and (min-width: 768px) {
   .footer__content {
-    grid-template-columns: 4fr 1fr;
-  }
+    grid-template-columns: 4fr 1fr; }
 
   .footer-info__mobile {
-    display: none;
-  }
+    display: none; }
 
   .footer-info__desktop {
-    display: block;
-  }
+    display: block; }
 
   .footer-info {
-    grid-column: 1/2;
-    grid-row: 1/2;
-  }
+    grid-column: 1 / 2;
+    grid-row: 1 / 2; }
 
   .footer-logos {
-    grid-column: 2/3;
-  }
-}
+    grid-column: 2 / 3; } }
 
 /*# sourceMappingURL=main.css.map */

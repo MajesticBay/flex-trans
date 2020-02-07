@@ -10,38 +10,31 @@
   --color-input-background: #F6F6F6;
   --font-16: 16px;
   --font-22: 22px;
-  --font-26: 26px;
-}
+  --font-26: 26px; }
 
 .mb-16 {
-  margin-bottom: 16px;
-}
+  margin-bottom: 16px; }
 
 .mb-45 {
-  margin-bottom: 45px;
-}
+  margin-bottom: 45px; }
 
 .navbar {
   width: 100%;
   display: flex;
-  justify-content: center;
-}
+  justify-content: center; }
 
 .navbar-mobile {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 16px;
-}
+  padding: 16px; }
 
 .navbar-mobile__logo-container {
-  height: 45px;
-}
+  height: 45px; }
 
 .navbar-mobile__menu {
-  display: none;
-}
+  display: none; }
 
 .navbar-desktop {
   display: none;
@@ -49,12 +42,10 @@
   align-items: center;
   max-width: 1280px;
   padding-top: 18px;
-  padding-bottom: 18px;
-}
+  padding-bottom: 18px; }
 
 .navbar-desktop__logo-container {
-  height: 45px;
-}
+  height: 45px; }
 
 .call-btn {
   display: flex;
@@ -62,55 +53,42 @@
   align-items: center;
   background-color: var(--color-red);
   padding: 8px 16px;
-  margin-left: 16px;
-}
+  margin-left: 16px; }
 
 .call-btn--mobile {
-  display: none;
-}
+  display: none; }
 
 .call-btn__phone-img {
-  height: 24px;
-}
+  height: 24px; }
 
 .call-btn__text {
   font-size: var(--font-22);
   font-weight: bold;
   color: var(--color-white);
-  margin-left: 10px;
-}
+  margin-left: 10px; }
 
 .navbar__navbar-links {
   display: flex;
-  margin-left: 16px;
-}
+  margin-left: 16px; }
 
 .navbar-links__navbar-link {
   font-size: var(--font-16);
   color: var(--color-button);
   text-decoration: underline;
-  padding-right: 16px;
-}
+  padding-right: 16px; }
 
 @media only screen and (min-width: 768px) {
   .call-btn--mobile {
-    display: block;
-  }
-}
+    display: block; } }
 @media only screen and (min-width: 1024px) {
   .navbar-mobile {
-    display: none;
-  }
+    display: none; }
 
   .navbar-desktop {
-    display: flex;
-  }
-}
+    display: flex; } }
 @media only screen and (min-width: 1280px) {
   .navbar-links__navbar-link {
     font-size: var(--font-22);
-    padding-right: 40px;
-  }
-}
+    padding-right: 40px; } }
 
 /*# sourceMappingURL=NavBar.css.map */
