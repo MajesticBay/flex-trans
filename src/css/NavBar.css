@@ -8,6 +8,7 @@
   --color-footer: #232121;
   --color-input-border: #D1D1D1;
   --color-input-background: #F6F6F6;
+  --font-16: 16px;
   --font-22: 22px;
   --font-26: 26px;
 }
@@ -79,19 +80,25 @@
 }
 
 .navbar-links__navbar-link {
-  font-size: var(--font-22);
+  font-size: var(--font-16);
   color: var(--color-button);
   text-decoration: underline;
-  padding-right: 40px;
+  padding-right: 16px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   .navbar-mobile {
     display: none;
   }
 
   .navbar-desktop {
     display: flex;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .navbar-links__navbar-link {
+    font-size: var(--font-22);
+    padding-right: 40px;
   }
 }
 

@@ -182,6 +182,7 @@ body, p {
   --color-footer: #232121;
   --color-input-border: #D1D1D1;
   --color-input-background: #F6F6F6;
+  --font-16: 16px;
   --font-22: 22px;
   --font-26: 26px;
 }
@@ -208,14 +209,14 @@ body, p {
 }
 
 .top__floating-wrapper {
-  position: absolute;
-  bottom: -50px;
   display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1280px;
 }
 
 .top__car-photo-wrapper {
   width: 500px;
-  margin-left: 50px;
 }
 
 .home__content {
@@ -224,6 +225,15 @@ body, p {
   place-items: center;
 }
 
+@media only screen and (min-width: 768px) {
+  .top__floating-wrapper {
+    position: absolute;
+    bottom: -50px;
+    display: row;
+    justify-content: space-between;
+    width: 80%;
+  }
+}
 :root {
   --color-description: #9E9E9E;
   --color-button: #1F1D1D;
@@ -234,6 +244,7 @@ body, p {
   --color-footer: #232121;
   --color-input-border: #D1D1D1;
   --color-input-background: #F6F6F6;
+  --font-16: 16px;
   --font-22: 22px;
   --font-26: 26px;
 }
@@ -305,13 +316,13 @@ body, p {
 }
 
 .navbar-links__navbar-link {
-  font-size: var(--font-22);
+  font-size: var(--font-16);
   color: var(--color-button);
   text-decoration: underline;
-  padding-right: 40px;
+  padding-right: 16px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   .navbar-mobile {
     display: none;
   }
@@ -320,10 +331,16 @@ body, p {
     display: flex;
   }
 }
+@media only screen and (min-width: 1280px) {
+  .navbar-links__navbar-link {
+    font-size: var(--font-22);
+    padding-right: 40px;
+  }
+}
 .reservation-form {
   display: flex;
   flex-direction: column;
-  padding: 40px;
+  padding: 16px;
   background-color: var(--color-white);
 }
 
@@ -348,6 +365,11 @@ body, p {
   font-size: var(--font-26);
 }
 
+@media only screen and (min-width: 768px) {
+  .reservation-form {
+    padding: 40px;
+  }
+}
 :root {
   --color-description: #9E9E9E;
   --color-button: #1F1D1D;
@@ -358,6 +380,7 @@ body, p {
   --color-footer: #232121;
   --color-input-border: #D1D1D1;
   --color-input-background: #F6F6F6;
+  --font-16: 16px;
   --font-22: 22px;
   --font-26: 26px;
 }

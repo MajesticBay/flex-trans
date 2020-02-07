@@ -4,7 +4,7 @@
     // position: absolute;
     // left: 320px;
     // top: 300px;
-    padding: 40px;
+    padding: 16px;
     background-color: var(--color-white);
 }
 
@@ -27,4 +27,10 @@
 .reservation-form__submit-text {
     color: var(--color-white);
     font-size: var(--font-26);
+}
+
+@media only screen and (min-width: 768px) {
+    .reservation-form {
+        padding: 40px;
+    }
 }
