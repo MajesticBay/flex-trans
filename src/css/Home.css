@@ -1,14 +1,15 @@
 .home {
+  position: relative;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .top {
   background-image: url("../images/bg.jpg");
   height: 547px;
   width: 100%;
-  position: relative;
-  display: grid;
-  justify-items: center;
 }
 
 .top__floating-wrapper {
@@ -20,7 +21,7 @@
 }
 
 .top__car-photo-wrapper {
-  width: 500px;
+  display: none;
 }
 
 .home__content {
@@ -32,10 +33,15 @@
 @media only screen and (min-width: 1024px) {
   .top__floating-wrapper {
     position: absolute;
-    bottom: -50px;
+    top: 300px;
     flex-direction: row;
     justify-content: space-between;
     width: 80%;
+  }
+
+  .top__car-photo-wrapper {
+    display: block;
+    width: 500px;
   }
 }
 

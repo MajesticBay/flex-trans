@@ -10,11 +10,11 @@ function Home() {
             <NavBar />
             <div className="home">
                 <div className="top">
-                    <div className="top__floating-wrapper">
-                        <ReservationForm/>
-                        <div className="top__car-photo-wrapper">
-                            <img className="img-fluid" src={fordtransit} alt="Ford Transit Wheelchair Vagon"/>
-                        </div>
+                </div>
+                <div className="top__floating-wrapper">
+                    <ReservationForm/>
+                    <div className="top__car-photo-wrapper">
+                        <img className="img-fluid" src={fordtransit} alt="Ford Transit Wheelchair Vagon"/>
                     </div>
                 </div>
                 <div className="home__content">

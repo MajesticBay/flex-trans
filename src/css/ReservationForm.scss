@@ -20,14 +20,24 @@
 .reservation-form__submit-btn {
     display: flex;
     justify-content: center;
-    width: 100%;
-    padding: 16px 26px;
+    align-items: center;
+    padding: 16px;
     background-color: var(--color-red);
 }
 
 .reservation-form__submit-text {
     color: var(--color-white);
-    font-size: var(--font-26);
+    font-size: 1.2em;
+}
+
+@media only screen and (min-width: 400px) {
+    .reservation-form__submit-btn {
+        padding: 16px 26px;
+    }
+
+    .reservation-form__submit-text {
+        font-size: 1.35em;
+    }
 }
 
 @media only screen and (min-width: 768px) {
