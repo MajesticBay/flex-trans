@@ -14,6 +14,7 @@
 .top__floating-wrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   max-width: 1280px;
 }
@@ -28,11 +29,11 @@
   place-items: center;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   .top__floating-wrapper {
     position: absolute;
     bottom: -50px;
-    display: row;
+    flex-direction: row;
     justify-content: space-between;
     width: 80%;
   }

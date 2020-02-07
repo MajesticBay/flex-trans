@@ -211,6 +211,7 @@ body, p {
 .top__floating-wrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   max-width: 1280px;
 }
@@ -225,11 +226,11 @@ body, p {
   place-items: center;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   .top__floating-wrapper {
     position: absolute;
     bottom: -50px;
-    display: row;
+    flex-direction: row;
     justify-content: space-between;
     width: 80%;
   }
@@ -340,12 +341,13 @@ body, p {
 .reservation-form {
   display: flex;
   flex-direction: column;
+  width: 100%;
   padding: 16px;
   background-color: var(--color-white);
 }
 
 .reservation-form__input {
-  width: 425px;
+  width: 100%;
   padding: 16px 26px;
   border: 1px solid var(--color-input-border);
   font-size: var(--font-22);
@@ -355,7 +357,7 @@ body, p {
 .reservation-form__submit-btn {
   display: flex;
   justify-content: center;
-  width: 425px;
+  width: 100%;
   padding: 16px 26px;
   background-color: var(--color-red);
 }
@@ -367,6 +369,7 @@ body, p {
 
 @media only screen and (min-width: 768px) {
   .reservation-form {
+    width: 425px;
     padding: 40px;
   }
 }

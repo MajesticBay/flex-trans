@@ -1,12 +1,13 @@
 .reservation-form {
   display: flex;
   flex-direction: column;
+  width: 100%;
   padding: 16px;
   background-color: var(--color-white);
 }
 
 .reservation-form__input {
-  width: 425px;
+  width: 100%;
   padding: 16px 26px;
   border: 1px solid var(--color-input-border);
   font-size: var(--font-22);
@@ -16,7 +17,7 @@
 .reservation-form__submit-btn {
   display: flex;
   justify-content: center;
-  width: 425px;
+  width: 100%;
   padding: 16px 26px;
   background-color: var(--color-red);
 }
@@ -28,6 +29,7 @@
 
 @media only screen and (min-width: 768px) {
   .reservation-form {
+    width: 425px;
     padding: 40px;
   }
 }
