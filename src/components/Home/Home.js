@@ -20,31 +20,35 @@ function Home() {
                     </div>
                 </div>
                 <div className="home__home-content">
-                    <div className="home-content__welcome-container">
-                        <p className="welcome-container__general-info">Flex-Trans is a family-owned business that offers Non-Emergency Medical Transportation for seniors and disabled passengers. We are located in Bellevue but we offer our services anywhere in the entire Washington State.</p>
-                        <div className="welcome-container">
-                            <div className="welcome-container__content">
-                                <h3>Welcome to Flex-Trans</h3>
-                                <p>Wheel chair transfer:</p>
-                                <p>
-                                    $30 pick up one way, + $2.95/mi
-                                    Ferry fee $110 extra
-                                </p>
-                                <p>Reduced/Flat rates available for long-distance transfers</p>
-                            </div>
-                            <div className="welcome-container__map-container">
-                                <img className="img-fluid" src={map} alt="working area map"/>
+                    <div className="home-content__outside-welcome-container">
+                        <div className="home-content__welcome-container">
+                            <p className="welcome-container__general-info">Flex-Trans is a family-owned business that offers Non-Emergency Medical Transportation for seniors and disabled passengers. We are located in Bellevue but we offer our services anywhere in the entire Washington State.</p>
+                            <div className="welcome-container">
+                                <div className="welcome-container__content">
+                                    <h3>Welcome to Flex-Trans</h3>
+                                    <p>Wheel chair transfer:</p>
+                                    <p>
+                                        $30 pick up one way, + $2.95/mi
+                                        Ferry fee $110 extra
+                                    </p>
+                                    <p>Reduced/Flat rates available for long-distance transfers</p>
+                                </div>
+                                <div className="welcome-container__map-container">
+                                    <img className="img-fluid" src={map} alt="working area map"/>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div className="home-content__mission-container">
-                        <div className="mission-container__mission-photo">
-                            <img className="img-fluid" src={missionPhoto} alt="our mission"/>
-                        </div>
-                        <div className="mission-container__mission-content">
-                            <p>Our mission at Flex-Trans is simple, we aim to provide you with the best services you require.  
-                                From Pickup to Drop-Off as a valued member we want to make your transportation needs as simple and seamless as possible.</p>
-                            <p>To ensure timely arrival and departure we ask that you make your appointment with us at least 24 hours in advance.  If a last-minute trip arises and you must get somewhere on short notice — we will go out of our way to try and accommodate your travel needs.</p>
+                    <div className="home-content__outside-mission-container">
+                        <div className="home-content__mission-container">
+                            <div className="mission-container__mission-photo">
+                                <img className="img-fluid" src={missionPhoto} alt="our mission"/>
+                            </div>
+                            <div className="mission-container__mission-content">
+                                <p>Our mission at Flex-Trans is simple, we aim to provide you with the best services you require.  
+                                    From Pickup to Drop-Off as a valued member we want to make your transportation needs as simple and seamless as possible.</p>
+                                <p>To ensure timely arrival and departure we ask that you make your appointment with us at least 24 hours in advance.  If a last-minute trip arises and you must get somewhere on short notice — we will go out of our way to try and accommodate your travel needs.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
