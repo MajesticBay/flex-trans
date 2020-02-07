@@ -8,9 +8,12 @@
 
 .top {
     // background-image: url('/bg.jpg');
-    background-image: url('../images/bg.jpg');
-    height: 547px;
+    height: 265px;
     width: 100%;
+    background-image: url('../images/bg-mobile.png');
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
     // display: grid;
     // justify-items: center;
     // gap: 30px;
@@ -39,6 +42,13 @@
     width: 100%;
     display: grid;
     place-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .top {
+        height: 547px;
+        background-image: url('../images/bg.jpg');
+    }
 }
 
 @media only screen and (min-width: 1024px) {

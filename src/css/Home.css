@@ -7,9 +7,14 @@
 }
 
 .top {
-  background-image: url("../images/bg.jpg");
-  height: 547px;
+  height: 265px;
   width: 100%;
+  background-image: url("../images/bg-mobile.png");
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
 }
 
 .top__floating-wrapper {
@@ -30,6 +35,12 @@
   place-items: center;
 }
 
+@media only screen and (min-width: 768px) {
+  .top {
+    height: 547px;
+    background-image: url("../images/bg.jpg");
+  }
+}
 @media only screen and (min-width: 1024px) {
   .top__floating-wrapper {
     position: absolute;
