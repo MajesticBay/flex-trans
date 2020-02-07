@@ -242,6 +242,11 @@ body, p {
   flex-direction: column;
 }
 
+.home-content__mission-container {
+  display: flex;
+  flex-direction: column;
+}
+
 @media only screen and (min-width: 768px) {
   .top {
     height: 547px;
@@ -268,6 +273,10 @@ body, p {
   }
 
   .welcome-wrapper {
+    flex-direction: row;
+  }
+
+  .home-content__mission-container {
     flex-direction: row;
   }
 }

@@ -4,6 +4,7 @@ import Footer from '../Footer/Footer';
 import ReservationForm from '../ReservationForm/ReservaitonForm';
 import fordtransit from '../../images/ford-transit-home-page.png';
 import map from '../../images/map.png';
+import missionPhoto from '../../images/mission-photo.png';
 
 function Home() {
     return (
@@ -34,6 +35,16 @@ function Home() {
                             <div className="welcome-wrapper__map-container">
                                 <img src={map} alt="working area map"/>
                             </div>
+                        </div>
+                    </div>
+                    <div className="home-content__mission-container">
+                        <div>
+                            <img src={missionPhoto}/>
+                        </div>
+                        <div>
+                            <p>Our mission at Flex-Trans is simple, we aim to provide you with the best services you require.  
+                                From Pickup to Drop-Off as a valued member we want to make your transportation needs as simple and seamless as possible.</p>
+                            <p>To ensure timely arrival and departure we ask that you make your appointment with us at least 24 hours in advance.  If a last-minute trip arises and you must get somewhere on short notice — we will go out of our way to try and accommodate your travel needs.</p>
                         </div>
                     </div>
                 </div>
