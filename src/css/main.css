@@ -228,8 +228,18 @@ body, p {
 
 .home__home-content {
   width: 100%;
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-content__welcome-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 @media only screen and (min-width: 768px) {
@@ -255,6 +265,10 @@ body, p {
   .home__home-content {
     width: 80%;
     padding-top: 80px;
+  }
+
+  .welcome-wrapper {
+    flex-direction: row;
   }
 }
 :root {

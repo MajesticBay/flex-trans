@@ -3,6 +3,7 @@ import NavBar from '../NavBar/NavBar';
 import Footer from '../Footer/Footer';
 import ReservationForm from '../ReservationForm/ReservaitonForm';
 import fordtransit from '../../images/ford-transit-home-page.png';
+import map from '../../images/map.png';
 
 function Home() {
     return (
@@ -30,12 +31,11 @@ function Home() {
                                 </p>
                                 <p>Reduced/Flat rates available for long-distance transfers</p>
                             </div>
-                            <div>
-                                <img alt="working area map"/>
+                            <div className="welcome-wrapper__map-container">
+                                <img src={map} alt="working area map"/>
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
             <Footer />
