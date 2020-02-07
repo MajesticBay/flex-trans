@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../../images/logo-cabulance.png';
 import phone from '../../images/phone.svg';
+import hamburger from '../../images/menu-hamburger.svg';
 
 function NavBar() {
     return (
@@ -9,8 +10,11 @@ function NavBar() {
                 <div className="navbar-mobile__logo-container">
                     <img className="img-fluid" src={logo} alt="company logo"/>
                 </div>
+                <div>
+                    <img src={hamburger} alt="menu hamburger"/>
+                </div>
                 <div className="navbar-mobile__menu">
-                    <p>(425) 260 2121</p>
+                    <p>(425) 260 2121</p>   
                 </div>
             </div>
             <div className="navbar-desktop">

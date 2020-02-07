@@ -29,8 +29,10 @@
 
 .navbar-mobile {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
+  padding: 16px;
 }
 
 .navbar-mobile__logo-container {

@@ -24,8 +24,8 @@
   display: none;
 }
 
-.home__content {
-  height: 100vh;
+.home__home-content {
+  width: 100%;
   display: grid;
   place-items: center;
 }
@@ -42,6 +42,11 @@
   .top__car-photo-wrapper {
     display: block;
     width: 500px;
+  }
+
+  .home__home-content {
+    width: 80%;
+    padding-top: 80px;
   }
 }
 
