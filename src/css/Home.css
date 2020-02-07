@@ -3,8 +3,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
+  align-items: center; }
 
 .top {
   height: 265px;
@@ -14,74 +13,89 @@
   /* Center the image */
   background-repeat: no-repeat;
   /* Do not repeat the image */
-  background-size: cover;
-}
+  background-size: cover; }
 
-.top__floating-wrapper {
+.top__floating-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 1280px;
-}
+  max-width: 1280px; }
 
-.top__car-photo-wrapper {
-  display: none;
-}
+.top__car-photo-container {
+  display: none; }
 
 .home__home-content {
   width: 100%;
   display: flex;
-  flex-direction: column;
-}
+  flex-direction: column; }
 
-.home-content__welcome-wrapper {
+.home-content__welcome-container {
+  display: flex;
+  flex-direction: column; }
+
+.welcome-container__general-info {
+  font-size: var(--font-32);
+  line-height: var(--line-150); }
+
+.welcome-container {
+  display: flex;
+  flex-direction: column; }
+
+.welcome-container__content {
   display: flex;
   flex-direction: column;
-}
-
-.welcome-wrapper {
-  display: flex;
-  flex-direction: column;
-}
+  background-color: var(--color-blue); }
 
 .home-content__mission-container {
   display: flex;
-  flex-direction: column;
-}
+  flex-direction: column; }
+
+.mission-container__mission-photo {
+  width: 100%; }
+
+.mission-container__mission-content {
+  width: 100%;
+  background-color: var(--color-light-blue); }
 
 @media only screen and (min-width: 768px) {
   .top {
     height: 547px;
-    background-image: url("../images/bg.jpg");
-  }
-}
+    background-image: url("../images/bg.jpg"); } }
 @media only screen and (min-width: 1024px) {
-  .top__floating-wrapper {
+  .top__floating-container {
     position: absolute;
     top: 300px;
     flex-direction: row;
     justify-content: space-between;
-    width: 80%;
-  }
+    width: 80%; }
 
-  .top__car-photo-wrapper {
+  .top__car-photo-container {
     display: block;
-    width: 500px;
-  }
+    width: 500px; }
 
   .home__home-content {
     width: 80%;
-    padding-top: 80px;
-  }
+    padding-top: 80px; }
 
-  .welcome-wrapper {
-    flex-direction: row;
-  }
+  .welcome-container {
+    width: 100%;
+    flex-direction: row; }
+
+  .welcome-container__content {
+    width: 50%; }
+
+  .welcome-container__map-container {
+    width: 50%; }
 
   .home-content__mission-container {
-    flex-direction: row;
-  }
-}
+    width: 100%;
+    flex-direction: row; }
+
+  .mission-container__mission-photo {
+    width: 50%; }
+
+  .mission-container__mission-content {
+    width: 50%; } }
 
 /*# sourceMappingURL=Home.css.map */

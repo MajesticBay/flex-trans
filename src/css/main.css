@@ -163,6 +163,8 @@ body, p {
   --color-button: #1F1D1D;
   --color-base: #000080;
   --color-red: #DF2C21;
+  --color-blue: #80B9CD;
+  --color-light-blue: #E3F2F8;
   --color-white: #FFFFFF;
   --color-green: #4DDC40;
   --color-footer: #232121;
@@ -170,7 +172,9 @@ body, p {
   --color-input-background: #F6F6F6;
   --font-16: 16px;
   --font-22: 22px;
-  --font-26: 26px; }
+  --font-26: 26px;
+  --font-32: 32px;
+  --line-150: 150%; }
 
 .mb-16 {
   margin-bottom: 16px; }
@@ -195,14 +199,14 @@ body, p {
   /* Do not repeat the image */
   background-size: cover; }
 
-.top__floating-wrapper {
+.top__floating-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   max-width: 1280px; }
 
-.top__car-photo-wrapper {
+.top__car-photo-container {
   display: none; }
 
 .home__home-content {
@@ -210,31 +214,47 @@ body, p {
   display: flex;
   flex-direction: column; }
 
-.home-content__welcome-wrapper {
+.home-content__welcome-container {
   display: flex;
   flex-direction: column; }
 
-.welcome-wrapper {
+.welcome-container__general-info {
+  font-size: var(--font-32);
+  line-height: var(--line-150); }
+
+.welcome-container {
   display: flex;
   flex-direction: column; }
+
+.welcome-container__content {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-blue); }
 
 .home-content__mission-container {
   display: flex;
   flex-direction: column; }
+
+.mission-container__mission-photo {
+  width: 100%; }
+
+.mission-container__mission-content {
+  width: 100%;
+  background-color: var(--color-light-blue); }
 
 @media only screen and (min-width: 768px) {
   .top {
     height: 547px;
     background-image: url("../images/bg.jpg"); } }
 @media only screen and (min-width: 1024px) {
-  .top__floating-wrapper {
+  .top__floating-container {
     position: absolute;
     top: 300px;
     flex-direction: row;
     justify-content: space-between;
     width: 80%; }
 
-  .top__car-photo-wrapper {
+  .top__car-photo-container {
     display: block;
     width: 500px; }
 
@@ -242,16 +262,32 @@ body, p {
     width: 80%;
     padding-top: 80px; }
 
-  .welcome-wrapper {
+  .welcome-container {
+    width: 100%;
     flex-direction: row; }
 
+  .welcome-container__content {
+    width: 50%; }
+
+  .welcome-container__map-container {
+    width: 50%; }
+
   .home-content__mission-container {
-    flex-direction: row; } }
+    width: 100%;
+    flex-direction: row; }
+
+  .mission-container__mission-photo {
+    width: 50%; }
+
+  .mission-container__mission-content {
+    width: 50%; } }
 :root {
   --color-description: #9E9E9E;
   --color-button: #1F1D1D;
   --color-base: #000080;
   --color-red: #DF2C21;
+  --color-blue: #80B9CD;
+  --color-light-blue: #E3F2F8;
   --color-white: #FFFFFF;
   --color-green: #4DDC40;
   --color-footer: #232121;
@@ -259,7 +295,9 @@ body, p {
   --color-input-background: #F6F6F6;
   --font-16: 16px;
   --font-22: 22px;
-  --font-26: 26px; }
+  --font-26: 26px;
+  --font-32: 32px;
+  --line-150: 150%; }
 
 .mb-16 {
   margin-bottom: 16px; }
@@ -379,6 +417,8 @@ body, p {
   --color-button: #1F1D1D;
   --color-base: #000080;
   --color-red: #DF2C21;
+  --color-blue: #80B9CD;
+  --color-light-blue: #E3F2F8;
   --color-white: #FFFFFF;
   --color-green: #4DDC40;
   --color-footer: #232121;
@@ -386,7 +426,9 @@ body, p {
   --color-input-background: #F6F6F6;
   --font-16: 16px;
   --font-22: 22px;
-  --font-26: 26px; }
+  --font-26: 26px;
+  --font-32: 32px;
+  --line-150: 150%; }
 
 .mb-16 {
   margin-bottom: 16px; }
