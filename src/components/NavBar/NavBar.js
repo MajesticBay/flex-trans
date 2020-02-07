@@ -10,6 +10,10 @@ function NavBar() {
                 <div className="navbar-mobile__logo-container">
                     <img className="img-fluid" src={logo} alt="company logo"/>
                 </div>
+                <div className="call-btn call-btn--mobile rounded pointer">
+                    <img className="call-btn__phone-img" src={phone} alt="Press to call us"/>
+                    <span className="call-btn__text">(425) 260 2121</span>
+                </div>
                 <div>
                     <img src={hamburger} alt="menu hamburger"/>
                 </div>

@@ -313,6 +313,10 @@ body, p {
   margin-left: 16px;
 }
 
+.call-btn--mobile {
+  display: none;
+}
+
 .call-btn__phone-img {
   height: 24px;
 }
@@ -336,6 +340,11 @@ body, p {
   padding-right: 16px;
 }
 
+@media only screen and (min-width: 768px) {
+  .call-btn--mobile {
+    display: block;
+  }
+}
 @media only screen and (min-width: 1024px) {
   .navbar-mobile {
     display: none;
