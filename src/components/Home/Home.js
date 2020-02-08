@@ -1,6 +1,5 @@
 import React from 'react';
-import NavBar from '../NavBar/NavBar';
-import Footer from '../Footer/Footer';
+
 import ReservationForm from '../ReservationForm/ReservaitonForm';
 import fordtransit from '../../images/ford-transit-home-page.png';
 import map from '../../images/map.png';
@@ -9,7 +8,6 @@ import missionPhoto from '../../images/mission-photo.png';
 function Home() {
     return (
         <div>
-            <NavBar />
             <div className="home">
                 <div className="top">
                 </div>
@@ -54,7 +52,6 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 }
