@@ -14,12 +14,17 @@
   --font-22: 22px;
   --font-26: 26px;
   --font-32: 32px;
-  --line-150: 150%; }
+  --font-44: 44px;
+  --line-120: 120%;
+  --line-150: 150%;
+}
 
 .mb-16 {
-  margin-bottom: 16px; }
+  margin-bottom: 16px;
+}
 
 .mb-45 {
-  margin-bottom: 45px; }
+  margin-bottom: 45px;
+}
 
 /*# sourceMappingURL=placeholders.css.map */
