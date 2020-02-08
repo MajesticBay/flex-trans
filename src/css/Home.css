@@ -3,7 +3,8 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+}
 
 .top {
   height: 265px;
@@ -13,47 +14,78 @@
   /* Center the image */
   background-repeat: no-repeat;
   /* Do not repeat the image */
-  background-size: cover; }
+  background-size: cover;
+}
 
 .top__floating-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 1280px; }
+  max-width: 1280px;
+}
 
 .top__car-photo-container {
-  display: none; }
+  display: none;
+}
 
 .home__home-content {
   width: 100%;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+}
 
 .home-content__outside-welcome-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%; }
+  width: 100%;
+}
 
 .home-content__welcome-container {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+}
 
 .welcome-container__general-info {
   padding: 16px;
   font-size: var(--font-22);
-  line-height: var(--line-150); }
+  line-height: var(--line-150);
+}
 
-.welcome-container {
-  display: flex;
-  flex-direction: column; }
-
-.welcome-container__content {
+.welcome-content-container {
   display: flex;
   flex-direction: column;
-  background-color: var(--color-blue); }
+}
+
+.welcome-content-container__content {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-blue);
+  padding: 40px;
+  font-size: var(--font-22);
+  line-height: var(--line-150);
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.welcome-content-container__header {
+  font-size: var(--font-44);
+  color: var(--color-white);
+}
+
+.welcome-content-container__wheel-chair-transfer-text {
+  margin-top: 40px;
+  font-size: var(--font-32);
+  line-height: var(--line-150);
+}
+
+.welcome-content-container__prices {
+  font-size: var(--font-32);
+  line-height: var(--line-150);
+  color: var(--color-white);
+}
 
 .home-content__outside-mission-container {
   display: flex;
@@ -61,60 +93,85 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: var(--color-light-blue); }
+  background-color: var(--color-light-blue);
+}
 
 .home-content__mission-container {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+}
 
 .mission-container__mission-photo {
-  width: 100%; }
+  width: 100%;
+}
 
 .mission-container__mission-content {
-  width: 100%; }
+  width: 100%;
+  padding: 16px;
+}
+
+.mission-content__text {
+  font-size: var(--font-22);
+  line-height: var(--line-150);
+}
 
 @media only screen and (min-width: 768px) {
   .top {
     height: 547px;
-    background-image: url("../images/bg.jpg"); } }
+    background-image: url("../images/bg.jpg");
+  }
+}
 @media only screen and (min-width: 1024px) {
   .top__floating-container {
     position: absolute;
     top: 300px;
     flex-direction: row;
     justify-content: space-between;
-    width: 80%; }
+    width: 80%;
+  }
 
   .top__car-photo-container {
     display: block;
-    width: 500px; }
+    width: 500px;
+  }
 
   .home-content__welcome-container {
     width: 85%;
-    padding: 80px; }
+    padding: 80px;
+  }
 
   .welcome-container__general-info {
-    font-size: var(--font-32); }
+    font-size: var(--font-32);
+  }
 
-  .welcome-container {
+  .welcome-content-container {
     width: 100%;
-    flex-direction: row; }
+    flex-direction: row;
+  }
 
-  .welcome-container__content {
-    width: 50%; }
+  .welcome-content-container__content {
+    width: 50%;
+  }
 
-  .welcome-container__map-container {
-    width: 50%; }
+  .welcome-content-container__map-container {
+    width: 50%;
+  }
 
   .home-content__mission-container {
     width: 85%;
     padding: 80px;
-    flex-direction: row; }
+    flex-direction: row;
+  }
 
   .mission-container__mission-photo {
-    width: 50%; }
+    width: 50%;
+  }
 
   .mission-container__mission-content {
-    width: 50%; } }
+    width: 50%;
+    padding: 0;
+    padding-left: 30px;
+  }
+}
 
 /*# sourceMappingURL=Home.css.map */

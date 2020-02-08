@@ -26,20 +26,32 @@
 
 .footer__payment-logo-container {
     width: 80px;
+    margin: 0 35px;
 }
 
 .footer-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    line-height: var(--line-120);
 }
 
 .footer-info__desktop {
     display: none;
 }
 
+.footer-info__terms {
+    margin-top: 16px;
+}
+
 @media only screen and (min-width: 768px) {
+    .footer {
+        padding: 30px 0;
+    }
+
     .footer__content {
+        width: 80%;
+        max-width: 1280px;
         grid-template-columns: 4fr 1fr;
     }
 

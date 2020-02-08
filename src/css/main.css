@@ -5,13 +5,15 @@
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 /* Fix the bug that causes body go out of screen border and because of that horizontal scrolling. */
 /* https://stackoverflow.com/a/42798283/5184474 */
 html,
 body {
-  position: relative; }
+  position: relative;
+}
 
 /* http://meyerweb.com/eric/tools/css/reset/
     v2.0 | 20110126
@@ -103,7 +105,8 @@ video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 /* HTML5 display-role reset for older browsers */
 article,
@@ -117,46 +120,57 @@ hgroup,
 menu,
 nav,
 section {
-  display: block; }
+  display: block;
+}
 
 body {
-  line-height: 1; }
+  line-height: 1;
+}
 
 ol,
 ul {
-  list-style: none; }
+  list-style: none;
+}
 
 blockquote,
 q {
-  quotes: none; }
+  quotes: none;
+}
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
-  content: none; }
+  content: "";
+  content: none;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 body, p {
   margin: 0;
-  font-family: Lato; }
+  font-family: Lato;
+}
 
 .img-fluid {
   width: 100%;
-  height: auto; }
+  height: auto;
+}
 
 .pointer {
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 .rounded {
-  border-radius: 6px; }
+  border-radius: 6px;
+}
 
 :root {
   --color-description: #9E9E9E;
@@ -174,20 +188,26 @@ body, p {
   --font-22: 22px;
   --font-26: 26px;
   --font-32: 32px;
-  --line-150: 150%; }
+  --font-44: 44px;
+  --line-120: 120%;
+  --line-150: 150%;
+}
 
 .mb-16 {
-  margin-bottom: 16px; }
+  margin-bottom: 16px;
+}
 
 .mb-45 {
-  margin-bottom: 45px; }
+  margin-bottom: 45px;
+}
 
 .home {
   position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+}
 
 .top {
   height: 265px;
@@ -197,47 +217,78 @@ body, p {
   /* Center the image */
   background-repeat: no-repeat;
   /* Do not repeat the image */
-  background-size: cover; }
+  background-size: cover;
+}
 
 .top__floating-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 1280px; }
+  max-width: 1280px;
+}
 
 .top__car-photo-container {
-  display: none; }
+  display: none;
+}
 
 .home__home-content {
   width: 100%;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+}
 
 .home-content__outside-welcome-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%; }
+  width: 100%;
+}
 
 .home-content__welcome-container {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+}
 
 .welcome-container__general-info {
   padding: 16px;
   font-size: var(--font-22);
-  line-height: var(--line-150); }
+  line-height: var(--line-150);
+}
 
-.welcome-container {
-  display: flex;
-  flex-direction: column; }
-
-.welcome-container__content {
+.welcome-content-container {
   display: flex;
   flex-direction: column;
-  background-color: var(--color-blue); }
+}
+
+.welcome-content-container__content {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-blue);
+  padding: 40px;
+  font-size: var(--font-22);
+  line-height: var(--line-150);
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.welcome-content-container__header {
+  font-size: var(--font-44);
+  color: var(--color-white);
+}
+
+.welcome-content-container__wheel-chair-transfer-text {
+  margin-top: 40px;
+  font-size: var(--font-32);
+  line-height: var(--line-150);
+}
+
+.welcome-content-container__prices {
+  font-size: var(--font-32);
+  line-height: var(--line-150);
+  color: var(--color-white);
+}
 
 .home-content__outside-mission-container {
   display: flex;
@@ -245,61 +296,86 @@ body, p {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: var(--color-light-blue); }
+  background-color: var(--color-light-blue);
+}
 
 .home-content__mission-container {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+}
 
 .mission-container__mission-photo {
-  width: 100%; }
+  width: 100%;
+}
 
 .mission-container__mission-content {
-  width: 100%; }
+  width: 100%;
+  padding: 16px;
+}
+
+.mission-content__text {
+  font-size: var(--font-22);
+  line-height: var(--line-150);
+}
 
 @media only screen and (min-width: 768px) {
   .top {
     height: 547px;
-    background-image: url("../images/bg.jpg"); } }
+    background-image: url("../images/bg.jpg");
+  }
+}
 @media only screen and (min-width: 1024px) {
   .top__floating-container {
     position: absolute;
     top: 300px;
     flex-direction: row;
     justify-content: space-between;
-    width: 80%; }
+    width: 80%;
+  }
 
   .top__car-photo-container {
     display: block;
-    width: 500px; }
+    width: 500px;
+  }
 
   .home-content__welcome-container {
     width: 85%;
-    padding: 80px; }
+    padding: 80px;
+  }
 
   .welcome-container__general-info {
-    font-size: var(--font-32); }
+    font-size: var(--font-32);
+  }
 
-  .welcome-container {
+  .welcome-content-container {
     width: 100%;
-    flex-direction: row; }
+    flex-direction: row;
+  }
 
-  .welcome-container__content {
-    width: 50%; }
+  .welcome-content-container__content {
+    width: 50%;
+  }
 
-  .welcome-container__map-container {
-    width: 50%; }
+  .welcome-content-container__map-container {
+    width: 50%;
+  }
 
   .home-content__mission-container {
     width: 85%;
     padding: 80px;
-    flex-direction: row; }
+    flex-direction: row;
+  }
 
   .mission-container__mission-photo {
-    width: 50%; }
+    width: 50%;
+  }
 
   .mission-container__mission-content {
-    width: 50%; } }
+    width: 50%;
+    padding: 0;
+    padding-left: 30px;
+  }
+}
 :root {
   --color-description: #9E9E9E;
   --color-button: #1F1D1D;
@@ -316,31 +392,40 @@ body, p {
   --font-22: 22px;
   --font-26: 26px;
   --font-32: 32px;
-  --line-150: 150%; }
+  --font-44: 44px;
+  --line-120: 120%;
+  --line-150: 150%;
+}
 
 .mb-16 {
-  margin-bottom: 16px; }
+  margin-bottom: 16px;
+}
 
 .mb-45 {
-  margin-bottom: 45px; }
+  margin-bottom: 45px;
+}
 
 .navbar {
   width: 100%;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+}
 
 .navbar-mobile {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 16px; }
+  padding: 16px;
+}
 
 .navbar-mobile__logo-container {
-  height: 45px; }
+  height: 45px;
+}
 
 .navbar-mobile__menu {
-  display: none; }
+  display: none;
+}
 
 .navbar-desktop {
   display: none;
@@ -348,10 +433,12 @@ body, p {
   align-items: center;
   max-width: 1280px;
   padding-top: 18px;
-  padding-bottom: 18px; }
+  padding-bottom: 18px;
+}
 
 .navbar-desktop__logo-container {
-  height: 45px; }
+  height: 45px;
+}
 
 .call-btn {
   display: flex;
@@ -359,78 +446,100 @@ body, p {
   align-items: center;
   background-color: var(--color-red);
   padding: 8px 16px;
-  margin-left: 16px; }
+  margin-left: 16px;
+}
 
 .call-btn--mobile {
-  display: none; }
+  display: none;
+}
 
 .call-btn__phone-img {
-  height: 24px; }
+  height: 24px;
+}
 
 .call-btn__text {
   font-size: var(--font-22);
   font-weight: bold;
   color: var(--color-white);
-  margin-left: 10px; }
+  margin-left: 10px;
+}
 
 .navbar__navbar-links {
   display: flex;
-  margin-left: 16px; }
+  margin-left: 16px;
+}
 
 .navbar-links__navbar-link {
   font-size: var(--font-16);
   color: var(--color-button);
   text-decoration: underline;
-  padding-right: 16px; }
+  padding-right: 16px;
+}
 
 @media only screen and (min-width: 768px) {
   .call-btn--mobile {
-    display: block; } }
+    display: block;
+  }
+}
 @media only screen and (min-width: 1024px) {
   .navbar-mobile {
-    display: none; }
+    display: none;
+  }
 
   .navbar-desktop {
-    display: flex; } }
+    display: flex;
+  }
+}
 @media only screen and (min-width: 1280px) {
   .navbar-links__navbar-link {
     font-size: var(--font-22);
-    padding-right: 40px; } }
+    padding-right: 40px;
+  }
+}
 .reservation-form {
   display: flex;
   flex-direction: column;
   width: 100%;
   padding: 16px;
-  background-color: var(--color-white); }
+  background-color: var(--color-white);
+}
 
 .reservation-form__input {
   width: 100%;
   padding: 16px 26px;
   border: 1px solid var(--color-input-border);
   font-size: var(--font-22);
-  background-color: var(--color-input-background); }
+  background-color: var(--color-input-background);
+}
 
 .reservation-form__submit-btn {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 16px;
-  background-color: var(--color-red); }
+  background-color: var(--color-red);
+}
 
 .reservation-form__submit-text {
   color: var(--color-white);
-  font-size: 1.2em; }
+  font-size: 1.2em;
+}
 
 @media only screen and (min-width: 400px) {
   .reservation-form__submit-btn {
-    padding: 16px 26px; }
+    padding: 16px 26px;
+  }
 
   .reservation-form__submit-text {
-    font-size: 1.35em; } }
+    font-size: 1.35em;
+  }
+}
 @media only screen and (min-width: 768px) {
   .reservation-form {
     width: 425px;
-    padding: 40px; } }
+    padding: 40px;
+  }
+}
 :root {
   --color-description: #9E9E9E;
   --color-button: #1F1D1D;
@@ -447,13 +556,18 @@ body, p {
   --font-22: 22px;
   --font-26: 26px;
   --font-32: 32px;
-  --line-150: 150%; }
+  --font-44: 44px;
+  --line-120: 120%;
+  --line-150: 150%;
+}
 
 .mb-16 {
-  margin-bottom: 16px; }
+  margin-bottom: 16px;
+}
 
 .mb-45 {
-  margin-bottom: 45px; }
+  margin-bottom: 45px;
+}
 
 .footer {
   display: grid;
@@ -461,43 +575,67 @@ body, p {
   width: 100%;
   background-color: var(--color-footer);
   padding: 16px;
-  color: var(--color-white); }
+  color: var(--color-white);
+}
 
 .footer__content {
   display: grid;
-  max-width: 1440px; }
+  max-width: 1440px;
+}
 
 .footer-logos {
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+}
 
 .footer__payment-logo-container {
-  width: 80px; }
+  width: 80px;
+  margin: 0 35px;
+}
 
 .footer-info {
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+  line-height: var(--line-120);
+}
 
 .footer-info__desktop {
-  display: none; }
+  display: none;
+}
+
+.footer-info__terms {
+  margin-top: 16px;
+}
 
 @media only screen and (min-width: 768px) {
+  .footer {
+    padding: 30px 0;
+  }
+
   .footer__content {
-    grid-template-columns: 4fr 1fr; }
+    width: 80%;
+    max-width: 1280px;
+    grid-template-columns: 4fr 1fr;
+  }
 
   .footer-info__mobile {
-    display: none; }
+    display: none;
+  }
 
   .footer-info__desktop {
-    display: block; }
+    display: block;
+  }
 
   .footer-info {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2; }
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
 
   .footer-logos {
-    grid-column: 2 / 3; } }
+    grid-column: 2/3;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
