@@ -20,9 +20,11 @@ function NavBar() {
                 <div>
                     <img src={hamburger} alt="menu hamburger"/>
                 </div>
-                <div className="navbar-mobile__menu">
-                    <p>(425) 260 2121</p>   
-                </div>
+                <a href="tel:(425) 260 2121">
+                    <div className="navbar-mobile__menu">
+                        <p>(425) 260 2121</p>   
+                    </div>
+                </a>
             </div>
             <div className="navbar-desktop">
                 <div className="navbar-desktop__logo-container pointer">
@@ -30,21 +32,18 @@ function NavBar() {
                         <img className="img-fluid" src={logo} alt="company logo"/>
                     </Link>
                 </div>
-                <div className="call-btn rounded pointer">
-                    <img className="call-btn__phone-img" src={phone} alt="Press to call us"/>
-                    <span className="call-btn__text">(425) 260 2121</span>
-                </div>
+                <a href="tel:(425) 260 2121">
+                    <div className="call-btn rounded pointer">
+                        <img className="call-btn__phone-img" src={phone} alt="Press to call us"/>
+                        <span className="call-btn__text">(425) 260 2121</span>
+                    </div>
+                </a>
                 <div className="navbar__navbar-links">
                     <Link className="navbar-links__navbar-link" to="/">Home</Link>
                     <Link className="navbar-links__navbar-link" to="/about">About Us</Link>
                     <Link className="navbar-links__navbar-link" to="/reservation">Reservation</Link>
                     <Link className="navbar-links__navbar-link" to="/services">Services</Link>
                     <Link className="navbar-links__navbar-link" to="/contact">Contact Us</Link>
-                    {/* <a className="navbar-links__navbar-link" href="/">Home</a>
-                    <a className="navbar-links__navbar-link" href="/">About Us</a>
-                    <a className="navbar-links__navbar-link" href="/">Reservation</a>
-                    <a className="navbar-links__navbar-link" href="/">Services</a>
-                    <a className="navbar-links__navbar-link" href="/">Contact Us</a> */}
                 </div>
             </div>
         </div>
