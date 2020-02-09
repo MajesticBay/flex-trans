@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../../images/logo-cabulance.png';
 import phone from '../../images/phone.svg';
 import hamburger from '../../images/menu-hamburger.svg';
@@ -8,7 +9,9 @@ function NavBar() {
         <div className="navbar">
             <div className="navbar-mobile">
                 <div className="navbar-mobile__logo-container">
-                    <img className="img-fluid" src={logo} alt="company logo"/>
+                    <Link to="/">
+                        <img className="img-fluid" src={logo} alt="company logo"/>
+                    </Link>
                 </div>
                 <div className="call-btn call-btn--mobile rounded pointer">
                     <img className="call-btn__phone-img" src={phone} alt="Press to call us"/>
@@ -23,18 +26,25 @@ function NavBar() {
             </div>
             <div className="navbar-desktop">
                 <div className="navbar-desktop__logo-container pointer">
-                    <img className="img-fluid" src={logo} alt="company logo"/>
+                    <Link to="/">
+                        <img className="img-fluid" src={logo} alt="company logo"/>
+                    </Link>
                 </div>
                 <div className="call-btn rounded pointer">
                     <img className="call-btn__phone-img" src={phone} alt="Press to call us"/>
                     <span className="call-btn__text">(425) 260 2121</span>
                 </div>
                 <div className="navbar__navbar-links">
-                    <a className="navbar-links__navbar-link" href="/home">Home</a>
-                    <a className="navbar-links__navbar-link" href="/about-us">About Us</a>
-                    <a className="navbar-links__navbar-link" href="/reservation">Reservation</a>
-                    <a className="navbar-links__navbar-link" href="/services">Services</a>
-                    <a className="navbar-links__navbar-link" href="/contact-us">Contact Us</a>
+                    <Link className="navbar-links__navbar-link" to="/">Home</Link>
+                    <Link className="navbar-links__navbar-link" to="/about">About Us</Link>
+                    <Link className="navbar-links__navbar-link" to="/reservation">Reservation</Link>
+                    <Link className="navbar-links__navbar-link" to="/services">Services</Link>
+                    <Link className="navbar-links__navbar-link" to="/contact">Contact Us</Link>
+                    {/* <a className="navbar-links__navbar-link" href="/">Home</a>
+                    <a className="navbar-links__navbar-link" href="/">About Us</a>
+                    <a className="navbar-links__navbar-link" href="/">Reservation</a>
+                    <a className="navbar-links__navbar-link" href="/">Services</a>
+                    <a className="navbar-links__navbar-link" href="/">Contact Us</a> */}
                 </div>
             </div>
         </div>
