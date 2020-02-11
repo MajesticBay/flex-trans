@@ -1,0 +1,46 @@
+
+.home-content__outside-mission-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--color-light-blue);
+}
+
+.home-content__mission-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.mission-container__mission-photo {
+    width: 100%;
+}
+
+.mission-container__mission-content {
+    width: 100%;
+    padding: 16px;
+}
+
+.mission-content__text {
+    font-size: var(--font-22);
+    line-height: var(--line-150);
+}
+
+@media only screen and (min-width: 1024px) {
+    .home-content__mission-container {
+        width: 85%;
+        padding: 80px;
+        flex-direction: row;
+    }
+
+    .mission-container__mission-photo {
+        width: 50%;
+    }
+
+    .mission-container__mission-content {
+        width: 50%;
+        padding: 0;
+        padding-left: 30px;
+    }
+}

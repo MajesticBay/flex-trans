@@ -295,34 +295,6 @@ body, p {
   color: var(--color-white);
 }
 
-.home-content__outside-mission-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  background-color: var(--color-light-blue);
-}
-
-.home-content__mission-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.mission-container__mission-photo {
-  width: 100%;
-}
-
-.mission-container__mission-content {
-  width: 100%;
-  padding: 16px;
-}
-
-.mission-content__text {
-  font-size: var(--font-22);
-  line-height: var(--line-150);
-}
-
 @media only screen and (min-width: 768px) {
   .top {
     height: 547px;
@@ -363,22 +335,6 @@ body, p {
 
   .welcome-content-container__map-container {
     width: 50%;
-  }
-
-  .home-content__mission-container {
-    width: 85%;
-    padding: 80px;
-    flex-direction: row;
-  }
-
-  .mission-container__mission-photo {
-    width: 50%;
-  }
-
-  .mission-container__mission-content {
-    width: 50%;
-    padding: 0;
-    padding-left: 30px;
   }
 }
 :root {
@@ -671,5 +627,24 @@ body, p {
     grid-column: 2/3;
   }
 }
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */
 
 /*# sourceMappingURL=main.css.map */
