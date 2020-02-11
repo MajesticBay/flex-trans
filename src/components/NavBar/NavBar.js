@@ -20,24 +20,26 @@ function NavBar() {
                 <div>
                     <img src={hamburger} alt="menu hamburger"/>
                 </div>
-                <a href="tel:(425) 260 2121">
-                    <div className="navbar-mobile__menu">
-                        <p>(425) 260 2121</p>   
-                    </div>
-                </a>
+                <div className="navbar-mobile__menu">
+                    <a href="tel:(425) 260 2121">
+                        <p>(425) 260 2121</p>
+                    </a>
+                </div>
             </div>
             <div className="navbar-desktop">
-                <div className="navbar-desktop__logo-container pointer">
-                    <Link to="/">
-                        <img className="img-fluid" src={logo} alt="company logo"/>
-                    </Link>
-                </div>
-                <a href="tel:(425) 260 2121">
-                    <div className="call-btn rounded pointer">
-                        <img className="call-btn__phone-img" src={phone} alt="Press to call us"/>
-                        <span className="call-btn__text">(425) 260 2121</span>
+                <div className="navbar-desktop__navbar-desktop-left">
+                    <div className="navbar-desktop__logo-container pointer">
+                        <Link to="/">
+                            <img className="img-fluid" src={logo} alt="company logo"/>
+                        </Link>
                     </div>
-                </a>
+                    <a href="tel:(425) 260 2121">
+                        <div className="call-btn rounded pointer">
+                            <img className="call-btn__phone-img" src={phone} alt="Press to call us"/>
+                            <span className="call-btn__text">(425) 260 2121</span>
+                        </div>
+                    </a>
+                </div>
                 <div className="navbar__navbar-links">
                     <Link className="navbar-links__navbar-link" to="/">Home</Link>
                     <Link className="navbar-links__navbar-link" to="/about">About Us</Link>
