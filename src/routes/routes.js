@@ -11,8 +11,7 @@ export default (
     <Switch>
         <Route exact path="/" component={ Home }/>
         <Route path="/about" component={ AboutUs }/>
-        <Route path="/reservation" component={ Reservation }/>
-        <Route path="/services" component={ Services }/>
+        <Route path="/reserve" component={ Reservation }/>
         <Route path="/contact" component={ ContactUs }/>
     </Switch>
 )

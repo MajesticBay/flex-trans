@@ -43,8 +43,7 @@ function NavBar() {
                 <div className="navbar__navbar-links">
                     <Link className="navbar-links__navbar-link" to="/">Home</Link>
                     <Link className="navbar-links__navbar-link" to="/about">About Us</Link>
-                    <Link className="navbar-links__navbar-link" to="/reservation">Reservation</Link>
-                    <Link className="navbar-links__navbar-link" to="/services">Services</Link>
+                    <Link className="navbar-links__navbar-link" to="/reserve">Reserve a trip</Link>
                     <Link className="navbar-links__navbar-link" to="/contact">Contact Us</Link>
                 </div>
             </div>
