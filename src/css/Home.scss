@@ -6,20 +6,6 @@
     align-items: center;
 }
 
-.top {
-    // background-image: url('/bg.jpg');
-    height: 265px;
-    width: 100%;
-    background-image: url('../images/bg-mobile.png');
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover;
-    // display: grid;
-    // justify-items: center;
-    // gap: 30px;
-    // align-items: center;
-}
-
 .top__floating-container {
     display: flex;
     flex-direction: column;
@@ -94,13 +80,6 @@
     font-size: var(--font-32);
     line-height: var(--line-150);
     color: var(--color-white);
-}
-
-@media only screen and (min-width: 768px) {
-    .top {
-        height: 547px;
-        background-image: url('../images/bg.jpg');
-    }
 }
 
 @media only screen and (min-width: 1024px) {

@@ -1,17 +1,16 @@
 import React from 'react';
 
+import Top from '../Top/Top';
 import ReservationForm from '../ReservationForm/ReservaitonForm';
 import Mission from '../Mission/Mission';
 import fordtransit from '../../images/ford-transit-home-page.png';
 import map from '../../images/map.png';
-// import missionPhoto from '../../images/mission-photo.png';
 
 function Home() {
     return (
         <div>
             <div className="home">
-                <div className="top">
-                </div>
+                <Top/>
                 <div className="top__floating-container">
                     <ReservationForm/>
                     <div className="top__car-photo-container">

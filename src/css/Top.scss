@@ -1,0 +1,20 @@
+.top {
+    // background-image: url('/bg.jpg');
+    height: 265px;
+    width: 100%;
+    background-image: url('../images/bg-mobile.png');
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    // display: grid;
+    // justify-items: center;
+    // gap: 30px;
+    // align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .top {
+        height: 547px;
+        background-image: url('../images/bg.jpg');
+    }
+}
