@@ -214,18 +214,6 @@ body, p {
   align-items: center;
 }
 
-.top__floating-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 1280px;
-}
-
-.top__car-photo-container {
-  display: none;
-}
-
 .home__home-content {
   width: 100%;
   display: flex;
@@ -285,22 +273,11 @@ body, p {
 }
 
 @media only screen and (min-width: 1024px) {
-  .top__floating-container {
-    position: absolute;
-    top: 300px;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 80%;
-  }
-
-  .top__car-photo-container {
-    display: block;
-    width: 500px;
-  }
-
   .home-content__welcome-container {
     width: 85%;
-    padding: 80px;
+    max-width: 1280px;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 
   .welcome-container__general-info {
@@ -466,6 +443,32 @@ body, p {
     background-image: url("../images/bg.jpg");
   }
 }
+.top__floating-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1280px;
+}
+
+.top__car-photo-container {
+  display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  .top__floating-container {
+    position: absolute;
+    top: 300px;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+  }
+
+  .top__car-photo-container {
+    display: block;
+    width: 500px;
+  }
+}
 .reservation-form {
   display: flex;
   flex-direction: column;
@@ -561,7 +564,9 @@ body, p {
 @media only screen and (min-width: 1024px) {
   .home-content__mission-container {
     width: 85%;
-    padding: 80px;
+    max-width: 1280px;
+    padding-top: 80px;
+    padding-bottom: 80px;
     flex-direction: row;
   }
 
@@ -672,36 +677,29 @@ body, p {
     grid-column: 2/3;
   }
 }
+.about-us {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-us__description-container {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
 .about-us__services {
   display: flex;
 }
 
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
+@media only screen and (min-width: 1024px) {
+  .about-us__description-container {
+    width: 85%;
+    max-width: 1280px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */

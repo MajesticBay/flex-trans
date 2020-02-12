@@ -1,34 +1,25 @@
+.about-us {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-us__description-container {
+  width: 100%;
+}
+
 .about-us__services {
   display: flex;
 }
 
-/*# sourceMappingURL=AboutUs.css.map */
-/*# sourceMappingURL=AboutUs.css.map */
-/*# sourceMappingURL=aboutus.css.map */
-/*# sourceMappingURL=aboutus.css.map */
-/*# sourceMappingURL=aboutus.css.map */
-/*# sourceMappingURL=aboutus.css.map */
-/*# sourceMappingURL=aboutus.css.map */
-/*# sourceMappingURL=aboutus.css.map */
-/*# sourceMappingURL=aboutus.css.map */
-/*# sourceMappingURL=aboutus.css.map */
-/*# sourceMappingURL=aboutus.css.map */
-/*# sourceMappingURL=aboutus.css.map */
-/*# sourceMappingURL=aboutus.css.map */
-/*# sourceMappingURL=aboutus.css.map */
-/*# sourceMappingURL=aboutus.css.map */
-/*# sourceMappingURL=aboutus.css.map */
-/*# sourceMappingURL=aboutus.css.map */
-/*# sourceMappingURL=aboutus.css.map */
-/*# sourceMappingURL=aboutus.css.map */
-/*# sourceMappingURL=aboutus.css.map */
-/*# sourceMappingURL=aboutus.css.map */
-/*# sourceMappingURL=aboutus.css.map */
-/*# sourceMappingURL=aboutus.css.map */
-/*# sourceMappingURL=aboutus.css.map */
-/*# sourceMappingURL=aboutus.css.map */
-/*# sourceMappingURL=aboutus.css.map */
-/*# sourceMappingURL=aboutus.css.map */
-/*# sourceMappingURL=aboutus.css.map */
+@media only screen and (min-width: 1024px) {
+  .about-us__description-container {
+    max-width: 1280px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
 
-/*# sourceMappingURL=aboutus.css.map */
+/*# sourceMappingURL=AboutUs.css.map */
