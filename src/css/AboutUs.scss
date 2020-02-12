@@ -13,7 +13,28 @@
 }
 
 .about-us__services {
+    width: 100%;
     display: flex;
+    flex-direction: column;
+}
+
+.about-us-services__services-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-us__fleet {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-us-fleet__description {
+    width: 100%;
+}
+
+.about-us-fleet_car-container {
+    width: 100%;
+    background-color: var(--color-blue);
 }
 
 @media only screen and (min-width: 1024px) {
@@ -22,5 +43,29 @@
         max-width: 1280px;
         padding-top: 80px;
         padding-bottom: 80px;
+    }
+
+    .about-us__services {
+        max-width: 1280px;
+    }
+
+    .about-us-services__services-container {
+        flex-direction: row;
+    }
+
+    .about-us__fleet {
+        width: 100%;
+        max-width: 1280px;
+        flex-direction: row;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .about-us-fleet__description {
+        width: 50%;
+    }
+
+    .about-us-fleet_car-container {
+        width: 50%;
     }
 }
