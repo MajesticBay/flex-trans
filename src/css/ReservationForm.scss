@@ -57,7 +57,8 @@
 
 @media only screen and (min-width: 768px) {
     .reservation-form {
-        width: 425px;
+        width: 100%;
+        max-width: 534px;
         padding: 40px;
     }
 
