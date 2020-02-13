@@ -2,9 +2,7 @@ import React from 'react';
 
 import Top from '../Top/Top';
 import TalkingCar from '../TalkingCar/TalkingCar';
-import ReservationForm from '../ReservationForm/ReservaitonForm';
 import Mission from '../Mission/Mission';
-import fordtransit from '../../images/ford-transit-right.png';
 import map from '../../images/map.png';
 
 function Home() {
