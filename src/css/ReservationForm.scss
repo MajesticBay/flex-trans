@@ -14,21 +14,22 @@
     display: none;
     position: absolute;
     right: -49px;
-    bottom: 40px;
+    bottom: 25px;
     height: 0;
     width: 0;
     border-top: 25px solid transparent;
     border-bottom: 25px solid transparent;
     border-right: 25px solid transparent;
-    border-left: 25px solid var(--color-white);
+    border-left: 35px solid var(--color-white);
     background-color: transparent;
 }
 
 .reservation-form__input {
     width: 100%;
-    padding: 16px 26px;
+    padding: .5em 1em;
+    margin-bottom: .5em;
     border: 1px solid var(--color-input-border);
-    font-size: var(--font-22);
+    font-size: 1.15em;
     background-color: var(--color-input-background);
 }
 
@@ -47,11 +48,12 @@
 
 @media only screen and (min-width: 400px) {
     .reservation-form__submit-btn {
-        padding: 16px 26px;
+        padding: 1em 1.2em;
+        margin-top: 2em;
     }
 
     .reservation-form__submit-text {
-        font-size: 1.35em;
+        font-size: 1.15em;
     }
 }
 
@@ -59,7 +61,7 @@
     .reservation-form {
         width: 100%;
         max-width: 534px;
-        padding: 2em;
+        padding: 1.5em;
     }
 
     .reservation-form__triangle {
