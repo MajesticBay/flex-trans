@@ -5,7 +5,7 @@ import Mission from '../Mission/Mission';
 import aboutUsOne from '../../images/about-us1.png';
 import aboutUsTwo from '../../images/about-us2.png';
 import aboutUsThree from '../../images/about-us3.png';
-import fordtransit from '../../images/ford-transit-home-page.png';
+import fordtransit from '../../images/ford-transit-right.png';
 
 function AboutUs() {
   return (
@@ -40,7 +40,7 @@ function AboutUs() {
           <p>We provide transportation on fully equipped and inspected 2015 Ford Transit Wheelchair Van. </p>
         </div>
         <div className="about-us-fleet_car-container">
-          <img className="img-fluid" src={fordtransit}/>
+          <img className="img-fluid" src={fordtransit} alt="Ford Transit"/>
         </div>
       </div>
       <Mission/>

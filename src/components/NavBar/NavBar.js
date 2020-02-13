@@ -10,7 +10,7 @@ function NavBar() {
             <div className="navbar-mobile">
                 <div className="navbar-mobile__logo-container">
                     <Link to="/">
-                        <img className="img-fluid" src={logo} alt="company logo"/>
+                        <img className="img-fluid" src={logo} alt="Flex-trans logo"/>
                     </Link>
                 </div>
                 <div className="call-btn call-btn--mobile rounded pointer">
@@ -18,7 +18,7 @@ function NavBar() {
                     <span className="call-btn__text">(425) 260 2121</span>
                 </div>
                 <div>
-                    <img src={hamburger} alt="menu hamburger"/>
+                    <img src={hamburger} alt="Tap to open the menu"/>
                 </div>
                 <div className="navbar-mobile__menu">
                     <a href="tel:(425) 260 2121">
@@ -30,7 +30,7 @@ function NavBar() {
                 <div className="navbar-desktop__navbar-desktop-left">
                     <div className="navbar-desktop__logo-container pointer">
                         <Link to="/">
-                            <img className="img-fluid" src={logo} alt="company logo"/>
+                            <img className="img-fluid" src={logo} alt="Flex-trans logo"/>
                         </Link>
                     </div>
                     <a href="tel:(425) 260 2121">
