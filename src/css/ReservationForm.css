@@ -56,7 +56,7 @@
   .reservation-form {
     width: 100%;
     max-width: 534px;
-    padding: 40px;
+    padding: 2em;
   }
 
   .reservation-form__triangle {

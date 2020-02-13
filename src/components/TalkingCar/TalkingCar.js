@@ -5,7 +5,9 @@ import fordtransit from '../../images/ford-transit.png';
 function TalkingCar() {
     return (
         <div className="top__floating-container">
-            <ReservationForm/>
+            <div>
+                <ReservationForm/>
+            </div>
             <div className="top__car-photo-container">
                 <img className="img-fluid" src={fordtransit} alt="Ford Transit Wheelchair Vagon"/>
             </div>
