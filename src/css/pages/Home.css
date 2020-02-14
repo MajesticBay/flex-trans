@@ -68,8 +68,8 @@
   .home-content__welcome-container {
     width: 67%;
     max-width: 1280px;
-    padding-top: 200px;
-    padding-bottom: 80px;
+    padding-top: 11rem;
+    padding-bottom: 8rem;
   }
 
   .welcome-container__general-info {

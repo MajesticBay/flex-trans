@@ -8,6 +8,11 @@ body, p {
   height: auto;
 }
 
+.img-fluid--no-width {
+  height: auto;
+  max-height: -webkit-fill-available;
+}
+
 .pointer {
   cursor: pointer;
 }

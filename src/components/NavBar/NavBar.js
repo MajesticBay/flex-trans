@@ -8,15 +8,19 @@ function NavBar() {
     return (
         <div className="navbar">
             <div className="navbar-mobile">
-                <div className="navbar-mobile__logo-container">
-                    <Link to="/">
-                        <img className="img-fluid" src={logo} alt="Flex-trans logo"/>
-                    </Link>
-                </div>
-                <div className="call-btn call-btn--mobile rounded pointer">
-                    <img className="call-btn__phone-img" src={phone} alt="Press to call us"/>
-                    <span className="call-btn__text">(425) 260 2121</span>
-                </div>
+                <Link to="/">
+                    <div className="navbar-mobile__logo-container">
+                        <img className="img-fluid--no-width" src={logo} alt="Flex-trans logo"/>
+                    </div>
+                </Link>
+                <a href="tel:(425) 260 2121">
+                    <div className="call-btn rounded pointer">
+                        <div className="call-btn__phone-img-container">
+                            <img className="call-btn__phone-img" src={phone} alt="Press to call us"/>
+                        </div>
+                        <span className="call-btn__text">(425) 260 2121</span>
+                    </div>
+                </a>
                 <div>
                     <img src={hamburger} alt="Tap to open the menu"/>
                 </div>
@@ -28,14 +32,16 @@ function NavBar() {
             </div>
             <div className="navbar-desktop">
                 <div className="navbar-desktop__navbar-desktop-left">
-                    <div className="navbar-desktop__logo-container pointer">
-                        <Link to="/">
-                            <img className="img-fluid" src={logo} alt="Flex-trans logo"/>
-                        </Link>
-                    </div>
+                    <Link to="/">
+                        <div className="navbar-desktop__logo-container pointer">
+                            <img className="img-fluid--no-width" src={logo} alt="Flex-trans logo"/>
+                        </div>
+                    </Link>
                     <a href="tel:(425) 260 2121">
                         <div className="call-btn rounded pointer">
-                            <img className="call-btn__phone-img" src={phone} alt="Press to call us"/>
+                            <div className="call-btn__phone-img-container">
+                                <img className="img-fluid--no-width" src={phone} alt="Press to call us"/>
+                            </div>
                             <span className="call-btn__text">(425) 260 2121</span>
                         </div>
                     </a>
