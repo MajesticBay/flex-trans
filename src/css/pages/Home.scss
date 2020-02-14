@@ -73,12 +73,14 @@
     .home-content__welcome-container {
         width: 67%;
         max-width: 1280px;
-        padding-top: 11rem;
+        padding-top: 14rem;
         padding-bottom: 8rem;
     }
 
     .welcome-container__general-info {
-        font-size: var(--font-32);
+        padding: 0;
+        margin-bottom: 6rem;
+        font-size: var(--font-2-2);
     }
 
     .welcome-content-container {
