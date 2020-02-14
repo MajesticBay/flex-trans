@@ -26,10 +26,10 @@
 
 .reservation-form__input {
     width: 100%;
-    padding: .5em 1em;
-    margin-bottom: .5em;
+    padding: .5rem 1rem;
+    margin-bottom: .5rem;
     border: 1px solid var(--color-input-border);
-    font-size: 1.15em;
+    font-size: 1.15rem;
     background-color: var(--color-input-background);
 }
 
@@ -43,17 +43,17 @@
 
 .reservation-form__submit-text {
     color: var(--color-white);
-    font-size: 1.2em;
+    font-size: 1.2rem;
 }
 
 @media only screen and (min-width: 400px) {
     .reservation-form__submit-btn {
-        padding: 1em 1.2em;
-        margin-top: 2em;
+        padding: 1rem 1.2rem;
+        margin-top: 2rem;
     }
 
     .reservation-form__submit-text {
-        font-size: 1.15em;
+        font-size: 1.15rem;
     }
 }
 
@@ -61,7 +61,7 @@
     .reservation-form {
         width: 100%;
         max-width: 534px;
-        padding: 1.5em;
+        padding: 1.5rem;
     }
 
     .reservation-form__triangle {

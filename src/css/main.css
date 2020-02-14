@@ -278,7 +278,7 @@ body, p {
 
 @media only screen and (min-width: 1024px) {
   .home-content__welcome-container {
-    width: 85%;
+    width: 67%;
     max-width: 1280px;
     padding-top: 200px;
     padding-bottom: 80px;
@@ -298,6 +298,74 @@ body, p {
   }
 
   .welcome-content-container__map-container {
+    width: 50%;
+  }
+}
+.about-us {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-us__description-container {
+  width: 100%;
+}
+
+.about-us__services {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-us-services__services-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-us__fleet {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-us-fleet__description {
+  width: 100%;
+}
+
+.about-us-fleet_car-container {
+  width: 100%;
+  background-color: var(--color-blue);
+}
+
+@media only screen and (min-width: 1024px) {
+  .about-us__description-container {
+    max-width: 1280px;
+    padding-top: 200px;
+    padding-bottom: 80px;
+  }
+
+  .about-us__services {
+    max-width: 1280px;
+  }
+
+  .about-us-services__services-container {
+    flex-direction: row;
+  }
+
+  .about-us__fleet {
+    width: 100%;
+    max-width: 1280px;
+    flex-direction: row;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .about-us-fleet__description {
+    width: 50%;
+  }
+
+  .about-us-fleet_car-container {
     width: 50%;
   }
 }
@@ -356,7 +424,7 @@ body, p {
   display: none;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  grid-gap: 5em;
+  grid-gap: 5rem;
   max-width: 1280px;
   padding-top: 18px;
   padding-bottom: 18px;
@@ -498,10 +566,10 @@ body, p {
 
 .reservation-form__input {
   width: 100%;
-  padding: 0.5em 1em;
-  margin-bottom: 0.5em;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
   border: 1px solid var(--color-input-border);
-  font-size: 1.15em;
+  font-size: 1.15rem;
   background-color: var(--color-input-background);
 }
 
@@ -515,24 +583,24 @@ body, p {
 
 .reservation-form__submit-text {
   color: var(--color-white);
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
 @media only screen and (min-width: 400px) {
   .reservation-form__submit-btn {
-    padding: 1em 1.2em;
-    margin-top: 2em;
+    padding: 1rem 1.2rem;
+    margin-top: 2rem;
   }
 
   .reservation-form__submit-text {
-    font-size: 1.15em;
+    font-size: 1.15rem;
   }
 }
 @media only screen and (min-width: 768px) {
   .reservation-form {
     width: 100%;
     max-width: 534px;
-    padding: 1.5em;
+    padding: 1.5rem;
   }
 
   .reservation-form__triangle {
@@ -569,7 +637,7 @@ body, p {
 
 @media only screen and (min-width: 1024px) {
   .home-content__mission-container {
-    width: 85%;
+    width: 67%;
     max-width: 1280px;
     padding-top: 80px;
     padding-bottom: 80px;
@@ -683,86 +751,5 @@ body, p {
     grid-column: 2/3;
   }
 }
-.about-us {
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.about-us__description-container {
-  width: 100%;
-}
-
-.about-us__services {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.about-us-services__services-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.about-us__fleet {
-  display: flex;
-  flex-direction: column;
-}
-
-.about-us-fleet__description {
-  width: 100%;
-}
-
-.about-us-fleet_car-container {
-  width: 100%;
-  background-color: var(--color-blue);
-}
-
-@media only screen and (min-width: 1024px) {
-  .about-us__description-container {
-    max-width: 1280px;
-    padding-top: 200px;
-    padding-bottom: 80px;
-  }
-
-  .about-us__services {
-    max-width: 1280px;
-  }
-
-  .about-us-services__services-container {
-    flex-direction: row;
-  }
-
-  .about-us__fleet {
-    width: 100%;
-    max-width: 1280px;
-    flex-direction: row;
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-
-  .about-us-fleet__description {
-    width: 50%;
-  }
-
-  .about-us-fleet_car-container {
-    width: 50%;
-  }
-}
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
 
 /*# sourceMappingURL=main.css.map */

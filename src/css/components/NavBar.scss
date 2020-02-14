@@ -1,4 +1,4 @@
-@import 'placeholders';
+@import '../placeholders';
 
 .navbar {
     width: 100%;
@@ -26,7 +26,7 @@
     display: none;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-gap: 5em;
+    grid-gap: 5rem;
     // flex-direction: row;
     // align-items: center;
     max-width: 1280px;
