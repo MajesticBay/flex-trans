@@ -62,7 +62,7 @@
 }
 
 .call-btn__text {
-    font-size: var(--font-22);
+    font-size: var(--font-2-2);
     font-weight: bold;
     color: var(--color-white);
     margin-left: 10px;
@@ -76,7 +76,8 @@
 }
 
 .navbar-links__navbar-link {
-    font-size: var(--font-16);
+    // font-size: var(--font-16);
+    font-size: var(--font-1-6);
     color: var(--color-button);
     text-decoration: underline;
     padding-right: 16px;
@@ -102,7 +103,7 @@
 
 @media only screen and (min-width: 1280px) {
     .navbar-links__navbar-link {
-        font-size: var(--font-22);
+        font-size: var(--font-2-2);
         padding-right: 40px;
     }
 }

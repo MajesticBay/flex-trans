@@ -1,7 +1,3 @@
-html {
-  font-size: 62.5%;
-}
-
 a {
   color: inherit;
 }
@@ -198,8 +194,17 @@ body, p {
   --font-26: 26px;
   --font-32: 32px;
   --font-44: 44px;
+  --font-1-6: 1.6rem;
+  --font-2-2: 2.2rem;
+  --font-2-6: 2.6rem;
+  --font-3-2: 3.2rem;
+  --font-4-4: 4.4rem;
   --line-120: 120%;
   --line-150: 150%;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 .mb-16 {
@@ -386,8 +391,17 @@ body, p {
   --font-26: 26px;
   --font-32: 32px;
   --font-44: 44px;
+  --font-1-6: 1.6rem;
+  --font-2-2: 2.2rem;
+  --font-2-6: 2.6rem;
+  --font-3-2: 3.2rem;
+  --font-4-4: 4.4rem;
   --line-120: 120%;
   --line-150: 150%;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 .mb-16 {
@@ -458,7 +472,7 @@ body, p {
 }
 
 .call-btn__text {
-  font-size: var(--font-22);
+  font-size: var(--font-2-2);
   font-weight: bold;
   color: var(--color-white);
   margin-left: 10px;
@@ -471,7 +485,7 @@ body, p {
 }
 
 .navbar-links__navbar-link {
-  font-size: var(--font-16);
+  font-size: var(--font-1-6);
   color: var(--color-button);
   text-decoration: underline;
   padding-right: 16px;
@@ -494,7 +508,7 @@ body, p {
 }
 @media only screen and (min-width: 1280px) {
   .navbar-links__navbar-link {
-    font-size: var(--font-22);
+    font-size: var(--font-2-2);
     padding-right: 40px;
   }
 }
@@ -671,8 +685,17 @@ body, p {
   --font-26: 26px;
   --font-32: 32px;
   --font-44: 44px;
+  --font-1-6: 1.6rem;
+  --font-2-2: 2.2rem;
+  --font-2-6: 2.6rem;
+  --font-3-2: 3.2rem;
+  --font-4-4: 4.4rem;
   --line-120: 120%;
   --line-150: 150%;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 .mb-16 {
