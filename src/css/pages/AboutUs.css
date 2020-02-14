@@ -1,3 +1,42 @@
+:root {
+  --color-description: #9E9E9E;
+  --color-button: #1F1D1D;
+  --color-base: #000080;
+  --color-red: #DF2C21;
+  --color-blue: #80B9CD;
+  --color-light-blue: #E3F2F8;
+  --color-white: #FFFFFF;
+  --color-green: #4DDC40;
+  --color-footer: #232121;
+  --color-input-border: #D1D1D1;
+  --color-input-background: #F6F6F6;
+  --font-16: 16px;
+  --font-22: 22px;
+  --font-26: 26px;
+  --font-32: 32px;
+  --font-44: 44px;
+  --font-1-6: 1.6rem;
+  --font-2: 2rem;
+  --font-2-2: 2.2rem;
+  --font-2-6: 2.6rem;
+  --font-3-2: 3.2rem;
+  --font-4-4: 4.4rem;
+  --line-120: 120%;
+  --line-150: 150%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.mb-45 {
+  margin-bottom: 45px;
+}
+
 .about-us {
   position: relative;
   width: 100%;
@@ -8,6 +47,14 @@
 
 .about-us__description-container {
   width: 100%;
+}
+
+.about-us__header {
+  font-size: var(--font-2-6);
+}
+
+.about-us__base-text {
+  font-size: var(--font-1-6);
 }
 
 .about-us__services {
@@ -37,6 +84,7 @@
 
 @media only screen and (min-width: 1024px) {
   .about-us__description-container {
+    width: 67%;
     max-width: 1280px;
     padding-top: 20rem;
     padding-bottom: 80px;
@@ -66,5 +114,11 @@
     width: 50%;
   }
 }
-
 /*# sourceMappingURL=AboutUs.css.map */
+/*# sourceMappingURL=AboutUs.css.map */
+/*# sourceMappingURL=aboutus.css.map */
+/*# sourceMappingURL=aboutus.css.map */
+/*# sourceMappingURL=aboutus.css.map */
+/*# sourceMappingURL=aboutus.css.map */
+
+/*# sourceMappingURL=aboutus.css.map */

@@ -13,12 +13,12 @@ function AboutUs() {
       <Top/>
       <TalkingCar/>
       <div className="about-us__description-container">
-        <h3>About us</h3>
-        <p>Flex-Trans was created with the vision of providing the best quality care and customer service in the non-emergent transportation industry.
+        <h3 className="about-us__header">About us</h3>
+        <p className="about-us__base-text">Flex-Trans was created with the vision of providing the best quality care and customer service in the non-emergent transportation industry.
   The founders of Flex-Trans saw a need for professional, timely, and courteous service and have set the standard for delivering on these promises.  Our professional and qualified staff is trained to be compassionate and understanding to the needs of our clients. From the dispatcher to the drivers you can always expect and deserve 5-star service from Flex-Trans.</p>
       </div>
       <div className="about-us__services">
-        <h3>We provide Services</h3>
+        <h3 className="about-us__header">We provide Services</h3>
         <div className="about-us-services__services-container">
           <div>
             <img className="img-fluid" src={aboutUsOne} alt="Transportation to Doctor's appointment"/>
@@ -36,8 +36,8 @@ function AboutUs() {
       </div>
       <div className="about-us__fleet">
         <div className="about-us-fleet__description">
-          <h3>Our fleet</h3>
-          <p>We provide transportation on fully equipped and inspected 2015 Ford Transit Wheelchair Van. </p>
+          <h3 className="about-us__header">Our fleet</h3>
+          <p className="about-us__base-text">We provide transportation on fully equipped and inspected 2015 Ford Transit Wheelchair Van. </p>
         </div>
         <div className="about-us-fleet_car-container">
           <img className="img-fluid" src={fordtransitright} alt="Ford Transit"/>

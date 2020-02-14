@@ -1,3 +1,5 @@
+@import '../placeholders.scss';
+
 .about-us {
     position: relative;
     width: 100%;
@@ -10,6 +12,14 @@
     width: 100%;
     // padding-top: 80px;
     // padding-bottom: 80px;
+}
+
+.about-us__header {
+    font-size: var(--font-2-6);
+}
+
+.about-us__base-text {
+    font-size: var(--font-1-6);
 }
 
 .about-us__services {
@@ -39,7 +49,7 @@
 
 @media only screen and (min-width: 1024px) {
     .about-us__description-container {
-        // width: 85%;
+        width: 67%;
         max-width: 1280px;
         padding-top: 20rem;
         padding-bottom: 80px;
