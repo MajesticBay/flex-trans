@@ -195,6 +195,7 @@ body, p {
   --font-32: 32px;
   --font-44: 44px;
   --font-1-6: 1.6rem;
+  --font-2: 2rem;
   --font-2-2: 2.2rem;
   --font-2-6: 2.6rem;
   --font-3-2: 3.2rem;
@@ -392,6 +393,7 @@ html {
   --font-32: 32px;
   --font-44: 44px;
   --font-1-6: 1.6rem;
+  --font-2: 2rem;
   --font-2-2: 2.2rem;
   --font-2-6: 2.6rem;
   --font-3-2: 3.2rem;
@@ -580,10 +582,10 @@ html {
 
 .reservation-form__input {
   width: 100%;
-  padding: 0.5rem 1rem;
-  margin-bottom: 0.5rem;
+  padding: 1.6rem 2rem;
+  margin-bottom: 1rem;
   border: 1px solid var(--color-input-border);
-  font-size: 1.15rem;
+  font-size: var(--font-1-6);
   background-color: var(--color-input-background);
 }
 
@@ -597,7 +599,7 @@ html {
 
 .reservation-form__submit-text {
   color: var(--color-white);
-  font-size: 1.2rem;
+  font-size: var(--font-1-6);
 }
 
 @media only screen and (min-width: 400px) {
@@ -607,14 +609,15 @@ html {
   }
 
   .reservation-form__submit-text {
-    font-size: 1.15rem;
+    font-size: var(--font-2);
+    white-space: nowrap;
   }
 }
 @media only screen and (min-width: 768px) {
   .reservation-form {
     width: 100%;
     max-width: 534px;
-    padding: 1.5rem;
+    padding: 2.5rem;
   }
 
   .reservation-form__triangle {
@@ -686,6 +689,7 @@ html {
   --font-32: 32px;
   --font-44: 44px;
   --font-1-6: 1.6rem;
+  --font-2: 2rem;
   --font-2-2: 2.2rem;
   --font-2-6: 2.6rem;
   --font-3-2: 3.2rem;
