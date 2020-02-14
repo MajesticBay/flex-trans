@@ -721,6 +721,7 @@ html {
   background-color: var(--color-footer);
   padding: 16px;
   color: var(--color-white);
+  font-size: 1.3rem;
 }
 
 .footer__content {
