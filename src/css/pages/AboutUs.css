@@ -68,8 +68,13 @@ html {
 }
 
 .about-us-services__services-container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.services-container__service-header {
+  font-size: var(--font-2-2);
+  text-align: center;
 }
 
 .about-us__fleet {
@@ -95,15 +100,17 @@ html {
   }
 
   .about-us__services {
+    width: 67%;
     max-width: 1280px;
   }
 
   .about-us-services__services-container {
-    flex-direction: row;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 3rem;
   }
 
   .about-us__fleet {
-    width: 100%;
+    width: 67%;
     max-width: 1280px;
     flex-direction: row;
     padding-top: 80px;
