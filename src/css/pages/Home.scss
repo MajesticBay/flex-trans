@@ -48,20 +48,29 @@
 }
 
 .welcome-content-container__header {
-    font-size: var(--font-44);
+    font-size: var(--font-3-2);
     color: var(--color-white);
 }
 
 .welcome-content-container__wheel-chair-transfer-text {
     margin-top: 40px;
-    font-size: var(--font-32);
+    font-size: var(--font-2-2);
     line-height: var(--line-150);
 }
 
 .welcome-content-container__prices {
-    font-size: var(--font-32);
+    font-size: var(--font-2-2);
     line-height: var(--line-150);
     color: var(--color-white);
+}
+
+.welcome-content-container__prices--black {
+    color: var(--color-black);
+}
+
+.welcome-content-container__reduced-prices {
+    font-size: var(--font-1-3);
+    margin-top: 2rem;
 }
 
 @media only screen and (min-width: 1024px) {

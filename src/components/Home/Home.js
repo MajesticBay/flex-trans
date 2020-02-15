@@ -19,10 +19,10 @@ function Home() {
                                 <h3 className="welcome-content-container__header">Welcome to Flex-Trans</h3>
                                 <p className="welcome-content-container__wheel-chair-transfer-text">Wheel chair transfer:</p>
                                 <p className="welcome-content-container__prices">
-                                    $30 pick up one way, + $2.95/mi <br/>
-                                    Ferry fee $110 extra
+                                    <span className="welcome-content-container__prices--black">One way trip</span> $30 pick up + $2.95/mi <br/>
+                                    <span className="welcome-content-container__prices--black">Ferry fee</span> $110 extra
                                 </p>
-                                <p>Reduced/Flat rates available for long-distance transfers</p>
+                                <p className="welcome-content-container__reduced-prices">Reduced/Flat rates available for long-distance transfers</p>
                             </div>
                             <div className="welcome-content-container__map-container">
                                 <img className="img-fluid" src={map} alt="working area map"/>

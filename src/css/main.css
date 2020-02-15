@@ -189,9 +189,10 @@ body, p {
   --color-red: #DF2C21;
   --color-blue: #80B9CD;
   --color-light-blue: #E3F2F8;
-  --color-white: #FFFFFF;
   --color-green: #4DDC40;
   --color-footer: #232121;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
   --color-input-border: #D1D1D1;
   --color-input-background: #F6F6F6;
   --font-16: 16px;
@@ -199,7 +200,10 @@ body, p {
   --font-26: 26px;
   --font-32: 32px;
   --font-44: 44px;
+  --font-1: 1rem;
+  --font-1-3: 1-3rem;
   --font-1-6: 1.6rem;
+  --font-1-8: 1.8rem;
   --font-2: 2rem;
   --font-2-2: 2.2rem;
   --font-2-6: 2.6rem;
@@ -271,20 +275,29 @@ html {
 }
 
 .welcome-content-container__header {
-  font-size: var(--font-44);
+  font-size: var(--font-3-2);
   color: var(--color-white);
 }
 
 .welcome-content-container__wheel-chair-transfer-text {
   margin-top: 40px;
-  font-size: var(--font-32);
+  font-size: var(--font-2-2);
   line-height: var(--line-150);
 }
 
 .welcome-content-container__prices {
-  font-size: var(--font-32);
+  font-size: var(--font-2-2);
   line-height: var(--line-150);
   color: var(--color-white);
+}
+
+.welcome-content-container__prices--black {
+  color: var(--color-black);
+}
+
+.welcome-content-container__reduced-prices {
+  font-size: var(--font-1-3);
+  margin-top: 2rem;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -321,9 +334,10 @@ html {
   --color-red: #DF2C21;
   --color-blue: #80B9CD;
   --color-light-blue: #E3F2F8;
-  --color-white: #FFFFFF;
   --color-green: #4DDC40;
   --color-footer: #232121;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
   --color-input-border: #D1D1D1;
   --color-input-background: #F6F6F6;
   --font-16: 16px;
@@ -331,7 +345,10 @@ html {
   --font-26: 26px;
   --font-32: 32px;
   --font-44: 44px;
+  --font-1: 1rem;
+  --font-1-3: 1-3rem;
   --font-1-6: 1.6rem;
+  --font-1-8: 1.8rem;
   --font-2: 2rem;
   --font-2-2: 2.2rem;
   --font-2-6: 2.6rem;
@@ -437,9 +454,10 @@ html {
   --color-red: #DF2C21;
   --color-blue: #80B9CD;
   --color-light-blue: #E3F2F8;
-  --color-white: #FFFFFF;
   --color-green: #4DDC40;
   --color-footer: #232121;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
   --color-input-border: #D1D1D1;
   --color-input-background: #F6F6F6;
   --font-16: 16px;
@@ -447,7 +465,10 @@ html {
   --font-26: 26px;
   --font-32: 32px;
   --font-44: 44px;
+  --font-1: 1rem;
+  --font-1-3: 1-3rem;
   --font-1-6: 1.6rem;
+  --font-1-8: 1.8rem;
   --font-2: 2rem;
   --font-2-2: 2.2rem;
   --font-2-6: 2.6rem;
@@ -732,9 +753,10 @@ html {
   --color-red: #DF2C21;
   --color-blue: #80B9CD;
   --color-light-blue: #E3F2F8;
-  --color-white: #FFFFFF;
   --color-green: #4DDC40;
   --color-footer: #232121;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
   --color-input-border: #D1D1D1;
   --color-input-background: #F6F6F6;
   --font-16: 16px;
@@ -742,7 +764,10 @@ html {
   --font-26: 26px;
   --font-32: 32px;
   --font-44: 44px;
+  --font-1: 1rem;
+  --font-1-3: 1-3rem;
   --font-1-6: 1.6rem;
+  --font-1-8: 1.8rem;
   --font-2: 2rem;
   --font-2-2: 2.2rem;
   --font-2-6: 2.6rem;
@@ -833,11 +858,5 @@ html {
     grid-column: 2/3;
   }
 }
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
-/*# sourceMappingURL=main.css.map */
 
 /*# sourceMappingURL=main.css.map */
