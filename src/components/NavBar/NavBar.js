@@ -14,7 +14,7 @@ function NavBar() {
                     </div>
                 </Link>
                 <a href="tel:(425) 260 2121">
-                    <div className="call-btn rounded pointer">
+                    <div className="call-btn--mobile rounded pointer">
                         <div className="call-btn__phone-img-container">
                             <img className="call-btn__phone-img" src={phone} alt="Press to call us"/>
                         </div>
