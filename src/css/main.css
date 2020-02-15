@@ -723,7 +723,7 @@ html {
 }
 
 .mission-content__text {
-  font-size: var(--font-22);
+  font-size: var(--font-1-8);
   line-height: var(--line-150);
 }
 
@@ -743,7 +743,7 @@ html {
   .mission-container__mission-content {
     width: 50%;
     padding: 0;
-    padding-left: 30px;
+    margin-left: 3rem;
   }
 }
 :root {
