@@ -27,12 +27,12 @@ function ContactUs() {
               </div>
               <div className="contact-form__contact-form-group">
                 <p>Email</p>
-                <input className="contact-form-group__input rounded"></input>
+                <input className="contact-form-group__input contact-form-group__input--no-padding rounded"></input>
               </div>
             </div>
 
             <div className="contact-form-inside-wrapper__contact-right">
-              <div className="contact-us__contact-form-group">
+              <div className="contact-us__contact-form-group contact-us__contact-form-group--height-100">
                 <p>Message</p>
                 <textarea className="contact-form-group__textarea rounded"></textarea>
               </div>
