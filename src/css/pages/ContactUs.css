@@ -3,6 +3,24 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+}
+
+.contact-us__contact-us-content {
+  width: 100%;
+}
+
+.contact-us__header {
+  font-size: var(--font-2-6);
+}
+
+@media only screen and (min-width: 1024px) {
+  .contact-us__contact-us-content {
+    width: 67%;
+    max-width: 1280px;
+    padding-top: 20rem;
+    padding-bottom: 80px;
+  }
+}
 
 /*# sourceMappingURL=ContactUs.css.map */
