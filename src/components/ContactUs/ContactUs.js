@@ -18,22 +18,22 @@ function ContactUs() {
           <div className="contact-form__contact-form-inside-wrapper">
             <div className="contact-form-inside-wrapper__contact-left">
               <div className="contact-form__contact-form-group">
-                <p>First and Last Name</p>
+                <label className="contact-form__label">First and Last Name</label>
                 <input className="contact-form-group__input rounded"></input>
               </div>
               <div className="contact-form__contact-form-group">
-                <p>Phone</p>
+                <label className="contact-form__label">Phone</label>
                 <input className="contact-form-group__input rounded"></input>
               </div>
               <div className="contact-form__contact-form-group">
-                <p>Email</p>
+                <label className="contact-form__label">Email</label>
                 <input className="contact-form-group__input contact-form-group__input--no-padding rounded"></input>
               </div>
             </div>
 
             <div className="contact-form-inside-wrapper__contact-right">
               <div className="contact-us__contact-form-group contact-us__contact-form-group--height-100">
-                <p>Message</p>
+                <label className="contact-form__label">Message</label>
                 <textarea className="contact-form-group__textarea rounded"></textarea>
               </div>
             </div>

@@ -493,7 +493,12 @@ html {
 }
 
 .contact-us__header--form {
+  margin-bottom: 2rem;
   color: var(--color-white);
+}
+
+.contact-form__label {
+  font-size: var(--font-1-6);
 }
 
 .contact-form-group__input {
