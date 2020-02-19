@@ -37,6 +37,9 @@ function ContactUs() {
                 <textarea className="contact-form-group__textarea rounded"></textarea>
               </div>
             </div>
+            <div className="contact-form-group__contact-submit-btn rounded">
+              <p className="contact-submit-btn__text">Send message</p>
+            </div>
           </div>
         </div>
       </div>

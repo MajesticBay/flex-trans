@@ -62,6 +62,19 @@
   background-color: var(--color-input-background);
 }
 
+.contact-form-group__contact-submit-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  background-color: var(--color-red);
+}
+
+.contact-submit-btn__text {
+  font-size: var(--font-2-6);
+  color: var(--color-white);
+}
+
 @media only screen and (min-width: 1024px) {
   .contact-us__contact-us-content {
     width: 67%;
