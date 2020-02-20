@@ -509,6 +509,8 @@ html {
 }
 
 .contact-form__label {
+  display: inline-block;
+  margin-bottom: 1rem;
   font-size: var(--font-1-6);
 }
 
