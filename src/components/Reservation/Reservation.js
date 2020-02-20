@@ -1,9 +1,15 @@
 import React from 'react';
 
+import Top from '../Top/Top';
+import TalkingCar from '../TalkingCar/TalkingCar';
+import Mission from '../Mission/Mission';
+
 function Reservation() {
   return (
-    <div className="App">
-      <p>reservation</p>
+    <div className="reservation">
+      <Top/>
+      <TalkingCar/>
+      <Mission/>
     </div>
   );
 }

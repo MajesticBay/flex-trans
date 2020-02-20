@@ -1,6 +1,6 @@
 import React from 'react';
 import ReservationForm from '../ReservationForm/ReservaitonForm';
-import fordtransit from '../../images/ford-transit.png';
+import fordtransit from '../../images/car-left-shadow.png';
 
 function TalkingCar() {
     return (
