@@ -12,9 +12,20 @@
 
 .contact-us__header {
   font-size: var(--font-2-6);
+  margin-bottom: 2rem;
+}
+
+.contact-us__info {
+  line-height: var(--line-150);
+  font-size: var(--font-2-6);
+}
+
+.contact-us__info-header {
+  color: #9E9E9E;
 }
 
 .contact-us__contact-form {
+  margin-top: 2rem;
   padding: 2rem;
   background-color: var(--color-blue);
 }

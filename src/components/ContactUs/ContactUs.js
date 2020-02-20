@@ -11,8 +11,8 @@ function ContactUs() {
       <TalkingCar/>
       <div className="contact-us__contact-us-content">
         <h3 className="contact-us__header">Contact Information</h3>
-        <p>Phone: 1-425-444-3905</p>
-        <p>Email: flextranswa@gmail.com</p>
+        <p className="contact-us__info"><span className="contact-us__info-header">Phone:</span> 1-425-444-3905</p>
+        <p className="contact-us__info"><span className="contact-us__info-header">Email:</span> flextranswa@gmail.com</p>
         <div className="contact-us__contact-form rounded">
           <p className="contact-us__header contact-us__header--form">Send us a message</p>
           <div className="contact-form__contact-form-inside-wrapper">
