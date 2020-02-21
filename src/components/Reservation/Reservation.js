@@ -9,7 +9,6 @@ function Reservation() {
     <div className="reservation">
       <Top/>
       <TalkingCar/>
-      <Mission/>
     </div>
   );
 }
