@@ -1,7 +1,6 @@
 import React from 'react';
 import Top from '../Top/Top';
 import TalkingCar from '../TalkingCar/TalkingCar';
-import Mission from '../Mission/Mission';
 import aboutUsOne from '../../images/about-us1.png';
 import aboutUsTwo from '../../images/about-us2.png';
 import aboutUsThree from '../../images/about-us3.png';
