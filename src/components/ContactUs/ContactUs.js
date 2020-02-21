@@ -43,7 +43,6 @@ function ContactUs() {
           </div>
         </div>
       </div>
-      <Mission/>
     </div>
   );
 }
