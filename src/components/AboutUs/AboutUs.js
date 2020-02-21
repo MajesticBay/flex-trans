@@ -39,7 +39,7 @@ function AboutUs() {
           <p className="about-us__base-text about-us-fleet__baset-text">We provide transportation on fully equipped and inspected 2015 Ford Transit Wheelchair Van. </p>
         </div>
         <div className="about-us-fleet_car-container">
-          <img className="img-fluid" src={fordtransitright} alt="Ford Transit"/>
+          <img className="about-us-fleet__car-img img-fluid" src={fordtransitright} alt="Ford Transit"/>
         </div>
       </div>
     </div>
