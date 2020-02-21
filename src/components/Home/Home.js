@@ -2,11 +2,13 @@ import React from 'react';
 
 import Top from '../Top/Top';
 import TalkingCar from '../TalkingCar/TalkingCar';
+import Mission from '../Mission/Mission';
 import map from '../../images/map.png';
 
 function Home() {
     return (
         <div className="home">
+            <Top/>
             <TalkingCar/>
             <div className="home__home-content">
                 <div className="home-content__outside-welcome-container">
