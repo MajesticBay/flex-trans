@@ -2,7 +2,6 @@ import React from 'react';
 
 import Top from '../Top/Top';
 import TalkingCar from '../TalkingCar/TalkingCar';
-import Mission from '../Mission/Mission';
 import map from '../../images/map.png';
 
 function Home() {
