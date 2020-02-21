@@ -43,7 +43,6 @@ function AboutUs() {
           <img className="img-fluid" src={fordtransitright} alt="Ford Transit"/>
         </div>
       </div>
-      <Mission/>
     </div>
   );
 }
