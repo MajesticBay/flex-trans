@@ -30,7 +30,6 @@ function Home() {
                         </div>
                     </div>
                 </div>
-                <Mission/>
             </div>
         </div>
     );
