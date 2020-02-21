@@ -129,6 +129,10 @@ html {
   .about-us-fleet_car-container {
     width: 50%;
   }
+
+  .about-us-fleet__baset-text {
+    font-size: var(--font-2-2);
+  }
 }
 
 /*# sourceMappingURL=AboutUs.css.map */
