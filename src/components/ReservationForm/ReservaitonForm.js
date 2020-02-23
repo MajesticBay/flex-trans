@@ -7,6 +7,11 @@ class ReservationForm extends React.Component {
             currentStep: 1
         }
     }
+
+    handleChange = event => {
+        const {name, value} = event.target;
+        
+    }
     render() {
         return (
             <div className="reservation-form rounded">
