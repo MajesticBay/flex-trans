@@ -1,5 +1,5 @@
 import React from 'react';
-import ReservationForm from '../ReservationForm/ReservaitonForm';
+import ReservationForm from '../ReservationForm/ReservationForm';
 import fordtransit from '../../images/car-left-shadow.png';
 
 function TalkingCar() {
