@@ -1,7 +1,7 @@
 import React from 'react';
 
 function StepEight(props) {
-    if (props.currentStep !== 2) {
+    if (props.currentStep !== 8) {
         return null
     }
     return (

@@ -1,7 +1,7 @@
 import React from 'react';
 
 function StepSix(props) {
-    if (props.currentStep !== 2) {
+    if (props.currentStep !== 6) {
         return null
     }
     return (

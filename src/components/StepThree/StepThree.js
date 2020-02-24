@@ -1,7 +1,7 @@
 import React from 'react';
 
 function StepThree(props) {
-    if (props.currentStep !== 2) {
+    if (props.currentStep !== 3) {
         return null
     }
     return (

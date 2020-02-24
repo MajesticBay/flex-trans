@@ -1,7 +1,7 @@
 import React from 'react';
 
 function StepSeven(props) {
-    if (props.currentStep !== 2) {
+    if (props.currentStep !== 7) {
         return null
     }
     return (

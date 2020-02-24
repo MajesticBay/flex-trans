@@ -1,7 +1,7 @@
 import React from 'react';
 
 function StepFour(props) {
-    if (props.currentStep !== 2) {
+    if (props.currentStep !== 4) {
         return null
     }
     return (
