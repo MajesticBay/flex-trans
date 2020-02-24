@@ -21,25 +21,39 @@ class ReservationForm extends React.Component {
         console.log('name ', name, 'value', value);
     }
 
-    test = param => {
-        console.log (this.state.currentStep);
+    _next = () => {
+        let currentStep = this.state.currentStep
+        currentStep += 1
+        this.setState({
+            currentStep: currentStep
+        })
     }
+
+    // nextButton() {
+    //     let currentStep = this.state.currentStep;
+        
+    // }
+
+    // test = param => {
+    //     console.log (this.state.currentStep);
+    // }
     
     render() {
         return (
             <form className="reservation-form rounded">
                 <StepOne 
-                    currenStep={this.state.currentStep}
+                    currentStep={this.state.currentStep}
                     handleChange={this.handleChange}
                     pick={this.state.pick}
                     drop={this.state.drop}
                 />
                 <StepTwo 
-                    handleChange={this.state.currentStep}
+                    currentStep={this.state.currentStep}
                     handleChange={this.handleChange}
                     pick={this.state.pick}
                     drop={this.state.drop}
                 />
+                <button onClick={this._next}>Next</button>
             </form>
         );
     }
