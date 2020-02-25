@@ -7,7 +7,7 @@ function StepOne(props) {
     }
     return (
         <div className="reservation-form__step-one">
-            <div>
+            <div className="step-one__form rounded">
                 <input className="reservation-form__input rounded" name="pick" placeholder="Pick-up location" onChange={props.handleChange}/>
                 <input className="reservation-form__input rounded" name="drop" placeholder="Drop-off location"/>
                 <div className="reservation-form__submit-btn rounded pointer">

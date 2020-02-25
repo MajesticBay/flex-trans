@@ -618,6 +618,74 @@ html {
   display: none;
 }
 
+.step-one__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  padding: 16px;
+  background-color: var(--color-white);
+  box-shadow: 0px 34px 64px rgba(0, 0, 0, 0.09);
+}
+
+.reservation-form__triangle {
+  display: none;
+  position: absolute;
+  right: -49px;
+  bottom: 25px;
+  height: 0;
+  width: 0;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-left: 35px solid var(--color-white);
+  background-color: transparent;
+}
+
+.reservation-form__input {
+  width: 100%;
+  padding: 1.6rem 2rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--color-input-border);
+  font-size: var(--font-1-6);
+  background-color: var(--color-input-background);
+}
+
+.reservation-form__submit-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  background-color: var(--color-red);
+}
+
+.reservation-form__submit-text {
+  color: var(--color-white);
+  font-size: var(--font-1-6);
+}
+
+@media only screen and (min-width: 400px) {
+  .reservation-form__submit-btn {
+    padding: 1.6rem 2rem;
+    margin-top: 2rem;
+  }
+
+  .reservation-form__submit-text {
+    font-size: var(--font-2);
+    white-space: nowrap;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .reservation-form {
+    width: 100%;
+    max-width: 534px;
+    padding: 2.5rem;
+  }
+
+  .reservation-form__triangle {
+    display: block;
+  }
+}
 @media only screen and (min-width: 1024px) {
   .reservation-form__step-one {
     position: absolute;
@@ -789,82 +857,6 @@ html {
   .top {
     height: 60vh;
     background-image: url("../images/bg.jpg");
-  }
-}
-.reservation-form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  position: relative;
-  padding: 16px;
-  background-color: var(--color-white);
-  box-shadow: 0px 34px 64px rgba(0, 0, 0, 0.09);
-}
-
-.reservation-form__step-one {
-  display: block;
-}
-
-.reservation-form__step-two {
-  display: none;
-}
-
-.reservation-form__triangle {
-  display: none;
-  position: absolute;
-  right: -49px;
-  bottom: 25px;
-  height: 0;
-  width: 0;
-  border-top: 25px solid transparent;
-  border-bottom: 25px solid transparent;
-  border-right: 25px solid transparent;
-  border-left: 35px solid var(--color-white);
-  background-color: transparent;
-}
-
-.reservation-form__input {
-  width: 100%;
-  padding: 1.6rem 2rem;
-  margin-bottom: 1rem;
-  border: 1px solid var(--color-input-border);
-  font-size: var(--font-1-6);
-  background-color: var(--color-input-background);
-}
-
-.reservation-form__submit-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 16px;
-  background-color: var(--color-red);
-}
-
-.reservation-form__submit-text {
-  color: var(--color-white);
-  font-size: var(--font-1-6);
-}
-
-@media only screen and (min-width: 400px) {
-  .reservation-form__submit-btn {
-    padding: 1.6rem 2rem;
-    margin-top: 2rem;
-  }
-
-  .reservation-form__submit-text {
-    font-size: var(--font-2);
-    white-space: nowrap;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .reservation-form {
-    width: 100%;
-    max-width: 534px;
-    padding: 2.5rem;
-  }
-
-  .reservation-form__triangle {
-    display: block;
   }
 }
 .home-content__outside-mission-container {

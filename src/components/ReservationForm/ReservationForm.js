@@ -95,7 +95,7 @@ class ReservationForm extends React.Component {
                     pick={this.state.pick}
                     drop={this.state.drop}
                 />
-                <button onClick={this._next}>Next</button>
+                {/* <button onClick={this._next}>Next</button> */}
             </form>
         );
     }
