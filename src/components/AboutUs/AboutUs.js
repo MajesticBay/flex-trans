@@ -1,6 +1,6 @@
 import React from 'react';
 import Top from '../Top/Top';
-import TalkingCar from '../TalkingCar/TalkingCar';
+import ReservationForm from '../ReservationForm/ReservationForm';
 import aboutUsOne from '../../images/about-us1.png';
 import aboutUsTwo from '../../images/about-us2.png';
 import aboutUsThree from '../../images/about-us3.png';
@@ -10,7 +10,7 @@ function AboutUs() {
   return (
     <div className="about-us">
       <Top/>
-      <TalkingCar/>
+      <ReservationForm/>
       <div className="about-us__description-container">
         <h3 className="about-us__header">About us</h3>
         <p className="about-us__base-text">Flex-Trans was created with the vision of providing the best quality care and customer service in the non-emergent transportation industry.
