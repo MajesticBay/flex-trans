@@ -1,14 +1,14 @@
 import React from 'react';
 
 import Top from '../Top/Top';
-import TalkingCar from '../TalkingCar/TalkingCar';
+import ReservationForm from '../ReservationForm/ReservationForm';
 import map from '../../images/map.png';
 
 function Home() {
     return (
         <div className="home">
             <Top/>
-            <TalkingCar/>
+            <ReservationForm/>
             <div className="home__home-content">
                 <div className="home-content__outside-welcome-container">
                     <div className="home-content__welcome-container">
