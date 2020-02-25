@@ -1,13 +1,13 @@
 import React from 'react';
 
 import Top from '../Top/Top';
-import TalkingCar from '../TalkingCar/TalkingCar';
+import ReservationForm from '../ReservationForm/ReservationForm';
 
 function ContactUs() {
   return (
     <div className="contact-us">
       <Top/>
-      <TalkingCar/>
+      <ReservationForm/>
       <div className="contact-us__contact-us-content">
         <h3 className="contact-us__header">Contact Information</h3>
         <p className="contact-us__info"><span className="contact-us__info-header">Phone:</span> 1-425-444-3905</p>
