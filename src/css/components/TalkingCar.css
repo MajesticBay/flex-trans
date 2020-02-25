@@ -1,3 +1,28 @@
+.top__floating-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1280px;
+}
 
+.top__car-photo-container {
+  display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  .top__floating-container {
+    position: absolute;
+    top: 25vh;
+    grid-template-columns: 1fr 1.5fr;
+    grid-gap: 50px;
+    width: 67%;
+  }
+
+  .top__car-photo-container {
+    display: block;
+    width: 100%;
+  }
+}
 
 /*# sourceMappingURL=TalkingCar.css.map */
