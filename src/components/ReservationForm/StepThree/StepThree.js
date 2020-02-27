@@ -6,8 +6,10 @@ function StepThree(props) {
     }
     return (
         <div className="reservation-form__step-one">
-            <input className="reservation-form__input rounded" placeholder="Pick-up location"/>
-            <input className="reservation-form__input rounded" placeholder="Drop-off location"/>
+            <p>Pick-up date and time</p>
+            <input className="reservation-form__input rounded" placeholder="Date"/>
+            <input className="reservation-form__input rounded" placeholder="Time"/>
+            <input className="reservation-form__input rounded" placeholder="Time"/>
             <div className="reservation-form__submit-btn rounded pointer">
                 <span className="reservation-form__submit-text">Step3</span>
                 <div className="reservation-form__triangle"></div>
