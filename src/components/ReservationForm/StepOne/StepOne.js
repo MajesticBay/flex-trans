@@ -1,10 +1,11 @@
 import React from 'react';
-import fordtransit from '../../images/car-left-shadow.png';
+import fordtransit from '../../../images/car-left-shadow.png';
 
 function StepOne(props) {
     if (props.currentStep !== 1) {
         return null
     }
+
     return (
         <div className="reservation-form__step-one">
             <div>
