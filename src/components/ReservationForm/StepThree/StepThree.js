@@ -7,6 +7,7 @@ function StepThree(props) {
     return (
         <div className="reservation-form__step-one">
             <p>Pick-up date and time</p>
+            <p></p>
             <input className="reservation-form__input rounded" placeholder="Date"/>
             <input className="reservation-form__input rounded" placeholder="Time"/>
             <input className="reservation-form__input rounded" placeholder="Time"/>
