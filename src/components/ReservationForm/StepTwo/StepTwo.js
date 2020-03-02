@@ -34,7 +34,7 @@ function StepTwo(props) {
             </div>
             <div className="step-one__car-photo-container">
                 {/* <img className="img-fluid" src={map} alt="Ford Transit Wheelchair Vagon"/> */}
-                <iframe frameBorder="0" style={{ width: "100%", height: "450"}} src={url}>
+                <iframe frameBorder="0" style={{ width: "100%", height: "100%"}} src={url}>
 
                 </iframe>
             </div>
