@@ -19,14 +19,6 @@ class ReservationForm extends React.Component {
         }
     }
 
-    handleChange = event => {
-        const {name, value} = event.target;
-        this.setState({
-            [name]: value
-        })
-        console.log('name ', name, 'value', value);
-    }
-
     _next = () => {
         let currentStep = this.state.currentStep
         currentStep += 1
@@ -49,51 +41,27 @@ class ReservationForm extends React.Component {
             <form className="reservation-form rounded">
                 <StepOne
                     currentStep={this.state.currentStep}
-                    handleChange={this.handleChange}
-                    pick={this.state.pick}
-                    drop={this.state.drop}
                 />
                 <StepTwo
                     currentStep={this.state.currentStep}
-                    handleChange={this.handleChange}
-                    pick={this.state.pick}
-                    drop={this.state.drop}
                 />
                 <StepThree
                     currentStep={this.state.currentStep}
-                    handleChange={this.handleChange}
-                    pick={this.state.pick}
-                    drop={this.state.drop}
                 />
                 <StepFour
                     currentStep={this.state.currentStep}
-                    handleChange={this.handleChange}
-                    pick={this.state.pick}
-                    drop={this.state.drop}
                 />
                 <StepFive
                     currentStep={this.state.currentStep}
-                    handleChange={this.handleChange}
-                    pick={this.state.pick}
-                    drop={this.state.drop}
                 />
                 <StepSix
                     currentStep={this.state.currentStep}
-                    handleChange={this.handleChange}
-                    pick={this.state.pick}
-                    drop={this.state.drop}
                 />
                 <StepSeven
                     currentStep={this.state.currentStep}
-                    handleChange={this.handleChange}
-                    pick={this.state.pick}
-                    drop={this.state.drop}
                 />
                 <StepEight
                     currentStep={this.state.currentStep}
-                    handleChange={this.handleChange}
-                    pick={this.state.pick}
-                    drop={this.state.drop}
                 />
                 <button onClick={this._next}>Next</button>
             </form>
