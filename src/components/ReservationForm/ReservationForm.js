@@ -14,8 +14,8 @@ class ReservationForm extends React.Component {
         super(props);
         this.state = {
             currentStep: 1,
-            pick: '',
-            drop: ''
+            // pick: '',
+            // drop: ''
         }
     }
 
