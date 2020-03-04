@@ -6,19 +6,19 @@ import routes from './routes/routes';
 
 import './App.css';
 
-const DataContext = createContext();
+// const DataContext = createContext();
 
 function App() {
-  const [test] = useState(data);
-  const [activeTest, setActiveTest] = useState(test[0]);
+  // const [test] = useState(data);
+  // const [activeTest, setActiveTest] = useState(test[0]);
   return (
     <div className="App">
-      <DataContext.Provider>
+      {/* <DataContext.Provider> */}
         <NavBar/>
         { routes }
         <Mission/>
         <Footer/>
-      </DataContext.Provider>
+      {/* </DataContext.Provider> */}
     </div>
   );
 }
