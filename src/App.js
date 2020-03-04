@@ -1,4 +1,5 @@
-import React, { useState, createContext } from 'react';
+import React from 'react';
+// import React, { useState, createContext } from 'react';
 import NavBar from './components/NavBar/NavBar';
 import Mission from './components/Mission/Mission';
 import Footer from './components/Footer/Footer';
