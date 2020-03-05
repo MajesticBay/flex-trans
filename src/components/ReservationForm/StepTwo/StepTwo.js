@@ -27,7 +27,8 @@ class StepTwo extends React.Component {
     
 
     render() {
-        let url = `https://www.google.com/maps/embed/v1/directions?origin=40.7127837,-74.0059413&destination=42.3600825,-71.05888&key=${process.env.REACT_APP_GOOGLE_API_KEY}`;
+        // let url = `https://www.google.com/maps/embed/v1/directions?origin=40.7127837,-74.0059413&destination=42.3600825,-71.05888&key=${process.env.REACT_APP_GOOGLE_API_KEY}`;
+        let url = `https://www.google.com/maps/embed/v1/directions?origin=${this.state.pickup}&destination=${this.state.drop}&key=${process.env.REACT_APP_GOOGLE_API_KEY}`;
         if (this.props.currentStep !== 2) {
             return null
         }
