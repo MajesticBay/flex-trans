@@ -23,7 +23,12 @@ function StepThree(props) {
                             <input className="reservation-form__input rounded" placeholder="Time"/>
                         </div>
                     </div>
-                    <div></div>
+                    <div>
+                        <label for="time-am">am</label>
+                        <input type="radio" id="time-am" name="gender" value="am"/>
+                        <label for="time-pm">pm</label>
+                        <input type="radio" id="time-pm" name="gender" value="pm"/>
+                    </div>
                 </div>
                 <div className="reservation-form__submit-btn rounded pointer">
                     <span className="reservation-form__submit-text">Step3</span>
