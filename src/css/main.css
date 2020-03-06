@@ -744,6 +744,30 @@ html {
     flex-direction: row;
   }
 }
+.reservation-form__step-three {
+  display: flex;
+  flex-direction: column;
+}
+
+.reservation-form__reservation-date-picker-container {
+  display: flex;
+  width: 50%;
+}
+
+.reservation-date-picker-container__reservation-date-picker {
+  display: flex;
+  flex-direction: column;
+}
+
+.reservation-date-picker-container__reservation-time-picker {
+  display: flex;
+}
+
+@media only screen and (min-width: 768px) {
+  .reservation-form__step-three {
+    flex-direction: row;
+  }
+}
 :root {
   --color-description: #9E9E9E;
   --color-button: #1F1D1D;
