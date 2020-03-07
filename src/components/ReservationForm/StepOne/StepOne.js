@@ -10,7 +10,7 @@ function StepOne(props) {
     const [addressPick, setAddressPick] = useState("");
     const [coordinatesPick, setCoordinatesPick] = useState({lat: null, lng: null})
 
-    const handleSelect = async value => {
+    const handleSelectPick = async value => {
         const results = await geocodeByAddress(value);
         const latLng = await getLatLng(results[0]);
         setAddressPick(value);
@@ -18,20 +18,30 @@ function StepOne(props) {
     };
     
     // Drop block
-    // const [address, setAddress] = useState("");
-    // const [coordinates, setCoordinates] = useState({lat: null, lng: null})
+    const [addressDrop, setAddressDrop] = useState("");
+    const [coordinatesDrop, setCoordinatesDrop] = useState({lat: null, lng: null})
 
-    // const handleSelect = async value => {
-    //     const results = await geocodeByAddress(value);
-    //     const latLng = await getLatLng(results[0]);
-    //     setAddress(value);
-    //     setCoordinates(latLng);
-    //     console.log(coordinates)
-    // };
+    const handleSelectDrop = async value => {
+        const results = await geocodeByAddress(value);
+        const latLng = await getLatLng(results[0]);
+        setAddressDrop(value);
+        setCoordinatesDrop(latLng);
+    };
 
 
     if (props.currentStep !== 1) {
         return null
+    }
+
+    const stepDone = () => {
+        localStorage.clear();
+        props.next();
+        localStorage.setItem('coordinatesPickLat', coordinatesPick.lat);
+        localStorage.setItem('coordinatesPickLng', coordinatesPick.lng);
+        localStorage.setItem('coordinatesDropLat', coordinatesDrop.lat);
+        localStorage.setItem('coordinatesDropLng', coordinatesDrop.lng);
+        console.log("Pick:", coordinatesPick.lat, coordinatesPick.lng)
+        console.log("Drop:", coordinatesDrop.lat, coordinatesDrop.lng)
     }
 
 
@@ -40,13 +50,39 @@ function StepOne(props) {
             <div>
                 <div className="step-one__form rounded">
                     <input className="reservation-form__input rounded" name="pick" placeholder="Pick-up location" onChange={props.handleChange}/>
-                    <PlacesAutocomplete className="reservation-form__input rounded" value={addressPick} onChange={setAddressPick} onSelect={handleSelect}>
+                    <PlacesAutocomplete className="reservation-form__input rounded" value={addressPick} onChange={setAddressPick} onSelect={handleSelectPick}>
                         {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
                             <div>
                             <p>Latitude: {coordinatesPick.lat}</p>
                             <p>Longitude: {coordinatesPick.lng}</p>
 
-                            <input {...getInputProps({ placeholder: "Type address" })} />
+                            <input {...getInputProps({ placeholder: "Pick-up location" })} />
+
+                            <div>
+                                {loading ? <div>...loading</div> : null}
+
+                                {suggestions.map(suggestion => {
+                                const style = {
+                                    backgroundColor: suggestion.active ? "#41b6e6" : "#fff"
+                                };
+
+                                return (
+                                    <div {...getSuggestionItemProps(suggestion, { style })}>
+                                    {suggestion.description}
+                                    </div>
+                                );
+                                })}
+                            </div>
+                            </div>
+                        )}
+                    </PlacesAutocomplete>
+                    <PlacesAutocomplete className="reservation-form__input rounded" value={addressDrop} onChange={setAddressDrop} onSelect={handleSelectDrop}>
+                        {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
+                            <div>
+                            <p>Latitude: {coordinatesDrop.lat}</p>
+                            <p>Longitude: {coordinatesDrop.lng}</p>
+
+                            <input {...getInputProps({ placeholder: "Drop-off location" })} />
 
                             <div>
                                 {loading ? <div>...loading</div> : null}
@@ -67,7 +103,7 @@ function StepOne(props) {
                         )}
                     </PlacesAutocomplete>
                     <input className="reservation-form__input rounded" name="drop" placeholder="Drop-off location"/>
-                    <div className="reservation-form__submit-btn rounded pointer">
+                    <div className="reservation-form__submit-btn rounded pointer" onClick={stepDone}>
                         <span className="reservation-form__submit-text">Get instant quote for your trip</span>
                         <div className="reservation-form__triangle"></div>
                     </div>

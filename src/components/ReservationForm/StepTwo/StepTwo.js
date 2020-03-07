@@ -9,18 +9,28 @@ class StepTwo extends React.Component {
 
         this.state = {
             pickup: '',
-            drop: ''
+            drop: '',
+            coordinatesPickLat: '',
+            coordinatesPickLng: '',
+            coordinatesDropLat: '',
+            coordinatesDropLng: ''
         }
     }
 
     componentDidMount() {
         const pickup = localStorage.getItem('pickup');
         const drop = localStorage.getItem('drop');
-        this.setState({ pickup, drop });
+        const coordinatesPickLat = localStorage.getItem('coordinatesPickLat')
+        const coordinatesPickLng = localStorage.getItem('coordinatesPickLng')
+        const coordinatesDropLat = localStorage.getItem('coordinatesDropLat')
+        const coordinatesDropLng = localStorage.getItem('coordinatesDropLng')
+        this.setState({ pickup, drop, coordinatesPickLat, coordinatesPickLng, coordinatesDropLat, coordinatesDropLng});
     }
 
     test = () => {
         console.log('123');
+        console.log("Pick: ", this.state.coordinatesPickLat, this.state.coordinatesPickLng);
+        console.log("Drop: ", this.state.coordinatesDropLat, this.state.coordinatesDropLng);
         console.log('this.state.pickup -> ', this.state.pickup);
         console.log('this.state.drop -> ', this.state.drop);
     }

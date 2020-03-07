@@ -34,7 +34,7 @@
 //     display: none;
 // }
 
-#root > div > div.home > form > div > div:nth-child(1) > div > div:nth-child(2) > input[type=text] {
+#root > div > div.home > form > div > div:nth-child(1) > div > div:nth-child(2) > input[type=text] , #root > div > div.home > form > div > div:nth-child(1) > div > div:nth-child(3) > input[type=text]{
     width: 100%;
     padding: 1.6rem 2rem;
     margin-bottom: 1rem;
