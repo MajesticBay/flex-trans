@@ -20,11 +20,13 @@ class ReservationForm extends React.Component {
     }
 
     _next = () => {
+        console.log("surrent step before -> ", this.state.currentStep);
         let currentStep = this.state.currentStep
         currentStep += 1
         this.setState({
             currentStep: currentStep
         })
+        console.log("surrent step after -> ", this.state.currentStep);
     }
 
     // nextButton() {
