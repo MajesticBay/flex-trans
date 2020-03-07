@@ -1,86 +1,88 @@
-import React from 'react';
+import React, { useState } from 'react';
+import PlacesAutocomplete, {geocodeByAddress, getLatLng} from "react-places-autocomplete"
+
 import fordtransit from '../../../images/car-left-shadow.png';
-// import "https://maps.googleapis.com/maps/api/js?key=AIzaSyA1_FjAoDlmqOnFqr8ckuw9Ifw9T8oYgWU&libraries=places&callback=initMap";
 
-const google = window.google;
 
-class StepOne extends React.Component {
-    constructor(props) {
-        super(props);
+function StepOne(props) {
 
-        // this.autocompleteInput = React.createRef();
-        // this.autocomplete = null;
-        // this.handlePlaceChanged = this.handlePlaceChanged.bind(this);
+    // Pick block
+    const [addressPick, setAddressPick] = useState("");
+    const [coordinatesPick, setCoordinatesPick] = useState({lat: null, lng: null})
 
-        this.state = {
-            pickup: '',
-            drop: ''
-        }
+    const handleSelect = async value => {
+        const results = await geocodeByAddress(value);
+        const latLng = await getLatLng(results[0]);
+        setAddressPick(value);
+        setCoordinatesPick(latLng);
+    };
+    
+    // Drop block
+    // const [address, setAddress] = useState("");
+    // const [coordinates, setCoordinates] = useState({lat: null, lng: null})
+
+    // const handleSelect = async value => {
+    //     const results = await geocodeByAddress(value);
+    //     const latLng = await getLatLng(results[0]);
+    //     setAddress(value);
+    //     setCoordinates(latLng);
+    //     console.log(coordinates)
+    // };
+
+
+    if (props.currentStep !== 1) {
+        return null
     }
 
-    // componentDidMount() {
-    //     this.autocomplete = new google.maps.places.Autocomplete(this.autocompleteInput.current,
-    //         {"types": ["geocode"]});
 
-    //     this.autocomplete.addListener('place_changed', this.handlePlaceChanged);
-    // }
+    return (
+        <div className="reservation-form__step-one">
+            <div>
+            <PlacesAutocomplete
+        value={addressPick}
+        onChange={setAddressPick}
+        onSelect={handleSelect}
+      >
+        {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
+          <div>
+            <p>Latitude: {coordinatesPick.lat}</p>
+            <p>Longitude: {coordinatesPick.lng}</p>
 
-    // handlePlaceChanged(){
-    //     const place = this.autocomplete.getPlace();
-    //     this.props.onPlaceLoaded(place);
-    // }
+            <input {...getInputProps({ placeholder: "Type address" })} />
 
-    handlePickupChange = event => {
-        const {name, value} = event.target;
-        this.setState({
-            [name]: value
-        })
-        console.log('name ', name, 'value', value);
-        console.log('this.state.pick ', this.state.pick);
-    }
+            <div>
+              {loading ? <div>...loading</div> : null}
 
-    handleDropChange = event => {
-        const {name, value} = event.target;
-        this.setState({
-            [name]: value
-        })
-        console.log('name ', name, 'value', value);
-        console.log('this.state.drop ', this.state.drop);
-    }
+              {suggestions.map(suggestion => {
+                const style = {
+                  backgroundColor: suggestion.active ? "#41b6e6" : "#fff"
+                };
 
-    test = () => {
-        const {pickup, drop} = this.state;
-        console.log ('pickup ->', pickup)
-        console.log ('drop ->', drop)
-        localStorage.setItem('pickup', pickup);
-        localStorage.setItem('drop', drop);
-    }
+                return (
+                  <div {...getSuggestionItemProps(suggestion, { style })}>
+                    {suggestion.description}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+      </PlacesAutocomplete>
 
-    render() {
-        if (this.props.currentStep !== 1) {
-            return null
-        }
-
-        return (
-            <div className="reservation-form__step-one">
-                <div>
-                    <div className="step-one__form rounded">
-                        {/* <input className="reservation-form__input rounded" name="pickup" ref={this.autocompleteInput}  id="autocomplete" placeholder="Enter your address" type="text"/> */}
-                        <input className="reservation-form__input rounded" name="pickup" placeholder="Pick-up location" onChange={this.handlePickupChange}/>
-                        <input className="reservation-form__input rounded" name="drop" placeholder="Drop-off location" onChange={this.handleDropChange}/>
-                        <div className="reservation-form__submit-btn rounded pointer" onClick={this.test}>
-                            <span className="reservation-form__submit-text">Get instant quote for your trip</span>
-                            <div className="reservation-form__triangle"></div>
-                        </div>
+                <div className="step-one__form rounded">
+                    <input className="reservation-form__input rounded" name="pick" placeholder="Pick-up location" onChange={props.handleChange}/>
+                    <input className="reservation-form__input rounded" name="drop" placeholder="Drop-off location"/>
+                    <div className="reservation-form__submit-btn rounded pointer">
+                        <span className="reservation-form__submit-text">Get instant quote for your trip</span>
+                        <div className="reservation-form__triangle"></div>
                     </div>
                 </div>
-                <div className="step-one__car-photo-container">
-                    <img className="img-fluid" src={fordtransit} alt="Ford Transit Wheelchair Vagon"/>
-                </div>
             </div>
-            
-        )
-    }
+            <div className="step-one__car-photo-container">
+                <img className="img-fluid" src={fordtransit} alt="Ford Transit Wheelchair Vagon"/>
+            </div>
+        </div>
+    )
 }
 
 export default StepOne;
