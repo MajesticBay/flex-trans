@@ -59,7 +59,7 @@ class StepTwo extends React.Component {
                                 <span className="step-two__cost">53.31</span>
                             </div>
                         </div>
-                        <div className="reservation-form__submit-btn rounded pointer" onClick={this.test}>
+                        <div className="reservation-form__submit-btn rounded pointer" onClick={this.next}>
                             <span className="reservation-form__submit-text">Get instant quote for your trip</span>
                         </div>
                     </div>
