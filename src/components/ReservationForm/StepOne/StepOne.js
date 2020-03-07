@@ -49,12 +49,9 @@ function StepOne(props) {
         <div className="reservation-form__step-one">
             <div>
                 <div className="step-one__form rounded">
-                    <input className="reservation-form__input rounded" name="pick" placeholder="Pick-up location" onChange={props.handleChange}/>
                     <PlacesAutocomplete className="reservation-form__input rounded" value={addressPick} onChange={setAddressPick} onSelect={handleSelectPick}>
                         {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
                             <div>
-                            <p>Latitude: {coordinatesPick.lat}</p>
-                            <p>Longitude: {coordinatesPick.lng}</p>
 
                             <input {...getInputProps({ placeholder: "Pick-up location" })} />
 
@@ -79,8 +76,6 @@ function StepOne(props) {
                     <PlacesAutocomplete className="reservation-form__input rounded" value={addressDrop} onChange={setAddressDrop} onSelect={handleSelectDrop}>
                         {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
                             <div>
-                            <p>Latitude: {coordinatesDrop.lat}</p>
-                            <p>Longitude: {coordinatesDrop.lng}</p>
 
                             <input {...getInputProps({ placeholder: "Drop-off location" })} />
 
@@ -102,7 +97,6 @@ function StepOne(props) {
                             </div>
                         )}
                     </PlacesAutocomplete>
-                    <input className="reservation-form__input rounded" name="drop" placeholder="Drop-off location"/>
                     <div className="reservation-form__submit-btn rounded pointer" onClick={stepDone}>
                         <span className="reservation-form__submit-text">Get instant quote for your trip</span>
                         <div className="reservation-form__triangle"></div>
