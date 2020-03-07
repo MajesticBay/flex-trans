@@ -40,27 +40,13 @@ class ReservationForm extends React.Component {
         return (
             <form className="reservation-form rounded">
                 <StepOne currentStep={this.state.currentStep} next={this._next} />
-                <StepTwo
-                    currentStep={this.state.currentStep}
-                />
-                <StepThree
-                    currentStep={this.state.currentStep}
-                />
-                <StepFour
-                    currentStep={this.state.currentStep}
-                />
-                <StepFive
-                    currentStep={this.state.currentStep}
-                />
-                <StepSix
-                    currentStep={this.state.currentStep}
-                />
-                <StepSeven
-                    currentStep={this.state.currentStep}
-                />
-                <StepEight
-                    currentStep={this.state.currentStep}
-                />
+                <StepTwo currentStep={this.state.currentStep} next={this._next}/>
+                <StepThree currentStep={this.state.currentStep} next={this._next}/>
+                <StepFour currentStep={this.state.currentStep} next={this._next}/>
+                <StepFive currentStep={this.state.currentStep} next={this._next}/>
+                <StepSix currentStep={this.state.currentStep} next={this._next}/>
+                <StepSeven currentStep={this.state.currentStep} next={this._next}/>
+                <StepEight currentStep={this.state.currentStep} next={this._next}/>
                 {/* <button onClick={this._next}>Next</button> */}
             </form>
         );

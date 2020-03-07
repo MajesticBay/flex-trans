@@ -3,7 +3,6 @@ import PlacesAutocomplete, {geocodeByAddress, getLatLng} from "react-places-auto
 
 import fordtransit from '../../../images/car-left-shadow.png';
 
-
 function StepOne(props) {
 
     // Pick block
