@@ -34,6 +34,16 @@
 //     display: none;
 // }
 
+#root > div > div.home > form > div > div:nth-child(1) > div > div:nth-child(2) > input[type=text] {
+    width: 100%;
+    padding: 1.6rem 2rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--color-input-border);
+    font-size: var(--font-1-6);
+    background-color: var(--color-input-background);
+    border-radius: 6px;
+}
+
 .reservation-form__triangle {
     display: none;
     position: absolute;
