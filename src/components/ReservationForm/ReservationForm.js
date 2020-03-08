@@ -18,18 +18,14 @@ function ReservationForm(props) {
     //         // drop: ''
     //     }
     // }
-    const currentStep = useState(1);
+    const [currentStep, setCurrentStep] = useState(1);
     const [addressPick, setAddressPick] = useState("");
     const [coordinatesPick, setCoordinatesPick] = useState({lat: null, lng: null})
 
     const _next = () => {
-        console.log("surrent step before -> ", this.state.currentStep);
-        let currentStep = this.state.currentStep
-        currentStep += 1
-        this.setState({
-            currentStep: currentStep
-        })
-        console.log("surrent step after -> ", this.state.currentStep);
+        console.log("surrent step before -> ", currentStep);
+        setCurrentStep(currentStep + 1)
+        console.log("surrent step after -> ", currentStep);
     }
 
     // nextButton() {

@@ -36,7 +36,7 @@ function StepTwo(props) {
                     </div>
                 </div>
             </div>
-            <div className="step-one__car-photo-container" onClick={stepDone}>
+            <div className="step-one__car-photo-container" onClick={stepDone()}>
                 {/* <img className="img-fluid" src={map} alt="Ford Transit Wheelchair Vagon"/> */}
                 <iframe title="google-map" frameBorder="0" style={{ width: "100%", height: "100%"}} src={url}>
 
