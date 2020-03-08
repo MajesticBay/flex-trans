@@ -45,7 +45,7 @@ function ReservationForm(props) {
     
     return (
         <form className="reservation-form rounded">
-            <StepOne currentStep={currentStep} next={_next} stepSwitcher={1}/>
+            <StepOne currentStep={currentStep}  stepSwitcher={1}/>
             <StepTwo currentStep={currentStep} next={_next} stepSwitcher={2}/>
             <StepThree currentStep={currentStep} next={_next} stepSwitcher={3}/>
             <StepFour currentStep={currentStep} next={_next} stepSwitcher={4}/>
