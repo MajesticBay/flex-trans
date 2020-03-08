@@ -4,18 +4,18 @@ import React from 'react';
 export const reservationFormContext = React.createContext(null);
 
 export default ({ children }) => {
-    const [addressPick, setAddressPick] = useState("");
-    const [coordinatesPick, setCoordinatesPick] = useState({lat: null, lng: null});
-    const [buildingInfoPick, setBuildingInfoPick] = useState("");
+    const [addressPick, setAddressPick] = React.useState("");
+    const [coordinatesPick, setCoordinatesPick] = React.useState({lat: null, lng: null});
+    const [buildingInfoPick, setBuildingInfoPick] = React.useState("");
 
-    const [addressDrop, setAddressDrop] = useState("");
-    const [coordinatesDrop, setCoordinatesDrop] = useState({lat: null, lng: null});
-    const [buildingInfoDrop, setBuildingInfoDrop] = useState("");
+    const [addressDrop, setAddressDrop] = React.useState("");
+    const [coordinatesDrop, setCoordinatesDrop] = React.useState({lat: null, lng: null});
+    const [buildingInfoDrop, setBuildingInfoDrop] = React.useState("");
 
-    const [date, setDate] = useState("");
-    const [time, setTime] = useTime("");
+    const [date, setDate] = React.useState("");
+    const [time, setTime] = React.useState("");
 
-    const [passengerInfo, setPassengerInfo] = useState({name: null,
+    const [passengerInfo, setPassengerInfo] = React.useState({name: null,
                                                         phone: null,
                                                         email: null,
                                                         additionalPassenger: 0,
@@ -34,7 +34,7 @@ export default ({ children }) => {
         passengerInfo: [passengerInfo, setPassengerInfo],
     }
 
-    
+return <reservationFormContext.Provider value={reservationForm}>{ children }</reservationFormContext.Provider>
 }
 
 
