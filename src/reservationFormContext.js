@@ -13,6 +13,15 @@ export default ({ children }) => {
 
     const [date, setDate] = useState("");
     const [time, setTime] = useTime("");
+
+    const [passengerInfo, setPassengerInfo] = useState({name: null,
+                                                        phone: null,
+                                                        email: null,
+                                                        additionalPassenger: 0,
+                                                        wheelchairNeeded: false,
+                                                        rideBackNeeded: false
+                                                        });
+
 }
 
 import { createContext } from 'react';
