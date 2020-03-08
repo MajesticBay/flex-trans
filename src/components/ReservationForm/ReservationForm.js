@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import StepOne from './StepOne/StepOne';
 import StepTwo from './StepTwo/StepTwo';
@@ -9,17 +9,20 @@ import StepSix from './StepSix/StepSix';
 import StepSeven from './StepSeven/StepSeven';
 import StepEight from './StepEight/StepEight';
 
-class ReservationForm extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            currentStep: 1,
-            // pick: '',
-            // drop: ''
-        }
-    }
+function ReservationForm(props) {
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         currentStep: 1,
+    //         // pick: '',
+    //         // drop: ''
+    //     }
+    // }
+    const currentStep = useState(1);
+    const [addressPick, setAddressPick] = useState("");
+    const [coordinatesPick, setCoordinatesPick] = useState({lat: null, lng: null})
 
-    _next = () => {
+    const _next = () => {
         console.log("surrent step before -> ", this.state.currentStep);
         let currentStep = this.state.currentStep
         currentStep += 1
@@ -38,21 +41,19 @@ class ReservationForm extends React.Component {
     //     console.log (this.state.currentStep);
     // }
     
-    render() {
-        return (
-            <form className="reservation-form rounded">
-                <StepOne currentStep={this.state.currentStep} next={this._next} />
-                <StepTwo currentStep={this.state.currentStep} next={this._next}/>
-                <StepThree currentStep={this.state.currentStep} next={this._next}/>
-                <StepFour currentStep={this.state.currentStep} next={this._next}/>
-                <StepFive currentStep={this.state.currentStep} next={this._next}/>
-                <StepSix currentStep={this.state.currentStep} next={this._next}/>
-                <StepSeven currentStep={this.state.currentStep} next={this._next}/>
-                <StepEight currentStep={this.state.currentStep} next={this._next}/>
-                {/* <button onClick={this._next}>Next</button> */}
-            </form>
-        );
-    }
+    return (
+        <form className="reservation-form rounded">
+            <StepOne currentStep={currentStep} next={_next} />
+            <StepTwo currentStep={currentStep} next={_next}/>
+            <StepThree currentStep={currentStep} next={_next}/>
+            <StepFour currentStep={currentStep} next={_next}/>
+            <StepFive currentStep={currentStep} next={_next}/>
+            <StepSix currentStep={currentStep} next={_next}/>
+            <StepSeven currentStep={currentStep} next={_next}/>
+            <StepEight currentStep={currentStep} next={_next}/>
+            {/* <button onClick={this._next}>Next</button> */}
+        </form>
+    )
 }
 
 export default ReservationForm;

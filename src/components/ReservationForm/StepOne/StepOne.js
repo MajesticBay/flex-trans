@@ -43,7 +43,6 @@ function StepOne(props) {
         console.log("Drop:", coordinatesDrop.lat, coordinatesDrop.lng)
     }
 
-
     return (
         <div className="reservation-form__step-one">
             <div>
