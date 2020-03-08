@@ -1,4 +1,4 @@
-import React from 'react';
+    import React from 'react';
 
 export const reservationFormContext = React.createContext(null);
 
@@ -21,7 +21,17 @@ export default ({ children }) => {
                                                         wheelchairNeeded: false,
                                                         rideBackNeeded: false
                                                         });
-
+    const reservationForm = {
+        addressPick: [addressPick, setAddressPick],
+        coordinatesPick: [coordinatesPick, setCoordinatesPick],
+        buildingInfoPick: [buildingInfoPick, setBuildingInfoPick],
+        addressDrop: [addressDrop, setAddressDrop],
+        coordinatesDrop: [coordinatesDrop, setCoordinatesDrop],
+        coordinatesPick: [coordinatesPick, setCoordinatesPick],
+        coordinatesPick: [coordinatesPick, setCoordinatesPick],
+        coordinatesPick: [coordinatesPick, setCoordinatesPick],
+        coordinatesPick: [coordinatesPick, setCoordinatesPick],
+    }
 }
 
 import { createContext } from 'react';
