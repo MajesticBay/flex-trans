@@ -48,11 +48,11 @@ function StepOne(props) {
         <div className="reservation-form__step-one">
             <div>
                 <div className="step-one__form rounded">
-                    <PlacesAutocomplete className="reservation-form__input rounded" value={addressPick} onChange={setAddressPick} onSelect={handleSelectPick}>
+                    <PlacesAutocomplete value={addressPick} onChange={setAddressPick} onSelect={handleSelectPick}>
                         {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
                             <div>
 
-                            <input {...getInputProps({ placeholder: "Pick-up location" })} />
+                            <input className="reservation-form__input rounded" {...getInputProps({ placeholder: "Pick-up location" })} />
 
                             <div>
                                 {loading ? <div>...loading</div> : null}
@@ -72,11 +72,11 @@ function StepOne(props) {
                             </div>
                         )}
                     </PlacesAutocomplete>
-                    <PlacesAutocomplete className="reservation-form__input rounded" value={addressDrop} onChange={setAddressDrop} onSelect={handleSelectDrop}>
+                    <PlacesAutocomplete value={addressDrop} onChange={setAddressDrop} onSelect={handleSelectDrop}>
                         {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
                             <div>
 
-                            <input {...getInputProps({ placeholder: "Drop-off location" })} />
+                            <input className="reservation-form__input rounded" {...getInputProps({ placeholder: "Drop-off location" })} />
 
                             <div>
                                 {loading ? <div>...loading</div> : null}
