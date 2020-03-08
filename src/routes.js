@@ -1,10 +1,10 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Home from '../components/Home/Home';
-import AboutUs from '../components/AboutUs/AboutUs';
-import Reservation from '../components/Reservation/Reservation';
-import ContactUs from '../components/ContactUs/ContactUs';
-import ReservationFormTest from '../components/ReservationFormTest/MultiStepForm';
+import Home from './components/Home/Home';
+import AboutUs from './components/AboutUs/AboutUs';
+import Reservation from './components/Reservation/Reservation';
+import ContactUs from './components/ContactUs/ContactUs';
+import ReservationFormTest from './components/ReservationFormTest/MultiStepForm';
 
 export default (
     <Switch>

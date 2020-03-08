@@ -3,7 +3,7 @@ import React from 'react';
 import NavBar from './components/NavBar/NavBar';
 import Mission from './components/Mission/Mission';
 import Footer from './components/Footer/Footer';
-import routes from './routes/routes';
+import routes from './routes';
 
 import './App.css';
 
