@@ -1,6 +1,6 @@
 import React from 'react';
 
-import map from '../../../images/map.png';
+// import map from '../../../images/map.png';
 
 function StepThree(props) {
     if (props.currentStep !== 3) {
