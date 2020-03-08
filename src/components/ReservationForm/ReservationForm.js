@@ -28,6 +28,12 @@ function ReservationForm(props) {
         console.log("surrent step after -> ", currentStep);
     }
 
+    const stepSwitcher = (step) => {
+        // if (step == 1) {
+        // }
+        return 1;
+    }
+
     // nextButton() {
     //     let currentStep = this.state.currentStep;
         
@@ -39,14 +45,14 @@ function ReservationForm(props) {
     
     return (
         <form className="reservation-form rounded">
-            <StepOne currentStep={currentStep} next={_next} />
-            <StepTwo currentStep={currentStep} next={_next}/>
-            <StepThree currentStep={currentStep} next={_next}/>
-            <StepFour currentStep={currentStep} next={_next}/>
-            <StepFive currentStep={currentStep} next={_next}/>
-            <StepSix currentStep={currentStep} next={_next}/>
-            <StepSeven currentStep={currentStep} next={_next}/>
-            <StepEight currentStep={currentStep} next={_next}/>
+            <StepOne currentStep={currentStep} next={_next} stepSwitcher={1}/>
+            <StepTwo currentStep={currentStep} next={_next} stepSwitcher={2}/>
+            <StepThree currentStep={currentStep} next={_next} stepSwitcher={3}/>
+            <StepFour currentStep={currentStep} next={_next} stepSwitcher={4}/>
+            <StepFive currentStep={currentStep} next={_next} stepSwitcher={5}/>
+            <StepSix currentStep={currentStep} next={_next} stepSwitcher={6}/>
+            <StepSeven currentStep={currentStep} next={_next} stepSwitcher={7}/>
+            <StepEight currentStep={currentStep} next={_next} stepSwitcher={8}/>
             {/* <button onClick={this._next}>Next</button> */}
         </form>
     )
