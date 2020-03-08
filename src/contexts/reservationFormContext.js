@@ -1,4 +1,5 @@
-    import React from 'react';
+import React from 'react';
+// import { createContext } from 'react';
 
 export const reservationFormContext = React.createContext(null);
 
@@ -27,11 +28,13 @@ export default ({ children }) => {
         buildingInfoPick: [buildingInfoPick, setBuildingInfoPick],
         addressDrop: [addressDrop, setAddressDrop],
         coordinatesDrop: [coordinatesDrop, setCoordinatesDrop],
-        coordinatesPick: [coordinatesPick, setCoordinatesPick],
-        coordinatesPick: [coordinatesPick, setCoordinatesPick],
-        coordinatesPick: [coordinatesPick, setCoordinatesPick],
-        coordinatesPick: [coordinatesPick, setCoordinatesPick],
+        buildingInfoDrop: [buildingInfoDrop, setBuildingInfoDrop],
+        date: [date, setDate],
+        time: [time, setTime],
+        passengerInfo: [passengerInfo, setPassengerInfo],
     }
+
+    
 }
 
-import { createContext } from 'react';
+
