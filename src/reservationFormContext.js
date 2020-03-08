@@ -11,7 +11,8 @@ export default ({ children }) => {
     const [coordinatesDrop, setCoordinatesDrop] = useState({lat: null, lng: null});
     const [buildingInfoDrop, setBuildingInfoDrop] = useState("");
 
-    
+    const [date, setDate] = useState("");
+    const [time, setTime] = useTime("");
 }
 
 import { createContext } from 'react';
