@@ -38,7 +38,7 @@ function StepOne(props) {
         console.log("Drop:", coordinatesDrop.lat, coordinatesDrop.lng)
     }
     const showStep = () => {
-        if (props.currentStep == 1) {
+        if (props.currentStep === 1) {
             return (
                 <div className="reservation-form__step-one">
                     <div>
