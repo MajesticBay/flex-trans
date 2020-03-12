@@ -23,9 +23,30 @@ function ReservationForm(props) {
     // const [coordinatesPick, setCoordinatesPick] = useState({lat: null, lng: null})
 
     const _next = () => {
-        console.log("surrent step before -> ", currentStep);
+        console.log("current step before -> ", currentStep);
         setCurrentStep(currentStep + 1)
-        console.log("surrent step after -> ", currentStep);
+        console.log("current step after -> ", currentStep);
+    }
+
+    const switchForms = () => {
+        switch(currentStep){
+            case 1:
+                return <StepOne currentStep={currentStep} next={_next}/>
+            case 2:
+                return <StepTwo currentStep={currentStep} next={_next}/>
+            case 3:
+                return <StepThree currentStep={currentStep} next={_next}/>
+            case 4:
+                return <StepFour currentStep={currentStep} next={_next}/>
+            case 5:
+                return <StepFive currentStep={currentStep} next={_next}/>
+            case 6:
+                return <StepSix currentStep={currentStep} next={_next}/>
+            case 7:
+                return <StepSeven currentStep={currentStep} next={_next}/>
+            case 8:
+                return <StepEight currentStep={currentStep} next={_next}/>
+            }
     }
 
     // nextButton() {
@@ -39,17 +60,7 @@ function ReservationForm(props) {
     
     return (
         <form className="reservation-form rounded">
-            {currentStep == 1 && <StepOne currentStep={currentStep} next={_next}/>}
-            {currentStep == 2 && <StepTwo currentStep={currentStep} next={_next}/>}
-            {/* <StepOne currentStep={currentStep} next={_next}/> */}
-            {/* <StepTwo currentStep={currentStep} next={_next}/> */}
-            <StepThree currentStep={currentStep} next={_next}/>
-            <StepFour currentStep={currentStep} next={_next}/>
-            <StepFive currentStep={currentStep} next={_next}/>
-            <StepSix currentStep={currentStep} next={_next}/>
-            <StepSeven currentStep={currentStep} next={_next}/>
-            <StepEight currentStep={currentStep} next={_next}/>
-            {/* <button onClick={this._next}>Next</button> */}
+            {switchForms()}
         </form>
     )
 }

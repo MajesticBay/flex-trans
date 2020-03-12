@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PlacesAutocomplete, {geocodeByAddress, getLatLng} from "react-places-autocomplete"
 
 import fordtransit from '../../../images/car-left-shadow.png';
@@ -8,6 +8,10 @@ function StepOne(props) {
     // Pick block
     const [addressPick, setAddressPick] = useState("");
     const [coordinatesPick, setCoordinatesPick] = useState({lat: null, lng: null})
+
+    useEffect(() => {
+        console.log('yes')
+    },[])
 
     const handleSelectPick = async value => {
         const results = await geocodeByAddress(value);

@@ -33,12 +33,12 @@ function StepTwo(props) {
                                     <span className="step-two__cost">53.31</span>
                                 </div>
                             </div>
-                            <div className="reservation-form__submit-btn rounded pointer">
+                            <div className="reservation-form__submit-btn rounded pointer" onClick={stepDone}>
                                 <span className="reservation-form__submit-text">Get instant quote for your trip</span>
                             </div>
                         </div>
                     </div>
-                    <div className="step-one__car-photo-container" onClick={stepDone()}>
+                    <div className="step-one__car-photo-container">
                         {/* <img className="img-fluid" src={map} alt="Ford Transit Wheelchair Vagon"/> */}
                         <iframe title="google-map" frameBorder="0" style={{ width: "100%", height: "100%"}} src={url}>
         
