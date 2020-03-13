@@ -4,13 +4,16 @@ import React from 'react';
 require('dotenv').config();
 
 function StepTwo(props) {
-    let url = `https://www.google.com/maps/embed/v1/directions?origin=40.7127837,-74.0059413&destination=42.3600825,-71.05888&key=${process.env.REACT_APP_GOOGLE_API_KEY}`;
-    // if (props.currentStep !=== 2) {
-    //     return null
-    // }
+    let url = `https://www.google.com/maps/embed/v1/directions?origin=${props.addressPick}&destination=42.3600825,-71.05888&key=${process.env.REACT_APP_GOOGLE_API_KEY}`;
+    // let url = `https://www.google.com/maps/embed/v1/directions?origin=40.7127837,-74.0059413&destination=42.3600825,-71.05888&key=${process.env.REACT_APP_GOOGLE_API_KEY}`;
+
+    const testing = () => {
+        console.log('here!!!!!!!!!!!')
+        console.log(props.addressPick);
+    }
 
     const stepDone = () => {
-        localStorage.clear();
+        
         props.next();
     }
 
@@ -33,7 +36,7 @@ function StepTwo(props) {
                                     <span className="step-two__cost">53.31</span>
                                 </div>
                             </div>
-                            <div className="reservation-form__submit-btn rounded pointer" onClick={stepDone}>
+                            <div className="reservation-form__submit-btn rounded pointer" onClick={testing}>
                                 <span className="reservation-form__submit-text">Get instant quote for your trip</span>
                             </div>
                         </div>

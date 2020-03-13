@@ -34,10 +34,10 @@ function StepOne(props) {
     const stepDone = () => {
         localStorage.clear();
         props.next();
-        localStorage.setItem('coordinatesPickLat', coordinatesPick.lat);
-        localStorage.setItem('coordinatesPickLng', coordinatesPick.lng);
-        localStorage.setItem('coordinatesDropLat', coordinatesDrop.lat);
-        localStorage.setItem('coordinatesDropLng', coordinatesDrop.lng);
+        // localStorage.setItem('coordinatesPickLat', coordinatesPick.lat);
+        // localStorage.setItem('coordinatesPickLng', coordinatesPick.lng);
+        // localStorage.setItem('coordinatesDropLat', coordinatesDrop.lat);
+        // localStorage.setItem('coordinatesDropLng', coordinatesDrop.lng);
         console.log("Pick:", coordinatesPick.lat, coordinatesPick.lng)
         console.log("Drop:", coordinatesDrop.lat, coordinatesDrop.lng)
     }

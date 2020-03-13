@@ -19,11 +19,12 @@ function ReservationForm(props) {
     //     }
     // }
     const [currentStep, setCurrentStep] = useState(1);
-    // const [addressPick, setAddressPick] = useState("");
-    // const [coordinatesPick, setCoordinatesPick] = useState({lat: null, lng: null})
+    const [addressPick, setAddressPick] = useState("");
+    const [coordinatesPick, setCoordinatesPick] = useState({lat: null, lng: null})
 
     const _next = () => {
         console.log("current step before -> ", currentStep);
+        console.log("addressPick ", addressPick);
         setCurrentStep(currentStep + 1)
         console.log("current step after -> ", currentStep);
     }
@@ -31,7 +32,7 @@ function ReservationForm(props) {
     const switchForms = () => {
         switch(currentStep){
             case 1:
-                return <StepOne currentStep={currentStep} next={_next}/>
+                return <StepOne currentStep={currentStep} next={_next} addressPick={addressPick}/>
             case 2:
                 return <StepTwo currentStep={currentStep} next={_next}/>
             case 3:
