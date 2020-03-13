@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import PlacesAutocomplete, {geocodeByAddress, getLatLng} from "react-places-autocomplete"
+import PlacesAutocomplete, {geocodeByAddress, getLatLng} from "react-places-autocomplete";
+
+import { reservationFormContext } from '../../../contexts/reservationFormContext';
 
 import fordtransit from '../../../images/car-left-shadow.png';
 
@@ -7,7 +9,11 @@ function StepOne(props) {
 
     // Pick block
     const [addressPick, setAddressPick] = useState("");
-    const [coordinatesPick, setCoordinatesPick] = useState({lat: null, lng: null})
+    const [coordinatesPick, setCoordinatesPick] = useState({lat: null, lng: null});
+    // const {
+    //     [type]: [data, setData],
+    // } = React.useContext(StoreContext)
+    const { addressPickContext } = React.useContext(reservationFormContext)
 
     useEffect(() => {
         console.log('yes')
@@ -51,7 +57,9 @@ function StepOne(props) {
                                 {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
                                     <div>
         
-                                    <input className="reservation-form__input rounded" {...getInputProps({ placeholder: "Pick-up location" })} />
+                                    <input
+                                        className="reservation-form__input rounded" 
+                                        {...getInputProps({ placeholder: "Pick-up location" })} />
         
                                     <div>
                                         {loading ? <div>...loading</div> : null}

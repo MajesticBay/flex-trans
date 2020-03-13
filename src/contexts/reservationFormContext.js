@@ -23,7 +23,7 @@ export default ({ children }) => {
                                                         rideBackNeeded: false
                                                         });
     const reservationForm = {
-        addressPick: [addressPick, setAddressPick],
+        addressPickContext: [addressPick, setAddressPick],
         coordinatesPick: [coordinatesPick, setCoordinatesPick],
         buildingInfoPick: [buildingInfoPick, setBuildingInfoPick],
         addressDrop: [addressDrop, setAddressDrop],
