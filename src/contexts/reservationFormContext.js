@@ -1,25 +1,13 @@
 import React from 'react';
-// import { createContext } from 'react';
 
-export const reservationFormContext = React.createContext({
-    addressPick:"",
-    setAddressPick: () => {},
-});
-
-// export const reservationProvider = reservationFormContext.Provider
-// export const reservationContext = reservationFormContext.Context
-
-
-// export default reservationFormContext;
-
-
+export const reservationFormContext = React.createContext({});
 
 export default ({ children }) => {
-    const [addressPick, setAddressPick] = React.useState("bbbb");
+    const [addressPick, setAddressPick] = React.useState("");
     const [coordinatesPick, setCoordinatesPick] = React.useState({lat: null, lng: null});
     const [buildingInfoPick, setBuildingInfoPick] = React.useState("");
 
-    const [addressDrop, setAddressDrop] = React.useState("cccc");
+    const [addressDrop, setAddressDrop] = React.useState("");
     const [coordinatesDrop, setCoordinatesDrop] = React.useState({lat: null, lng: null});
     const [buildingInfoDrop, setBuildingInfoDrop] = React.useState("");
 
@@ -34,19 +22,17 @@ export default ({ children }) => {
                                                         rideBackNeeded: false
                                                         });
     const reservationForm = {
-        addressPickContext: [addressPick, setAddressPick],
-        coordinatesPick: [coordinatesPick, setCoordinatesPick],
-        buildingInfoPick: [buildingInfoPick, setBuildingInfoPick],
-        addressDrop: [addressDrop, setAddressDrop],
-        coordinatesDrop: [coordinatesDrop, setCoordinatesDrop],
-        buildingInfoDrop: [buildingInfoDrop, setBuildingInfoDrop],
-        date: [date, setDate],
-        time: [time, setTime],
-        passengerInfo: [passengerInfo, setPassengerInfo],
-        addressPick,
-        setAddressPick
+        addressPick, setAddressPick,
+        coordinatesPick, setCoordinatesPick,
+        buildingInfoPick, setBuildingInfoPick,
+        addressDrop, setAddressDrop,
+        coordinatesDrop, setCoordinatesDrop,
+        buildingInfoDrop, setBuildingInfoDrop,
+        date, setDate,
+        time, setTime,
+        passengerInfo, setPassengerInfo,
+        addressPick, setAddressPick
     }
-    
 
 return <reservationFormContext.Provider value={reservationForm}>{ children }</reservationFormContext.Provider>
 }
