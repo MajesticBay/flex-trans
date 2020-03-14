@@ -8,12 +8,19 @@ import fordtransit from '../../../images/car-left-shadow.png';
 function StepOne(props) {
 
     // Pick block
-    const [addressPick, setAddressPick] = useState("");
-    const [coordinatesPick, setCoordinatesPick] = useState({lat: null, lng: null});
+    const [addressPickLocal, setAddressPickLocal] = useState("");
+    const [coordinatesPickLocal, setCoordinatesPickLocal] = useState({lat: null, lng: null});
     // const {
     //     [type]: [data, setData],
     // } = React.useContext(StoreContext)
-    const { addressPickContext } = React.useContext(reservationFormContext)
+    const { addressPick, setAddressPick } = React.useContext(reservationFormContext)
+
+    //console.log('yoooo===>>>>', addressPick, 'funcc===>>', setAddressPick)
+   //useEffect(() => {
+        setAddressPick('ddddddd')
+        console.log('yoooo===>>>>', addressPick)
+    //}, [])
+
 
     useEffect(() => {
         console.log('yes')
@@ -22,8 +29,8 @@ function StepOne(props) {
     const handleSelectPick = async value => {
         const results = await geocodeByAddress(value);
         const latLng = await getLatLng(results[0]);
-        setAddressPick(value);
-        setCoordinatesPick(latLng);
+        setAddressPickLocal(value);
+        setCoordinatesPickLocal(latLng);
     };
     
     // Drop block
@@ -40,11 +47,11 @@ function StepOne(props) {
     const stepDone = () => {
         localStorage.clear();
         props.next();
-        // localStorage.setItem('coordinatesPickLat', coordinatesPick.lat);
-        // localStorage.setItem('coordinatesPickLng', coordinatesPick.lng);
+        // localStorage.setItem('coordinatesPickLocalLat', coordinatesPickLocal.lat);
+        // localStorage.setItem('coordinatesPickLocalLng', coordinatesPickLocal.lng);
         // localStorage.setItem('coordinatesDropLat', coordinatesDrop.lat);
         // localStorage.setItem('coordinatesDropLng', coordinatesDrop.lng);
-        console.log("Pick:", coordinatesPick.lat, coordinatesPick.lng)
+        console.log("Pick:", coordinatesPickLocal.lat, coordinatesPickLocal.lng)
         console.log("Drop:", coordinatesDrop.lat, coordinatesDrop.lng)
     }
     const showStep = () => {
@@ -53,7 +60,7 @@ function StepOne(props) {
                 <div className="reservation-form__step-one">
                     <div>
                         <div className="step-one__form rounded">
-                            <PlacesAutocomplete value={addressPick} onChange={setAddressPick} onSelect={handleSelectPick}>
+                            <PlacesAutocomplete value={addressPickLocal} onChange={setAddressPickLocal} onSelect={handleSelectPick}>
                                 {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
                                     <div>
         
