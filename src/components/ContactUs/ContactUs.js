@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Top from '../Top/Top';
 import ReservationForm from '../ReservationForm/ReservationForm';
 
 function ContactUs() {
+  const [contactFormName, setContactFormName] = useState("");
+  const [contactFormPhone, setContactFormPhone] = useState("");
+  const [contactFormEmail, setContactFormEmail] = useState("");
+  const [contactFormMessage, setContactFormMessage] = useState("");
+
+  const handleSubmit = (event) => {
+    // event.preventDefault();
+    console.log(contactFormName);
+  }
+
   return (
     <div className="contact-us">
       <Top/>
@@ -12,35 +22,39 @@ function ContactUs() {
         <h3 className="contact-us__header">Contact Information</h3>
         <p className="contact-us__info"><span className="contact-us__info-header">Phone:</span> 1-425-444-3905</p>
         <p className="contact-us__info"><span className="contact-us__info-header">Email:</span> flextranswa@gmail.com</p>
-        <div className="contact-us__contact-form rounded">
+        {/* <form className="contact-us__contact-form rounded" onSubmit={() => handleSubmit()}> */}
+        <form className="contact-us__contact-form rounded">
           <p className="contact-us__header contact-us__header--form">Send us a message</p>
           <div className="contact-form__contact-form-inside-wrapper">
             <div className="contact-form-inside-wrapper__contact-left">
               <div className="contact-form__contact-form-group">
                 <label className="contact-form__label">First and Last Name</label>
-                <input className="contact-form-group__input rounded"></input>
+                <input type="text" className="contact-form-group__input rounded" onChange={e => setContactFormName(e.target.value)}></input>
               </div>
               <div className="contact-form__contact-form-group">
                 <label className="contact-form__label">Phone</label>
-                <input className="contact-form-group__input rounded"></input>
+                <input type="phone" className="contact-form-group__input rounded" onChange={e => setContactFormPhone(e.target.value)}></input>
               </div>
               <div className="contact-form__contact-form-group">
                 <label className="contact-form__label">Email</label>
-                <input className="contact-form-group__input contact-form-group__input--no-padding rounded"></input>
+                <input type="email" className="contact-form-group__input contact-form-group__input--no-padding rounded" onChange={e => setContactFormEmail(e.target.value)}></input>
               </div>
             </div>
 
             <div className="contact-form-inside-wrapper__contact-right">
               <div className="contact-us__contact-form-group contact-us__contact-form-group--height-100">
                 <label className="contact-form__label">Message</label>
-                <textarea className="contact-form-group__textarea rounded"></textarea>
+                <textarea type="text" className="contact-form-group__textarea rounded"></textarea>
               </div>
             </div>
-            <div className="contact-form-group__contact-submit-btn rounded pointer">
+            {/* <div className="contact-form-group__contact-submit-btn rounded pointer" onClick={ () => handleSubmit() }>
+              <input className="contact-submit-btn__text" type="submit" value="Send message"></input>
+            </div> */}
+            <div className="contact-form-group__contact-submit-btn rounded pointer" onClick={ () => handleSubmit() }>
               <p className="contact-submit-btn__text">Send message</p>
             </div>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   );

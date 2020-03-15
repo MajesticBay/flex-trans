@@ -17,8 +17,8 @@ function StepOne(props) {
 
     //console.log('yoooo===>>>>', addressPick, 'funcc===>>', setAddressPick)
    //useEffect(() => {
-        setAddressPick('ddddddd')
-        console.log('yoooo===>>>>', addressPick)
+        setAddressPick('1')
+        console.log('here: ', addressPick)
     //}, [])
 
 

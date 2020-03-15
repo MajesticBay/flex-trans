@@ -91,6 +91,8 @@
 .contact-submit-btn__text {
     font-size: var(--font-2-6);
     color: var(--color-white);
+    border: none;
+    background-color: transparent;
 }
 
 @media only screen and (min-width: 1024px) {
