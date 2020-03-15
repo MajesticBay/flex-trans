@@ -10,14 +10,6 @@ import StepSeven from './StepSeven/StepSeven';
 import StepEight from './StepEight/StepEight';
 
 function ReservationForm(props) {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         currentStep: 1,
-    //         // pick: '',
-    //         // drop: ''
-    //     }
-    // }
     const [currentStep, setCurrentStep] = useState(1);
     const [addressPick, setAddressPick] = useState("");
     const [coordinatesPick, setCoordinatesPick] = useState({lat: null, lng: null})
@@ -49,15 +41,6 @@ function ReservationForm(props) {
                 return <StepEight currentStep={currentStep} next={_next}/>
             }
     }
-
-    // nextButton() {
-    //     let currentStep = this.state.currentStep;
-        
-    // }
-
-    // test = param => {
-    //     console.log (this.state.currentStep);
-    // }
     
     return (
         <form className="reservation-form rounded">
