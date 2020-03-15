@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import StepOne from './StepOne/StepOne';
 import StepTwo from './StepTwo/StepTwo';
@@ -10,9 +10,10 @@ import StepSeven from './StepSeven/StepSeven';
 import StepEight from './StepEight/StepEight';
 
 function ReservationForm(props) {
+    const [currentStep, setCurrentStep] = useState(1);
+
     const _next = () => {
         console.log("current step before -> ", currentStep);
-        console.log("addressPick ", addressPick);
         setCurrentStep(currentStep + 1)
         console.log("current step after -> ", currentStep);
     }
@@ -37,7 +38,7 @@ function ReservationForm(props) {
                 return <StepEight currentStep={currentStep} next={_next}/>
             }
     }
-
+    
     return (
         <form className="reservation-form rounded">
             {switchForms()}
