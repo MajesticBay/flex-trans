@@ -13,20 +13,20 @@ function NavBar() {
                         <img className="img-fluid--no-width" src={logo} alt="Flex-trans logo"/>
                     </div>
                 </Link>
-                <a href="tel:(425) 260 2121">
+                <a href="tel:(425) 444 3905">
                     <div className="call-btn--mobile rounded pointer">
                         <div className="call-btn__phone-img-container">
                             <img className="call-btn__phone-img" src={phone} alt="Press to call us"/>
                         </div>
-                        <span className="call-btn__text">(425) 260 2121</span>
+                        <span className="call-btn__text">(425) 444 3905</span>
                     </div>
                 </a>
                 <div>
                     <img src={hamburger} alt="Tap to open the menu"/>
                 </div>
                 <div className="navbar-mobile__menu">
-                    <a href="tel:(425) 260 2121">
-                        <p>(425) 260 2121</p>
+                    <a href="tel:(425) 444 3905">
+                        <p>(425) 444 3905</p>
                     </a>
                 </div>
             </div>
@@ -37,12 +37,12 @@ function NavBar() {
                             <img className="img-fluid--no-width" src={logo} alt="Flex-trans logo"/>
                         </div>
                     </Link>
-                    <a href="tel:(425) 260 2121">
+                    <a href="tel:(425) 444 3905">
                         <div className="call-btn rounded pointer">
                             <div className="call-btn__phone-img-container">
                                 <img className="img-fluid--no-width" src={phone} alt="Press to call us"/>
                             </div>
-                            <span className="call-btn__text">(425) 260 2121</span>
+                            <span className="call-btn__text">(425) 444 3905</span>
                         </div>
                     </a>
                 </div>
