@@ -25,14 +25,14 @@ function ContactUs() {
   }
 
   const sendFeedback = (templateId, variables) => {
-    window.emailjs.send( templateId, variables)
+    window.emailjs.send( 'gmail', templateId, variables)
     .then(res => {
         // this.createNotification('success')
         console.log('Email successfully sent!')
         console.log(res)
     })
     .catch(err => {
-        this.createNotification('error')
+        // this.createNotification('error')
         console.error('Error during sending email:', err)
     })
   }
