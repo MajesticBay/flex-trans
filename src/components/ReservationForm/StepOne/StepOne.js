@@ -8,19 +8,10 @@ import fordtransit from '../../../images/car-left-shadow.png';
 function StepOne(props) {
 
     // Pick block
-    // const [addressPick, setAddressPick] = useState("");
-    // const [coordinatesPick, setCoordinatesPick] = useState({lat: null, lng: null});
     const { addressPick, setAddressPick } = React.useContext(reservationFormContext);
     const { coordinatesPick, setCoordinatesPick } = React.useContext(reservationFormContext);
     const { addressDrop, setAddressDrop } = React.useContext(reservationFormContext);
     const { coordinatesDrop, setCoordinatesDrop } = React.useContext(reservationFormContext);
-
-    //console.log('yoooo===>>>>', addressPick, 'funcc===>>', setAddressPick)
-   //useEffect(() => {
-        // setAddressPick('1')
-        // console.log('here: ', addressPick)
-    //}, [])
-
 
     // useEffect(() => {
     //     console.log('yes')
@@ -34,8 +25,6 @@ function StepOne(props) {
     };
     
     // Drop block
-    // const [addressDrop, setAddressDrop] = useState("");
-    // const [coordinatesDrop, setCoordinatesDrop] = useState({lat: null, lng: null})
 
     const handleSelectDrop = async value => {
         const results = await geocodeByAddress(value);
@@ -47,10 +36,6 @@ function StepOne(props) {
     const stepDone = () => {
         localStorage.clear();
         props.next();
-        // localStorage.setItem('coordinatesPickLat', coordinatesPick.lat);
-        // localStorage.setItem('coordinatesPickLng', coordinatesPick.lng);
-        // localStorage.setItem('coordinatesDropLat', coordinatesDrop.lat);
-        // localStorage.setItem('coordinatesDropLng', coordinatesDrop.lng);
         console.log("Pick:", coordinatesPick.lat, coordinatesPick.lng)
         console.log("Drop:", coordinatesDrop.lat, coordinatesDrop.lng)
     }

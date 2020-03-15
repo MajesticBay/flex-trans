@@ -11,10 +11,6 @@ function StepTwo(props) {
     const { coordinatesDrop, setCoordinatesDrop } = React.useContext(reservationFormContext);
 
     let url = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&key=${process.env.REACT_APP_GOOGLE_API_KEY}`;
-    // let url = `https://www.google.com/maps/embed/v1/directions?origin=40.7127837,-74.0059413&destination=42.3600825,-71.05888&key=${process.env.REACT_APP_GOOGLE_API_KEY}`;
-
-    // const [addressPickLocal, setAddressPickLocal] = useState("");
-    // const [coordinatesPickLocal, setCoordinatesPickLocal] = useState({lat: null, lng: null});
 
     const testing = () => {
         console.log('here!!!!!!!!!!!')
@@ -51,7 +47,6 @@ function StepTwo(props) {
                         </div>
                     </div>
                     <div className="step-one__car-photo-container">
-                        {/* <img className="img-fluid" src={map} alt="Ford Transit Wheelchair Vagon"/> */}
                         <iframe title="google-map" frameBorder="0" style={{ width: "100%", height: "100%"}} src={url}>
         
                         </iframe>
