@@ -21,7 +21,20 @@ function ContactUs() {
     const message = contactFormMessage;
     const formValues = { name, phone, email, message };
     const templateId = 'template_zxl0pk0o';
-    // sendFeedback(templateId, formValues);
+    sendFeedback(templateId, formValues);
+  }
+
+  const sendFeedback = (templateId, variables) => {
+    window.emailjs.send( templateId, variables)
+    .then(res => {
+        // this.createNotification('success')
+        console.log('Email successfully sent!')
+        console.log(res)
+    })
+    .catch(err => {
+        this.createNotification('error')
+        console.error('Error during sending email:', err)
+    })
   }
 
   return (
