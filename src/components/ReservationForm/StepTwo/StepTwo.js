@@ -6,20 +6,25 @@ require('dotenv').config();
 
 function StepTwo(props) {
     GoogleMap.key('AIzaSyA1_FjAoDlmqOnFqr8ckuw9Ifw9T8oYgWU');
+    GoogleMap.units('imperial');
     const { addressPick, setAddressPick } = React.useContext(reservationFormContext);
     const { coordinatesPick, setCoordinatesPick } = React.useContext(reservationFormContext);
     const { addressDrop, setAddressDrop } = React.useContext(reservationFormContext);
     const { coordinatesDrop, setCoordinatesDrop } = React.useContext(reservationFormContext);
+    const { distance, setDistance } = React.useContext(reservationFormContext);
 
     let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&key=AIzaSyA1_FjAoDlmqOnFqr8ckuw9Ifw9T8oYgWU`;
 
-    // const testing = () => {
-    //     console.log('here!!!!!!!!!!!')
-    //     console.log(addressPick);
-    // }
+    const testing = () => {
+        console.log('here!!!!!!!!!!!')
+        getDistance();
+        console.log(addressPick);
+    }
 
-    getDistance = () => {
-        GoogleMap.matrix(addressPick, addressDrop, function (err, distances) {
+    const getDistance = () => {
+        let var1 = "Seattle";
+        let var2 = "Renton";
+        GoogleMap.matrix([var1], [var2], function (err, distances) {
             if (err) {
                 return console.log(err);
             }
@@ -28,12 +33,8 @@ function StepTwo(props) {
             }
             if (distances.status == 'OK') {
                 if(distances.rows[0].elements[0])  {
-                    var distance = distances.rows[0].elements[0].duration['text'];
-                    this.setState({
-                        foundDistance: true, 
-                        distanceText: distance
-    
-                    }); 
+                    var localDistance = distances.rows[0].elements[0].distance['text'];
+                    console.log(localDistance)
                 }
             } 
         });
@@ -58,9 +59,12 @@ function StepTwo(props) {
                                     <span className="step-two__cost">53.31</span>
                                 </div>
                             </div>
-                            <div className="reservation-form__submit-btn rounded pointer" onClick={() => props.next()}>
+                            <div className="reservation-form__submit-btn rounded pointer" onClick={testing}>
                                 <span className="reservation-form__submit-text">Get instant quote for your trip</span>
                             </div>
+                            {/* <div className="reservation-form__submit-btn rounded pointer" onClick={() => props.next()}>
+                                <span className="reservation-form__submit-text">Get instant quote for your trip</span>
+                            </div> */}
                         </div>
                     </div>
                     <div className="step-one__car-photo-container">

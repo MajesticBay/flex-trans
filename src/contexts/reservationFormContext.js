@@ -11,6 +11,8 @@ export default ({ children }) => {
     const [coordinatesDrop, setCoordinatesDrop] = React.useState({lat: null, lng: null});
     const [buildingInfoDrop, setBuildingInfoDrop] = React.useState("");
 
+    const [distance, setDistance] = React.useState("");
+
     const [date, setDate] = React.useState("");
     const [time, setTime] = React.useState("");
 
@@ -28,6 +30,7 @@ export default ({ children }) => {
         addressDrop, setAddressDrop,
         coordinatesDrop, setCoordinatesDrop,
         buildingInfoDrop, setBuildingInfoDrop,
+        distance, setDistance,
         date, setDate,
         time, setTime,
         passengerInfo, setPassengerInfo,
