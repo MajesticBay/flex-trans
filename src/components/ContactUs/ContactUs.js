@@ -12,6 +12,16 @@ function ContactUs() {
   const handleSubmit = (event) => {
     // event.preventDefault();
     console.log(contactFormName);
+    console.log(contactFormPhone);
+    console.log(contactFormEmail);
+    console.log(contactFormMessage);
+    const name = contactFormName;
+    const phone = contactFormPhone;
+    const email = contactFormEmail;
+    const message = contactFormMessage;
+    const formValues = { name, phone, email, message };
+    const templateId = 'template_zxl0pk0o';
+    // sendFeedback(templateId, formValues);
   }
 
   return (
@@ -44,7 +54,7 @@ function ContactUs() {
             <div className="contact-form-inside-wrapper__contact-right">
               <div className="contact-us__contact-form-group contact-us__contact-form-group--height-100">
                 <label className="contact-form__label">Message</label>
-                <textarea type="text" className="contact-form-group__textarea rounded"></textarea>
+                <textarea type="text" className="contact-form-group__textarea rounded" onChange={e => setContactFormMessage(e.target.value)}></textarea>
               </div>
             </div>
             {/* <div className="contact-form-group__contact-submit-btn rounded pointer" onClick={ () => handleSubmit() }>
