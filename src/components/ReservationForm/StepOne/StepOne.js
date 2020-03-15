@@ -8,34 +8,34 @@ import fordtransit from '../../../images/car-left-shadow.png';
 function StepOne(props) {
 
     // Pick block
-    const [addressPickLocal, setAddressPickLocal] = useState("");
-    const [coordinatesPickLocal, setCoordinatesPickLocal] = useState({lat: null, lng: null});
-    // const {
-    //     [type]: [data, setData],
-    // } = React.useContext(StoreContext)
-    const { addressPick, setAddressPick } = React.useContext(reservationFormContext)
+    // const [addressPick, setAddressPick] = useState("");
+    // const [coordinatesPick, setCoordinatesPick] = useState({lat: null, lng: null});
+    const { addressPick, setAddressPick } = React.useContext(reservationFormContext);
+    const { coordinatesPick, setCoordinatesPick } = React.useContext(reservationFormContext);
+    const { addressDrop, setAddressDrop } = React.useContext(reservationFormContext);
+    const { coordinatesDrop, setCoordinatesDrop } = React.useContext(reservationFormContext);
 
     //console.log('yoooo===>>>>', addressPick, 'funcc===>>', setAddressPick)
    //useEffect(() => {
-        setAddressPick('1')
-        console.log('here: ', addressPick)
+        // setAddressPick('1')
+        // console.log('here: ', addressPick)
     //}, [])
 
 
-    useEffect(() => {
-        console.log('yes')
-    },[])
+    // useEffect(() => {
+    //     console.log('yes')
+    // },[])
 
     const handleSelectPick = async value => {
         const results = await geocodeByAddress(value);
         const latLng = await getLatLng(results[0]);
-        setAddressPickLocal(value);
-        setCoordinatesPickLocal(latLng);
+        setAddressPick(value);
+        setCoordinatesPick(latLng);
     };
     
     // Drop block
-    const [addressDrop, setAddressDrop] = useState("");
-    const [coordinatesDrop, setCoordinatesDrop] = useState({lat: null, lng: null})
+    // const [addressDrop, setAddressDrop] = useState("");
+    // const [coordinatesDrop, setCoordinatesDrop] = useState({lat: null, lng: null})
 
     const handleSelectDrop = async value => {
         const results = await geocodeByAddress(value);
@@ -47,11 +47,11 @@ function StepOne(props) {
     const stepDone = () => {
         localStorage.clear();
         props.next();
-        // localStorage.setItem('coordinatesPickLocalLat', coordinatesPickLocal.lat);
-        // localStorage.setItem('coordinatesPickLocalLng', coordinatesPickLocal.lng);
+        // localStorage.setItem('coordinatesPickLat', coordinatesPick.lat);
+        // localStorage.setItem('coordinatesPickLng', coordinatesPick.lng);
         // localStorage.setItem('coordinatesDropLat', coordinatesDrop.lat);
         // localStorage.setItem('coordinatesDropLng', coordinatesDrop.lng);
-        console.log("Pick:", coordinatesPickLocal.lat, coordinatesPickLocal.lng)
+        console.log("Pick:", coordinatesPick.lat, coordinatesPick.lng)
         console.log("Drop:", coordinatesDrop.lat, coordinatesDrop.lng)
     }
     const showStep = () => {
@@ -60,7 +60,7 @@ function StepOne(props) {
                 <div className="reservation-form__step-one">
                     <div>
                         <div className="step-one__form rounded">
-                            <PlacesAutocomplete value={addressPickLocal} onChange={setAddressPickLocal} onSelect={handleSelectPick}>
+                            <PlacesAutocomplete value={addressPick} onChange={setAddressPick} onSelect={handleSelectPick}>
                                 {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
                                     <div>
         
