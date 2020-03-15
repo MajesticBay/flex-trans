@@ -5,16 +5,16 @@ import { reservationFormContext } from '../../../contexts/reservationFormContext
 require('dotenv').config();
 
 function StepTwo(props) {
-    let url = `https://www.google.com/maps/embed/v1/directions?origin=${props.addressPick}&destination=42.3600825,-71.05888&key=${process.env.REACT_APP_GOOGLE_API_KEY}`;
-    // let url = `https://www.google.com/maps/embed/v1/directions?origin=40.7127837,-74.0059413&destination=42.3600825,-71.05888&key=${process.env.REACT_APP_GOOGLE_API_KEY}`;
-
-    // const [addressPickLocal, setAddressPickLocal] = useState("");
-    // const [coordinatesPickLocal, setCoordinatesPickLocal] = useState({lat: null, lng: null});
-
     const { addressPick, setAddressPick } = React.useContext(reservationFormContext);
     const { coordinatesPick, setCoordinatesPick } = React.useContext(reservationFormContext);
     const { addressDrop, setAddressDrop } = React.useContext(reservationFormContext);
     const { coordinatesDrop, setCoordinatesDrop } = React.useContext(reservationFormContext);
+
+    let url = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&key=${process.env.REACT_APP_GOOGLE_API_KEY}`;
+    // let url = `https://www.google.com/maps/embed/v1/directions?origin=40.7127837,-74.0059413&destination=42.3600825,-71.05888&key=${process.env.REACT_APP_GOOGLE_API_KEY}`;
+
+    // const [addressPickLocal, setAddressPickLocal] = useState("");
+    // const [coordinatesPickLocal, setCoordinatesPickLocal] = useState({lat: null, lng: null});
 
     const testing = () => {
         console.log('here!!!!!!!!!!!')
