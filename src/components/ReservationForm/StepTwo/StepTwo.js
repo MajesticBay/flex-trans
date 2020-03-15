@@ -13,6 +13,8 @@ function StepTwo(props) {
 
     const { addressPick, setAddressPick } = React.useContext(reservationFormContext);
     const { coordinatesPick, setCoordinatesPick } = React.useContext(reservationFormContext);
+    const { addressDrop, setAddressDrop } = React.useContext(reservationFormContext);
+    const { coordinatesDrop, setCoordinatesDrop } = React.useContext(reservationFormContext);
 
     const testing = () => {
         console.log('here!!!!!!!!!!!')
@@ -31,10 +33,10 @@ function StepTwo(props) {
                     <div>
                         <div className="step-two__form rounded">
                             <div className="step-two__locations">
-                                <span className="step-two__locations-text--red">A: </span><span className="step-two__locations-text">Seattle-Tacoma International Airport (SEA), International Boulevard, Seattle, WA, USA</span>
+                                <span className="step-two__locations-text--red">A: </span><span className="step-two__locations-text">{addressPick}</span>
                             </div>
                             <div className="step-two__locations">
-                                <span className="step-two__locations-text--red">B: </span><span className="step-two__locations-text">Sammamish Landing Park, East Lake Sam- mamish Parkway Northeast, Sammamish, WA, USA</span>
+            <span className="step-two__locations-text--red">B: </span><span className="step-two__locations-text">{addressDrop}</span>
                             </div>
                             <div className="step-two__trip-cost-container">
                                 <p className="step-two__info">Wheelchair rampvan <br/> One way trip 43,5 mi</p>

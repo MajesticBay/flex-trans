@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PlacesAutocomplete, {geocodeByAddress, getLatLng} from "react-places-autocomplete";
 
 import { reservationFormContext } from '../../../contexts/reservationFormContext';
