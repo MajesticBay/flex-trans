@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { NotificationContainer, NotificationManager } from 'react-notifications';
+import 'react-notifications/lib/notifications.css';
 
 import Top from '../Top/Top';
 import ReservationForm from '../ReservationForm/ReservationForm';
@@ -8,6 +10,17 @@ function ContactUs() {
   const [contactFormPhone, setContactFormPhone] = useState("");
   const [contactFormEmail, setContactFormEmail] = useState("");
   const [contactFormMessage, setContactFormMessage] = useState("");
+
+  const createNotification = (type) => {
+    console.log(type)
+    if (type === "success") {
+        NotificationManager.success('A message was sent', 'Success!', 5000);
+    } else {
+        NotificationManager.error('This message has not been sended', 'Error!', 5000, () => {
+        alert('callback');
+        });
+    }
+  }
 
   const handleSubmit = (event) => {
     // event.preventDefault();
@@ -24,18 +37,22 @@ function ContactUs() {
     sendFeedback(templateId, formValues);
   }
 
+
+
   const sendFeedback = (templateId, variables) => {
     window.emailjs.send('gmail', templateId, variables)
     .then(res => {
-        // this.createNotification('success')
-        console.log('Email successfully sent!')
-        console.log(res)
+        createNotification('success')
+        console.log('Email successfully sent!');
+        console.log(res);
     })
     .catch(err => {
-        // this.createNotification('error')
-        console.error('Error during sending email:', err)
+        createNotification('error')
+        console.error('Error during sending email:', err);
     })
   }
+
+  
 
   return (
     <div className="contact-us">
@@ -43,6 +60,7 @@ function ContactUs() {
       <ReservationForm/>
       <div className="contact-us__contact-us-content">
         <h3 className="contact-us__header">Contact Information</h3>
+        <NotificationContainer/>
         <p className="contact-us__info"><span className="contact-us__info-header">Phone:</span> 1-425-444-3905</p>
         <p className="contact-us__info"><span className="contact-us__info-header">Email:</span> flextranswa@gmail.com</p>
         {/* <form className="contact-us__contact-form rounded" onSubmit={() => handleSubmit()}> */}
