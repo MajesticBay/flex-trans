@@ -25,7 +25,6 @@ function StepOne(props) {
     };
     
     // Drop block
-
     const handleSelectDrop = async value => {
         const results = await geocodeByAddress(value);
         const latLng = await getLatLng(results[0]);

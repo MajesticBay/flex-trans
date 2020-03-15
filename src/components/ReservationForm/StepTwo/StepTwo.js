@@ -10,7 +10,7 @@ function StepTwo(props) {
     const { addressDrop, setAddressDrop } = React.useContext(reservationFormContext);
     const { coordinatesDrop, setCoordinatesDrop } = React.useContext(reservationFormContext);
 
-    let url = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&key=${process.env.REACT_APP_GOOGLE_API_KEY}`;
+    let url = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&key=AIzaSyA1_FjAoDlmqOnFqr8ckuw9Ifw9T8oYgWU`;
 
     const testing = () => {
         console.log('here!!!!!!!!!!!')
