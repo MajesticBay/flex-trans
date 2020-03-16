@@ -24,7 +24,7 @@ function StepTwo(props) {
     const getDistance = () => {
         let var1 = "Seattle";
         let var2 = "Renton";
-        GoogleMap.matrix([var1], [var2], function (err, distances) {
+        GoogleMap.matrix([addressPick], [addressDrop], function (err, distances) {
             if (err) {
                 return console.log(err);
             }
