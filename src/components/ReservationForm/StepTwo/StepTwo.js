@@ -1,5 +1,6 @@
 import React from 'react';
 import GoogleMap from 'google-distance-matrix';
+import axios from 'axios'
 import { reservationFormContext } from '../../../contexts/reservationFormContext';
 
 require('dotenv').config();
@@ -21,23 +22,35 @@ function StepTwo(props) {
         console.log(addressPick);
     }
 
+    // const getDistance = () => {
+    //     let var1 = "Seattle";
+    //     let var2 = "Renton";
+    //     GoogleMap.matrix([addressPick], [addressDrop], function (err, distances) {
+    //         if (err) {
+    //             return console.log(err);
+    //         }
+    //         if(!distances) {
+    //             return console.log('no distances');
+    //         }
+    //         if (distances.status == 'OK') {
+    //             if(distances.rows[0].elements[0])  {
+    //                 var localDistance = distances.rows[0].elements[0].distance['text'];
+    //                 console.log(localDistance)
+    //             }
+    //         } 
+    //     });
+    // }
+
     const getDistance = () => {
-        let var1 = "Seattle";
-        let var2 = "Renton";
-        GoogleMap.matrix([addressPick], [addressDrop], function (err, distances) {
-            if (err) {
-                return console.log(err);
-            }
-            if(!distances) {
-                return console.log('no distances');
-            }
-            if (distances.status == 'OK') {
-                if(distances.rows[0].elements[0])  {
-                    var localDistance = distances.rows[0].elements[0].distance['text'];
-                    console.log(localDistance)
-                }
-            } 
-        });
+        let seattle = "Seattle";
+        let renton = "Renton";
+        axios.get('https://beat-cors.herokuapp.com/https://maps.googleapis.com/maps/api/distancematrix/json?origins=Seattle&destinations=Renton&mode=driving&units=imperial&language=en&avoid=&key=AIzaSyA1_FjAoDlmqOnFqr8ckuw9Ifw9T8oYgWU')
+            .then(res => {
+                console.log(res);
+            })
+            .catch(err => {
+                console.log(err);
+            })
     }
 
     const showStep = () => {
