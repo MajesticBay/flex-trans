@@ -1,7 +1,7 @@
 import React from 'react';
 import useState from 'react';
 import fordtransit from '../../../images/car-left-shadow.png';
-// import "https://maps.googleapis.com/maps/api/js?key=AIzaSyA1_FjAoDlmqOnFqr8ckuw9Ifw9T8oYgWU&libraries=places&callback=initMap";
+// import "https://maps.googleapis.com/maps/api/js?key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE&libraries=places&callback=initMap";
 import PlacesAutocomplete, {geocodeByAddress, getLatLng} from "react-places-autocomplete"
 
 

@@ -6,7 +6,7 @@ import { reservationFormContext } from '../../../contexts/reservationFormContext
 require('dotenv').config();
 
 function StepTwo(props) {
-    GoogleMap.key('AIzaSyA1_FjAoDlmqOnFqr8ckuw9Ifw9T8oYgWU');
+    GoogleMap.key('AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE');
     GoogleMap.units('imperial');
     const { addressPick, setAddressPick } = React.useContext(reservationFormContext);
     const { coordinatesPick, setCoordinatesPick } = React.useContext(reservationFormContext);
@@ -14,7 +14,7 @@ function StepTwo(props) {
     const { coordinatesDrop, setCoordinatesDrop } = React.useContext(reservationFormContext);
     const { distance, setDistance } = React.useContext(reservationFormContext);
 
-    let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&key=AIzaSyA1_FjAoDlmqOnFqr8ckuw9Ifw9T8oYgWU`;
+    let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
 
     const testing = () => {
         console.log('here!!!!!!!!!!!')
@@ -44,9 +44,11 @@ function StepTwo(props) {
     const getDistance = () => {
         let seattle = "Seattle";
         let renton = "Renton";
-        axios.get('https://beat-cors.herokuapp.com/https://maps.googleapis.com/maps/api/distancematrix/json?origins=Seattle&destinations=Renton&mode=driving&units=imperial&language=en&avoid=&key=AIzaSyA1_FjAoDlmqOnFqr8ckuw9Ifw9T8oYgWU')
+        axios.get('https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/distancematrix/json?origins=Seattle&destinations=Renton&mode=driving&units=imperial&language=en&avoid=&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE')
+        // axios.get('https://beat-cors.herokuapp.com/https://maps.googleapis.com/maps/api/distancematrix/json?origins=Seattle&destinations=Renton&mode=driving&units=imperial&language=en&avoid=&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE')
             .then(res => {
-                console.log(res);
+                console.log('res data===>>>>', res.data);
+                //console.log(res.data.rows[0].elements[0].distance.text);
             })
             .catch(err => {
                 console.log(err);
