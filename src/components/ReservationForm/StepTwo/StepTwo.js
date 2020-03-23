@@ -22,33 +22,17 @@ function StepTwo(props) {
         console.log(addressPick);
     }
 
-    // const getDistance = () => {
-    //     let var1 = "Seattle";
-    //     let var2 = "Renton";
-    //     GoogleMap.matrix([addressPick], [addressDrop], function (err, distances) {
-    //         if (err) {
-    //             return console.log(err);
-    //         }
-    //         if(!distances) {
-    //             return console.log('no distances');
-    //         }
-    //         if (distances.status == 'OK') {
-    //             if(distances.rows[0].elements[0])  {
-    //                 var localDistance = distances.rows[0].elements[0].distance['text'];
-    //                 console.log(localDistance)
-    //             }
-    //         } 
-    //     });
-    // }
-
     const getDistance = () => {
         let origins = ["Seattle"];
         let destinations = ["Renton"];
         axios.post('/distance', { origins, destinations })
         // axios.get('https://beat-cors.herokuapp.com/https://maps.googleapis.com/maps/api/distancematrix/json?origins=Seattle&destinations=Renton&mode=driving&units=imperial&language=en&avoid=&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE')
             .then(res => {
-                console.log('res data===>>>>', res.data);
-                //console.log(res.data.rows[0].elements[0].distance.text);
+                // console.log(res.data[0].elements[0].distance.text);
+                let distanceStrArr = res.data[0].elements[0].distance.text.split(' ');
+                let distanceStr = distanceStrArr[0]
+                console.log(distanceStr);
+                setDistance(distanceStr);
             })
             .catch(err => {
                 console.log(err);
@@ -68,7 +52,7 @@ function StepTwo(props) {
                                 <span className="step-two__locations-text--red">B: </span><span className="step-two__locations-text">{addressDrop}</span>
                             </div>
                             <div className="step-two__trip-cost-container">
-                                <p className="step-two__info">Wheelchair rampvan <br/> One way trip 43,5 mi</p>
+                                <p className="step-two__info">Wheelchair rampvan <br/> One way trip ${distance} mi</p>
                                 <div>
                                     <span className="step-two__dollar-sign">$</span>
                                     <span className="step-two__cost">53.31</span>
