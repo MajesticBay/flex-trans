@@ -15,8 +15,8 @@ function StepTwo(props) {
     const { distance, setDistance } = React.useContext(reservationFormContext);
 
     useEffect(() => {
-        let origins = ["Seattle"];
-        let destinations = ["Renton"];
+        let origins = [addressPick];
+        let destinations = [addressDrop];
         axios.post('/distance', { origins, destinations })
         // axios.get('https://beat-cors.herokuapp.com/https://maps.googleapis.com/maps/api/distancematrix/json?origins=Seattle&destinations=Renton&mode=driving&units=imperial&language=en&avoid=&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE')
             .then(res => {
