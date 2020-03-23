@@ -13,6 +13,8 @@ export default ({ children }) => {
 
     const [distance, setDistance] = React.useState("");
 
+    const [price, setPrice] = React.useState("");
+
     const [date, setDate] = React.useState("");
     const [time, setTime] = React.useState("");
 
@@ -31,6 +33,7 @@ export default ({ children }) => {
         coordinatesDrop, setCoordinatesDrop,
         buildingInfoDrop, setBuildingInfoDrop,
         distance, setDistance,
+        price, setPrice,
         date, setDate,
         time, setTime,
         passengerInfo, setPassengerInfo,

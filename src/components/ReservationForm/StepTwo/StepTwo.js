@@ -13,6 +13,7 @@ function StepTwo(props) {
     const { addressDrop, setAddressDrop } = React.useContext(reservationFormContext);
     const { coordinatesDrop, setCoordinatesDrop } = React.useContext(reservationFormContext);
     const { distance, setDistance } = React.useContext(reservationFormContext);
+    const { price, setPrice } = React.useContext(reservationFormContext);
 
     useEffect(() => {
         let origins = [addressPick];
@@ -29,6 +30,8 @@ function StepTwo(props) {
             .catch(err => {
                 console.log(err);
             })
+        let priceRes = 30 + (2.95 * distance);
+        setPrice(priceRes);
     }, []);
 
     let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
@@ -69,13 +72,13 @@ function StepTwo(props) {
                                 <span className="step-two__locations-text--red">B: </span><span className="step-two__locations-text">{addressDrop}</span>
                             </div>
                             <div className="step-two__trip-cost-container">
-                                <p className="step-two__info">Wheelchair rampvan <br/> One way trip ${distance} mi</p>
+                                <p className="step-two__info">Wheelchair rampvan <br/> One way trip {distance} mi</p>
                                 <div>
                                     <span className="step-two__dollar-sign">$</span>
-                                    <span className="step-two__cost">53.31</span>
+                                    <span className="step-two__cost">{price}</span>
                                 </div>
                             </div>
-                            <div className="reservation-form__submit-btn rounded pointer" onClick={testing}>
+                            <div className="reservation-form__submit-btn rounded pointer" onClick={props.next}>
                                 <span className="reservation-form__submit-text">Get instant quote for your trip</span>
                             </div>
                             {/* <div className="reservation-form__submit-btn rounded pointer" onClick={() => props.next()}>
