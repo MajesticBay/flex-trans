@@ -1,6 +1,6 @@
 import React from 'react';
 import GoogleMap from 'google-distance-matrix';
-import axios from 'axios'
+import axios from 'axios';
 import { reservationFormContext } from '../../../contexts/reservationFormContext';
 
 require('dotenv').config();
@@ -42,9 +42,9 @@ function StepTwo(props) {
     // }
 
     const getDistance = () => {
-        let seattle = "Seattle";
-        let renton = "Renton";
-        axios.get('https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/distancematrix/json?origins=Seattle&destinations=Renton&mode=driving&units=imperial&language=en&avoid=&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE')
+        let origins = ["Seattle"];
+        let destinations = ["Renton"];
+        axios.post('/distance', { origins, destinations })
         // axios.get('https://beat-cors.herokuapp.com/https://maps.googleapis.com/maps/api/distancematrix/json?origins=Seattle&destinations=Renton&mode=driving&units=imperial&language=en&avoid=&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE')
             .then(res => {
                 console.log('res data===>>>>', res.data);
