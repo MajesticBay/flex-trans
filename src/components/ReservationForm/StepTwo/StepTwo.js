@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import GoogleMap from 'google-distance-matrix';
 import axios from 'axios';
 import { reservationFormContext } from '../../../contexts/reservationFormContext';
@@ -13,6 +13,23 @@ function StepTwo(props) {
     const { addressDrop, setAddressDrop } = React.useContext(reservationFormContext);
     const { coordinatesDrop, setCoordinatesDrop } = React.useContext(reservationFormContext);
     const { distance, setDistance } = React.useContext(reservationFormContext);
+
+    useEffect(() => {
+        let origins = ["Seattle"];
+        let destinations = ["Renton"];
+        axios.post('/distance', { origins, destinations })
+        // axios.get('https://beat-cors.herokuapp.com/https://maps.googleapis.com/maps/api/distancematrix/json?origins=Seattle&destinations=Renton&mode=driving&units=imperial&language=en&avoid=&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE')
+            .then(res => {
+                // console.log(res.data[0].elements[0].distance.text);
+                let distanceStrArr = res.data[0].elements[0].distance.text.split(' ');
+                let distanceStr = distanceStrArr[0]
+                console.log(distanceStr);
+                setDistance(distanceStr);
+            })
+            .catch(err => {
+                console.log(err);
+            })
+    }, []);
 
     let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
 
