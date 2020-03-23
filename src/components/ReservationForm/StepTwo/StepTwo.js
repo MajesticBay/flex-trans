@@ -26,12 +26,18 @@ function StepTwo(props) {
                 let distanceStr = distanceStrArr[0]
                 console.log(distanceStr);
                 setDistance(distanceStr);
+                console.log (distance);
+            })
+            .then(() => {
+                console.log (distance);
+                console.log (parseInt(distance));
+                let priceRes = 30 + (2.95 * parseInt(distance));
+                setPrice(priceRes);
             })
             .catch(err => {
                 console.log(err);
             })
-        let priceRes = 30 + (2.95 * distance);
-        setPrice(priceRes);
+        
     }, []);
 
     let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
