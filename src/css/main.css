@@ -615,7 +615,8 @@ html {
     width: 100%; } }
 .reservation-form__step-two {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  background-color: var(--color-white); }
 
 .step-two__form {
   display: flex;
@@ -623,7 +624,6 @@ html {
   width: 100%;
   position: relative;
   padding: 16px;
-  background-color: var(--color-white);
   box-shadow: 0px 34px 64px rgba(0, 0, 0, 0.09); }
 
 .step-two__locations {
@@ -652,18 +652,29 @@ html {
     flex-direction: row; } }
 .reservation-form__step-three {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  background-color: var(--color-white); }
 
-.reservation-form__reservation-date-picker-container {
-  display: flex;
-  width: 50%; }
+.step-three__header {
+  font-size: 2.5rem; }
+
+.step-three__reservation-date-picker-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'date-left date-right' 'time-left time-right' 'submit-left submit-right'; }
 
 .reservation-date-picker-container__reservation-date-picker {
-  display: flex;
-  flex-direction: column; }
+  grid-area: date-left; }
 
 .reservation-date-picker-container__reservation-time-picker {
+  grid-area: time-left;
   display: flex; }
+
+.reservation-date-picker-container__reservation-am-pm-picker {
+  grid-area: time-right; }
+
+.reservation-form__submit-btn--step-three {
+  grid-area: submit-right; }
 
 @media only screen and (min-width: 768px) {
   .reservation-form__step-three {

@@ -1,20 +1,44 @@
 .reservation-form__step-three {
     display: flex;
     flex-direction: column;
+    background-color: var(--color-white);
 }
 
-.reservation-form__reservation-date-picker-container {
-    display: flex;
-    width: 50%;
+.step-three__header {
+    font-size: 2.5rem;
 }
+
+.step-three__reservation-date-picker-container {
+    // width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    'date-left date-right'
+    'time-left time-right'
+    'submit-left submit-right';
+}
+
+// .reservation-form__input--step-three-date {
+//     grid-area: date-right;
+// }
 
 .reservation-date-picker-container__reservation-date-picker {
-    display: flex;
-    flex-direction: column;
+    grid-area: date-left;
+    // display: flex;
+    // flex-direction: column;
 }
 
 .reservation-date-picker-container__reservation-time-picker {
+    grid-area: time-left;
     display: flex;
+}
+
+.reservation-date-picker-container__reservation-am-pm-picker {
+    grid-area: time-right;
+}
+
+.reservation-form__submit-btn--step-three {
+    grid-area: submit-right;
 }
 
 @media only screen and (min-width: 768px) {
