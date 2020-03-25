@@ -1,8 +1,13 @@
 import React from 'react';
 
-
+import { reservationFormContext } from '../../../contexts/reservationFormContext';
 
 function StepThree(props) {
+    const { addressPick, setAddressPick } = React.useContext(reservationFormContext);
+    const { addressDrop, setAddressDrop } = React.useContext(reservationFormContext);
+    
+    let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
+
     if (props.currentStep !== 3) {
         return null
     }
@@ -35,7 +40,11 @@ function StepThree(props) {
                     <div className="reservation-form__triangle"></div>
                 </div>
             </div>
-            <div></div>
+            <div className="step-one__car-photo-container">
+                <iframe title="google-map" frameBorder="0" style={{ width: "100%", height: "100%"}} src={mapUrl}>
+
+                </iframe>
+            </div>
         </div>
     )
 }

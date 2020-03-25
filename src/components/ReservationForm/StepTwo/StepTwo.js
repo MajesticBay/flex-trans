@@ -8,8 +8,8 @@ require('dotenv').config();
 function StepTwo(props) {
     GoogleMap.key('AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE');
     GoogleMap.units('imperial');
-    const { addressPick, setAddressPick } = React.useContext(reservationFormContext);
-    const { addressDrop, setAddressDrop } = React.useContext(reservationFormContext);
+    const { addressPick} = React.useContext(reservationFormContext);
+    const { addressDrop } = React.useContext(reservationFormContext);
     const { distance, setDistance } = React.useContext(reservationFormContext);
     const { price, setPrice } = React.useContext(reservationFormContext);
 
@@ -34,27 +34,6 @@ function StepTwo(props) {
 
     let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
 
-    const testing = () => {
-        console.log('here!!!!!!!!!!!')
-        getDistance();
-        console.log(addressPick);
-    }
-
-    const getDistance = () => {
-        let origins = ["Seattle"];
-        let destinations = ["Renton"];
-        axios.post('/distance', { origins, destinations })
-            .then(res => {
-                let distanceStrArr = res.data[0].elements[0].distance.text.split(' ');
-                let distanceStr = distanceStrArr[0]
-                console.log(distanceStr);
-                setDistance(distanceStr);
-            })
-            .catch(err => {
-                console.log(err);
-            })
-    }
-
     const showStep = () => {
         if (props.currentStep === 2) {
             return (
@@ -77,9 +56,6 @@ function StepTwo(props) {
                             <div className="reservation-form__submit-btn rounded pointer" onClick={props.next}>
                                 <span className="reservation-form__submit-text">Get instant quote for your trip</span>
                             </div>
-                            {/* <div className="reservation-form__submit-btn rounded pointer" onClick={() => props.next()}>
-                                <span className="reservation-form__submit-text">Get instant quote for your trip</span>
-                            </div> */}
                         </div>
                     </div>
                     <div className="step-one__car-photo-container">
