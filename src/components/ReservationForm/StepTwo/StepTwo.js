@@ -32,7 +32,7 @@ function StepTwo(props) {
         
     }, []);
 
-    let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
+    let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&language=EN&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
 
     const showStep = () => {
         if (props.currentStep === 2) {
@@ -62,6 +62,7 @@ function StepTwo(props) {
                         <iframe title="google-map" frameBorder="0" style={{ width: "100%", height: "100%"}} src={mapUrl}>
         
                         </iframe>
+                        <span>Distance {distance}</span>
                     </div>
                 </div>
             )

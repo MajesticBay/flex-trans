@@ -40,7 +40,6 @@ function AboutUs() {
         </div>
         <div className="about-us-fleet_car-container rounded">
           <img className="about-us-fleet__car-img img-fluid" src={fordtransitright} alt="Ford Transit"/>
-          {/* <img className="about-us-fleet__car-img" src={fordtransitright} alt="Ford Transit"/> */}
         </div>
       </div>
     </div>
