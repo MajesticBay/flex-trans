@@ -7,7 +7,6 @@ function StepSix(props) {
             <input className="reservation-form__input rounded" placeholder="Drop-off location"/>
             <div className="reservation-form__submit-btn rounded pointer" onClick={() => props.next()}>
                 <span className="reservation-form__submit-text">Step6</span>
-                <div className="reservation-form__triangle"></div>
             </div>
         </div>
     )

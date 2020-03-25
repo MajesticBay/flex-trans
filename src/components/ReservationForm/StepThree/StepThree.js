@@ -31,7 +31,6 @@ function StepThree(props) {
                     </div>
                     <div className="reservation-form__submit-btn reservation-form__submit-btn--step-three rounded pointer" onClick={() => props.next()}>
                         <span className="reservation-form__submit-text">Next Step →</span>
-                        <div className="reservation-form__triangle"></div>
                     </div>
                 </div>  
                 
