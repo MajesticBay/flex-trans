@@ -1,9 +1,6 @@
 import React from 'react';
 
 function StepFive(props) {
-    if (props.currentStep !== 5) {
-        return null
-    }
     return (
         <div className="reservation-form__step-one">
             <input className="reservation-form__input rounded" placeholder="Pick-up location"/>
