@@ -30,7 +30,7 @@ function StepThree(props) {
                         <input type="radio" id="time-pm" name="gender" value="pm"/>
                     </div>
                     <div className="reservation-form__submit-btn reservation-form__submit-btn--step-three rounded pointer" onClick={() => props.next()}>
-                        <span className="reservation-form__submit-text">Step3</span>
+                        <span className="reservation-form__submit-text">Next Step →</span>
                         <div className="reservation-form__triangle"></div>
                     </div>
                 </div>  
