@@ -9,9 +9,7 @@ function StepTwo(props) {
     GoogleMap.key('AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE');
     GoogleMap.units('imperial');
     const { addressPick, setAddressPick } = React.useContext(reservationFormContext);
-    const { coordinatesPick, setCoordinatesPick } = React.useContext(reservationFormContext);
     const { addressDrop, setAddressDrop } = React.useContext(reservationFormContext);
-    const { coordinatesDrop, setCoordinatesDrop } = React.useContext(reservationFormContext);
     const { distance, setDistance } = React.useContext(reservationFormContext);
     const { price, setPrice } = React.useContext(reservationFormContext);
 
@@ -19,9 +17,7 @@ function StepTwo(props) {
         let origins = [addressPick];
         let destinations = [addressDrop];
         axios.post('/distance', { origins, destinations })
-        // axios.get('https://beat-cors.herokuapp.com/https://maps.googleapis.com/maps/api/distancematrix/json?origins=Seattle&destinations=Renton&mode=driving&units=imperial&language=en&avoid=&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE')
             .then(res => {
-                // console.log(res.data[0].elements[0].distance.text);
                 let distanceStrArr = res.data[0].elements[0].distance.text.split(' ');
                 let distanceStr = distanceStrArr[0]
                 console.log(distanceStr);
@@ -48,9 +44,7 @@ function StepTwo(props) {
         let origins = ["Seattle"];
         let destinations = ["Renton"];
         axios.post('/distance', { origins, destinations })
-        // axios.get('https://beat-cors.herokuapp.com/https://maps.googleapis.com/maps/api/distancematrix/json?origins=Seattle&destinations=Renton&mode=driving&units=imperial&language=en&avoid=&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE')
             .then(res => {
-                // console.log(res.data[0].elements[0].distance.text);
                 let distanceStrArr = res.data[0].elements[0].distance.text.split(' ');
                 let distanceStr = distanceStrArr[0]
                 console.log(distanceStr);

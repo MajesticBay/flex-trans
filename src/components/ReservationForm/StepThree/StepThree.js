@@ -1,6 +1,6 @@
 import React from 'react';
 
-// import map from '../../../images/map.png';
+
 
 function StepThree(props) {
     if (props.currentStep !== 3) {
@@ -29,7 +29,7 @@ function StepThree(props) {
                         <label for="time-pm">pm</label>
                         <input type="radio" id="time-pm" name="gender" value="pm"/>
                     </div>
-                </div>
+                </div>  
                 <div className="reservation-form__submit-btn rounded pointer" onClick={() => props.next()}>
                     <span className="reservation-form__submit-text">Step3</span>
                     <div className="reservation-form__triangle"></div>
