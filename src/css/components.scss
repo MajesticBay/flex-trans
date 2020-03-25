@@ -22,3 +22,11 @@ body, p {
 .rounded {
     border-radius: 6px;
 }
+
+#mapDiv > div > div > div:nth-child(10) {
+    display: none !important;
+}
+
+.directions-card {
+    display: none !important;
+}

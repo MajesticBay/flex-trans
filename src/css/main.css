@@ -166,6 +166,12 @@ body, p {
 .rounded {
   border-radius: 6px; }
 
+#mapDiv > div > div > div:nth-child(10) {
+  display: none !important; }
+
+.directions-card {
+  display: none !important; }
+
 :root {
   --color-description: #9E9E9E;
   --color-button: #1F1D1D;

@@ -1,24 +1,25 @@
 body, p {
   margin: 0;
-  font-family: Lato;
-}
+  font-family: Lato; }
 
 .img-fluid {
   width: 100%;
-  height: auto;
-}
+  height: auto; }
 
 .img-fluid--no-width {
   height: auto;
-  max-height: -webkit-fill-available;
-}
+  max-height: -webkit-fill-available; }
 
 .pointer {
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 .rounded {
-  border-radius: 6px;
-}
+  border-radius: 6px; }
+
+#mapDiv > div > div > div:nth-child(10) {
+  display: none !important; }
+
+.directions-card {
+  display: none !important; }
 
 /*# sourceMappingURL=components.css.map */
