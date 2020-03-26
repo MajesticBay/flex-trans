@@ -578,6 +578,9 @@ html {
   font-size: var(--font-1-6);
   background-color: var(--color-input-background); }
 
+.reservation-form__input--no-margin {
+  margin-bottom: 0; }
+
 .reservation-form__submit-btn {
   display: flex;
   justify-content: center;
@@ -593,6 +596,9 @@ html {
   .reservation-form__submit-btn {
     padding: 1.6rem 2rem;
     margin-top: 2rem; }
+
+  .reservation-form__submit-btn--no-margin {
+    margin-top: 0; }
 
   .reservation-form__submit-text {
     font-size: var(--font-2);
@@ -661,6 +667,7 @@ html {
 .step-three__reservation-date-picker-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
   grid-template-areas: 'date-left date-right' 'time-left time-right' 'submit-left submit-right'; }
 
 .reservation-date-picker-container__reservation-date-picker {
@@ -668,10 +675,13 @@ html {
 
 .reservation-date-picker-container__reservation-time-picker {
   grid-area: time-left;
-  display: flex; }
+  display: flex;
+  align-items: center; }
 
 .reservation-date-picker-container__reservation-am-pm-picker {
-  grid-area: time-right; }
+  grid-area: time-right;
+  display: flex;
+  align-items: center; }
 
 .reservation-form__submit-btn--step-three {
   grid-area: submit-right; }

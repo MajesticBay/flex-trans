@@ -67,6 +67,10 @@
     background-color: var(--color-input-background);
 }
 
+.reservation-form__input--no-margin {
+    margin-bottom: 0;
+}
+
 .reservation-form__submit-btn {
     display: flex;
     justify-content: center;
@@ -84,6 +88,10 @@
     .reservation-form__submit-btn {
         padding: 1.6rem 2rem;
         margin-top: 2rem;
+    }
+
+    .reservation-form__submit-btn--no-margin {
+        margin-top: 0;
     }
 
     .reservation-form__submit-text {

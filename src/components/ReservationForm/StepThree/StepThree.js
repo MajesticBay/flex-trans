@@ -18,18 +18,18 @@ function StepThree(props) {
                     <span>of 5</span>
                 </div>
                 <div className="step-three__reservation-date-picker-container">
-                    <input className="reservation-date-picker-container__reservation-date-picker reservation-form__input rounded" placeholder="Date"/>
+                    <input className="reservation-date-picker-container__reservation-date-picker reservation-form__input reservation-form__input--no-margin rounded" placeholder="Date"/>
                     <div className="reservation-date-picker-container__reservation-time-picker">
-                        <input className="reservation-form__input rounded" placeholder="Time"/>
-                        <input className="reservation-form__input rounded" placeholder="Time"/>
+                        <input className="reservation-form__input reservation-form__input--no-margin rounded" placeholder="Time"/>
+                        <input className="reservation-form__input reservation-form__input--no-margin rounded" placeholder="Time"/>
                     </div>
                     <div className="reservation-date-picker-container__reservation-am-pm-picker">
-                        <label for="time-am">am</label>
                         <input type="radio" id="time-am" name="gender" value="am"/>
-                        <label for="time-pm">pm</label>
+                        <label for="time-am">am</label>
                         <input type="radio" id="time-pm" name="gender" value="pm"/>
+                        <label for="time-pm">pm</label>
                     </div>
-                    <div className="reservation-form__submit-btn reservation-form__submit-btn--step-three rounded pointer" onClick={() => props.next()}>
+                    <div className="reservation-form__submit-btn reservation-form__submit-btn--no-margin reservation-form__submit-btn--step-three rounded pointer" onClick={() => props.next()}>
                         <span className="reservation-form__submit-text">Next Step →</span>
                     </div>
                 </div>  

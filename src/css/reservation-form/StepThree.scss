@@ -12,6 +12,7 @@
     // width: 50%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
     grid-template-areas:
     'date-left date-right'
     'time-left time-right'
@@ -31,10 +32,13 @@
 .reservation-date-picker-container__reservation-time-picker {
     grid-area: time-left;
     display: flex;
+    align-items: center;
 }
 
 .reservation-date-picker-container__reservation-am-pm-picker {
     grid-area: time-right;
+    display: flex;
+    align-items: center;
 }
 
 .reservation-form__submit-btn--step-three {
