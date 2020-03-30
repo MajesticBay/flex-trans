@@ -1,4 +1,4 @@
-.reservation-form__step-four {
+.reservation-form__step-five {
     display: flex;
     flex-direction: column;
 }
@@ -10,48 +10,48 @@
     border-top-right-radius: 6px;
 }
 
-.step-four__step-four-header {
+.step-five__step-five-header {
     display: flex;
     justify-content: space-between;
 }
 
-.step-four__header-text {
+.step-five__header-text {
     font-size: var(--font-2-6);
 }
 
-.step-four__step-four-form {
+.step-five__step-five-form {
     display: flex;
     flex-direction: column;
 }
 
-.step-four__pickup-container {
+.step-five__pickup-container {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.step-four__dropoff-container {
+.step-five__dropoff-container {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.step-four__step-four-footer {
+.step-five__step-five-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 @media only screen and (min-width: 768px) {
-    .step-four__step-four-form {
+    .step-five__step-five-form {
         flex-direction: row;
     }
 
-    .step-four__pickup-container {
+    .step-five__pickup-container {
         width: 50%;
     }
 
-    .step-four__dropoff-container {
+    .step-five__dropoff-container {
         width: 50%;
     }
 }

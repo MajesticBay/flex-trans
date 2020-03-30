@@ -670,7 +670,7 @@ html {
   align-items: center; }
 
 .step-three__header {
-  font-size: 2.5rem; }
+  font-size: var(--font-2-6); }
 
 .step-three__reservation-date-picker-container {
   display: grid;
@@ -716,6 +716,9 @@ html {
   display: flex;
   justify-content: space-between; }
 
+.step-four__header-text {
+  font-size: var(--font-2-6); }
+
 .step-four__step-four-form {
   display: flex;
   flex-direction: column; }
@@ -743,6 +746,51 @@ html {
     width: 50%; }
 
   .step-four__dropoff-container {
+    width: 50%; } }
+.reservation-form__step-five {
+  display: flex;
+  flex-direction: column; }
+
+.reservation-form__inner-container {
+  padding: 1.6rem;
+  background-color: var(--color-white);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px; }
+
+.step-five__step-five-header {
+  display: flex;
+  justify-content: space-between; }
+
+.step-five__header-text {
+  font-size: var(--font-2-6); }
+
+.step-five__step-five-form {
+  display: flex;
+  flex-direction: column; }
+
+.step-five__pickup-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column; }
+
+.step-five__dropoff-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column; }
+
+.step-five__step-five-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+@media only screen and (min-width: 768px) {
+  .step-five__step-five-form {
+    flex-direction: row; }
+
+  .step-five__pickup-container {
+    width: 50%; }
+
+  .step-five__dropoff-container {
     width: 50%; } }
 :root {
   --color-description: #9E9E9E;
