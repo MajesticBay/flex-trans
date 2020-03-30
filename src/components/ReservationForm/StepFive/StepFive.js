@@ -7,30 +7,30 @@ function StepFive(props) {
     const { addressDrop } = React.useContext(reservationFormContext);
     let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&language=EN&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
     return (
-        <div className="reservation-form__step-four">
+        <div className="reservation-form__step-five">
             <div className="reservation-form__inner-container">
-                <div className="step-four__step-four-header">
-                    <span className="step-four__header-text">Reservation form</span>
+                <div className="step-five__step-five-header">
+                    <span className="step-five__header-text">Reservation form</span>
                     <div>
                         <span>← Back</span>
                         <span>Step 2 of 5</span>
                     </div>
                 </div>
-                <div className="step-four__step-four-form">
-                    <div className="step-four__pickup-container">
-                        <p>Pick-up location</p>
+                <div className="step-five__step-five-form">
+                    <div className="step-five__pickup-container">
+                        <p>First & Last Name</p>
                         <input className="reservation-form__input rounded"/>
                     </div>
-                    <div className="step-four__dropoff-container">
-                        <p>Drop-off location</p>
+                    <div className="step-five__dropoff-container">
+                        <p>Phone Number</p>
                         <input className="reservation-form__input rounded"/>
                     </div>
-                    <div className="step-four__dropoff-container">
-                        <p>Drop-off location</p>
+                    <div className="step-five__dropoff-container">
+                        <p>Email Adress</p>
                         <input className="reservation-form__input rounded"/>
                     </div>
                 </div>
-                <div className="step-four__step-four-footer">
+                <div className="step-five__step-five-footer">
                     <div>
                         <span>Total</span>
                         <span>$0</span>

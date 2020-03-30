@@ -16,8 +16,8 @@
   font-size: var(--font-2-6); }
 
 .step-five__step-five-form {
-  display: flex;
-  flex-direction: column; }
+  display: grid;
+  grid-template-columns: 1fr; }
 
 .step-five__pickup-container {
   width: 100%;
@@ -36,7 +36,7 @@
 
 @media only screen and (min-width: 768px) {
   .step-five__step-five-form {
-    flex-direction: row; }
+    grid-template-columns: 1fr 1fr; }
 
   .step-five__pickup-container {
     width: 50%; }
