@@ -8,9 +8,9 @@ function StepFour(props) {
     let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&language=EN&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
     return (
         <div className="reservation-form__step-four">
-            <div>
+            <div className="reservation-form__inner-container">
                 <div className="step-four__step-four-header">
-                    <span>Reservation form</span>
+                    <span className="step-four__header-text">Reservation form</span>
                     <div>
                         <span>← Back</span>
                         <span>Step 2 of 5</span>
@@ -19,13 +19,13 @@ function StepFour(props) {
                 <div className="step-four__step-four-form">
                     <div className="step-four__pickup-container">
                         <p>Pick-up location</p>
-                        <input/>
-                        <input/>
+                        <input className="reservation-form__input rounded"/>
+                        <input className="reservation-form__input rounded"/>
                     </div>
                     <div className="step-four__dropoff-container">
                         <p>Drop-off location</p>
-                        <input/>
-                        <input/>
+                        <input className="reservation-form__input rounded"/>
+                        <input className="reservation-form__input rounded"/>
                     </div>
                 </div>
                 <div className="step-four__step-four-footer">
@@ -34,7 +34,7 @@ function StepFour(props) {
                         <span>$0</span>
                     </div>
                     <div className="reservation-form__submit-btn rounded pointer" onClick={props.next}>
-                        <span className="reservation-form__submit-text">Get instant quote for your trip</span>
+                        <span className="reservation-form__submit-text">Next Step →</span>
                     </div>
                 </div>
             </div>

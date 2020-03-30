@@ -1,5 +1,13 @@
 .reservation-form__step-four {
+    display: flex;
+    flex-direction: column;
+}
+
+.reservation-form__inner-container {
+    padding: 1.6rem;
     background-color: var(--color-white);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
 }
 
 .step-four__step-four-header {
@@ -9,6 +17,7 @@
 
 .step-four__step-four-form {
     display: flex;
+    flex-direction: column;
 }
 
 .step-four__pickup-container {
@@ -23,7 +32,17 @@
     flex-direction: column;
 }
 
+.step-four__step-four-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 @media only screen and (min-width: 768px) {
+    .step-four__step-four-form {
+        flex-direction: row;
+    }
+
     .step-four__pickup-container {
         width: 50%;
     }
