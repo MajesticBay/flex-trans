@@ -27,7 +27,7 @@ function StepThree(props) {
                     </span>
                 </div>
                 <div className="step-three__reservation-date-picker-container">
-                    <input className="reservation-date-picker-container__reservation-date-picker reservation-form__input reservation-form__input--no-margin rounded" placeholder="Date" onChange={e => handleDataChange(e.target.value)}/>
+                    <input className="reservation-date-picker-container__reservation-date-picker reservation-form__input reservation-form__input--no-margin rounded" type="date" placeholder="Date" onChange={e => handleDataChange(e.target.value)}/>
                     <div className="reservation-date-picker-container__reservation-time-picker">
                         <input className="reservation-form__input reservation-form__input--no-margin rounded" placeholder="Time"/>
                         <span> : </span>

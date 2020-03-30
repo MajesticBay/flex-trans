@@ -702,6 +702,13 @@ html {
 @media only screen and (min-width: 768px) {
   .reservation-form__step-three {
     flex-direction: row; } }
+.reservation-form__step-four {
+  background-color: var(--color-white); }
+
+.step-four__step-four-header {
+  display: flex;
+  justify-content: space-between; }
+
 :root {
   --color-description: #9E9E9E;
   --color-button: #1F1D1D;
