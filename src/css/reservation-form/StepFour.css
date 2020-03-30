@@ -5,4 +5,24 @@
   display: flex;
   justify-content: space-between; }
 
+.step-four__step-four-form {
+  display: flex; }
+
+.step-four__pickup-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column; }
+
+.step-four__dropoff-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column; }
+
+@media only screen and (min-width: 768px) {
+  .step-four__pickup-container {
+    width: 50%; }
+
+  .step-four__dropoff-container {
+    width: 50%; } }
+
 /*# sourceMappingURL=StepFour.css.map */

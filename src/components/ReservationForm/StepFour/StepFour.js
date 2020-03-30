@@ -17,11 +17,25 @@ function StepFour(props) {
                     </div>
                 </div>
                 <div className="step-four__step-four-form">
-                    <div>
-                    
+                    <div className="step-four__pickup-container">
+                        <p>Pick-up location</p>
+                        <input/>
+                        <input/>
+                    </div>
+                    <div className="step-four__dropoff-container">
+                        <p>Drop-off location</p>
+                        <input/>
+                        <input/>
                     </div>
                 </div>
                 <div className="step-four__step-four-footer">
+                    <div>
+                        <span>Total</span>
+                        <span>$0</span>
+                    </div>
+                    <div className="reservation-form__submit-btn rounded pointer" onClick={props.next}>
+                        <span className="reservation-form__submit-text">Get instant quote for your trip</span>
+                    </div>
                 </div>
             </div>
             <iframe title="google-map" frameBorder="0" style={{ width: "100%", height: "100%", borderRadius: "6px" }} src={mapUrl}></iframe>
