@@ -30,16 +30,16 @@ function StepFive(props) {
                         <input className="reservation-form__input rounded"/>
                     </div>
                 </div>
-                <div>
-                    <div className="step-five__pickup-container">
+                <div className="step-five__additional-info">
+                    <div className="step-five__additional-info-form-group">
                         <p>Additional Passenger</p>
                         <input className="reservation-form__input rounded"/>
                     </div>
-                    <div className="step-five__dropoff-container">
+                    <div className="step-five__additional-info-form-group">
                         <p>Do you need our wheelchair provided?</p>
                         <input className="reservation-form__input rounded"/>
                     </div>
-                    <div className="step-five__dropoff-container">
+                    <div className="step-five__additional-info-form-group">
                         <p>Do you need a ride back?</p>
                         <input className="reservation-form__input rounded"/>
                     </div>

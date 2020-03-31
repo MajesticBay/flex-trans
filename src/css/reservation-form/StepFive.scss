@@ -36,6 +36,14 @@
     flex-direction: column;
 }
 
+.step-five__additional-info {
+    display: grid;
+}
+
+.step-five__additional-info-form-group {
+    display: flex;
+}
+
 .step-five__step-five-footer {
     display: flex;
     justify-content: space-between;
@@ -47,11 +55,8 @@
         grid-template-columns: 1fr 1fr;
     }
 
-    .step-five__pickup-container {
-        width: 50%;
-    }
-
-    .step-five__dropoff-container {
-        width: 50%;
+    .step-five__additional-info {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1rem;
     }
 }
