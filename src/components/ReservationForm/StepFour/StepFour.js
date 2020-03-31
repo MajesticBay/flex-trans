@@ -8,7 +8,7 @@ function StepFour(props) {
     let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&language=EN&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
     return (
         <div className="reservation-form__step-four">
-            <div className="reservation-form__inner-container">
+            <div className="step-four__inner-container">
                 <div className="step-four__step-four-header">
                     <span className="step-four__header-text">Reservation form</span>
                     <div>

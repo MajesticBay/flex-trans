@@ -8,7 +8,7 @@ function StepFive(props) {
     let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&language=EN&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
     return (
         <div className="reservation-form__step-five">
-            <div className="reservation-form__inner-container">
+            <div className="step-five__inner-container">
                 <div className="step-five__step-five-header">
                     <span className="step-five__header-text">Reservation form</span>
                     <div>
