@@ -1,3 +1,23 @@
+.reservation-form__step-six {
+  display: flex;
+  flex-direction: column; }
 
+.step-six__inner-container {
+  padding: 1.6rem;
+  background-color: var(--color-white);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px; }
+
+.step-six__step-six-header {
+  display: flex;
+  justify-content: space-between; }
+
+.step-six__header-text {
+  font-size: var(--font-2-6); }
+
+.step-six__step-six-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
 
 /*# sourceMappingURL=StepSix.css.map */

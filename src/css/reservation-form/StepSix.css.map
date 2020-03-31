@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAAA,2BAA4B;EACxB,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;;AAG1B,0BAA2B;EACvB,OAAO,EAAE,MAAM;EACf,gBAAgB,EAAE,kBAAkB;EACpC,sBAAsB,EAAE,GAAG;EAC3B,uBAAuB,EAAE,GAAG;;AAGhC,0BAA2B;EACvB,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;;AAGlC,sBAAuB;EACnB,SAAS,EAAE,eAAe;;AAO9B,0BAA2B;EACvB,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,WAAW,EAAE,MAAM",
+"sources": ["StepSix.scss"],
 "names": [],
 "file": "StepSix.css"
 }
