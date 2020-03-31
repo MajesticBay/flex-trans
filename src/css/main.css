@@ -796,6 +796,55 @@ html {
   .step-five__additional-info {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1rem; } }
+.reservation-form__step-five {
+  display: flex;
+  flex-direction: column; }
+
+.reservation-form__inner-container {
+  padding: 1.6rem;
+  background-color: var(--color-white);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px; }
+
+.step-five__step-five-header {
+  display: flex;
+  justify-content: space-between; }
+
+.step-five__header-text {
+  font-size: var(--font-2-6); }
+
+.step-five__step-five-form {
+  display: grid;
+  grid-template-columns: 1fr; }
+
+.step-five__pickup-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column; }
+
+.step-five__dropoff-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column; }
+
+.step-five__additional-info {
+  display: grid; }
+
+.step-five__additional-info-form-group {
+  display: flex; }
+
+.step-five__step-five-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+@media only screen and (min-width: 768px) {
+  .step-five__step-five-form {
+    grid-template-columns: 1fr 1fr; }
+
+  .step-five__additional-info {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem; } }
 :root {
   --color-description: #9E9E9E;
   --color-button: #1F1D1D;
