@@ -830,6 +830,12 @@ html {
 .step-six-line-container__step-six-line-content {
   font-weight: bold; }
 
+.step-six__step-six-comments-container {
+  font-size: var(--font-1-6); }
+
+.step-six-comments-container__title {
+  color: #535353; }
+
 .step-six__step-six-footer {
   display: flex;
   justify-content: space-between;

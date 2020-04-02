@@ -57,13 +57,17 @@ function StepSix(props) {
                         </div>
                     </div>
                 </div>
+                <div className="step-six__step-six-comments-container">
+                    <p className="step-six-comments-container__title">Comments: </p>
+                    <span>You might notice that if you add extra passengers or use of our wheelchair, your quote does not go up. That’s because we offer these services, plus a number of others to whoever needs them free of charge. Go to our About Us page to see what others you can take advantage of at no cost to you.  </span>
+                </div>
                 <div className="step-six__step-six-footer">
                     <div>
                         <span>Total</span>
                         <span>$0</span>
                     </div>
                     <div className="reservation-form__submit-btn rounded pointer" onClick={props.next}>
-                        <span className="reservation-form__submit-text">Next Step →</span>
+                        <span className="reservation-form__submit-text">Accept Terms & Condition</span>
                     </div>
                 </div>
             </div>
