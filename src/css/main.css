@@ -814,12 +814,21 @@ html {
   font-size: var(--font-2-6); }
 
 .step-six__step-six-content {
-  display: flex;
-  flex-direction: column; }
+  display: grid; }
 
 .step-six__step-six-form-container {
   display: flex;
   flex-direction: column; }
+
+.step-six-form-container__step-six-line-container {
+  font-size: var(--font-1-6);
+  line-height: var(--line-150); }
+
+.step-six-line-container__step-six-line-title {
+  color: #535353; }
+
+.step-six-line-container__step-six-line-content {
+  font-weight: bold; }
 
 .step-six__step-six-footer {
   display: flex;
@@ -828,7 +837,9 @@ html {
 
 @media only screen and (min-width: 768px) {
   .step-six__step-six-content {
-    flex-direction: row; } }
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem; } }
 :root {
   --color-description: #9E9E9E;
   --color-button: #1F1D1D;
