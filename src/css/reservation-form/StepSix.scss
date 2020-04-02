@@ -20,7 +20,13 @@
 }
 
 .step-six__step-six-content {
-    
+    display: flex;
+    flex-direction: column;
+}
+
+.step-six__step-six-form-container {
+    display: flex;
+    flex-direction: column;
 }
 
 .step-six__step-six-footer {
@@ -30,5 +36,7 @@
 }
 
 @media only screen and (min-width: 768px) {
-
+    .step-six__step-six-content {
+        flex-direction: row;
+    }
 }

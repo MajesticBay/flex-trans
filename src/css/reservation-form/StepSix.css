@@ -15,9 +15,21 @@
 .step-six__header-text {
   font-size: var(--font-2-6); }
 
+.step-six__step-six-content {
+  display: flex;
+  flex-direction: column; }
+
+.step-six__step-six-form-container {
+  display: flex;
+  flex-direction: column; }
+
 .step-six__step-six-footer {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+
+@media only screen and (min-width: 768px) {
+  .step-six__step-six-content {
+    flex-direction: row; } }
 
 /*# sourceMappingURL=StepSix.css.map */
