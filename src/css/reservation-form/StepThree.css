@@ -43,6 +43,7 @@
 
 @media only screen and (min-width: 768px) {
   .reservation-form__step-three {
-    flex-direction: row; } }
+    flex-direction: row;
+    border-radius: 6px; } }
 
 /*# sourceMappingURL=StepThree.css.map */

@@ -43,6 +43,10 @@
 }
 
 @media only screen and (min-width: 768px) {
+    .reservation-form__step-four {
+        border-radius: 6px;
+    }
+    
     .step-four__step-four-form {
         flex-direction: row;
     }

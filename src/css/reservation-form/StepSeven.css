@@ -16,6 +16,7 @@
 
 @media only screen and (min-width: 768px) {
   .reservation-form__step-seven {
-    flex-direction: row; } }
+    flex-direction: row;
+    border-radius: 6px; } }
 
 /*# sourceMappingURL=StepSeven.css.map */

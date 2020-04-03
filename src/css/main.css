@@ -655,7 +655,8 @@ html {
 
 @media only screen and (min-width: 768px) {
   .reservation-form__step-two {
-    flex-direction: row; } }
+    flex-direction: row;
+    border-radius: 6px; } }
 .reservation-form__step-three {
   display: flex;
   flex-direction: column;
@@ -701,7 +702,8 @@ html {
 
 @media only screen and (min-width: 768px) {
   .reservation-form__step-three {
-    flex-direction: row; } }
+    flex-direction: row;
+    border-radius: 6px; } }
 .reservation-form__step-four {
   display: flex;
   flex-direction: column; }
@@ -739,6 +741,9 @@ html {
   align-items: center; }
 
 @media only screen and (min-width: 768px) {
+  .reservation-form__step-four {
+    border-radius: 6px; }
+
   .step-four__step-four-form {
     flex-direction: row; }
 
@@ -790,6 +795,9 @@ html {
   align-items: center; }
 
 @media only screen and (min-width: 768px) {
+  .reservation-form__step-five {
+    border-radius: 6px; }
+
   .step-five__step-five-form {
     grid-template-columns: 1fr 1fr; }
 
@@ -842,6 +850,9 @@ html {
   align-items: center; }
 
 @media only screen and (min-width: 768px) {
+  .reservation-form__step-six {
+    border-radius: 6px; }
+
   .step-six__step-six-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -864,7 +875,8 @@ html {
 
 @media only screen and (min-width: 768px) {
   .reservation-form__step-seven {
-    flex-direction: row; } }
+    flex-direction: row;
+    border-radius: 6px; } }
 :root {
   --color-description: #9E9E9E;
   --color-button: #1F1D1D;
