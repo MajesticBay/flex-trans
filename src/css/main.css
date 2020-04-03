@@ -676,7 +676,7 @@ html {
 .step-three__reservation-date-picker-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 1rem;
+  grid-column-gap: 1rem;
   grid-template-areas: 'date-left date-right' 'time-left time-right' 'submit-left submit-right'; }
 
 .reservation-date-picker-container__reservation-date-picker {
@@ -722,8 +722,8 @@ html {
   font-size: var(--font-2-6); }
 
 .step-four__step-four-form {
-  display: flex;
-  flex-direction: column; }
+  display: grid;
+  grid-template-columns: 1fr; }
 
 .step-four__pickup-container {
   width: 100%;
@@ -745,13 +745,8 @@ html {
     border-radius: 6px; }
 
   .step-four__step-four-form {
-    flex-direction: row; }
-
-  .step-four__pickup-container {
-    width: 50%; }
-
-  .step-four__dropoff-container {
-    width: 50%; } }
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1rem; } }
 .reservation-form__step-five {
   display: flex;
   flex-direction: column; }
@@ -799,11 +794,12 @@ html {
     border-radius: 6px; }
 
   .step-five__step-five-form {
-    grid-template-columns: 1fr 1fr; }
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1rem; }
 
   .step-five__additional-info {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1rem; } }
+    grid-column-gap: 1rem; } }
 .reservation-form__step-six {
   display: flex;
   flex-direction: column; }
