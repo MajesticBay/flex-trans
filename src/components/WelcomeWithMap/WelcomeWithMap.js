@@ -1,8 +1,13 @@
 import React from 'react';
 
+// import { reservationFormContext } from '../../contexts/reservationFormContext';
+
 import map from '../../images/map.png';
 
 function WelcomeWithMap() {
+    // const { addressPick} = React.useContext(reservationFormContext);
+    // const { addressDrop } = React.useContext(reservationFormContext);
+    // let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&language=EN&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
     return (
         <div className="home-content__outside-welcome-container">
             <div className="home-content__welcome-container">
@@ -18,7 +23,9 @@ function WelcomeWithMap() {
                         <p className="welcome-content-container__reduced-prices">Reduced/Flat rates available for long-distance transfers</p>
                     </div>
                     <div className="welcome-content-container__map-container">
-                        <img className="img-fluid" src={map} alt="working area map"/>
+                        {/* <iframe title="google-map" frameBorder="0" style={{ width: "100%", height: "100%", borderRadius: "6px" }} src={mapUrl}></iframe> */}
+                        {/* <span>Distance {distance}</span> */}
+                        <img className="welcome-content-container__map-image" src={map} alt="working area map"/>
                     </div>
                 </div>
             </div>

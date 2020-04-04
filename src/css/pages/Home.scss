@@ -71,6 +71,14 @@
     margin-top: 2rem;
 }
 
+.welcome-content-container__map-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
 @media only screen and (min-width: 1024px) {
     // .home__home-content {
     //     width: 80%;
@@ -103,5 +111,13 @@
 
     .welcome-content-container__map-container {
         width: 50%;
+    }
+
+    .welcome-content-container__map-image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        // border-top-right-radius: 6px;
+        // border-bottom-right-radius: 6px;
     }
 }
