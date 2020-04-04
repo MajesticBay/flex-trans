@@ -529,7 +529,8 @@ html {
     padding-bottom: 80px; }
 
   .contact-us__contact-form {
-    padding: 4rem; }
+    padding: 4rem;
+    border-radius: 6px; }
 
   .contact-form__contact-form-inside-wrapper {
     grid-template-columns: 1fr 1fr;

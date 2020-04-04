@@ -64,7 +64,7 @@ function ContactUs() {
         <p className="contact-us__info"><span className="contact-us__info-header">Phone:</span> 1-425-444-3905</p>
         <p className="contact-us__info"><span className="contact-us__info-header">Email:</span> flextranswa@gmail.com</p>
         {/* <form className="contact-us__contact-form rounded" onSubmit={() => handleSubmit()}> */}
-        <form className="contact-us__contact-form rounded">
+        <form className="contact-us__contact-form">
           <p className="contact-us__header contact-us__header--form">Send us a message</p>
           <div className="contact-form__contact-form-inside-wrapper">
             <div className="contact-form-inside-wrapper__contact-left">
