@@ -34,14 +34,18 @@ function StepThree(props) {
                         <input className="reservation-form__input reservation-form__input--no-margin rounded" placeholder="Time"/>
                     </div>
                     <div className="reservation-date-picker-container__reservation-am-pm-picker">
-                        <div className="reservation-date-picker-container__am-container">
-                            <input type="radio" id="time-am" name="gender" value="am"/>
-                            <label for="time-am">am</label>
+                        <div className="reservation-am-pm-picker__inner-container">
+                            <div className="reservation-date-picker-container__am-container">
+                                <input type="radio" id="time-am" name="gender" value="am"/>
+                                <label for="time-am">am</label>
+                            </div>
+                            <div className="reservation-date-picker-container__pm-container">
+                                <input type="radio" id="time-pm" name="gender" value="pm"/>
+                                <label for="time-pm">pm</label>
+                            </div>
                         </div>
-                        <div className="reservation-date-picker-container__pm-container">
-                            <input type="radio" id="time-pm" name="gender" value="pm"/>
-                            <label for="time-pm">pm</label>
-                        </div>
+                        <div></div>
+                        <div></div>
                     </div>
                     <div className="reservation-form__submit-btn reservation-form__submit-btn--no-margin reservation-form__submit-btn--step-three rounded pointer" onClick={() => props.next()}>
                         <span className="reservation-form__submit-text">Next Step →</span>
