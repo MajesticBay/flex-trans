@@ -11,13 +11,14 @@
   --color-black: #000000;
   --color-input-border: #D1D1D1;
   --color-input-background: #F6F6F6;
+  --color-input-label: #535353;
   --font-16: 16px;
   --font-22: 22px;
   --font-26: 26px;
   --font-32: 32px;
   --font-44: 44px;
   --font-1: 1rem;
-  --font-1-3: 1-3rem;
+  --font-1-3: 1.3rem;
   --font-1-6: 1.6rem;
   --font-1-8: 1.8rem;
   --font-2: 2rem;
@@ -26,42 +27,34 @@
   --font-3-2: 3.2rem;
   --font-4-4: 4.4rem;
   --line-120: 120%;
-  --line-150: 150%;
-}
+  --line-150: 150%; }
 
 html {
-  font-size: 62.5%;
-}
+  font-size: 62.5%; }
 
 .mb-16 {
-  margin-bottom: 16px;
-}
+  margin-bottom: 16px; }
 
 .mb-45 {
-  margin-bottom: 45px;
-}
+  margin-bottom: 45px; }
 
 .navbar {
   width: 100%;
   display: flex;
-  justify-content: center;
-}
+  justify-content: center; }
 
 .navbar-mobile {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 16px;
-}
+  padding: 16px; }
 
 .navbar-mobile__logo-container {
-  height: 45px;
-}
+  height: 45px; }
 
 .navbar-mobile__menu {
-  display: none;
-}
+  display: none; }
 
 .navbar-desktop {
   display: none;
@@ -70,18 +63,15 @@ html {
   grid-gap: 10rem;
   max-width: 1280px;
   padding-top: 1.6rem;
-  padding-bottom: 1.6rem;
-}
+  padding-bottom: 1.6rem; }
 
 .navbar-desktop__navbar-desktop-left {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-}
+  align-items: center; }
 
 .navbar-desktop__logo-container {
-  height: 3rem;
-}
+  height: 3rem; }
 
 .call-btn {
   display: flex;
@@ -89,56 +79,43 @@ html {
   align-items: center;
   background-color: var(--color-red);
   padding: 8px 16px;
-  margin-left: 16px;
-}
+  margin-left: 16px; }
 
 .call-btn--mobile {
-  display: none;
-}
+  display: none; }
 
 .call-btn__phone-img-container {
-  height: 1.6rem;
-}
+  height: 1.6rem; }
 
 .call-btn__text {
   font-size: var(--font-1-6);
   font-weight: bold;
   color: var(--color-white);
   margin-left: 10px;
-  white-space: nowrap;
-}
+  white-space: nowrap; }
 
 .navbar__navbar-links {
   display: flex;
-  align-items: center;
-}
+  align-items: center; }
 
 .navbar-links__navbar-link {
   font-size: var(--font-1-6);
   color: var(--color-button);
   text-decoration: underline;
   padding-right: 16px;
-  white-space: nowrap;
-}
+  white-space: nowrap; }
 
 @media only screen and (min-width: 768px) {
   .call-btn--mobile {
-    display: block;
-  }
-}
+    display: block; } }
 @media only screen and (min-width: 1024px) {
   .navbar-mobile {
-    display: none;
-  }
+    display: none; }
 
   .navbar-desktop {
-    display: grid;
-  }
-}
+    display: grid; } }
 @media only screen and (min-width: 1280px) {
   .navbar-links__navbar-link {
-    padding-right: 40px;
-  }
-}
+    padding-right: 40px; } }
 
 /*# sourceMappingURL=NavBar.css.map */

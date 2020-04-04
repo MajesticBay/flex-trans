@@ -27,7 +27,7 @@
   line-height: var(--line-150); }
 
 .step-six-line-container__step-six-line-title {
-  color: #535353; }
+  color: var(--color-input-label); }
 
 .step-six-line-container__step-six-line-content {
   font-weight: bold; }
@@ -36,7 +36,7 @@
   font-size: var(--font-1-6); }
 
 .step-six-comments-container__title {
-  color: #535353; }
+  color: var(--color-input-label); }
 
 .step-six__step-six-footer {
   display: flex;

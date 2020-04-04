@@ -11,13 +11,14 @@
   --color-black: #000000;
   --color-input-border: #D1D1D1;
   --color-input-background: #F6F6F6;
+  --color-input-label: #535353;
   --font-16: 16px;
   --font-22: 22px;
   --font-26: 26px;
   --font-32: 32px;
   --font-44: 44px;
   --font-1: 1rem;
-  --font-1-3: 1-3rem;
+  --font-1-3: 1.3rem;
   --font-1-6: 1.6rem;
   --font-1-8: 1.8rem;
   --font-2: 2rem;
@@ -26,124 +27,101 @@
   --font-3-2: 3.2rem;
   --font-4-4: 4.4rem;
   --line-120: 120%;
-  --line-150: 150%;
-}
+  --line-150: 150%; }
 
 html {
-  font-size: 62.5%;
-}
+  font-size: 62.5%; }
 
 .mb-16 {
-  margin-bottom: 16px;
-}
+  margin-bottom: 16px; }
 
 .mb-45 {
-  margin-bottom: 45px;
-}
+  margin-bottom: 45px; }
 
 .about-us {
   position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
+  align-items: center; }
 
 .about-us__description-container {
-  width: 100%;
-}
+  width: 100%; }
 
 .about-us__header {
-  font-size: var(--font-2-6);
-}
+  font-size: var(--font-2-6); }
 
 .about-us__base-text {
   font-size: var(--font-1-6);
   line-height: var(--line-150);
-  margin-top: 1.1rem;
-}
+  margin-top: 1.1rem; }
 
 .about-us__services {
   width: 100%;
   display: flex;
-  flex-direction: column;
-}
+  flex-direction: column; }
 
 .about-us-services__services-container {
   display: grid;
   grid-template-columns: 1fr;
-  margin-top: 2rem;
-}
+  margin-top: 2rem; }
 
 .services-container__service-header {
   font-size: var(--font-2-2);
   line-height: var(--line-150);
   text-align: center;
-  margin-top: 1.5rem;
-}
+  margin-top: 1.5rem; }
 
 .about-us__fleet {
   display: flex;
-  flex-direction: column;
-}
+  flex-direction: column; }
 
 .about-us-fleet__description {
-  width: 100%;
-}
+  width: 100%; }
 
 .about-us-fleet_car-container {
   width: 100%;
-  background-color: var(--color-blue);
-}
+  background-color: var(--color-blue); }
 
 @media only screen and (min-width: 1024px) {
   .about-us__description-container {
     width: 67%;
     max-width: 1280px;
     padding-top: 20rem;
-    padding-bottom: 80px;
-  }
+    padding-bottom: 80px; }
 
   .about-us__services {
     width: 67%;
-    max-width: 1280px;
-  }
+    max-width: 1280px; }
 
   .about-us-services__services-container {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 3rem;
-  }
+    grid-gap: 3rem; }
 
   .about-us__fleet {
     width: 67%;
     max-width: 1280px;
     flex-direction: row;
     padding-top: 80px;
-    padding-bottom: 80px;
-  }
+    padding-bottom: 80px; }
 
   .about-us-fleet__description {
-    width: 50%;
-  }
+    width: 50%; }
 
   .about-us-fleet_car-container {
     min-height: 250px;
     width: 50%;
-    position: relative;
-  }
+    position: relative; }
 
   .about-us-fleet__car-img {
     position: absolute;
     right: 4rem;
     bottom: -3rem;
     width: 115%;
-    height: auto;
-  }
+    height: auto; }
 
   .about-us-fleet__baset-text {
     font-size: var(--font-2-2);
-    padding-right: 17rem;
-  }
-}
+    padding-right: 17rem; } }
 
 /*# sourceMappingURL=AboutUs.css.map */

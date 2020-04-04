@@ -10,7 +10,8 @@
 
 .step-four__step-four-header {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  margin-bottom: 2rem; }
 
 .step-four__header-text {
   font-size: var(--font-2-6); }
@@ -40,6 +41,6 @@
 
   .step-four__step-four-form {
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 1rem; } }
+    grid-column-gap: 1.5rem; } }
 
 /*# sourceMappingURL=StepFour.css.map */

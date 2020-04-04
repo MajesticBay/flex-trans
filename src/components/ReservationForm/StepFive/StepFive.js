@@ -18,29 +18,29 @@ function StepFive(props) {
                 </div>
                 <div className="step-five__step-five-form">
                     <div className="step-five__pickup-container">
-                        <p>First & Last Name</p>
+                        <p className="reservation-form__input-label">First & Last Name</p>
                         <input className="reservation-form__input rounded"/>
                     </div>
                     <div className="step-five__dropoff-container">
-                        <p>Phone Number</p>
+                        <p className="reservation-form__input-label">Phone Number</p>
                         <input className="reservation-form__input rounded"/>
                     </div>
                     <div className="step-five__dropoff-container">
-                        <p>Email Adress</p>
+                        <p className="reservation-form__input-label">Email Adress</p>
                         <input className="reservation-form__input rounded"/>
                     </div>
                 </div>
                 <div className="step-five__additional-info">
                     <div className="step-five__additional-info-form-group">
-                        <p>Additional Passenger</p>
+                        <p className="reservation-form__input-label">Additional Passenger</p>
                         <input className="reservation-form__input rounded"/>
                     </div>
                     <div className="step-five__additional-info-form-group">
-                        <p>Do you need our wheelchair provided?</p>
+                        <p className="reservation-form__input-label">Do you need our wheelchair provided?</p>
                         <input className="reservation-form__input rounded"/>
                     </div>
                     <div className="step-five__additional-info-form-group">
-                        <p>Do you need a ride back?</p>
+                        <p className="reservation-form__input-label">Do you need a ride back?</p>
                         <input className="reservation-form__input rounded"/>
                     </div>
                 </div>

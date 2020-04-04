@@ -33,11 +33,11 @@
 //     grid-area: date-right;
 // }
 
-.reservation-date-picker-container__reservation-date-picker {
-    // grid-area: date-left;
-    // display: flex;
-    // flex-direction: column;
-}
+// .reservation-date-picker-container__reservation-date-picker {
+// grid-area: date-left;
+// display: flex;
+// flex-direction: column;
+// }
 
 .reservation-date-picker-container__reservation-time-picker {
     // grid-area: time-left;
@@ -74,9 +74,9 @@
 //     grid-area: left;
 // }
 
-.reservation-form__submit-btn--step-three {
-    // grid-area: submit-right;
-}
+// .reservation-form__submit-btn--step-three {
+// grid-area: submit-right;
+// }
 
 @media only screen and (min-width: 768px) {
     .reservation-form__step-three {

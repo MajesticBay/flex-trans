@@ -18,12 +18,12 @@ function StepFour(props) {
                 </div>
                 <div className="step-four__step-four-form">
                     <div className="step-four__pickup-container">
-                        <p>Pick-up location</p>
+                        <p className="reservation-form__input-label">Pick-up location</p>
                         <input className="reservation-form__input rounded"/>
                         <input className="reservation-form__input rounded"/>
                     </div>
                     <div className="step-four__dropoff-container">
-                        <p>Drop-off location</p>
+                        <p className="reservation-form__input-label">Drop-off location</p>
                         <input className="reservation-form__input rounded"/>
                         <input className="reservation-form__input rounded"/>
                     </div>
