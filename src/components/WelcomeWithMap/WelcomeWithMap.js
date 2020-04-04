@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // import { reservationFormContext } from '../../contexts/reservationFormContext';
 
@@ -23,9 +24,12 @@ function WelcomeWithMap() {
                         <p className="welcome-content-container__reduced-prices">Reduced/Flat rates available for long-distance transfers</p>
                     </div>
                     <div className="welcome-content-container__map-container">
-                        <div className="welcome-content-container__reservation-btn reservation-form__submit-btn rounded pointer">
-                            <span className="reservation-form__submit-text">Reservation</span>
-                        </div>
+                        <Link to="/reserve">
+                            <div className="welcome-content-container__reservation-btn reservation-form__submit-btn rounded pointer">
+                                <span className="reservation-form__submit-text">Reservation</span>
+                            </div>
+                        </Link>
+                        
                         <img className="welcome-content-container__map-image" src={map} alt="working area map"/>
                     </div>
                 </div>
