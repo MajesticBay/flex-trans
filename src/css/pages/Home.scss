@@ -43,8 +43,6 @@
     padding: 40px;
     font-size: var(--font-22);
     line-height: var(--line-150);
-    border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;
 }
 
 .welcome-content-container__header {
@@ -99,6 +97,8 @@
 
     .welcome-content-container__content {
         width: 50%;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
     }
 
     .welcome-content-container__map-container {

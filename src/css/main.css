@@ -250,9 +250,7 @@ html {
   background-color: var(--color-blue);
   padding: 40px;
   font-size: var(--font-22);
-  line-height: var(--line-150);
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px; }
+  line-height: var(--line-150); }
 
 .welcome-content-container__header {
   font-size: var(--font-3-2);
@@ -292,7 +290,9 @@ html {
     flex-direction: row; }
 
   .welcome-content-container__content {
-    width: 50%; }
+    width: 50%;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px; }
 
   .welcome-content-container__map-container {
     width: 50%; } }
