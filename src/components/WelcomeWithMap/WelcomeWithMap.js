@@ -23,8 +23,9 @@ function WelcomeWithMap() {
                         <p className="welcome-content-container__reduced-prices">Reduced/Flat rates available for long-distance transfers</p>
                     </div>
                     <div className="welcome-content-container__map-container">
-                        {/* <iframe title="google-map" frameBorder="0" style={{ width: "100%", height: "100%", borderRadius: "6px" }} src={mapUrl}></iframe> */}
-                        {/* <span>Distance {distance}</span> */}
+                        <div className="welcome-content-container__reservation-btn reservation-form__submit-btn rounded pointer">
+                            <span className="reservation-form__submit-text">Reservation</span>
+                        </div>
                         <img className="welcome-content-container__map-image" src={map} alt="working area map"/>
                     </div>
                 </div>

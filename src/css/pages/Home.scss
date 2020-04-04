@@ -71,6 +71,18 @@
     margin-top: 2rem;
 }
 
+.welcome-content-container__map-container {
+    position: relative;
+}
+
+.welcome-content-container__reservation-btn {
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+
 .welcome-content-container__map-image {
     height: 100%;
     width: 100%;
@@ -111,6 +123,10 @@
 
     .welcome-content-container__map-container {
         width: 50%;
+    }
+
+    .welcome-content-container__reservation-btn {
+        bottom: 50px;
     }
 
     .welcome-content-container__map-image {
