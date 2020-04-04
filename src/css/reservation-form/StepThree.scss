@@ -12,6 +12,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 2rem;
 }
 
 .step-three__header {
@@ -86,7 +87,7 @@
 
     .step-three__reservation-date-picker-container {
         grid-template-columns: 1fr 1fr;
-        grid-column-gap: 1rem;
+        grid-column-gap: 1.5rem;
         grid-template-areas:
         'date-left date-right'
         'time-left time-right'

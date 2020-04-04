@@ -10,7 +10,8 @@
 
 .step-five__step-five-header {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  margin-bottom: 2rem; }
 
 .step-five__header-text {
   font-size: var(--font-2-6); }
@@ -33,7 +34,8 @@
   display: grid; }
 
 .step-five__additional-info-form-group {
-  display: flex; }
+  display: flex;
+  align-items: center; }
 
 .step-five__step-five-footer {
   display: flex;
@@ -46,10 +48,10 @@
 
   .step-five__step-five-form {
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 1rem; }
+    grid-column-gap: 1.5rem; }
 
   .step-five__additional-info {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 1rem; } }
+    grid-column-gap: 1.5rem; } }
 
 /*# sourceMappingURL=StepFive.css.map */

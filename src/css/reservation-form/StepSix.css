@@ -10,7 +10,8 @@
 
 .step-six__step-six-header {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  margin-bottom: 2rem; }
 
 .step-six__header-text {
   font-size: var(--font-2-6); }
