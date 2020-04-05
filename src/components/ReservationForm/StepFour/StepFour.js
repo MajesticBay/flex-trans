@@ -17,15 +17,15 @@ function StepFour(props) {
                     </div>
                 </div>
                 <div className="step-four__step-four-form">
-                    <div className="step-four__pickup-container">
-                        <p className="reservation-form__input-label">Pick-up location</p>
-                        <input className="reservation-form__input rounded"/>
-                        <input className="reservation-form__input rounded"/>
+                    <div className="step-four__address-container">
+                        <p className="step-four__address-input-header reservation-form__input-label">Pick-up location</p>
+                        <input className="step-four__address-input reservation-form__input rounded"/>
+                        <input className="step-four__apt-input reservation-form__input rounded"/>
                     </div>
-                    <div className="step-four__dropoff-container">
-                        <p className="reservation-form__input-label">Drop-off location</p>
-                        <input className="reservation-form__input rounded"/>
-                        <input className="reservation-form__input rounded"/>
+                    <div className="step-four__address-container">
+                        <p className="step-four__address-input-header reservation-form__input-label">Drop-off location</p>
+                        <input className="step-four__address-input reservation-form__input rounded"/>
+                        <input className="step-four__apt-input reservation-form__input rounded"/>
                     </div>
                 </div>
                 <div className="step-four__step-four-footer">

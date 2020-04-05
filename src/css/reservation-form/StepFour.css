@@ -20,10 +20,20 @@
   display: grid;
   grid-template-columns: 1fr; }
 
-.step-four__pickup-container {
+.step-four__address-container {
   width: 100%;
-  display: flex;
-  flex-direction: column; }
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 'header header header' 'address address address' 'apt - -'; }
+
+.step-four__address-input-header {
+  grid-area: header; }
+
+.step-four__address-input {
+  grid-area: address; }
+
+.step-four__apt-input {
+  grid-area: apt; }
 
 .step-four__dropoff-container {
   width: 100%;
