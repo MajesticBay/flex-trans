@@ -39,8 +39,13 @@
   align-items: center;
   margin-bottom: 1rem; }
 
+.step-five__additional-info-header {
+  min-width: 10rem;
+  padding-right: 1rem; }
+
 .step-five__additional-info-input {
-  width: 150px; }
+  min-width: 10rem;
+  max-width: 15rem; }
 
 .step-five__step-five-footer {
   display: flex;
@@ -56,7 +61,7 @@
     grid-column-gap: 1.5rem; }
 
   .step-five__additional-info {
-    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 2.5rem; } }
 
 /*# sourceMappingURL=StepFive.css.map */

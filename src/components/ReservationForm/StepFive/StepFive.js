@@ -36,11 +36,11 @@ function StepFive(props) {
                         <input className="step-five__additional-info-input reservation-form__input reservation-form__input--no-margin rounded"/>
                     </div>
                     <div className="step-five__additional-info-form-group">
-                        <p className="step-five__additional-info-header reservation-form__input-label reservation-form__input-label--no-margin">Do you need our wheelchair provided?</p>
+                        <p className="step-five__additional-info-header reservation-form__input-label reservation-form__input-label--no-margin">Do you need our<br/>wheelchair provided?</p>
                         <input className="step-five__additional-info-input reservation-form__input reservation-form__input--no-margin rounded"/>
                     </div>
                     <div className="step-five__additional-info-form-group">
-                        <p className="step-five__additional-info-header reservation-form__input-label reservation-form__input-label--no-margin">Do you need a ride back?</p>
+                        <p className="step-five__additional-info-header reservation-form__input-label reservation-form__input-label--no-margin">Do you need<br/>a ride back?</p>
                         <input className="step-five__additional-info-input reservation-form__input reservation-form__input--no-margin rounded"/>
                     </div>
                 </div>

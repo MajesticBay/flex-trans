@@ -54,7 +54,7 @@ function StepTwo(props) {
                                 </div>
                             </div>
                             <div className="reservation-form__submit-btn rounded pointer" onClick={props.next}>
-                                <span className="reservation-form__submit-text">Get instant quote for your trip</span>
+                                <span className="reservation-form__submit-text">Make Reservation →</span>
                             </div>
                         </div>
                     </div>
