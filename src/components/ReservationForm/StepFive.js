@@ -23,6 +23,12 @@ function StepFive(props) {
         setPassengerInfo({ ...passengerInfo, email: e.target.value });
         console.log('passengerInfo => ', passengerInfo.email);
     }
+
+    const handleAdditionalPassengerChange = (e) => {
+        setPassengerInfo({ ...passengerInfo, additionalPassenger: e.target.value });
+        console.log('passengerInfo => ', passengerInfo.additionalPassenger);
+    }
+
     return (
         <div className="reservation-form__step-five">
             <div className="step-five__inner-container">
@@ -50,15 +56,28 @@ function StepFive(props) {
                 <div className="step-five__additional-info">
                     <div className="step-five__additional-info-form-group">
                         <p className="step-five__additional-info-header reservation-form__input-label reservation-form__input-label--no-margin">Additional Passenger</p>
-                        <input className="step-five__additional-info-input reservation-form__input reservation-form__input--no-margin rounded"/>
+                        <select className="step-five__additional-info-input reservation-form__input reservation-form__input--no-margin rounded" onChange={e => handleAdditionalPassengerChange(e)}>
+                            <option selected>None</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
                     </div>
                     <div className="step-five__additional-info-form-group">
                         <p className="step-five__additional-info-header reservation-form__input-label reservation-form__input-label--no-margin">Do you need our<br/>wheelchair provided?</p>
-                        <input className="step-five__additional-info-input reservation-form__input reservation-form__input--no-margin rounded"/>
+                        <select className="step-five__additional-info-input reservation-form__input reservation-form__input--no-margin rounded">
+                            <option>Yes</option>
+                            <option selected>No</option>
+                        </select>
                     </div>
                     <div className="step-five__additional-info-form-group">
                         <p className="step-five__additional-info-header reservation-form__input-label reservation-form__input-label--no-margin">Do you need<br/>a ride back?</p>
-                        <input className="step-five__additional-info-input reservation-form__input reservation-form__input--no-margin rounded"/>
+                        <select className="step-five__additional-info-input reservation-form__input reservation-form__input--no-margin rounded">
+                            <option>Yes</option>
+                            <option selected>No</option>
+                        </select>
                     </div>
                 </div>
                 <div className="step-five__step-five-footer">
