@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Top from '../Top';
-import ReservationForm from '../ReservationForm/ReservationForm';
+import Top from './Top';
+import ReservationForm from './ReservationForm/ReservationForm';
 
 function Reservation(){
   return (

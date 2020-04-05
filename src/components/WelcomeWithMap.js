@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 // import { reservationFormContext } from '../../contexts/reservationFormContext';
 
-import map from '../../images/map.png';
+import map from '../images/map.png';
 
 function WelcomeWithMap() {
     // const { addressPick} = React.useContext(reservationFormContext);
