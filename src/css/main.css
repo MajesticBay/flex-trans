@@ -676,7 +676,8 @@ html {
 
 .step-two__trip-cost-container {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  margin-bottom: 1rem; }
 
 .step-two__info {
   font-size: var(--font-2);
@@ -910,7 +911,8 @@ html {
   font-weight: bold; }
 
 .step-six__step-six-comments-container {
-  font-size: var(--font-1-6); }
+  font-size: var(--font-1-6);
+  margin-bottom: 1rem; }
 
 .step-six-comments-container__title {
   color: var(--color-input-label); }
