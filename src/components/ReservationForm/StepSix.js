@@ -57,15 +57,15 @@ function StepSix(props) {
                         </div>
                         <div className="step-six-form-container__step-six-line-container">
                             <span className="step-six-line-container__step-six-line-title">Additional Passengers: </span>
-                            <span className="step-six-line-container__step-six-line-content">Yes</span>
+                            <span className="step-six-line-container__step-six-line-content">{passengerInfo.additionalPassenger}</span>
                         </div>
                         <div className="step-six-form-container__step-six-line-container">
                             <span className="step-six-line-container__step-six-line-title">Do you need our wheelchair provided? </span>
-                            <span className="step-six-line-container__step-six-line-content">Yes</span>
+                            <span className="step-six-line-container__step-six-line-content">{passengerInfo.wheelchairNeeded}</span>
                         </div>
                         <div className="step-six-form-container__step-six-line-container">
                             <span className="step-six-line-container__step-six-line-title">Do you need a ride back? </span>
-                            <span className="step-six-line-container__step-six-line-content">No</span>
+                            <span className="step-six-line-container__step-six-line-content">{passengerInfo.rideBackNeeded}</span>
                         </div>
                     </div>
                 </div>

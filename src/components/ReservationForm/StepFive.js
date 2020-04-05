@@ -28,6 +28,16 @@ function StepFive(props) {
         setPassengerInfo({ ...passengerInfo, additionalPassenger: e.target.value });
         console.log('passengerInfo => ', passengerInfo.additionalPassenger);
     }
+    
+    const handleWheelchairNeededChange = (e) => {
+        setPassengerInfo({ ...passengerInfo, wheelchairNeeded: e.target.value });
+        console.log('passengerInfo => ', passengerInfo.wheelchairNeeded);
+    }
+
+    const handleRideBackNeededChange = (e) => {
+        setPassengerInfo({ ...passengerInfo, rideBackNeeded: e.target.value });
+        console.log('passengerInfo => ', passengerInfo.rideBackNeeded);
+    }
 
     return (
         <div className="reservation-form__step-five">
@@ -67,14 +77,14 @@ function StepFive(props) {
                     </div>
                     <div className="step-five__additional-info-form-group">
                         <p className="step-five__additional-info-header reservation-form__input-label reservation-form__input-label--no-margin">Do you need our<br/>wheelchair provided?</p>
-                        <select className="step-five__additional-info-input reservation-form__input reservation-form__input--no-margin rounded">
+                        <select className="step-five__additional-info-input reservation-form__input reservation-form__input--no-margin rounded" onChange={e => handleWheelchairNeededChange(e)}>
                             <option>Yes</option>
                             <option selected>No</option>
                         </select>
                     </div>
                     <div className="step-five__additional-info-form-group">
                         <p className="step-five__additional-info-header reservation-form__input-label reservation-form__input-label--no-margin">Do you need<br/>a ride back?</p>
-                        <select className="step-five__additional-info-input reservation-form__input reservation-form__input--no-margin rounded">
+                        <select className="step-five__additional-info-input reservation-form__input reservation-form__input--no-margin rounded"onChange={e => handleRideBackNeededChange(e)}>
                             <option>Yes</option>
                             <option selected>No</option>
                         </select>
