@@ -10,6 +10,7 @@ function StepSix(props) {
     const { price } = React.useContext(reservationFormContext);
     const { date } = React.useContext(reservationFormContext);
     const { time } = React.useContext(reservationFormContext);
+    const { passengerInfo } = React.useContext(reservationFormContext);
 
 
     return (
@@ -44,19 +45,19 @@ function StepSix(props) {
                     <div className="step-six__step-six-form-container">
                         <div className="step-six-form-container__step-six-line-container">
                             <span className="step-six-line-container__step-six-line-title">Passenger's Name: </span>
-                            <span className="step-six-line-container__step-six-line-content">John Johnson</span>
+                            <span className="step-six-line-container__step-six-line-content">{passengerInfo.name}</span>
                         </div>
                         <div className="step-six-form-container__step-six-line-container">
                             <span className="step-six-line-container__step-six-line-title">Phone Number: </span>
-                            <span className="step-six-line-container__step-six-line-content">3-498-503-9-45</span>
+                            <span className="step-six-line-container__step-six-line-content">{passengerInfo.phone}</span>
                         </div>
                         <div className="step-six-form-container__step-six-line-container">
                             <span className="step-six-line-container__step-six-line-title">Email Address: </span>
-                            <span className="step-six-line-container__step-six-line-content">johnson@gmail.com</span>
+                            <span className="step-six-line-container__step-six-line-content">{passengerInfo.email}</span>
                         </div>
                         <div className="step-six-form-container__step-six-line-container">
                             <span className="step-six-line-container__step-six-line-title">Additional Passengers: </span>
-                            <span className="step-six-line-container__step-six-line-content">1</span>
+                            <span className="step-six-line-container__step-six-line-content">Yes</span>
                         </div>
                         <div className="step-six-form-container__step-six-line-container">
                             <span className="step-six-line-container__step-six-line-title">Do you need our wheelchair provided? </span>

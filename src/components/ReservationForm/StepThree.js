@@ -13,22 +13,22 @@ function StepThree(props) {
 
     const handleDateChange = (e) => {
         setDate(e.target.value);
-        console.log('date => ', date);
+        // console.log('date => ', date);
     }
 
     const handleHoursChange = (e) => {
         setTime({ ...time, hours: e.target.value });
-        console.log('time => ', time);
+        // console.log('time => ', time);
     }
 
     const handleMinutesChange = (e) => {
         setTime({ ...time, minutes: e.target.value });
-        console.log('time => ', time);
+        // console.log('time => ', time);
     }
 
     const handleRadioChange = (e) => {
         setTime ({ ...time, ampm: e.target.value });
-        console.log('time => ', time);
+        // console.log('time => ', time);
     }
 
     const goToStepFour = () => {

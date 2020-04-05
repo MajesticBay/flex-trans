@@ -5,7 +5,24 @@ import { reservationFormContext } from '../../contexts/reservationFormContext';
 function StepFive(props) {
     const { addressPick} = React.useContext(reservationFormContext);
     const { addressDrop } = React.useContext(reservationFormContext);
+
+    const { passengerInfo, setPassengerInfo } = React.useContext(reservationFormContext);
     let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&language=EN&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
+
+    const handleNameChange = (e) => {
+        setPassengerInfo({ ...passengerInfo, name: e.target.value });
+        console.log('passengerInfo => ', passengerInfo.name);
+    }
+
+    const handlePhoneChange = (e) => {
+        setPassengerInfo({ ...passengerInfo, phone: e.target.value });
+        console.log('passengerInfo => ', passengerInfo.phone);
+    }
+
+    const handleEmailChange = (e) => {
+        setPassengerInfo({ ...passengerInfo, email: e.target.value });
+        console.log('passengerInfo => ', passengerInfo.email);
+    }
     return (
         <div className="reservation-form__step-five">
             <div className="step-five__inner-container">
@@ -19,15 +36,15 @@ function StepFive(props) {
                 <div className="step-five__step-five-form">
                     <div className="step-five__pickup-container">
                         <p className="reservation-form__input-label">First & Last Name</p>
-                        <input className="reservation-form__input rounded"/>
+                        <input className="reservation-form__input rounded" onChange={e => handleNameChange(e)}/>
                     </div>
                     <div className="step-five__dropoff-container">
                         <p className="reservation-form__input-label">Phone Number</p>
-                        <input className="reservation-form__input rounded"/>
+                        <input className="reservation-form__input rounded" onChange={e => handlePhoneChange(e)}/>
                     </div>
                     <div className="step-five__dropoff-container">
                         <p className="reservation-form__input-label">Email Adress</p>
-                        <input className="reservation-form__input rounded"/>
+                        <input className="reservation-form__input rounded" onChange={e => handleEmailChange(e)}/>
                     </div>
                 </div>
                 <div className="step-five__additional-info">
