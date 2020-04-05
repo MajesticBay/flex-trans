@@ -1,5 +1,8 @@
 import React from 'react';
 
+import { NotificationContainer, NotificationManager } from 'react-notifications';
+import 'react-notifications/lib/notifications.css';
+
 import { reservationFormContext } from '../../contexts/reservationFormContext';
 
 function StepSix(props) {
@@ -12,6 +15,50 @@ function StepSix(props) {
     const { time } = React.useContext(reservationFormContext);
     const { passengerInfo } = React.useContext(reservationFormContext);
 
+    const createNotification = (type) => {
+        console.log(type)
+        if (type === "success") {
+            NotificationManager.success('A message was sent', 'Success!', 5000);
+        } else {
+            NotificationManager.error('This message has not been sended', 'Error!', 5000, () => {
+            alert('callback');
+            });
+        }
+    }
+
+    const handleReservationSubmit = (event) => {
+        // event.preventDefault();
+        const pickup = addressPick;
+        const drop = addressDrop;
+        console.log('addressPick ', addressPick);
+        console.log('addressDrop ', addressDrop);
+        // const dateStr = date;
+        // const time = time.fullTime;
+        // const name = passengerInfo.name;
+        // const phone = passengerInfo.phone;
+        // const email = passengerInfo.email;
+        // const additionalPassenger = passengerInfo.additionalPassenger;
+        // const wheelchairNeeded = passengerInfo.wheelchairNeeded;
+        // const rideBackNeeded = passengerInfo.rideBackNeeded;
+        // const formValues = { pickup, drop, time, dateStr, name, phone, email, additionalPassenger, wheelchairNeeded, rideBackNeeded };
+        const formValues = { addressPick, addressDrop };
+        const templateId = 'reservation_form';
+        sendFeedback(templateId, formValues);
+        // props.next();
+    }
+
+    const sendFeedback = (templateId, variables) => {
+        window.emailjs.send('gmail', templateId, variables)
+        .then(res => {
+            createNotification('success')
+            console.log('Email successfully sent!');
+            console.log(res);
+        })
+        .catch(err => {
+            createNotification('error')
+            console.error('Error during sending email:', err);
+        })
+    }
 
     return (
         <div className="reservation-form__step-six">
@@ -78,7 +125,7 @@ function StepSix(props) {
                         <span>Total</span>
                         <span>$0</span>
                     </div>
-                    <div className="reservation-form__submit-btn rounded pointer" onClick={props.next}>
+                    <div className="reservation-form__submit-btn rounded pointer" onClick={() => handleReservationSubmit()}>
                         <span className="reservation-form__submit-text">Accept Terms & Condition</span>
                     </div>
                 </div>

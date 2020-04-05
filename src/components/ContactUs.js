@@ -24,10 +24,10 @@ function ContactUs() {
 
   const handleSubmit = (event) => {
     // event.preventDefault();
-    console.log(contactFormName);
-    console.log(contactFormPhone);
-    console.log(contactFormEmail);
-    console.log(contactFormMessage);
+    // console.log(contactFormName);
+    // console.log(contactFormPhone);
+    // console.log(contactFormEmail);
+    // console.log(contactFormMessage);
     const name = contactFormName;
     const phone = contactFormPhone;
     const email = contactFormEmail;
@@ -36,8 +36,6 @@ function ContactUs() {
     const templateId = 'contact-us_zxl0pk0o';
     sendFeedback(templateId, formValues);
   }
-
-
 
   const sendFeedback = (templateId, variables) => {
     window.emailjs.send('gmail', templateId, variables)
@@ -51,8 +49,6 @@ function ContactUs() {
         console.error('Error during sending email:', err);
     })
   }
-
-  
 
   return (
     <div className="contact-us">

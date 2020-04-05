@@ -32,12 +32,12 @@ function StepOne(props) {
         setCoordinatesDrop(latLng);
     };
 
-    const stepDone = () => {
-        localStorage.clear();
-        props.next();
-        console.log("Pick:", coordinatesPick.lat, coordinatesPick.lng)
-        console.log("Drop:", coordinatesDrop.lat, coordinatesDrop.lng)
-    }
+    // const stepDone = () => {
+    //     localStorage.clear();
+    //     props.next();
+    //     console.log("Pick:", coordinatesPick.lat, coordinatesPick.lng)
+    //     console.log("Drop:", coordinatesDrop.lat, coordinatesDrop.lng)
+    // }
     const showStep = () => {
         if (props.currentStep === 1) {
             return (
@@ -113,7 +113,7 @@ function StepOne(props) {
                                     </div>
                                 )}
                             </PlacesAutocomplete>
-                            <div className="reservation-form__submit-btn rounded pointer" onClick={stepDone}>
+                            <div className="reservation-form__submit-btn rounded pointer" onClick={props.next}>
                                 <span className="reservation-form__submit-text">Get instant quote for your trip</span>
                                 <div className="reservation-form__triangle"></div>
                             </div>
