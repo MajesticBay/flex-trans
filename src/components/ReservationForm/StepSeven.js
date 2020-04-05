@@ -9,13 +9,13 @@ function StepSeven(props) {
     return (
         <div className="reservation-form__step-seven">
             <div className="step-seven__form rounded">
-                    <span className="step-seven__thank-you-text">Thank you for your reservation!  Our manager will be  in touch with you soon.</span>
+                    <span className="step-seven__thank-you-text">Thank you for your reservation! Our manager will be  in touch with you soon.</span>
                     <div className="reservation-form__submit-btn reservation-form__submit-btn--no-margin rounded pointer" onClick={props.next}>
                         <span className="reservation-form__submit-text">Reserve Another Trip →</span>
                     </div>
                 </div>
             <div className="step-one__car-photo-container">
-                <iframe title="google-map" frameBorder="0" style={{ width: "100%", height: "100%", borderRadius: "6px" }} src={mapUrl}></iframe>
+                <iframe title="google-map" frameBorder="0" style={{ width: "100%", height: "100%", borderBottomLeftRadius: "6px", borderBottomRightRadius: "6px" }} src={mapUrl}></iframe>
             </div>
         </div>
     )
