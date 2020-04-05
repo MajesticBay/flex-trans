@@ -31,6 +31,11 @@ function StepThree(props) {
         console.log('time => ', time);
     }
 
+    const goToStepFour = () => {
+        
+        props.next();
+    }
+
     return (
         <div className="reservation-form__step-three">
             <div className="step-three__step-three-container">
@@ -62,7 +67,7 @@ function StepThree(props) {
                         <div></div>
                         <div></div>
                     </div>
-                    <div className="reservation-form__submit-btn reservation-form__submit-btn--no-margin reservation-form__submit-btn--step-three rounded pointer" onClick={() => props.next()}>
+                    <div className="reservation-form__submit-btn reservation-form__submit-btn--no-margin reservation-form__submit-btn--step-three rounded pointer" onClick={() => goToStepFour()}>
                         <span className="reservation-form__submit-text">Next Step →</span>
                     </div>
                 </div>  
