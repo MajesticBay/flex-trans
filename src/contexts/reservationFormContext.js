@@ -20,6 +20,7 @@ export default ({ children }) => {
     // const [minutes, setMinutes] = React.useState("");
     // const [ampm, setAmPm] = React.useState("");
     const [time, setTime] = React.useState({
+                                            fullTime: '',
                                             hours: '',
                                             minutes: '',
                                             ampm: ''
