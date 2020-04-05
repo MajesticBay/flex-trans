@@ -1,6 +1,5 @@
 .reservation-form__step-three {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   background-color: var(--color-white); }
 
 .step-three__step-three-container {
@@ -40,7 +39,7 @@
 
 @media only screen and (min-width: 768px) {
   .reservation-form__step-three {
-    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
     border-radius: 6px; }
 
   .step-three__reservation-date-picker-container {

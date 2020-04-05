@@ -58,7 +58,7 @@ function StepTwo(props) {
                             </div>
                         </div>
                     </div>
-                    <div className="step-one__car-photo-container">
+                    <div className="step-two__google-map-container">
                         <iframe title="google-map" frameBorder="0" style={{ width: "100%", height: "100%", borderRadius: "6px" }} src={mapUrl}></iframe>
                         {/* <span>Distance {distance}</span> */}
                     </div>

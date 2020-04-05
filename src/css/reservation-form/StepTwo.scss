@@ -1,6 +1,7 @@
 .reservation-form__step-two {
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
+    display: grid;
     background-color: var(--color-white);
 }
 
@@ -45,7 +46,8 @@
 
 @media only screen and (min-width: 768px) {
     .reservation-form__step-two {
-        flex-direction: row;
+        // flex-direction: row;
+        grid-template-columns: 1fr 1fr;
         border-radius: 6px;
     }
 }

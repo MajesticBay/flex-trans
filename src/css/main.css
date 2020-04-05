@@ -655,8 +655,7 @@ html {
     display: block;
     width: 100%; } }
 .reservation-form__step-two {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   background-color: var(--color-white); }
 
 .step-two__form {
@@ -691,11 +690,10 @@ html {
 
 @media only screen and (min-width: 768px) {
   .reservation-form__step-two {
-    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
     border-radius: 6px; } }
 .reservation-form__step-three {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   background-color: var(--color-white); }
 
 .step-three__step-three-container {
@@ -735,7 +733,7 @@ html {
 
 @media only screen and (min-width: 768px) {
   .reservation-form__step-three {
-    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
     border-radius: 6px; }
 
   .step-three__reservation-date-picker-container {
