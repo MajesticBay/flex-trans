@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../images/logo-cabulance.png';
-import phone from '../../images/phone.svg';
-import hamburger from '../../images/menu-hamburger.svg';
+import logo from '../images/logo-cabulance.png';
+import phone from '../images/phone.svg';
+import hamburger from '../images/menu-hamburger.svg';
 
 function NavBar() {
     return (

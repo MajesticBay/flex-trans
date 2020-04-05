@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Top from '../Top';
-import ReservationForm from '../ReservationForm/ReservationForm';
-import WelcomeWithMap from '../WelcomeWithMap/WelcomeWithMap';
+import Top from './Top';
+import ReservationForm from './ReservationForm/ReservationForm';
+import WelcomeWithMap from './WelcomeWithMap/WelcomeWithMap';
 // import map from '../../images/map.png';
 
 function Home() {
