@@ -16,6 +16,11 @@ function StepThree(props) {
         console.log('date => ', date);
     }
 
+    const handleHoursChange = (e) => {
+        setTime({ ...time, hours: e.target.value });
+        console.log('time => ', time);
+    }
+
     return (
         <div className="reservation-form__step-three">
             <div className="step-three__step-three-container">
@@ -29,7 +34,7 @@ function StepThree(props) {
                 <div className="step-three__reservation-date-picker-container">
                     <input className="reservation-date-picker-container__reservation-date-picker reservation-form__input reservation-form__input--no-margin rounded" type="date" placeholder="Date" onChange={e => handleDataChange(e.target.value)}/>
                     <div className="reservation-date-picker-container__reservation-time-picker">
-                        <input className="reservation-form__input reservation-form__input--no-margin rounded" placeholder="Time"/>
+                        <input className="reservation-form__input reservation-form__input--no-margin rounded" placeholder="Time" onChange={e => handleHoursChange(e.target.value)}/>
                         <span> : </span>
                         <input className="reservation-form__input reservation-form__input--no-margin rounded" placeholder="Time"/>
                     </div>
