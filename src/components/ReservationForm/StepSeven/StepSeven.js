@@ -10,7 +10,7 @@ function StepSeven(props) {
         <div className="reservation-form__step-seven">
             <div className="step-seven__form rounded">
                     <span className="step-seven__thank-you-text">Thank you for your reservation!  Our manager will be  in touch with you soon.</span>
-                    <div className="reservation-form__submit-btn rounded pointer" onClick={props.next}>
+                    <div className="reservation-form__submit-btn reservation-form__submit-btn--no-margin rounded pointer" onClick={props.next}>
                         <span className="reservation-form__submit-text">Reserve Another Trip →</span>
                     </div>
                 </div>

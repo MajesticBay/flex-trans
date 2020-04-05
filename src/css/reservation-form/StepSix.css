@@ -4,9 +4,7 @@
 
 .step-six__inner-container {
   padding: 1.6rem;
-  background-color: var(--color-white);
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px; }
+  background-color: var(--color-white); }
 
 .step-six__step-six-header {
   display: flex;
@@ -51,6 +49,9 @@
   .step-six__step-six-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 2rem; } }
+    grid-gap: 2rem; }
+
+  .step-six__inner-container {
+    border-radius: 6px; } }
 
 /*# sourceMappingURL=StepSix.css.map */
