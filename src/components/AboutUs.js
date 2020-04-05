@@ -1,10 +1,10 @@
 import React from 'react';
-import Top from '../Top';
-import ReservationForm from '../ReservationForm/ReservationForm';
-import aboutUsOne from '../../images/about-us1.png';
-import aboutUsTwo from '../../images/about-us2.png';
-import aboutUsThree from '../../images/about-us3.png';
-import fordtransitright from '../../images/ford-transit-right.png';
+import Top from './Top';
+import ReservationForm from './ReservationForm/ReservationForm';
+import aboutUsOne from '../images/about-us1.png';
+import aboutUsTwo from '../images/about-us2.png';
+import aboutUsThree from '../images/about-us3.png';
+import fordtransitright from '../images/ford-transit-right.png';
 
 function AboutUs() {
   return (
