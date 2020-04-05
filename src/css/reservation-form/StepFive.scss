@@ -1,6 +1,6 @@
 .reservation-form__step-five {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }
 
 .step-five__inner-container {

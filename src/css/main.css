@@ -757,8 +757,8 @@ html {
   .reservation-form__submit-btn--step-three {
     grid-area: submit-right; } }
 .reservation-form__step-four {
-  display: flex;
-  flex-direction: column; }
+  display: grid;
+  grid-template-rows: 1fr 1fr; }
 
 .step-four__inner-container {
   padding: 1.6rem;
@@ -811,8 +811,8 @@ html {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 1.5rem; } }
 .reservation-form__step-five {
-  display: flex;
-  flex-direction: column; }
+  display: grid;
+  grid-template-rows: 1fr 1fr; }
 
 .step-five__inner-container {
   padding: 1.6rem;

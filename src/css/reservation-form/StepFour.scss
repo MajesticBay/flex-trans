@@ -1,6 +1,6 @@
 .reservation-form__step-four {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }
 
 .step-four__inner-container {
