@@ -33,7 +33,7 @@ function ContactUs() {
     const email = contactFormEmail;
     const message = contactFormMessage;
     const formValues = { name, phone, email, message };
-    const templateId = 'template_zxl0pk0o';
+    const templateId = 'contact-us_zxl0pk0o';
     sendFeedback(templateId, formValues);
   }
 
