@@ -60,7 +60,7 @@ function StepOne(props) {
                                                 fontSize: "1.6rem",
                                                 cursor: "pointer"
                                             }}>
-                                        {loading ? <div>...loading</div> : null}
+                                        {loading ? <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}><span style={{padding: "1.6rem 2rem"}}>...loading</span></div> : null}
         
                                         {suggestions.map(suggestion => {
                                         const style = {
@@ -94,7 +94,7 @@ function StepOne(props) {
                                                 fontSize: "1.6rem",
                                                 cursor: "pointer"
                                             }}>
-                                        {loading ? <div>...loading</div> : null}
+                                        {loading ? <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}><span style={{padding: "1.6rem 2rem"}}>...loading</span></div> : null}
         
                                         {suggestions.map(suggestion => {
                                         const style = {
