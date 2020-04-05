@@ -1,6 +1,6 @@
 import React from 'react';
-import visa from '../../images/visa.svg';
-import mastercard from '../../images/mastercard.svg';
+import visa from '../images/visa.svg';
+import mastercard from '../images/mastercard.svg';
 
 function Footer() {
     return (
