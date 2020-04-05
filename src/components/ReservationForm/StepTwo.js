@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import GoogleMap from 'google-distance-matrix';
 import axios from 'axios';
-import { reservationFormContext } from '../../../contexts/reservationFormContext';
+import { reservationFormContext } from '../../contexts/reservationFormContext';
 
 require('dotenv').config();
 

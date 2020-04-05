@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { reservationFormContext } from '../../../contexts/reservationFormContext';
+import { reservationFormContext } from '../../contexts/reservationFormContext';
 
 function StepFive(props) {
     const { addressPick} = React.useContext(reservationFormContext);

@@ -1,9 +1,9 @@
 import React from 'react';
 import PlacesAutocomplete, {geocodeByAddress, getLatLng} from "react-places-autocomplete";
 
-import { reservationFormContext } from '../../../contexts/reservationFormContext';
+import { reservationFormContext } from '../../contexts/reservationFormContext';
 
-import fordtransit from '../../../images/car-left-shadow.png';
+import fordtransit from '../../images/car-left-shadow.png';
 
 function StepOne(props) {
 
