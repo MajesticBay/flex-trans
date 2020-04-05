@@ -26,6 +26,11 @@ function StepThree(props) {
         console.log('time => ', time);
     }
 
+    const handleRadioChange = (e) => {
+        setTime ({ ...time, ampm: e.target.value });
+        console.log('time => ', time);
+    }
+
     return (
         <div className="reservation-form__step-three">
             <div className="step-three__step-three-container">
@@ -46,11 +51,11 @@ function StepThree(props) {
                     <div className="reservation-date-picker-container__reservation-am-pm-picker">
                         <div className="reservation-am-pm-picker__inner-container">
                             <div className="reservation-date-picker-container__am-container">
-                                <input type="radio" id="time-am" name="gender" value="am"/>
+                                <input type="radio" id="time-am" name="gender" value="am" onChange={e => handleRadioChange(e)}/>
                                 <label for="time-am">am</label>
                             </div>
                             <div className="reservation-date-picker-container__pm-container">
-                                <input type="radio" id="time-pm" name="gender" value="pm"/>
+                                <input type="radio" id="time-pm" name="gender" value="pm" onChange={e => handleRadioChange(e)}/>
                                 <label for="time-pm">pm</label>
                             </div>
                         </div>
