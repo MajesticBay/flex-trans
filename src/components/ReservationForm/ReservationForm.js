@@ -7,7 +7,7 @@ import StepFour from './StepFour';
 import StepFive from './StepFive';
 import StepSix from './StepSix';
 import StepSeven from './StepSeven';
-import StepEight from './StepEight';
+// import StepEight from './StepEight';
 
 function ReservationForm(props) {
     const [currentStep, setCurrentStep] = useState(1);
@@ -34,8 +34,8 @@ function ReservationForm(props) {
                 return <StepSix currentStep={currentStep} next={_next}/>
             case 7:
                 return <StepSeven currentStep={currentStep} next={_next}/>
-            case 8:
-                return <StepEight currentStep={currentStep} next={_next}/>
+            // case 8:
+            //     return <StepEight currentStep={currentStep} next={_next}/>
             }
     }
     
