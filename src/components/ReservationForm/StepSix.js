@@ -1,6 +1,16 @@
 import React from 'react';
 
+import { reservationFormContext } from '../../contexts/reservationFormContext';
+
 function StepSix(props) {
+
+    const { addressPick } = React.useContext(reservationFormContext);
+    const { addressDrop } = React.useContext(reservationFormContext);
+    const { distance } = React.useContext(reservationFormContext);
+    const { price } = React.useContext(reservationFormContext);
+    const { date } = React.useContext(reservationFormContext);
+
+
     return (
         <div className="reservation-form__step-six">
             <div className="step-six__inner-container">
@@ -15,7 +25,7 @@ function StepSix(props) {
                     <div className="step-six__step-six-form-container">
                         <div className="step-six-form-container__step-six-line-container">
                             <span className="step-six-line-container__step-six-line-title">Pick-up date: </span>
-                            <span className="step-six-line-container__step-six-line-content">01/30/2020</span>
+                            <span className="step-six-line-container__step-six-line-content">{date}</span>
                         </div>
                         <div className="step-six-form-container__step-six-line-container">
                             <span className="step-six-line-container__step-six-line-title">Pick-up time: </span>
@@ -23,11 +33,11 @@ function StepSix(props) {
                         </div>
                         <div className="step-six-form-container__step-six-line-container">
                             <span className="step-six-line-container__step-six-line-title">Trip origin: </span>
-                            <span className="step-six-line-container__step-six-line-content">Seattle-Tacoma International Airport (SEA), International Boulevard, Seattle, WA, USA</span>
+                            <span className="step-six-line-container__step-six-line-content">{addressPick}</span>
                         </div>
                         <div className="step-six-form-container__step-six-line-container">
                             <span className="step-six-line-container__step-six-line-title">Destination: </span>
-                            <span className="step-six-line-container__step-six-line-content">Sammamish Landing Park, East Lake Sam- mamish Parkway Northeast, Sammamish, WA, USA</span>
+                            <span className="step-six-line-container__step-six-line-content">{addressDrop}</span>
                         </div>
                     </div>
                     <div className="step-six__step-six-form-container">
