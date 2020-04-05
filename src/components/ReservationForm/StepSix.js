@@ -9,6 +9,7 @@ function StepSix(props) {
     const { distance } = React.useContext(reservationFormContext);
     const { price } = React.useContext(reservationFormContext);
     const { date } = React.useContext(reservationFormContext);
+    const { time } = React.useContext(reservationFormContext);
 
 
     return (
@@ -29,7 +30,7 @@ function StepSix(props) {
                         </div>
                         <div className="step-six-form-container__step-six-line-container">
                             <span className="step-six-line-container__step-six-line-title">Pick-up time: </span>
-                            <span className="step-six-line-container__step-six-line-content">4:30 pm</span>
+                            <span className="step-six-line-container__step-six-line-content">{time.fullTime}</span>
                         </div>
                         <div className="step-six-form-container__step-six-line-container">
                             <span className="step-six-line-container__step-six-line-title">Trip origin: </span>

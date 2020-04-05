@@ -32,7 +32,8 @@ function StepThree(props) {
     }
 
     const goToStepFour = () => {
-        
+        let timeStr = time.hours + ':' + time.minutes + ' ' + time.ampm;
+        setTime ({ ...time, fullTime: timeStr });
         props.next();
     }
 
