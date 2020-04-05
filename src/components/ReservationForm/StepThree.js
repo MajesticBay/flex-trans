@@ -11,13 +11,18 @@ function StepThree(props) {
     
     let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
 
-    const handleDataChange = (e) => {
-        setDate(e);
+    const handleDateChange = (e) => {
+        setDate(e.target.value);
         console.log('date => ', date);
     }
 
     const handleHoursChange = (e) => {
         setTime({ ...time, hours: e.target.value });
+        console.log('time => ', time);
+    }
+
+    const handleMinutesChange = (e) => {
+        setTime({ ...time, minutes: e.target.value });
         console.log('time => ', time);
     }
 
@@ -32,11 +37,11 @@ function StepThree(props) {
                     </span>
                 </div>
                 <div className="step-three__reservation-date-picker-container">
-                    <input className="reservation-date-picker-container__reservation-date-picker reservation-form__input reservation-form__input--no-margin rounded" type="date" placeholder="Date" onChange={e => handleDataChange(e.target.value)}/>
+                    <input className="reservation-date-picker-container__reservation-date-picker reservation-form__input reservation-form__input--no-margin rounded" type="date" placeholder="Date" onChange={e => handleDateChange(e)}/>
                     <div className="reservation-date-picker-container__reservation-time-picker">
-                        <input className="reservation-form__input reservation-form__input--no-margin rounded" placeholder="Time" onChange={e => handleHoursChange(e.target.value)}/>
+                        <input className="reservation-form__input reservation-form__input--no-margin rounded" placeholder="Time" onChange={e => handleHoursChange(e)}/>
                         <span> : </span>
-                        <input className="reservation-form__input reservation-form__input--no-margin rounded" placeholder="Time"/>
+                        <input className="reservation-form__input reservation-form__input--no-margin rounded" placeholder="Time" onChange={e => handleMinutesChange(e)}/>
                     </div>
                     <div className="reservation-date-picker-container__reservation-am-pm-picker">
                         <div className="reservation-am-pm-picker__inner-container">
