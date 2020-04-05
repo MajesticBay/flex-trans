@@ -46,18 +46,27 @@ function StepOne(props) {
                         <div className="step-one__form rounded">
                             <PlacesAutocomplete value={addressPick} onChange={setAddressPick} onSelect={handleSelectPick}>
                                 {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
-                                    <div>
+                                    <div style={{position: "relative", display: "flex", flexDirection: "column"}}>
         
                                     <input
                                         className="reservation-form__input rounded" 
                                         {...getInputProps({ placeholder: "Pick-up location" })} />
         
-                                    <div>
+                                    <div style = {{ 
+                                                position: "absolute",
+                                                zIndex: "2",
+                                                top: "5.2rem",
+                                                width: "100%",
+                                                fontSize: "1.6rem",
+                                                cursor: "pointer"
+                                            }}>
                                         {loading ? <div>...loading</div> : null}
         
                                         {suggestions.map(suggestion => {
                                         const style = {
-                                            backgroundColor: suggestion.active ? "#41b6e6" : "#fff"
+                                            width: "100%",
+                                            backgroundColor: suggestion.active ? "#41b6e6" : "#fff",
+                                            padding: "1.6rem 2rem"
                                         };
         
                                         return (
@@ -72,16 +81,26 @@ function StepOne(props) {
                             </PlacesAutocomplete>
                             <PlacesAutocomplete value={addressDrop} onChange={setAddressDrop} onSelect={handleSelectDrop}>
                                 {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
-                                    <div>
+                                    <div style={{position: "relative", display: "flex", flexDirection: "column"}}>
         
-                                    <input className="reservation-form__input rounded" {...getInputProps({ placeholder: "Drop-off location" })} />
+                                    <input
+                                        className="reservation-form__input rounded"
+                                        {...getInputProps({ placeholder: "Drop-off location" })} />
         
-                                    <div>
+                                    <div style = {{ 
+                                                position: "absolute",
+                                                top: "5.2rem",
+                                                width: "100%",
+                                                fontSize: "1.6rem",
+                                                cursor: "pointer"
+                                            }}>
                                         {loading ? <div>...loading</div> : null}
         
                                         {suggestions.map(suggestion => {
                                         const style = {
-                                            backgroundColor: suggestion.active ? "#41b6e6" : "#fff"
+                                            width: "100%",
+                                            backgroundColor: suggestion.active ? "#41b6e6" : "#fff",
+                                            padding: "1.6rem 2rem"
                                         };
         
                                         return (
