@@ -3,4 +3,7 @@
   color: var(--color-input-label);
   margin-bottom: 1rem; }
 
+.reservation-form__input-label--no-margin {
+  margin-bottom: 0; }
+
 /*# sourceMappingURL=ReservationFormShared.css.map */

@@ -32,16 +32,16 @@ function StepFive(props) {
                 </div>
                 <div className="step-five__additional-info">
                     <div className="step-five__additional-info-form-group">
-                        <p className="reservation-form__input-label">Additional Passenger</p>
-                        <input className="reservation-form__input rounded"/>
+                        <p className="step-five__additional-info-header reservation-form__input-label reservation-form__input-label--no-margin">Additional Passenger</p>
+                        <input className="step-five__additional-info-input reservation-form__input reservation-form__input--no-margin rounded"/>
                     </div>
                     <div className="step-five__additional-info-form-group">
-                        <p className="reservation-form__input-label">Do you need our wheelchair provided?</p>
-                        <input className="reservation-form__input rounded"/>
+                        <p className="step-five__additional-info-header reservation-form__input-label reservation-form__input-label--no-margin">Do you need our wheelchair provided?</p>
+                        <input className="step-five__additional-info-input reservation-form__input reservation-form__input--no-margin rounded"/>
                     </div>
                     <div className="step-five__additional-info-form-group">
-                        <p className="reservation-form__input-label">Do you need a ride back?</p>
-                        <input className="reservation-form__input rounded"/>
+                        <p className="step-five__additional-info-header reservation-form__input-label reservation-form__input-label--no-margin">Do you need a ride back?</p>
+                        <input className="step-five__additional-info-input reservation-form__input reservation-form__input--no-margin rounded"/>
                     </div>
                 </div>
                 <div className="step-five__step-five-footer">

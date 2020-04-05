@@ -43,7 +43,13 @@
 
 .step-five__additional-info-form-group {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    margin-bottom: 1rem;
+}
+
+.step-five__additional-info-input {
+    width: 150px;
 }
 
 .step-five__step-five-footer {
@@ -63,7 +69,7 @@
     }
 
     .step-five__additional-info {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-column-gap: 1.5rem;
+        grid-template-columns: 1fr 1.5fr 1fr;
+        grid-column-gap: 2.5rem;
     }
 }

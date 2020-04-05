@@ -563,6 +563,9 @@ html {
   color: var(--color-input-label);
   margin-bottom: 1rem; }
 
+.reservation-form__input-label--no-margin {
+  margin-bottom: 0; }
+
 .reservation-form__step-one {
   display: grid;
   grid-template-columns: 1fr;
@@ -846,7 +849,12 @@ html {
 
 .step-five__additional-info-form-group {
   display: flex;
-  align-items: center; }
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem; }
+
+.step-five__additional-info-input {
+  width: 150px; }
 
 .step-five__step-five-footer {
   display: flex;
@@ -862,8 +870,8 @@ html {
     grid-column-gap: 1.5rem; }
 
   .step-five__additional-info {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 1.5rem; } }
+    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-column-gap: 2.5rem; } }
 .reservation-form__step-six {
   display: flex;
   flex-direction: column; }
