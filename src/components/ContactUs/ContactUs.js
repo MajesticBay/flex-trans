@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NotificationContainer, NotificationManager } from 'react-notifications';
 import 'react-notifications/lib/notifications.css';
 
-import Top from '../Top/Top';
+import Top from '../Top';
 import ReservationForm from '../ReservationForm/ReservationForm';
 
 function ContactUs() {

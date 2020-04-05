@@ -1,5 +1,5 @@
 import React from 'react';
-import Top from '../Top/Top';
+import Top from '../Top';
 import ReservationForm from '../ReservationForm/ReservationForm';
 import aboutUsOne from '../../images/about-us1.png';
 import aboutUsTwo from '../../images/about-us2.png';
