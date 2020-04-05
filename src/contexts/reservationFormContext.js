@@ -26,12 +26,12 @@ export default ({ children }) => {
                                             ampm: ''
                                         });
 
-    const [passengerInfo, setPassengerInfo] = React.useState({name: null,
-                                                        phone: null,
-                                                        email: null,
-                                                        additionalPassenger: false,
-                                                        wheelchairNeeded: false,
-                                                        rideBackNeeded: false
+    const [passengerInfo, setPassengerInfo] = React.useState({name: '',
+                                                        phone: '',
+                                                        email: '',
+                                                        additionalPassenger: '',
+                                                        wheelchairNeeded: '',
+                                                        rideBackNeeded: ''
                                                         });
     const reservationForm = {
         addressPick, setAddressPick,
