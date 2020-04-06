@@ -45,7 +45,7 @@ function StepSix(props) {
         console.log('formValues => ', formValues);
         const templateId = 'reservation_form';
         sendFeedback(templateId, formValues);
-        // props.next();
+        props.next();
     }
 
     const sendFeedback = (templateId, variables) => {
