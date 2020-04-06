@@ -13,7 +13,7 @@ function NavBar() {
                     </div>
                 </Link>
                 <a href="tel:(425) 444 3905">
-                    <div className="call-btn call-btn--desktop-navbar rounded pointer">
+                    <div className="call-btn rounded pointer">
                         <div className="call-btn__phone-img-container">
                             <img className="call-btn__phone-img" src={phone} alt="Press to call us"/>
                         </div>
@@ -34,7 +34,7 @@ function NavBar() {
                         </div>
                     </Link>
                     <a href="tel:(425) 444 3905">
-                        <div className="call-btn rounded pointer">
+                        <div className="call-btn call-btn--desktop-navbar rounded pointer">
                             <div className="call-btn__phone-img-container">
                                 <img className="img-fluid--no-width" src={phone} alt="Press to call us"/>
                             </div>
