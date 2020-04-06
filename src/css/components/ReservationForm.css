@@ -3,23 +3,20 @@
   grid-template-columns: 1fr;
   width: 100%;
   max-width: 1280px;
-}
+  margin-top: 8rem; }
 
 .step-one__car-photo-container {
-  display: none;
-}
+  display: none; }
 
 @media only screen and (min-width: 1024px) {
   .reservation-form {
     position: absolute;
     top: 25vh;
     width: 67%;
-  }
+    margin-top: 0; }
 
   .step-one__car-photo-container {
     display: block;
-    width: 100%;
-  }
-}
+    width: 100%; } }
 
 /*# sourceMappingURL=ReservationForm.css.map */

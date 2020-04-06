@@ -1079,7 +1079,8 @@ html {
   .navbar-links__navbar-link {
     padding-right: 4rem; } }
 .top {
-  height: 265px;
+  position: relative;
+  height: 20rem;
   width: 100%;
   background-image: url("../images/bg.jpg");
   background-position: center;
@@ -1088,14 +1089,29 @@ html {
   /* Do not repeat the image */
   background-size: cover; }
 
+.top__car-image {
+  position: absolute;
+  z-index: 1;
+  bottom: -9rem;
+  left: 50%;
+  transform: translateX(-50%);
+  height: auto;
+  width: auto;
+  max-height: 250px;
+  max-width: 100%; }
+
 @media only screen and (min-width: 768px) {
   .top {
-    height: 60vh; } }
+    height: 60vh; }
+
+  .top__car-image {
+    display: none; } }
 .reservation-form {
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
-  max-width: 1280px; }
+  max-width: 1280px;
+  margin-top: 8rem; }
 
 .step-one__car-photo-container {
   display: none; }
@@ -1104,7 +1120,8 @@ html {
   .reservation-form {
     position: absolute;
     top: 25vh;
-    width: 67%; }
+    width: 67%;
+    margin-top: 0; }
 
   .step-one__car-photo-container {
     display: block;

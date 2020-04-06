@@ -1,5 +1,6 @@
 .top {
-    height: 265px;
+    position: relative;
+    height: 20rem;
     width: 100%;
     background-image: url('../images/bg.jpg');
     background-position: center; /* Center the image */
@@ -7,8 +8,24 @@
     background-size: cover;
 }
 
+.top__car-image {
+    position: absolute;
+    z-index: 1;
+    bottom: -9rem;
+    left: 50%;
+    transform: translateX(-50%);
+    height: auto;
+    width: auto;
+    max-height: 250px;
+    max-width: 100%;
+}
+
 @media only screen and (min-width: 768px) {
     .top {
         height: 60vh;
+    }
+
+    .top__car-image {
+        display: none;
     }
 }
