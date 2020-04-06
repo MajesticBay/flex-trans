@@ -29,9 +29,9 @@ export default ({ children }) => {
     const [passengerInfo, setPassengerInfo] = React.useState({name: '',
                                                         phone: '',
                                                         email: '',
-                                                        additionalPassenger: '',
-                                                        wheelchairNeeded: '',
-                                                        rideBackNeeded: ''
+                                                        additionalPassenger: 'None',
+                                                        wheelchairNeeded: 'No',
+                                                        rideBackNeeded: 'No'
                                                         });
     const reservationForm = {
         addressPick, setAddressPick,
