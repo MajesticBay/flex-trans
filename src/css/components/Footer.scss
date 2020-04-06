@@ -1,10 +1,6 @@
 @import '../placeholders';
 
 .footer {
-    // position: fixed;
-    // bottom: 0;
-    // display: flex;
-    // justify-content: center;
     display: grid;
     place-items: center;
     width: 100%;
@@ -65,15 +61,11 @@
     }
 
     .footer-info {
-        // grid-column-start: 1;
-        // grid-column-end: 2;
         grid-column: 1 / 2;
         grid-row: 1 / 2;
     }
 
     .footer-logos {
-        // grid-column-start: 2;
-        // grid-column-end: 3;
         grid-column: 2 / 3;
     }
 }
