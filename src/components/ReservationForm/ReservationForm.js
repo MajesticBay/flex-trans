@@ -34,6 +34,8 @@ function ReservationForm(props) {
                 return <StepSix currentStep={currentStep} next={_next}/>
             case 7:
                 return <StepSeven currentStep={currentStep} next={_next}/>
+            default:
+                return <StepOne currentStep={currentStep} next={_next}/>
             // case 8:
             //     return <StepEight currentStep={currentStep} next={_next}/>
             }
