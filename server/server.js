@@ -4,6 +4,7 @@ const app = express();
 const bodyParser = require('body-parser');
 // const jsonParser = require('body-parser').json();
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, '../build')));
 
 // const distance = require('google-distance-matrix');
 
