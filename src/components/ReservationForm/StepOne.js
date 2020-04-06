@@ -66,6 +66,7 @@ function StepOne(props) {
                                         const style = {
                                             width: "100%",
                                             backgroundColor: suggestion.active ? "#41b6e6" : "#fff",
+                                            color: suggestion.active ? "#fff" : "#000",
                                             padding: "1.6rem 2rem"
                                         };
         
@@ -100,6 +101,7 @@ function StepOne(props) {
                                         const style = {
                                             width: "100%",
                                             backgroundColor: suggestion.active ? "#41b6e6" : "#fff",
+                                            color: suggestion.active ? "#fff" : "#000",
                                             padding: "1.6rem 2rem"
                                         };
         
