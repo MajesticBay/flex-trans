@@ -8,7 +8,8 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../build')));
 
 app.use((req, res, next) => {
-    log(req.ip + " has requested " + req.url);
+    const realIP = req.header("x-forwarded-for");
+    log(realIP || req.ip + " has requested " + req.url);
     next();
 })
 
