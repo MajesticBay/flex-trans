@@ -11,10 +11,10 @@ function StepFour(props) {
             <div className="step-four__inner-container">
                 <div className="step-four__step-four-header">
                     <span className="step-four__header-text">Reservation form</span>
-                    <div>
+                    {/* <div>
                         <span>← Back</span>
-                        <span>Step 2 of 5</span>
-                    </div>
+                        <span>Step 3 of 5</span>
+                    </div> */}
                 </div>
                 <div className="step-four__step-four-form">
                     <div className="step-four__address-container">

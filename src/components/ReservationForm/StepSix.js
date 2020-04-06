@@ -66,10 +66,10 @@ function StepSix(props) {
             <div className="step-six__inner-container">
                 <div className="step-six__step-six-header">
                     <span className="step-six__header-text">You are almost done. Please confirm your order.</span>
-                    <div>
+                    {/* <div>
                         <span>← Back</span>
                         <span>Step 2 of 5</span>
-                    </div>
+                    </div> */}
                 </div>
                 <div className="step-six__step-six-content">
                     <div className="step-six__step-six-form-container">

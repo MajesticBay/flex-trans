@@ -42,10 +42,10 @@ function StepThree(props) {
             <div className="step-three__step-three-container">
                 <div className="step-three__step-header">
                     <span className="step-three__header">Pick-up date and time</span>
-                    <span>
+                    {/* <span>
                         <span>← Back</span>
-                        <span>Step 1 of 5</span>
-                    </span>
+                        <span>Step 2 of 5</span>
+                    </span> */}
                 </div>
                 <div className="step-three__reservation-date-picker-container">
                     <input className="reservation-date-picker-container__reservation-date-picker reservation-form__input reservation-form__input--no-margin rounded" type="date" placeholder="Date" onChange={e => handleDateChange(e)}/>
