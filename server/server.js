@@ -9,7 +9,8 @@ app.use(express.static(path.join(__dirname, '../build')));
 
 app.use((req, res, next) => {
     const realIP = req.header("x-forwarded-for");
-    log(realIP || req.ip + " has requested " + req.url);
+    const loggedIP = realIP || req.ip;
+    log(loggedIP + " has requested " + req.url);
     next();
 })
 
