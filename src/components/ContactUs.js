@@ -33,6 +33,7 @@ function ContactUs() {
     const email = contactFormEmail;
     const message = contactFormMessage;
     const formValues = { name, phone, email, message };
+    console.log ('formValues => ', formValues);
     const templateId = 'contact-us_zxl0pk0o';
     sendFeedback(templateId, formValues);
   }

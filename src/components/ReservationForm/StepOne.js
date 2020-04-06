@@ -9,9 +9,9 @@ function StepOne(props) {
 
     // Pick block
     const { addressPick, setAddressPick } = React.useContext(reservationFormContext);
-    const { coordinatesPick, setCoordinatesPick } = React.useContext(reservationFormContext);
+    const { setCoordinatesPick } = React.useContext(reservationFormContext);
     const { addressDrop, setAddressDrop } = React.useContext(reservationFormContext);
-    const { coordinatesDrop, setCoordinatesDrop } = React.useContext(reservationFormContext);
+    const { setCoordinatesDrop } = React.useContext(reservationFormContext);
 
     // useEffect(() => {
     //     console.log('yes')

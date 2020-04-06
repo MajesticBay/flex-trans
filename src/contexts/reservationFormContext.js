@@ -44,8 +44,7 @@ export default ({ children }) => {
         price, setPrice,
         date, setDate,
         time, setTime,
-        passengerInfo, setPassengerInfo,
-        addressPick, setAddressPick
+        passengerInfo, setPassengerInfo
     }
 
 return <reservationFormContext.Provider value={reservationForm}>{ children }</reservationFormContext.Provider>
