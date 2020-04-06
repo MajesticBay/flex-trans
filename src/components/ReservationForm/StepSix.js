@@ -68,7 +68,7 @@ function StepSix(props) {
                     <span className="step-six__header-text">You are almost done. Please confirm your order.</span>
                     {/* <div>
                         <span>← Back</span>
-                        <span>Step 2 of 5</span>
+                        <span>Step 5 of 5</span>
                     </div> */}
                 </div>
                 <div className="step-six__step-six-content">
