@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../images/logo-cabulance.png';
 import phone from '../images/phone.svg';
-import hamburger from '../images/menu-hamburger.svg';
 
 function NavBar() {
     return (
@@ -14,16 +13,13 @@ function NavBar() {
                     </div>
                 </Link>
                 <a href="tel:(425) 444 3905">
-                    <div className="call-btn--mobile rounded pointer">
+                    <div className="call-btn call-btn--desktop-navbar rounded pointer">
                         <div className="call-btn__phone-img-container">
                             <img className="call-btn__phone-img" src={phone} alt="Press to call us"/>
                         </div>
                         <span className="call-btn__text">(425) 444 3905</span>
                     </div>
                 </a>
-                <div>
-                    <img src={hamburger} alt="Tap to open the menu"/>
-                </div>
                 <div className="navbar-mobile__menu">
                     <a href="tel:(425) 444 3905">
                         <p>(425) 444 3905</p>

@@ -45,13 +45,15 @@ html {
 
 .navbar-mobile {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 16px; }
+  padding: 1.6rem; }
 
 .navbar-mobile__logo-container {
-  height: 45px; }
+  height: 4.5rem;
+  margin-bottom: 1rem; }
 
 .navbar-mobile__menu {
   display: none; }
@@ -78,13 +80,18 @@ html {
   justify-content: center;
   align-items: center;
   background-color: var(--color-red);
-  padding: 8px 16px;
+  padding: 8px 16px; }
+
+.call-btn--desktop-navbar {
   margin-left: 16px; }
 
 .call-btn--mobile {
   display: none; }
 
 .call-btn__phone-img-container {
+  height: 1.6rem; }
+
+.call-btn__phone-img {
   height: 1.6rem; }
 
 .call-btn__text {
@@ -116,6 +123,6 @@ html {
     display: grid; } }
 @media only screen and (min-width: 1280px) {
   .navbar-links__navbar-link {
-    padding-right: 40px; } }
+    padding-right: 4rem; } }
 
 /*# sourceMappingURL=NavBar.css.map */

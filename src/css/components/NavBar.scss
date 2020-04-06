@@ -8,14 +8,16 @@
 
 .navbar-mobile {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 16px;
+    padding: 1.6rem;
 }
 
 .navbar-mobile__logo-container {
-    height: 45px;
+    height: 4.5rem;
+    margin-bottom: 1rem;
 }
 
 .navbar-mobile__menu {
@@ -50,6 +52,9 @@
     align-items: center;
     background-color: var(--color-red);
     padding: 8px 16px;
+}
+
+.call-btn--desktop-navbar {
     margin-left: 16px;
 }
 
@@ -61,9 +66,9 @@
     height: 1.6rem;
 }
 
-// .call-btn__phone-img {
-//     height: 24px;
-// }
+.call-btn__phone-img {
+    height: 1.6rem;
+}
 
 .call-btn__text {
     font-size: var(--font-1-6);
@@ -76,11 +81,9 @@
 .navbar__navbar-links {
     display: flex;
     align-items: center;
-    // margin-left: 16px;
 }
 
 .navbar-links__navbar-link {
-    // font-size: var(--font-16);
     font-size: var(--font-1-6);
     color: var(--color-button);
     text-decoration: underline;
@@ -100,14 +103,12 @@
     }
 
     .navbar-desktop {
-        // display: flex;
         display: grid;
     }
 }
 
 @media only screen and (min-width: 1280px) {
     .navbar-links__navbar-link {
-        // font-size: var(--font-2-2);
-        padding-right: 40px;
+        padding-right: 4rem;
     }
 }
