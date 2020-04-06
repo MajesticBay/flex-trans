@@ -22,4 +22,8 @@ body, p {
 .directions-card {
   display: none !important; }
 
+@media only screen and (min-width: 768px) {
+  .rounded-desktop {
+    border-radius: 6px; } }
+
 /*# sourceMappingURL=components.css.map */

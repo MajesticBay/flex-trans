@@ -172,6 +172,9 @@ body, p {
 .directions-card {
   display: none !important; }
 
+@media only screen and (min-width: 768px) {
+  .rounded-desktop {
+    border-radius: 6px; } }
 :root {
   --color-description: #9E9E9E;
   --color-button: #1F1D1D;

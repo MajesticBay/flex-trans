@@ -7,7 +7,7 @@ function Mission() {
         <div className="home-content__outside-mission-container">
             <div className="home-content__mission-container">
                 <div className="mission-container__mission-photo">
-                    <img className="img-fluid" src={missionPhoto} alt="Our mission"/>
+                    <img className="img-fluid rounded-desktop" src={missionPhoto} alt="Our mission"/>
                 </div>
                 <div className="mission-container__mission-content">
                     <p className="mission-content__text">Our mission at Flex-Trans is simple, we aim to provide you with the best services you require.  
