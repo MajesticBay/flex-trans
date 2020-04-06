@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
@@ -10,6 +11,10 @@ require('dotenv').config();
 
 const distanceController = require('./distanceController');
 app.post('/distance', distanceController.getDistance);
+
+app.get('*', (req, res)=>{
+    res.sendFile(path.join(__dirname, '../build/index.html'));
+});
 
 const port = process.env.SERVER_PORT || 3050;
 const server = app.listen(port, () => console.log(`Listening on port: ${port}`));
