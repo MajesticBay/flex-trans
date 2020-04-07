@@ -86,8 +86,16 @@ function StepSix(props) {
                             <span className="step-six-line-container__step-six-line-content">{addressPick}</span>
                         </div>
                         <div className="step-six-form-container__step-six-line-container">
+                            <span className="step-six-line-container__step-six-line-title">Apt./Ste: </span>
+                            <span className="step-six-line-container__step-six-line-content">{buildingInfoPick}</span>
+                        </div>
+                        <div className="step-six-form-container__step-six-line-container">
                             <span className="step-six-line-container__step-six-line-title">Destination: </span>
                             <span className="step-six-line-container__step-six-line-content">{addressDrop}</span>
+                        </div>
+                        <div className="step-six-form-container__step-six-line-container">
+                            <span className="step-six-line-container__step-six-line-title">Apt./Ste: </span>
+                            <span className="step-six-line-container__step-six-line-content">{buildingInfoDrop}</span>
                         </div>
                     </div>
                     <div className="step-six__step-six-form-container">
