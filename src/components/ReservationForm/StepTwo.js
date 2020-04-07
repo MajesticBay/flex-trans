@@ -18,6 +18,7 @@ function StepTwo(props) {
         let destinations = [addressDrop];
         axios.post('/distance', { origins, destinations })
             .then(res => {
+                console.log('res.data = ', res.data);
                 let distanceStrArr = res.data[0].elements[0].distance.text.split(' ');
                 let distanceStr = distanceStrArr[0]
                 console.log(distanceStr);
