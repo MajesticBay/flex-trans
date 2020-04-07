@@ -16,9 +16,6 @@ export default ({ children }) => {
     const [price, setPrice] = React.useState("");
 
     const [date, setDate] = React.useState("");
-    // const [hours, setHours] = React.useState("");
-    // const [minutes, setMinutes] = React.useState("");
-    // const [ampm, setAmPm] = React.useState("");
     const [time, setTime] = React.useState({
                                             fullTime: '',
                                             hours: '',
