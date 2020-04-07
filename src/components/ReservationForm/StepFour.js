@@ -10,6 +10,7 @@ function StepFour(props) {
     const { addressDrop, setAddressDrop } = React.useContext(reservationFormContext);
     const { setCoordinatesDrop } = React.useContext(reservationFormContext);
     const { setBuildingInfoDrop } = React.useContext(reservationFormContext);
+    const { price } = React.useContext(reservationFormContext);
     
     let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&language=EN&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
     
@@ -127,9 +128,10 @@ function StepFour(props) {
                     </div>
                 </div>
                 <div className="step-four__step-four-footer">
-                    <div>
-                        <span>Total</span>
-                        <span>$0</span>
+                    <div className="reservation-form__reservation-footer-price-container">
+                        <span className="reservation-footer-price-container__total">Total: </span>
+                        <span className="reservation-footer-price-container__dollar">$</span>
+                        <span className="reservation-footer-price-container__price">{price}</span>
                     </div>
                     <div className="reservation-form__submit-btn rounded pointer" onClick={props.next}>
                         <span className="reservation-form__submit-text">Next Step →</span>

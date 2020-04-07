@@ -12,7 +12,7 @@ function StepSix(props) {
     const { addressDrop } = React.useContext(reservationFormContext);
     const { buildingInfoDrop } = React.useContext(reservationFormContext);
     // const { distance } = React.useContext(reservationFormContext);
-    // const { price } = React.useContext(reservationFormContext);
+    const { price } = React.useContext(reservationFormContext);
     const { date } = React.useContext(reservationFormContext);
     const { time } = React.useContext(reservationFormContext);
     const { passengerInfo } = React.useContext(reservationFormContext);
@@ -122,9 +122,10 @@ function StepSix(props) {
                     <span>You might notice that if you add extra passengers or use of our wheelchair, your quote does not go up. That’s because we offer these services, plus a number of others to whoever needs them free of charge. Go to our About Us page to see what others you can take advantage of at no cost to you.</span>
                 </div>
                 <div className="step-six__step-six-footer">
-                    <div>
-                        <span>Total</span>
-                        <span>$0</span>
+                    <div className="reservation-form__reservation-footer-price-container">
+                        <span className="reservation-footer-price-container__total">Total: </span>
+                        <span className="reservation-footer-price-container__dollar">$</span>
+                        <span className="reservation-footer-price-container__price">{price}</span>
                     </div>
                     <div className="reservation-form__submit-btn rounded pointer" onClick={() => handleReservationSubmit()}>
                         <span className="reservation-form__submit-text">Accept Terms & Condition</span>

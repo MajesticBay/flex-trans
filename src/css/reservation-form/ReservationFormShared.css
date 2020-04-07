@@ -6,4 +6,13 @@
 .reservation-form__input-label--no-margin {
   margin-bottom: 0; }
 
+.reservation-footer-price-container__total {
+  font-size: var(--font-2-2); }
+
+.reservation-footer-price-container__dollar {
+  font-size: var(--font-2); }
+
+.reservation-footer-price-container__price {
+  font-size: var(--font-2-6); }
+
 /*# sourceMappingURL=ReservationFormShared.css.map */
