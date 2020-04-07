@@ -50,8 +50,8 @@
 
 .step-five__step-five-footer {
   display: flex;
-  justify-content: space-between;
-  align-items: center; }
+  flex-direction: column;
+  align-items: flex-start; }
 
 @media only screen and (min-width: 768px) {
   .reservation-form__step-five {
@@ -63,6 +63,11 @@
 
   .step-five__additional-info {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 2.5rem; } }
+    grid-column-gap: 2.5rem; }
+
+  .step-five__step-five-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; } }
 
 /*# sourceMappingURL=StepFive.css.map */

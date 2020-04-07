@@ -57,8 +57,8 @@
 
 .step-four__step-four-footer {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 @media only screen and (min-width: 768px) {
@@ -71,11 +71,17 @@
         grid-column-gap: 1.5rem;
     }
 
-    .step-four__address-container {
-        // width: 50%;
-    }
+    // .step-four__address-container {
+    //     width: 50%;
+    // }
 
-    .step-four__dropoff-container {
-        // width: 50%;
+    // .step-four__dropoff-container {
+    //     width: 50%;
+    // }
+
+    .step-four__step-four-footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 }
