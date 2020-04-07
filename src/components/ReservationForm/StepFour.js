@@ -1,11 +1,29 @@
 import React from 'react';
+import PlacesAutocomplete, { geocodeByAddress, getLatLng } from "react-places-autocomplete";
 
 import { reservationFormContext } from '../../contexts/reservationFormContext';
 
 function StepFour(props) {
-    const { addressPick} = React.useContext(reservationFormContext);
-    const { addressDrop } = React.useContext(reservationFormContext);
+    const { addressPick, setAddressPick } = React.useContext(reservationFormContext);
+    const { setCoordinatesPick } = React.useContext(reservationFormContext);
+    const { addressDrop, setAddressDrop } = React.useContext(reservationFormContext);
+    const { setCoordinatesDrop } = React.useContext(reservationFormContext);
     let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&language=EN&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
+    
+    const handleSelectPick = async value => {
+        const results = await geocodeByAddress(value);
+        const latLng = await getLatLng(results[0]);
+        setAddressPick(value);
+        setCoordinatesPick(latLng);
+    };
+
+    const handleSelectDrop = async value => {
+        const results = await geocodeByAddress(value);
+        const latLng = await getLatLng(results[0]);
+        setAddressDrop(value);
+        setCoordinatesDrop(latLng);
+    };
+    
     return (
         <div className="reservation-form__step-four">
             <div className="step-four__inner-container">
@@ -19,12 +37,81 @@ function StepFour(props) {
                 <div className="step-four__step-four-form">
                     <div className="step-four__address-container">
                         <p className="step-four__address-input-header reservation-form__input-label">Pick-up location</p>
-                        <input className="step-four__address-input reservation-form__input rounded"/>
+                        <PlacesAutocomplete value={addressPick} onChange={setAddressPick} onSelect={handleSelectPick}>
+                        {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
+                            <div style={{ gridArea: "address", position: "relative", display: "flex", flexDirection: "column"}}>
+
+                                <input
+                                    className="reservation-form__input rounded" 
+                                    {...getInputProps({ placeholder: "Pick-up location" })} />
+
+                                <div style = {{ 
+                                            position: "absolute",
+                                            zIndex: "2",
+                                            top: "5.2rem",
+                                            width: "100%",
+                                            fontSize: "1.6rem",
+                                            cursor: "pointer"
+                                        }}>
+                                    {loading ? <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}><span style={{padding: "1.6rem 2rem"}}>...loading</span></div> : null}
+
+                                    {suggestions.map(suggestion => {
+                                    const style = {
+                                        width: "100%",
+                                        backgroundColor: suggestion.active ? "#41b6e6" : "#fff",
+                                        color: suggestion.active ? "#fff" : "#000",
+                                        padding: "1.6rem 2rem"
+                                    };
+
+                                    return (
+                                        <div {...getSuggestionItemProps(suggestion, { style })}>
+                                        {suggestion.description}
+                                        </div>
+                                    );
+                                    })}
+                                </div>
+                            </div>
+                        )}
+                        </PlacesAutocomplete>
                         <input className="step-four__apt-input reservation-form__input rounded"/>
                     </div>
                     <div className="step-four__address-container">
                         <p className="step-four__address-input-header reservation-form__input-label">Drop-off location</p>
-                        <input className="step-four__address-input reservation-form__input rounded"/>
+                        <PlacesAutocomplete value={addressDrop} onChange={setAddressDrop} onSelect={handleSelectDrop}>
+                        {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
+                            <div style={{ gridArea: "address", position: "relative", display: "flex", flexDirection: "column"}}>
+
+                                <input
+                                    className="reservation-form__input rounded"
+                                    {...getInputProps({ placeholder: "Drop-off location" })} />
+
+                                <div style = {{ 
+                                            position: "absolute",
+                                            top: "5.2rem",
+                                            width: "100%",
+                                            fontSize: "1.6rem",
+                                            cursor: "pointer"
+                                        }}>
+                                    {loading ? <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}><span style={{padding: "1.6rem 2rem"}}>...loading</span></div> : null}
+
+                                    {suggestions.map(suggestion => {
+                                    const style = {
+                                        width: "100%",
+                                        backgroundColor: suggestion.active ? "#41b6e6" : "#fff",
+                                        color: suggestion.active ? "#fff" : "#000",
+                                        padding: "1.6rem 2rem"
+                                    };
+
+                                    return (
+                                        <div {...getSuggestionItemProps(suggestion, { style })}>
+                                        {suggestion.description}
+                                        </div>
+                                    );
+                                    })}
+                                </div>
+                            </div>
+                        )}
+                        </PlacesAutocomplete>
                         <input className="step-four__apt-input reservation-form__input rounded"/>
                     </div>
                 </div>
