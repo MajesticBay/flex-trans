@@ -35,40 +35,34 @@ function StepTwo(props) {
 
     let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&language=EN&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
 
-    const showStep = () => {
-        if (props.currentStep === 2) {
-            return (
-                <div className="reservation-form__step-two">
-                    <div>
-                        <div className="step-two__form rounded-desktop">
-                            <div className="step-two__locations">
-                                <span className="step-two__locations-text--red">A: </span><span className="step-two__locations-text">{addressPick}</span>
-                            </div>
-                            <div className="step-two__locations">
-                                <span className="step-two__locations-text--red">B: </span><span className="step-two__locations-text">{addressDrop}</span>
-                            </div>
-                            <div className="step-two__trip-cost-container">
-                                <p className="step-two__info">Wheelchair rampvan <br/> One way trip {distance} mi</p>
-                                <div>
-                                    <span className="step-two__dollar-sign">$</span>
-                                    <span className="step-two__cost">{price}</span>
-                                </div>
-                            </div>
-                            <div className="reservation-form__submit-btn rounded pointer" onClick={props.next}>
-                                <span className="reservation-form__submit-text">Make Reservation →</span>
-                            </div>
+    return (
+        <div className="reservation-form__step-two">
+            <div>
+                <div className="step-two__form rounded-desktop">
+                    <div className="step-two__locations">
+                        <span className="step-two__locations-text--red">A: </span><span className="step-two__locations-text">{addressPick}</span>
+                    </div>
+                    <div className="step-two__locations">
+                        <span className="step-two__locations-text--red">B: </span><span className="step-two__locations-text">{addressDrop}</span>
+                    </div>
+                    <div className="step-two__trip-cost-container">
+                        <p className="step-two__info">Wheelchair rampvan <br/> One way trip {distance} mi</p>
+                        <div>
+                            <span className="step-two__dollar-sign">$</span>
+                            <span className="step-two__cost">{price}</span>
                         </div>
                     </div>
-                    <div className="step-two__google-map-container">
-                        <iframe title="google-map" frameBorder="0" style={{ width: "100%", height: "100%", borderTopRightRadius: "6px", borderBottomRightRadius: "6px" }} src={mapUrl}></iframe>
-                        {/* <span>Distance {distance}</span> */}
+                    <div className="reservation-form__submit-btn rounded pointer" onClick={props.next}>
+                        <span className="reservation-form__submit-text">Make Reservation →</span>
                     </div>
                 </div>
-            )
-        } else return (<div><span>StepTwo null</span></div>);
-    }
-
-    return(showStep());
+            </div>
+            <div className="step-two__google-map-container">
+                <iframe title="google-map" frameBorder="0" style={{ width: "100%", height: "100%", borderTopRightRadius: "6px", borderBottomRightRadius: "6px" }} src={mapUrl}></iframe>
+                {/* <span>Distance {distance}</span> */}
+            </div>
+        </div>
+    )
 }
 
 export default StepTwo;
