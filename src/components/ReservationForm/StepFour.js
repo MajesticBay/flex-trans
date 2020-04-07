@@ -6,8 +6,11 @@ import { reservationFormContext } from '../../contexts/reservationFormContext';
 function StepFour(props) {
     const { addressPick, setAddressPick } = React.useContext(reservationFormContext);
     const { setCoordinatesPick } = React.useContext(reservationFormContext);
+    const { setBuildingInfoPick } = React.useContext(reservationFormContext);
     const { addressDrop, setAddressDrop } = React.useContext(reservationFormContext);
     const { setCoordinatesDrop } = React.useContext(reservationFormContext);
+    const { setBuildingInfoDrop } = React.useContext(reservationFormContext);
+    
     let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&language=EN&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
     
     const handleSelectPick = async value => {
@@ -17,12 +20,20 @@ function StepFour(props) {
         setCoordinatesPick(latLng);
     };
 
+    const handleBuildingInfoPick = (e) => {
+        setBuildingInfoPick(e.target.value);
+    }
+
     const handleSelectDrop = async value => {
         const results = await geocodeByAddress(value);
         const latLng = await getLatLng(results[0]);
         setAddressDrop(value);
         setCoordinatesDrop(latLng);
     };
+
+    const handleBuildingInfoDrop = (e) => {
+        setBuildingInfoDrop(e.target.value);
+    }
     
     return (
         <div className="reservation-form__step-four">
@@ -73,7 +84,7 @@ function StepFour(props) {
                             </div>
                         )}
                         </PlacesAutocomplete>
-                        <input className="step-four__apt-input reservation-form__input rounded"/>
+                        <input className="step-four__apt-input reservation-form__input rounded" placeholder="Apt./Ste" onChange={e => handleBuildingInfoPick(e)}/>
                     </div>
                     <div className="step-four__address-container">
                         <p className="step-four__address-input-header reservation-form__input-label">Drop-off location</p>
@@ -112,7 +123,7 @@ function StepFour(props) {
                             </div>
                         )}
                         </PlacesAutocomplete>
-                        <input className="step-four__apt-input reservation-form__input rounded"/>
+                        <input className="step-four__apt-input reservation-form__input rounded" placeholder="Apt./Ste" onChange={e => handleBuildingInfoDrop(e)}/>
                     </div>
                 </div>
                 <div className="step-four__step-four-footer">

@@ -8,7 +8,9 @@ import { reservationFormContext } from '../../contexts/reservationFormContext';
 function StepSix(props) {
 
     const { addressPick } = React.useContext(reservationFormContext);
+    const { buildingInfoPick } = React.useContext(reservationFormContext);
     const { addressDrop } = React.useContext(reservationFormContext);
+    const { buildingInfoDrop } = React.useContext(reservationFormContext);
     // const { distance } = React.useContext(reservationFormContext);
     // const { price } = React.useContext(reservationFormContext);
     const { date } = React.useContext(reservationFormContext);
@@ -29,9 +31,9 @@ function StepSix(props) {
     const handleReservationSubmit = (event) => {
         // event.preventDefault();
         const pickup = addressPick;
+        const buildingPick = buildingInfoPick;
         const drop = addressDrop;
-        console.log('addressPick ', addressPick);
-        console.log('addressDrop ', addressDrop);
+        const buildingDrop = buildingInfoDrop;
         const dateStr = date;
         const timeStr = time.fullTime;
         const name = passengerInfo.name;
@@ -40,9 +42,7 @@ function StepSix(props) {
         const additionalPassenger = passengerInfo.additionalPassenger;
         const wheelchairNeeded = passengerInfo.wheelchairNeeded;
         const rideBackNeeded = passengerInfo.rideBackNeeded;
-        const formValues = { pickup, drop, dateStr, timeStr, name, phone, email, additionalPassenger, wheelchairNeeded, rideBackNeeded };
-        // const formValues = { addressPick, addressDrop };
-        console.log('formValues => ', formValues);
+        const formValues = { pickup, buildingPick, drop, buildingDrop, dateStr, timeStr, name, phone, email, additionalPassenger, wheelchairNeeded, rideBackNeeded };
         const templateId = 'reservation_form';
         sendFeedback(templateId, formValues);
         props.next();
