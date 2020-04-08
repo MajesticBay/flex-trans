@@ -8,7 +8,7 @@ import WelcomeWithMap from './WelcomeWithMap';
 function Home() {
     return (
         <div className="home">
-            <Top/>
+            {/* <Top/> */}
             <ReservationForm/>
             <div className="home__home-content">
                 <WelcomeWithMap/>

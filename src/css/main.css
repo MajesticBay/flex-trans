@@ -297,7 +297,7 @@ html {
   .home-content__welcome-container {
     width: 67%;
     max-width: 1280px;
-    padding-top: 14rem;
+    padding-top: 2rem;
     padding-bottom: 8rem; }
 
   .welcome-container__general-info {
@@ -413,7 +413,7 @@ html {
   .about-us__description-container {
     width: 67%;
     max-width: 1280px;
-    padding-top: 20rem;
+    padding-top: 2rem;
     padding-bottom: 80px; }
 
   .about-us__services {
@@ -541,7 +541,7 @@ html {
   .contact-us__contact-us-content {
     width: 67%;
     max-width: 1280px;
-    padding-top: 20rem;
+    padding-top: 2rem;
     padding-bottom: 80px; }
 
   .contact-us__contact-form {
@@ -651,11 +651,6 @@ html {
     font-size: var(--font-2);
     white-space: nowrap; } }
 @media only screen and (min-width: 768px) {
-  .reservation-form {
-    width: 100%;
-    max-width: 534px;
-    padding: 2.5rem; }
-
   .reservation-form__triangle {
     display: block; } }
 @media only screen and (min-width: 1024px) {
@@ -1146,10 +1141,9 @@ html {
 
 @media only screen and (min-width: 1024px) {
   .reservation-form {
-    position: absolute;
-    top: 25vh;
     width: 67%;
-    margin-top: 0; }
+    max-width: 1280px;
+    margin-top: 17rem; }
 
   .step-one__car-photo-container {
     display: block;

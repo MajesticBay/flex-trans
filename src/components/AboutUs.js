@@ -9,7 +9,7 @@ import fordtransitright from '../images/ford-transit-right.png';
 function AboutUs() {
   return (
     <div className="about-us">
-      <Top/>
+      {/* <Top/> */}
       <ReservationForm/>
       <div className="about-us__description-container">
         <h3 className="about-us__header">About us</h3>
