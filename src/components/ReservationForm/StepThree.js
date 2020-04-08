@@ -1,12 +1,14 @@
 import React from 'react';
 
+import DateInput from '../InputComponents/DateInput';
+
 import { reservationFormContext } from '../../contexts/reservationFormContext';
 
 function StepThree(props) {
     const { addressPick } = React.useContext(reservationFormContext);
     const { addressDrop } = React.useContext(reservationFormContext);
 
-    const { setDate } = React.useContext(reservationFormContext);
+    const { date, setDate } = React.useContext(reservationFormContext);
     const { time, setTime } = React.useContext(reservationFormContext);
     
     let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
@@ -48,7 +50,8 @@ function StepThree(props) {
                     </span> */}
                 </div>
                 <div className="step-three__reservation-date-picker-container">
-                    <input className="reservation-date-picker-container__reservation-date-picker reservation-form__input reservation-form__input--no-margin rounded" placeholder="Date" onChange={e => handleDateChange(e)}/>
+                    <DateInput className="reservation-date-picker-container__reservation-date-picker reservation-form__input reservation-form__input--no-margin rounded" placeholder="Date" onChange={e => handleDateChange(e)}/>
+                    {/* <input className="reservation-date-picker-container__reservation-date-picker reservation-form__input reservation-form__input--no-margin rounded" placeholder="Date" onChange={e => handleDateChange(e)}/> */}
                     <div className="reservation-date-picker-container__reservation-time-picker">
                         <input className="reservation-form__input reservation-form__input--no-margin rounded" placeholder="Time" onChange={e => handleHoursChange(e)}/>
                         <span> : </span>
