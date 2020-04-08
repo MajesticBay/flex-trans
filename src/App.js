@@ -1,18 +1,26 @@
 import React from 'react';
 import NavBar from './components/NavBar';
+import Home from './components/Home';
+import AboutUs from './components/AboutUs';
+import ContactUs from './components/ContactUs';
 import Mission from './components/Mission';
 import Footer from './components/Footer';
 import routes from './routes';
 
 import bg from './images/bg.jpg';
 
-import './App.css';
-
 function App() {
   return (
     <div className="App">
         <NavBar/>
-        <div style={{
+        <div className="mobile">
+          <Home/>
+          <AboutUs/>
+          <Mission/>
+          <ContactUs/>
+          <Footer/>
+        </div>
+        <div className="desktop" style={{
           backgroundImage: `url(${bg})`,
           backgroundPosition: 'center top',
           backgroundRepeat: 'no-repeat',
