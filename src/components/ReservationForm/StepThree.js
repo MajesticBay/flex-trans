@@ -1,6 +1,7 @@
 import React from 'react';
 
 import DateInput from '../InputComponents/DateInput';
+import TimeInput from '../InputComponents/TimeInput';
 
 import { reservationFormContext } from '../../contexts/reservationFormContext';
 
@@ -50,12 +51,11 @@ function StepThree(props) {
                     </span> */}
                 </div>
                 <div className="step-three__reservation-date-picker-container">
-                    <DateInput className="reservation-date-picker-container__reservation-date-picker reservation-form__input reservation-form__input--no-margin rounded" placeholder="Date" onChange={e => handleDateChange(e)}/>
-                    {/* <input className="reservation-date-picker-container__reservation-date-picker reservation-form__input reservation-form__input--no-margin rounded" placeholder="Date" onChange={e => handleDateChange(e)}/> */}
+                    <DateInput onChange={e => handleDateChange(e)}/>
                     <div className="reservation-date-picker-container__reservation-time-picker">
-                        <input className="reservation-form__input reservation-form__input--no-margin rounded" placeholder="Time" onChange={e => handleHoursChange(e)}/>
+                        <TimeInput onChange={e => handleHoursChange(e)}/>
                         <span> : </span>
-                        <input className="reservation-form__input reservation-form__input--no-margin rounded" placeholder="Time" onChange={e => handleMinutesChange(e)}/>
+                        <TimeInput onChange={e => handleMinutesChange(e)}/>
                     </div>
                     <div className="reservation-date-picker-container__reservation-am-pm-picker">
                         <div className="reservation-am-pm-picker__inner-container">
