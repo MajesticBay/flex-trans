@@ -506,18 +506,21 @@ html {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  margin-top: 3rem; }
 
 .contact-us__contact-us-content {
   width: 100%; }
 
 .contact-us__header {
   font-size: var(--font-2-6);
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  margin-left: 2rem; }
 
 .contact-us__info {
   line-height: var(--line-150);
-  font-size: var(--font-2-6); }
+  font-size: var(--font-2-6);
+  margin-left: 2rem; }
 
 .contact-us__info-header {
   color: #9E9E9E; }
@@ -583,11 +586,20 @@ html {
   background-color: transparent; }
 
 @media only screen and (min-width: 1024px) {
+  .contact-us {
+    margin-top: 0; }
+
   .contact-us__contact-us-content {
     width: 67%;
     max-width: 1280px;
     padding-top: 2rem;
     padding-bottom: 80px; }
+
+  .contact-us__header {
+    margin-left: 0; }
+
+  .contact-us__info {
+    margin-left: 0; }
 
   .contact-us__contact-form {
     padding: 4rem;
@@ -1231,6 +1243,26 @@ html {
     width: 50%;
     padding: 0;
     margin-left: 3rem; } }
+.mission-mobile-container {
+  display: flex;
+  flex-direction: column; }
+
+.mission-mobile-container__content {
+  display: flex;
+  flex-direction: column;
+  background-color: #E3F2F8;
+  padding: 2rem 2rem 0 2rem; }
+
+.mission-mobile-container__header {
+  font-size: var(--font-2-6);
+  line-height: 150%;
+  padding-bottom: 2rem; }
+
+.mission-mobile-container__text {
+  font-size: 2rem;
+  line-height: 150%;
+  padding-bottom: 2rem; }
+
 :root {
   --color-description: #9E9E9E;
   --color-button: #1F1D1D;

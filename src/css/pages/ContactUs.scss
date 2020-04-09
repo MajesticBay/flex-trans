@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 3rem;
 }
 
 .contact-us__contact-us-content {
@@ -13,11 +14,13 @@
 .contact-us__header {
     font-size: var(--font-2-6);
     margin-bottom: 2rem;
+    margin-left: 2rem;
 }
 
 .contact-us__info {
     line-height: var(--line-150);
     font-size: var(--font-2-6);
+    margin-left: 2rem;
 }
 
 .contact-us__info-header {
@@ -96,11 +99,23 @@
 }
 
 @media only screen and (min-width: 1024px) {
+    .contact-us {
+        margin-top: 0;
+    }
+
     .contact-us__contact-us-content {
         width: 67%;
         max-width: 1280px;
         padding-top: 2rem;
         padding-bottom: 80px;
+    }
+
+    .contact-us__header {
+        margin-left: 0;
+    }
+
+    .contact-us__info {
+        margin-left: 0;
     }
 
     .contact-us__contact-form {

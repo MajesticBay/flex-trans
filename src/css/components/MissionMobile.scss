@@ -1,0 +1,24 @@
+.mission-mobile-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.mission-mobile-container__content {
+    display: flex;
+    flex-direction: column;
+    background-color: #E3F2F8;
+    padding: 2rem 2rem 0 2rem;
+    
+}
+
+.mission-mobile-container__header {
+    font-size: var(--font-2-6);
+    line-height: 150%;
+    padding-bottom: 2rem;
+}
+
+.mission-mobile-container__text {
+    font-size: 2rem;
+    line-height: 150%;
+    padding-bottom: 2rem;
+}

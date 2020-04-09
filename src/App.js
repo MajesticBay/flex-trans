@@ -21,7 +21,6 @@ function App() {
           <MissionMobile/>
           <AboutUs/>
           <ContactUs/>
-          <Footer/>
         </div>
         <div className="desktop" style={{
           position: 'relative',
@@ -36,8 +35,8 @@ function App() {
           <ReservationForm/>
           { routes }
           <Mission/>
-          <Footer/>
         </div>
+        <Footer/>
     </div>
   );
 }
