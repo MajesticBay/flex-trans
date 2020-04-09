@@ -5,6 +5,7 @@ import Home from './components/Home';
 import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
 import Mission from './components/Mission';
+import MissionMobile from './components/MissionMobile'
 import Footer from './components/Footer';
 import routes from './routes';
 
@@ -17,7 +18,7 @@ function App() {
         <div className="mobile">
           <ReservationForm/>
           <Home/>
-          <Mission/>
+          <MissionMobile/>
           <AboutUs/>
           <ContactUs/>
           <Footer/>
