@@ -1,5 +1,6 @@
 import React from 'react';
 import NavBar from './components/NavBar';
+import Top from './components/Top';
 import ReservationForm from './components/ReservationForm/ReservationForm';
 import Home from './components/Home';
 import AboutUs from './components/AboutUs';
@@ -16,6 +17,7 @@ function App() {
     <div className="App">
         <NavBar/>
         <div className="mobile">
+          <Top/>
           <ReservationForm/>
           <Home/>
           <MissionMobile/>
