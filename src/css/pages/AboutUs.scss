@@ -10,21 +10,19 @@
 
 .about-us__description-container {
     width: 100%;
-    // padding-top: 2rem;
-    // padding-right: 2rem;
-    // padding-bottom: 2rem;
-    // padding-left: 2rem;
-    padding: 2rem;
+    // padding: 2rem;
 }
 
 .about-us__header {
     font-size: var(--font-2-6);
+    padding-left: 2rem;
 }
 
 .about-us__base-text {
     font-size: var(--font-1-6);
     line-height: var(--line-150);
     margin-top: 1.1rem;
+    padding-left: 2rem;
 }
 
 .about-us__services {
@@ -60,10 +58,12 @@
 .about-us__fleet {
     display: flex;
     flex-direction: column;
+    margin-top: 3rem;
 }
 
 .about-us-fleet__description {
     width: 100%;
+    padding-bottom: 2rem;
 }
 
 .about-us-fleet_car-container {
@@ -76,6 +76,14 @@
         width: 67%;
         max-width: 1280px;
         padding: 2rem 0 8rem 0;
+    }
+
+    .about-us__header {
+        padding-left: 0;
+    }
+
+    .about-us__base-text {
+        padding-left: 0;
     }
 
     .about-us__services {
@@ -98,12 +106,14 @@
         width: 67%;
         max-width: 1280px;
         flex-direction: row;
-        padding-top: 80px;
-        padding-bottom: 80px;
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+        margin-top: 0;
     }
 
     .about-us-fleet__description {
         width: 50%;
+        padding-bottom: 0;
     }
 
     .about-us-fleet_car-container {

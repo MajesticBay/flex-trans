@@ -36,7 +36,7 @@ function AboutUs() {
           <h3 className="about-us__header">Our fleet</h3>
           <p className="about-us__base-text about-us-fleet__baset-text">We provide transportation on fully equipped and inspected wheelchair van. </p>
         </div>
-        <div className="about-us-fleet_car-container rounded">
+        <div className="about-us-fleet_car-container rounded-desktop">
           <img className="about-us-fleet__car-img img-fluid" src={fordtransitright} alt="Ford Transit"/>
         </div>
       </div>

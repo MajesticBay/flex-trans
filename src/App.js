@@ -15,8 +15,8 @@ function App() {
         <NavBar/>
         <div className="mobile">
           <Home/>
-          <AboutUs/>
           <Mission/>
+          <AboutUs/>
           <ContactUs/>
           <Footer/>
         </div>
