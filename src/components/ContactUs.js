@@ -51,8 +51,7 @@ function ContactUs() {
 
   return (
     <div className="contact-us">
-      {/* <Top/> */}
-      <ReservationForm/>
+      {/* <ReservationForm/> */}
       <div className="contact-us__contact-us-content">
         <h3 className="contact-us__header">Contact Information</h3>
         <NotificationContainer/>

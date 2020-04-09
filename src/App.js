@@ -1,5 +1,6 @@
 import React from 'react';
 import NavBar from './components/NavBar';
+import ReservationForm from './components/ReservationForm/ReservationForm';
 import Home from './components/Home';
 import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
@@ -14,6 +15,7 @@ function App() {
     <div className="App">
         <NavBar/>
         <div className="mobile">
+          <ReservationForm/>
           <Home/>
           <Mission/>
           <AboutUs/>
@@ -21,12 +23,16 @@ function App() {
           <Footer/>
         </div>
         <div className="desktop" style={{
+          position: 'relative',
+          width: "100%",
+          flexDirection: 'column',
+          alignItems: 'center',
           backgroundImage: `url(${bg})`,
           backgroundPosition: 'center top',
           backgroundRepeat: 'no-repeat',
-          backgroundSize: '100% 60vh',
-          width: "100%"
+          backgroundSize: '100% 60vh'
         }}>
+          <ReservationForm/>
           { routes }
           <Mission/>
           <Footer/>

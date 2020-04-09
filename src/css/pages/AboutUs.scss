@@ -9,8 +9,7 @@
 }
 
 .about-us__description-container {
-    width: 100%;
-    // padding: 2rem;
+    display: none;
 }
 
 .about-us__header {
@@ -73,6 +72,7 @@
 
 @media only screen and (min-width: 1024px) {
     .about-us__description-container {
+        display: block;
         width: 67%;
         max-width: 1280px;
         padding: 2rem 0 8rem 0;

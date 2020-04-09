@@ -4,7 +4,7 @@ import ReservationForm from './ReservationForm/ReservationForm';
 function Reservation(){
   return (
     <div className="reservation">
-      <ReservationForm/>
+      {/* <ReservationForm/> */}
     </div>
   );
 }
