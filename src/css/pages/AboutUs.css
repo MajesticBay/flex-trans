@@ -46,7 +46,8 @@ html {
   align-items: center; }
 
 .about-us__description-container {
-  width: 100%; }
+  width: 100%;
+  padding: 2rem; }
 
 .about-us__header {
   font-size: var(--font-2-6); }
@@ -64,9 +65,19 @@ html {
 .about-us-services__services-container {
   display: grid;
   grid-template-columns: 1fr;
+  grid-gap: 3rem;
   margin-top: 2rem; }
 
+.services-container__item {
+  position: relative; }
+
 .services-container__service-header {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(86, 129, 143, 0.8);
+  padding-bottom: .3rem;
+  color: #fff;
+  width: 100%;
   font-size: var(--font-2-2);
   line-height: var(--line-150);
   text-align: center;
@@ -87,16 +98,20 @@ html {
   .about-us__description-container {
     width: 67%;
     max-width: 1280px;
-    padding-top: 2rem;
-    padding-bottom: 80px; }
+    padding: 2rem 0 8rem 0; }
 
   .about-us__services {
     width: 67%;
     max-width: 1280px; }
 
   .about-us-services__services-container {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 3rem; }
+    grid-template-columns: 1fr 1fr 1fr; }
+
+  .services-container__service-header {
+    position: static;
+    background-color: transparent;
+    padding-bottom: 0;
+    color: #000; }
 
   .about-us__fleet {
     width: 67%;

@@ -1,5 +1,4 @@
 import React from 'react';
-import Top from './Top';
 import ReservationForm from './ReservationForm/ReservationForm';
 import aboutUsOne from '../images/about-us1.png';
 import aboutUsTwo from '../images/about-us2.png';
@@ -9,7 +8,6 @@ import fordtransitright from '../images/ford-transit-right.png';
 function AboutUs() {
   return (
     <div className="about-us">
-      {/* <Top/> */}
       <ReservationForm/>
       <div className="about-us__description-container">
         <h3 className="about-us__header">About us</h3>
@@ -19,15 +17,15 @@ function AboutUs() {
       <div className="about-us__services">
         <h3 className="about-us__header">We provide Services</h3>
         <div className="about-us-services__services-container">
-          <div>
+          <div className="services-container__item">
             <img className="img-fluid rounded-desktop" src={aboutUsOne} alt="Transportation to Doctor's appointment"/>
             <p className="services-container__service-header">Transportation to<br/>Doctor's appointment</p>
           </div>
-          <div>
+          <div className="services-container__item">
             <img className="img-fluid rounded-desktop" src={aboutUsTwo} alt="Transportation from Hospital to Home"/>
             <p className="services-container__service-header">Transportation from<br/>Hospital to Home</p>
           </div>
-          <div>
+          <div className="services-container__item">
             <img className="img-fluid rounded-desktop" src={aboutUsThree} alt="Non-Emergency Wheelchair Transportation"/>
             <p className="services-container__service-header">Non-Emergency<br/>Wheelchair Transportation</p>
           </div>
