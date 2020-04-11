@@ -6,7 +6,6 @@ import { reservationFormContext } from '../../contexts/reservationFormContext';
 import fordtransit from '../../images/car-left-shadow.png';
 
 function StepOne(props) {
-    // Pick block
     const { addressPick, setAddressPick } = React.useContext(reservationFormContext);
     const { setCoordinatesPick } = React.useContext(reservationFormContext);
     const { addressDrop, setAddressDrop } = React.useContext(reservationFormContext);
@@ -18,14 +17,21 @@ function StepOne(props) {
         setAddressPick(value);
         setCoordinatesPick(latLng);
     };
-    
-    // Drop block
+
     const handleSelectDrop = async value => {
         const results = await geocodeByAddress(value);
         const latLng = await getLatLng(results[0]);
         setAddressDrop(value);
         setCoordinatesDrop(latLng);
     };
+
+    const nextStep = () => {
+        if (!addressPick || !addressDrop) {
+            alert ("Fill out all fields!")
+        } else {
+            props.next();
+        }
+    }
 
     return (
         <div className="reservation-form__step-one">
@@ -102,7 +108,7 @@ function StepOne(props) {
                             </div>
                         )}
                     </PlacesAutocomplete>
-                    <div className="reservation-form__submit-btn rounded pointer" onClick={props.next}>
+                    <div className="reservation-form__submit-btn rounded pointer" onClick={() => nextStep()}>
                         <span className="reservation-form__submit-text">Get instant quote for your trip</span>
                         <div className="reservation-form__triangle"></div>
                     </div>
