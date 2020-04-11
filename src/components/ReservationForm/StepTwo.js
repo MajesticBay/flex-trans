@@ -20,12 +20,12 @@ function StepTwo(props) {
             .then(res => {
                 console.log('res.data = ', res.data);
                 let distanceStrArr = res.data[0].elements[0].distance.text.split(' ');
-                let distanceStr = distanceStrArr[0]
-                console.log(distanceStr);
+                let distanceStr = distanceStrArr[0];
+                console.log('distanceStr = ', distanceStr);
                 let priceRes = 30 + (2.95 * parseInt(distanceStr));
                 setPrice(priceRes);
                 setDistance(distanceStr);
-                console.log (distance);
+                console.log(distance);
             })
             .catch(err => {
                 console.log(err);
