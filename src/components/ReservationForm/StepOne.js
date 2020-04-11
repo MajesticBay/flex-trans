@@ -27,7 +27,7 @@ function StepOne(props) {
 
     const nextStep = () => {
         if (!addressPick || !addressDrop) {
-            alert ("Fill out all fields!")
+            alert ("Fill out all fields!");
         } else {
             props.next();
         }
