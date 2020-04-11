@@ -39,6 +39,16 @@ function StepFive(props) {
         console.log('passengerInfo => ', passengerInfo.rideBackNeeded);
     }
 
+    const nextStep = () => {
+        var hasFalseKeys = Object.keys(passengerInfo).some(k => !passengerInfo[k]);
+
+        if (hasFalseKeys) { 
+            alert ("Fill out all fields!");
+        } else {
+            props.next();
+        }
+    }
+
     return (
         <div className="reservation-form__step-five">
             <div className="step-five__inner-container">
@@ -96,7 +106,7 @@ function StepFive(props) {
                         <span className="reservation-footer-price-container__dollar">$</span>
                         <span className="reservation-footer-price-container__price">{price}</span>
                     </div>
-                    <div className="reservation-form__submit-btn rounded pointer" onClick={props.next}>
+                    <div className="reservation-form__submit-btn rounded pointer" onClick={() => nextStep()}>
                         <span className="reservation-form__submit-text">Next Step →</span>
                     </div>
                 </div>
