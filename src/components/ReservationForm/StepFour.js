@@ -6,10 +6,10 @@ import { reservationFormContext } from '../../contexts/reservationFormContext';
 function StepFour(props) {
     const { addressPick, setAddressPick } = React.useContext(reservationFormContext);
     const { setCoordinatesPick } = React.useContext(reservationFormContext);
-    const { setBuildingInfoPick } = React.useContext(reservationFormContext);
+    const { buildingInfoPick, setBuildingInfoPick } = React.useContext(reservationFormContext);
     const { addressDrop, setAddressDrop } = React.useContext(reservationFormContext);
     const { setCoordinatesDrop } = React.useContext(reservationFormContext);
-    const { setBuildingInfoDrop } = React.useContext(reservationFormContext);
+    const { buildingInfoDrop, setBuildingInfoDrop } = React.useContext(reservationFormContext);
     const { price } = React.useContext(reservationFormContext);
     
     let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&language=EN&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
@@ -34,6 +34,14 @@ function StepFour(props) {
 
     const handleBuildingInfoDrop = (e) => {
         setBuildingInfoDrop(e.target.value);
+    }
+
+    const nextStep = () => {
+        if (!buildingInfoPick || !buildingInfoDrop) {
+            alert ("Fill out all fields!");
+        } else {
+            props.next();
+        }
     }
     
     return (
@@ -133,7 +141,7 @@ function StepFour(props) {
                         <span className="reservation-footer-price-container__dollar">$</span>
                         <span className="reservation-footer-price-container__price">{price}</span>
                     </div>
-                    <div className="reservation-form__submit-btn rounded pointer" onClick={props.next}>
+                    <div className="reservation-form__submit-btn rounded pointer" onClick={() => nextStep()}>
                         <span className="reservation-form__submit-text">Next Step →</span>
                     </div>
                 </div>
