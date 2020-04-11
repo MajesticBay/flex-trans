@@ -1,6 +1,4 @@
 .reservation-form {
-  display: grid;
-  grid-template-columns: 1fr;
   width: 100%;
   max-width: 1280px;
   margin-top: 8rem; }
@@ -8,11 +6,11 @@
 .step-one__car-photo-container {
   display: none; }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   .reservation-form {
     width: 67%;
     max-width: 1280px;
-    margin-top: 17rem; }
+    margin-top: 40vh; }
 
   .step-one__car-photo-container {
     display: block;

@@ -35,7 +35,6 @@ function StepOne(props) {
 
     return (
         <div className="reservation-form__step-one">
-            <div>
                 <div className="step-one__form rounded-desktop">
                     <PlacesAutocomplete value={addressPick} onChange={setAddressPick} onSelect={handleSelectPick}>
                         {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
@@ -113,10 +112,9 @@ function StepOne(props) {
                         <div className="reservation-form__triangle"></div>
                     </div>
                 </div>
-            </div>
-            <div className="step-one__car-photo-container">
-                <img className="img-fluid" src={fordtransit} alt="Ford Transit Wheelchair Vagon"/>
-            </div>
+                <div className="step-one__car-photo-container">
+                    <img className="img-fluid" src={fordtransit} alt="Ford Transit Wheelchair Vagon"/>
+                </div>
         </div>
     )
 }
