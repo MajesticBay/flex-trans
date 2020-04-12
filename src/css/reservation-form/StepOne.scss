@@ -86,10 +86,10 @@
 
 .reservation-form__submit-text {
     color: var(--color-white);
-    font-size: 12px;
+    font-size: 1.6rem;
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 375px) {
     .reservation-form__submit-btn {
         padding: 1.6rem 2rem;
         // margin-top: 2rem;
@@ -100,12 +100,27 @@
     }
 
     .reservation-form__submit-text {
-        font-size: 15px;
+        font-size: 2rem;
         white-space: nowrap;
     }
 }
 
 @media only screen and (min-width: 768px) {
+    .reservation-form__submit-text {
+        font-size: 1.2rem;
+    }
+    
+    .step-one__form {
+        width: 43%;
+        margin-top: -130px;
+    }
+
+    .step-one__car-photo-container {
+        display: block;
+        width: 55%;
+        // margin-left: 50px;
+    }
+
     // .reservation-form {
     //     width: 100%;
     //     max-width: 534px;
@@ -117,33 +132,24 @@
     }
 }
 
-@media only screen and (min-width: 768px) {
-    .step-one__form {
-        width: 43%;
-        margin-top: -130px;
+@media only screen and (min-width: 1024px) {
+    .reservation-form__submit-text {
+        font-size: 1.6rem;
     }
 
-    .step-one__car-photo-container {
-        display: block;
-        width: 55%;
-        // margin-left: 50px;
-    }
+    // .reservation-form__step-one {
+    //     position: absolute;
+    //     top: 25vh;
+    //     grid-template-columns: 1fr 1.5fr;
+    //     grid-gap: 50px;
+    //     flex-direction: row;
+    //     justify-content: space-between;
+    //     width: 67%;
+    // }
+
+    // .step-one__car-photo-container {
+    //     display: block;
+    //     width: 100%;
+    //     margin-left: 50px;
+    // }
 }
-
-// @media only screen and (min-width: 1024px) {
-//     .reservation-form__step-one {
-//         position: absolute;
-//         top: 25vh;
-//         grid-template-columns: 1fr 1.5fr;
-//         grid-gap: 50px;
-//         flex-direction: row;
-//         justify-content: space-between;
-//         width: 67%;
-//     }
-
-//     .step-one__car-photo-container {
-//         display: block;
-//         width: 100%;
-//         margin-left: 50px;
-//     }
-// }

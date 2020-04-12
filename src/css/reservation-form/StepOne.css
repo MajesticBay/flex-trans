@@ -51,9 +51,9 @@
 
 .reservation-form__submit-text {
   color: var(--color-white);
-  font-size: 12px; }
+  font-size: 1.6rem; }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 375px) {
   .reservation-form__submit-btn {
     padding: 1.6rem 2rem; }
 
@@ -61,18 +61,24 @@
     margin-top: 0; }
 
   .reservation-form__submit-text {
-    font-size: 15px;
+    font-size: 2rem;
     white-space: nowrap; } }
 @media only screen and (min-width: 768px) {
-  .reservation-form__triangle {
-    display: block; } }
-@media only screen and (min-width: 768px) {
+  .reservation-form__submit-text {
+    font-size: 1.2rem; }
+
   .step-one__form {
     width: 43%;
     margin-top: -130px; }
 
   .step-one__car-photo-container {
     display: block;
-    width: 55%; } }
+    width: 55%; }
+
+  .reservation-form__triangle {
+    display: block; } }
+@media only screen and (min-width: 1024px) {
+  .reservation-form__submit-text {
+    font-size: 1.6rem; } }
 
 /*# sourceMappingURL=StepOne.css.map */
