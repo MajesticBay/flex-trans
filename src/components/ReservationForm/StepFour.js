@@ -37,11 +37,12 @@ function StepFour(props) {
     }
 
     const nextStep = () => {
-        if (!buildingInfoPick || !buildingInfoDrop) {
-            alert ("Fill out all fields!");
-        } else {
-            props.next();
-        }
+        // if (!buildingInfoPick || !buildingInfoDrop) {
+        //     alert ("Fill out all fields!");
+        // } else {
+        //     props.next();
+        // }
+        props.next();
     }
     
     return (
