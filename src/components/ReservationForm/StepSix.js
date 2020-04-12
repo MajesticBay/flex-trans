@@ -11,7 +11,7 @@ function StepSix(props) {
     const { buildingInfoPick } = React.useContext(reservationFormContext);
     const { addressDrop } = React.useContext(reservationFormContext);
     const { buildingInfoDrop } = React.useContext(reservationFormContext);
-    // const { distance } = React.useContext(reservationFormContext);
+    const { distance } = React.useContext(reservationFormContext);
     const { price } = React.useContext(reservationFormContext);
     const { date } = React.useContext(reservationFormContext);
     const { time } = React.useContext(reservationFormContext);
@@ -34,6 +34,8 @@ function StepSix(props) {
         const buildingPick = buildingInfoPick;
         const drop = addressDrop;
         const buildingDrop = buildingInfoDrop;
+        const priceStr = price;
+        const distanceStr = distance;
         const dateStr = date;
         const timeStr = time.fullTime;
         const name = passengerInfo.name;
@@ -42,7 +44,24 @@ function StepSix(props) {
         const additionalPassenger = passengerInfo.additionalPassenger;
         const wheelchairNeeded = passengerInfo.wheelchairNeeded;
         const rideBackNeeded = passengerInfo.rideBackNeeded;
-        const formValues = { pickup, buildingPick, drop, buildingDrop, dateStr, timeStr, name, phone, email, additionalPassenger, wheelchairNeeded, rideBackNeeded };
+        console.log(priceStr);
+        console.log(distanceStr);
+        const formValues = {
+                            dateStr,
+                            timeStr,
+                            pickup,
+                            buildingPick,
+                            drop,
+                            buildingDrop,
+                            priceStr,
+                            distanceStr,
+                            name,
+                            phone,
+                            email,
+                            additionalPassenger,
+                            wheelchairNeeded,
+                            rideBackNeeded
+                        };
         const templateId = 'reservation_form';
         sendFeedback(templateId, formValues);
         props.next();
