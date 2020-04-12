@@ -620,7 +620,7 @@ html {
 
 .step-one__car-photo-container {
   display: none;
-  width: 55%; }
+  width: 100%; }
 
 .step-one__form {
   width: 100%;
@@ -630,15 +630,6 @@ html {
   padding: 16px;
   background-color: var(--color-white);
   box-shadow: 0px 34px 64px rgba(0, 0, 0, 0.09); }
-
-#root > div > div.home > form > div > div:nth-child(1) > div > div:nth-child(1) > input[type=text], #root > div > div.home > form > div > div:nth-child(1) > div > div:nth-child(2) > input[type=text] {
-  width: 100%;
-  padding: 1.6rem 2rem;
-  margin-bottom: 1rem;
-  border: 1px solid var(--color-input-border);
-  font-size: var(--font-1-6);
-  background-color: var(--color-input-background);
-  border-radius: 6px; }
 
 .reservation-form__triangle {
   display: none;
@@ -690,7 +681,12 @@ html {
     display: block; } }
 @media only screen and (min-width: 768px) {
   .step-one__form {
-    margin-top: -130px; } }
+    width: 43%;
+    margin-top: -130px; }
+
+  .step-one__car-photo-container {
+    display: block;
+    width: 55%; } }
 .reservation-form__step-two {
   display: grid;
   background-color: var(--color-white); }
@@ -1164,18 +1160,20 @@ html {
   max-width: 1280px;
   margin-top: 8rem; }
 
-.step-one__car-photo-container {
-  display: none; }
-
 @media only screen and (min-width: 768px) {
   .reservation-form {
     width: 67%;
     max-width: 1280px;
-    margin-top: 40vh; }
-
-  .step-one__car-photo-container {
-    display: block;
-    width: 100%; } }
+    margin-top: 44vh; } }
+@media only screen and (min-width: 1024px) {
+  .reservation-form {
+    margin-top: 39vh; } }
+@media only screen and (min-width: 1280px) {
+  .reservation-form {
+    margin-top: 36vh; } }
+@media only screen and (min-width: 1440px) {
+  .reservation-form {
+    margin-top: 31vh; } }
 .home-content__outside-mission-container {
   display: flex;
   flex-direction: column;
@@ -1313,7 +1311,7 @@ html {
     padding: 30px 0; }
 
   .footer__content {
-    width: 80%;
+    width: 67%;
     max-width: 1280px;
     grid-template-columns: 4fr 1fr; }
 

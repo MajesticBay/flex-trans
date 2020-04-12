@@ -12,7 +12,7 @@
     display: none;
     // width: 500px;
     // margin-left: 50px;
-    width: 55%;
+    width: 100%;
 }
 
 .step-one__form {
@@ -39,15 +39,15 @@
 // }
 
 // check what is it doing
-#root > div > div.home > form > div > div:nth-child(1) > div > div:nth-child(1) > input[type=text] , #root > div > div.home > form > div > div:nth-child(1) > div > div:nth-child(2) > input[type=text]{
-    width: 100%;
-    padding: 1.6rem 2rem;
-    margin-bottom: 1rem;
-    border: 1px solid var(--color-input-border);
-    font-size: var(--font-1-6);
-    background-color: var(--color-input-background);
-    border-radius: 6px;
-}
+// #root > div > div.home > form > div > div:nth-child(1) > div > div:nth-child(1) > input[type=text] , #root > div > div.home > form > div > div:nth-child(1) > div > div:nth-child(2) > input[type=text]{
+//     width: 100%;
+//     padding: 1.6rem 2rem;
+//     margin-bottom: 1rem;
+//     border: 1px solid var(--color-input-border);
+//     font-size: var(--font-1-6);
+//     background-color: var(--color-input-background);
+//     border-radius: 6px;
+// }
 
 .reservation-form__triangle {
     display: none;
@@ -119,7 +119,14 @@
 
 @media only screen and (min-width: 768px) {
     .step-one__form {
+        width: 43%;
         margin-top: -130px;
+    }
+
+    .step-one__car-photo-container {
+        display: block;
+        width: 55%;
+        // margin-left: 50px;
     }
 }
 

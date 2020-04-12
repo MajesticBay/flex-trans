@@ -3,17 +3,19 @@
   max-width: 1280px;
   margin-top: 8rem; }
 
-.step-one__car-photo-container {
-  display: none; }
-
 @media only screen and (min-width: 768px) {
   .reservation-form {
     width: 67%;
     max-width: 1280px;
-    margin-top: 40vh; }
-
-  .step-one__car-photo-container {
-    display: block;
-    width: 100%; } }
+    margin-top: 44vh; } }
+@media only screen and (min-width: 1024px) {
+  .reservation-form {
+    margin-top: 39vh; } }
+@media only screen and (min-width: 1280px) {
+  .reservation-form {
+    margin-top: 36vh; } }
+@media only screen and (min-width: 1440px) {
+  .reservation-form {
+    margin-top: 31vh; } }
 
 /*# sourceMappingURL=ReservationForm.css.map */
