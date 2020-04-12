@@ -311,6 +311,10 @@ html {
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px; }
 
+.welcome-without-map__container {
+  width: 100%;
+  background-color: var(--color-blue); }
+
 @media only screen and (min-width: 1024px) {
   .home-content__welcome-container {
     width: 67%;
@@ -342,6 +346,16 @@ html {
     height: 100%;
     width: 100%;
     object-fit: cover; } }
+@media only screen and (min-width: 1024px) and (min-width: 768px) {
+  .welcome-without-map__container {
+    width: 67%;
+    display: flex; }
+
+  .welcome-without-map__content {
+    width: 50%; }
+
+  .welcome-without-map__car-container {
+    width: 50%; } }
 .about-us {
   position: relative;
   width: 100%;
