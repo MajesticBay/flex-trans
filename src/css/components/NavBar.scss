@@ -43,7 +43,7 @@
 }
 
 .navbar-desktop__logo-container {
-    height: 3rem;
+    height: 4rem;
 }
 
 .call-btn {
@@ -110,5 +110,11 @@
 @media only screen and (min-width: 1280px) {
     .navbar-links__navbar-link {
         padding-right: 4rem;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .navbar-desktop__logo-container {
+        height: 4.5rem;
     }
 }
