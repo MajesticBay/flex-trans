@@ -433,8 +433,7 @@ html {
   margin-top: 3rem; }
 
 .about-us-fleet__description {
-  width: 100%;
-  padding-bottom: 10rem; }
+  width: 100%; }
 
 .about-us-fleet_car-container {
   width: 100%;
@@ -452,6 +451,9 @@ html {
   bottom: -3rem;
   width: 90%; }
 
+@media only screen and (min-width: 400px) {
+  .about-us-fleet__description {
+    padding-bottom: 5rem; } }
 @media only screen and (min-width: 1024px) {
   .about-us {
     margin-top: 0; }
@@ -1167,7 +1169,7 @@ html {
   background-color: #F6F6F6; }
 
 .navbar-links__navbar-link:active {
-  background-color: #e7e7e7; }
+  background-color: #E7E7E7; }
 
 @media only screen and (min-width: 768px) {
   .call-btn--mobile {
