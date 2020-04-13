@@ -32,14 +32,14 @@
     // flex-direction: row;
     // align-items: center;
     max-width: 1280px;
-    padding-top: 1.6rem;
-    padding-bottom: 1.6rem;
 }
 
 .navbar-desktop__navbar-desktop-left {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
 }
 
 .navbar-desktop__logo-container {
@@ -95,8 +95,8 @@
     background-color: #F6F6F6;
 }
 
-.navbar-links__navbar-link:focus {
-    background-color: #F6F6F6;
+.navbar-links__navbar-link:active {
+    background-color: #e7e7e7;
 }
 
 @media only screen and (min-width: 768px) {
@@ -119,6 +119,7 @@
     .navbar-links__navbar-link {
         padding-left: 2rem;
         padding-right: 2rem;
+        line-height: 7.2rem;
     }
 }
 
