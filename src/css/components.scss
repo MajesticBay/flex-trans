@@ -1,6 +1,14 @@
+// @font-face {
+//     font-family: "Lato";
+//     src: url("../fonts/Lato-Regular.ttf");
+//     src: url("../fonts") format("ttf"),
+//     url("Lato.ttf") format("ttf"),
+//     url("Lato.ttf") format("ttf");
+// }
+
 body, p {
     margin: 0;
-    font-family: Lato;
+    font-family: "Lato";
 }
 
 .img-fluid {
