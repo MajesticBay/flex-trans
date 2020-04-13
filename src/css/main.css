@@ -150,7 +150,7 @@ a {
 
 body, p {
   margin: 0;
-  font-family: Lato; }
+  font-family: "Lato"; }
 
 .img-fluid {
   width: 100%;
@@ -557,7 +557,8 @@ html {
 .contact-form-inside-wrapper__contact-right {
   width: 100%;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  padding-top: 1rem; }
 
 .contact-us__header--form {
   margin-bottom: 2rem;
@@ -626,7 +627,8 @@ html {
     grid-gap: 3rem; }
 
   .contact-form-inside-wrapper__contact-right {
-    height: 100%; }
+    height: 100%;
+    padding-top: 1rem; }
 
   .contact-us__contact-form-group--height-100 {
     height: 100%;
@@ -1161,6 +1163,12 @@ html {
   padding-right: 16px;
   white-space: nowrap; }
 
+.navbar-links__navbar-link:hover {
+  background-color: #F6F6F6; }
+
+.navbar-links__navbar-link:focus {
+  background-color: #F6F6F6; }
+
 @media only screen and (min-width: 768px) {
   .call-btn--mobile {
     display: block; } }
@@ -1172,7 +1180,8 @@ html {
     display: grid; } }
 @media only screen and (min-width: 1280px) {
   .navbar-links__navbar-link {
-    padding-right: 4rem; } }
+    padding-left: 2rem;
+    padding-right: 2rem; } }
 @media only screen and (min-width: 1440px) {
   .navbar-desktop__logo-container {
     height: 4.5rem; } }

@@ -91,6 +91,14 @@
     white-space: nowrap;
 }
 
+.navbar-links__navbar-link:hover {
+    background-color: #F6F6F6;
+}
+
+.navbar-links__navbar-link:focus {
+    background-color: #F6F6F6;
+}
+
 @media only screen and (min-width: 768px) {
     .call-btn--mobile {
         display: block;
@@ -109,7 +117,8 @@
 
 @media only screen and (min-width: 1280px) {
     .navbar-links__navbar-link {
-        padding-right: 4rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 }
 
