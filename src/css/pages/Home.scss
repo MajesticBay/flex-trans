@@ -153,10 +153,23 @@
 
         .welcome-without-map__content {
             width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 3rem;
         }
 
         .welcome-without-map__car-container {
             width: 50%;
+        }
+        
+        .welcome-without-map__header {
+            font-size: 3.6rem;
+            padding-bottom: 2rem;
+        }
+
+        .welcome-without-map__text {
+            font-size: 2.2rem;
         }
     }
 }
