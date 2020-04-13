@@ -315,7 +315,7 @@ html {
   width: 100%;
   background-color: var(--color-blue); }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   .home-content__welcome-container {
     width: 67%;
     max-width: 1280px;
@@ -345,28 +345,41 @@ html {
   .welcome-content-container__map-image {
     height: 100%;
     width: 100%;
-    object-fit: cover; } }
-@media only screen and (min-width: 1024px) and (min-width: 768px) {
+    object-fit: cover; }
+
   .welcome-without-map__container {
     width: 67%;
     display: flex; }
 
   .welcome-without-map__content {
-    width: 50%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 3rem; }
 
-  .welcome-without-map__car-container {
-    width: 50%; }
-
   .welcome-without-map__header {
-    font-size: 3.6rem;
+    font-size: 3rem;
     padding-bottom: 2rem; }
 
   .welcome-without-map__text {
-    font-size: 2.2rem; } }
+    font-size: 1.6rem;
+    line-height: 150%; }
+
+  .welcome-without-map__car-container {
+    width: 50%;
+    position: relative; }
+
+  .welcome-without-map__car-img {
+    position: absolute;
+    top: -5rem;
+    right: -15rem; } }
+@media only screen and (min-width: 1024px) {
+  .welcome-without-map__header {
+    font-size: 3.6rem; }
+
+  .welcome-without-map__text {
+    font-size: 2rem; } }
 .about-us {
   position: relative;
   width: 100%;
@@ -500,7 +513,8 @@ html {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  margin-top: 10rem; }
 
 .contact-us {
   position: relative;

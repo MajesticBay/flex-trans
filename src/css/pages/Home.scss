@@ -98,7 +98,7 @@
     background-color: var(--color-blue);
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
     // .home__home-content {
     //     width: 80%;
     //     padding-top: 50px;
@@ -145,31 +145,49 @@
         // border-bottom-right-radius: 6px;
     }
 
-    @media only screen and (min-width: 768px) {
-        .welcome-without-map__container {
-            width: 67%;
-            display: flex;
-        }
+    // WELCOME CONTAINER WITHOUT MAP
 
-        .welcome-without-map__content {
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 3rem;
-        }
+    .welcome-without-map__container {
+        width: 67%;
+        display: flex;
+    }
 
-        .welcome-without-map__car-container {
-            width: 50%;
-        }
-        
-        .welcome-without-map__header {
-            font-size: 3.6rem;
-            padding-bottom: 2rem;
-        }
+    .welcome-without-map__content {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 3rem;
+    }
 
-        .welcome-without-map__text {
-            font-size: 2.2rem;
-        }
+    .welcome-without-map__header {
+        font-size: 3rem;
+        padding-bottom: 2rem;
+    }
+
+    .welcome-without-map__text {
+        font-size: 1.6rem;
+        line-height: 150%;
+    }
+
+    .welcome-without-map__car-container {
+        width: 50%;
+        position: relative;
+    }
+
+    .welcome-without-map__car-img {
+        position: absolute;
+        top: -5rem;
+        right: -15rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .welcome-without-map__header {
+        font-size: 3.6rem;
+    }
+
+    .welcome-without-map__text {
+        font-size: 2rem;
     }
 }

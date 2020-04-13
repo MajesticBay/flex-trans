@@ -10,7 +10,7 @@ function WelcomeWithoutMap() {
                 <p className="welcome-without-map__text">You may set up a ride at least 24 hours in advance. If you need to be picked up sooner, please call us at 425-260-2121. We do make exceptions.</p>
             </div>
             <div className="welcome-without-map__car-container">
-                <img className="img-fluid" src={car}/>
+                <img className="welcome-without-map__car-img img-fluid" src={car}/>
             </div>
         </div>
     )
