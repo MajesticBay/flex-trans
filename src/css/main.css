@@ -441,7 +441,6 @@ html {
   position: relative;
   height: 157px;
   margin-top: 4rem;
-  margin-bottom: 4rem;
   display: flex;
   flex-direction: column;
   align-items: center; }
@@ -525,7 +524,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 3rem; }
+  margin-top: 5rem; }
 
 .contact-us__contact-us-content {
   width: 100%; }
@@ -546,7 +545,7 @@ html {
 .contact-us__contact-form {
   margin-top: 2rem;
   padding: 2rem;
-  background-color: var(--color-blue); }
+  background-color: #E3F2F8; }
 
 .contact-form__contact-form-inside-wrapper {
   display: grid;
@@ -624,7 +623,8 @@ html {
 
   .contact-us__contact-form {
     padding: 4rem;
-    border-radius: 6px; }
+    border-radius: 6px;
+    background-color: var(--color-blue); }
 
   .contact-form__contact-form-inside-wrapper {
     grid-template-columns: 1fr 1fr;
