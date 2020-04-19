@@ -60,7 +60,7 @@ function NavBar() {
                     <Link className="navbar-links__navbar-link" to="/about">About Us</Link>
                     <Link className="navbar-links__navbar-link" to="/reserve">Reserve a trip</Link>
                     <Link className="navbar-links__navbar-link" to="/contact">Contact Us</Link>
-                    <span onClick={() => test()}>test</span>
+                    {/* <span onClick={() => test()}>test</span> */}
                 </div>
             </div>
         </div>
