@@ -4,7 +4,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 5rem; }
+  padding-top: 5rem;
+  background-color: #E3F2F8; }
 
 .contact-us__contact-us-content {
   width: 100%; }
@@ -45,7 +46,7 @@
 .contact-us__header--form {
   margin-left: 0 !important;
   margin-bottom: 2rem;
-  color: var(--color-white); }
+  color: var(--color-black); }
 
 .contact-form__label {
   display: inline-block;
@@ -87,7 +88,8 @@
 
 @media only screen and (min-width: 1024px) {
   .contact-us {
-    margin-top: 0; }
+    padding-top: 5rem;
+    background-color: #fff; }
 
   .contact-us__contact-us-content {
     width: 67%;
@@ -113,6 +115,9 @@
   .contact-form-inside-wrapper__contact-right {
     height: 100%;
     padding-top: 0; }
+
+  .contact-us__header--form {
+    color: var(--color-white); }
 
   .contact-us__contact-form-group--height-100 {
     height: 100%;
