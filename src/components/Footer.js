@@ -18,10 +18,10 @@ function Footer() {
                     <div className="footer-info__mobile">
                         <p>© 2020 Flex-trans Inc. All rights reserved.</p>
                         <p>Phone number: <a href="tel:(425) 444 3905">(425) 444 3905</a></p>
-                        <a href="mailto:flex-trans@gmail.com" target="_blank" rel="noopener noreferrer"><p>flex-trans@gmail.com</p></a>
+                        <a href="mailto:flextranswa@gmail.com" target="_blank" rel="noopener noreferrer"><p>flextranswa@gmail.com</p></a>
                     </div>
                     <div className="footer-info__desktop">
-                        <p>© 2020 Flex-trans Inc. All rights reserved. | Phone number: <a href="tel:(425) 444 3905">(425) 444 3905</a> | <a href="mailto:flex-trans@gmail.com" target="_blank" rel="noopener noreferrer">flex-trans@gmail.com</a></p>
+                        <p>© 2020 Flex-trans Inc. All rights reserved. | Phone number: <a href="tel:(425) 444 3905">(425) 444 3905</a> | <a href="mailto:flextranswa@gmail.com" target="_blank" rel="noopener noreferrer">flextranswa@gmail.com</a></p>
                     </div>
                     <p className="footer-info__terms">Terms & Conditions: All Pricing & Services are subject to change or update at any time by Flex-Trans with or without notice. We will honor all pricing & services in effect at the time of reservation. All payments are refundable upon cancellation at least one hour pick-up time.</p>
                 </div>
