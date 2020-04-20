@@ -8,6 +8,7 @@ function Home() {
             {/* <ReservationForm/> */}
             <div className="home__home-content">
                 <WelcomeWithMap/>
+        
             </div>
         </div>
     );
