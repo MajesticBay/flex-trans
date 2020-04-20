@@ -55,7 +55,8 @@ function StepThree(props) {
                     </span> */}
                 </div>
                 <div className="step-three__reservation-date-picker-container">
-                    <DateInput onChange={e => handleDateChange(e)}/>
+                    <input className="reservation-form__input reservation-form__input--no-margin rounded" type="date" onChange={e => handleDateChange(e)}/>
+                    {/* <DateInput onChange={e => handleDateChange(e)}/> */}
                     <div className="reservation-date-picker-container__reservation-time-picker">
                         <TimeInput onChange={e => handleHoursChange(e)}/>
                         <span> : </span>
@@ -81,7 +82,7 @@ function StepThree(props) {
                 </div>  
                 
             </div>
-            <div className="step-one__car-photo-container">
+            <div className="step-two__google-map-container">
                 <iframe title="google-map" frameBorder="0" style={{ width: "100%", height: "100%", borderTopRightRadius: "6px", borderBottomRightRadius: "6px" }} src={mapUrl}>
 
                 </iframe>
