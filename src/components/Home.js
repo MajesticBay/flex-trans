@@ -5,7 +5,7 @@ import WelcomeWithMap from './WelcomeWithMap';
 function Home() {
     return (
         <div className="home">
-            {/* <ReservationForm/> */}
+            <ReservationForm/>
             <div className="home__home-content">
                 <WelcomeWithMap/>
         

@@ -5,7 +5,7 @@ import WelcomeWithoutMap from './WelcomeWithoutMap';
 function Reservation(){
   return (
     <div className="reservation">
-      {/* <ReservationForm/> */}
+      <ReservationForm/>
       <WelcomeWithoutMap/>
     </div>
   );

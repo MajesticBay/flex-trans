@@ -519,6 +519,9 @@ html {
   margin-top: 10rem;
   margin-bottom: 5rem; }
 
+@media only screen and (min-width: 768px) {
+  .reservation {
+    margin-top: 0; } }
 .contact-us {
   position: relative;
   width: 100%;
