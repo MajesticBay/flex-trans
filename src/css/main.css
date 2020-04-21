@@ -612,14 +612,15 @@ html {
 
 @media only screen and (min-width: 1024px) {
   .contact-us {
-    padding-top: 5rem;
-    background-color: #fff; }
+    padding-top: 20rem;
+    background-color: transparent; }
 
   .contact-us__contact-us-content {
     width: 67%;
     max-width: 1280px;
-    padding-top: 2rem;
-    padding-bottom: 80px; }
+    padding: 2rem 3rem 8rem 3rem;
+    background-color: #fff;
+    border-radius: 6px; }
 
   .contact-us__header {
     margin-left: 0; }
