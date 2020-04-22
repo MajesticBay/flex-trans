@@ -58,9 +58,31 @@ function StepThree(props) {
                     <input className="reservation-form__input reservation-form__input--no-margin rounded" type="date" onChange={e => handleDateChange(e)}/>
                     {/* <DateInput onChange={e => handleDateChange(e)}/> */}
                     <div className="reservation-date-picker-container__reservation-time-picker">
-                        <TimeInput onChange={e => handleHoursChange(e)}/>
+                        <select className="reservation-form__input reservation-form__input--no-margin rounded" onChange={e => handleHoursChange(e)}>
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                        </select>
                         <span> : </span>
-                        <TimeInput onChange={e => handleMinutesChange(e)}/>
+                        <select className="reservation-form__input reservation-form__input--no-margin rounded" onChange={e => handleMinutesChange(e)}>
+                            <option>00</option>
+                            <option>15</option>
+                            <option>30</option>
+                            <option>45</option>
+                        </select>
+                        {/* <TimeInput onChange={e => handleHoursChange(e)}/>
+                        <span> : </span>
+                        <TimeInput onChange={e => handleMinutesChange(e)}/> */}
                     </div>
                     <div className="reservation-date-picker-container__reservation-am-pm-picker">
                         <div className="reservation-am-pm-picker__inner-container">
