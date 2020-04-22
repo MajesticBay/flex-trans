@@ -34,7 +34,6 @@ function App() {
           backgroundRepeat: 'no-repeat',
           backgroundSize: '100% 60vh'
         }}>
-          {/* <ReservationForm/> */}
           { routes }
           <Mission/>
         </div>

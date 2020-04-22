@@ -42,6 +42,9 @@
     grid-template-columns: 1fr 1fr;
     border-radius: 6px; }
 
+  .step-three__step-three-container {
+    padding: 2.5rem; }
+
   .step-three__reservation-date-picker-container {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 1.5rem;
