@@ -456,12 +456,18 @@ html {
     padding-bottom: 5rem; } }
 @media only screen and (min-width: 1024px) {
   .about-us {
-    margin-top: 0; }
+    margin-top: 0;
+    padding-top: 20rem; }
+
+  .about-us__content-container {
+    width: 67%;
+    max-width: 1200px;
+    padding: 2rem 3rem 8rem 3rem;
+    background-color: #fff;
+    border-radius: 6px; }
 
   .about-us__description-container {
     display: block;
-    width: 67%;
-    max-width: 1280px;
     padding: 2rem 0 8rem 0; }
 
   .about-us__header {
@@ -469,10 +475,6 @@ html {
 
   .about-us__base-text {
     padding-left: 0; }
-
-  .about-us__services {
-    width: 67%;
-    max-width: 1280px; }
 
   .about-us-services__services-container {
     grid-template-columns: 1fr 1fr 1fr; }
@@ -484,8 +486,6 @@ html {
     color: #000; }
 
   .about-us__fleet {
-    width: 67%;
-    max-width: 1280px;
     flex-direction: row;
     padding-top: 8rem;
     padding-bottom: 8rem;
