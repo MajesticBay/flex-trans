@@ -1,11 +1,11 @@
 import React from 'react';
-import ReservationForm from './ReservationForm/ReservationForm';
+import ReservationFormHome from './ReservationForm/ReservationFormHome';
 import WelcomeWithMap from './WelcomeWithMap';
 
 function Home() {
     return (
         <div className="home">
-            <ReservationForm/>
+            <ReservationFormHome/>
             <div className="home__home-content">
                 <WelcomeWithMap/>
             </div>
