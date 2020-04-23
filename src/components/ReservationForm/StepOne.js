@@ -3,7 +3,7 @@ import PlacesAutocomplete, { geocodeByAddress, getLatLng } from "react-places-au
 
 import { reservationFormContext } from '../../contexts/reservationFormContext';
 
-import fordtransit from '../../images/car-left-shadow.png';
+import fordtransit from '../../images/car-left.png';
 
 function StepOne(props) {
     const { addressPick, setAddressPick } = React.useContext(reservationFormContext);
