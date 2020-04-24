@@ -2,7 +2,7 @@ import React from 'react';
 import NavBar from './components/NavBar';
 import Top from './components/Top';
 import ReservationForm from './components/ReservationForm/ReservationForm';
-import Home from './components/Home';
+import WelcomeWithMap from './components/WelcomeWithMap';
 import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
 import Mission from './components/Mission';
@@ -19,7 +19,7 @@ function App() {
         <div className="mobile">
           <Top/>
           <ReservationForm/>
-          <Home/>
+          <WelcomeWithMap/>
           <MissionMobile/>
           <AboutUs/>
           <ContactUs/>
