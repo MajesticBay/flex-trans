@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
-import StepOne from './StepOne';
-import StepTwo from './StepTwo';
-import StepThree from './StepThree';
-import StepFour from './StepFour';
-import StepFive from './StepFive';
-import StepSix from './StepSix';
-import StepSeven from './StepSeven';
+import StepOne from '../ReservationFormHome/StepOne';
+import StepTwo from '../ReservationFormHome/StepTwo';
+import StepThree from '../ReservationFormHome/StepThree';
+import StepFour from '../ReservationFormHome/StepFour';
+import StepFive from '../ReservationFormHome/StepFive';
+import StepSix from '../ReservationFormHome/StepSix';
+import StepSeven from '../ReservationFormHome/StepSeven';
 
 function ReservationForm(props) {
     const [currentStep, setCurrentStep] = useState(1);

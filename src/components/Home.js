@@ -1,5 +1,5 @@
 import React from 'react';
-import ReservationFormHome from './ReservationForm/ReservationFormHome';
+import ReservationFormHome from './ReservationFormHome/ReservationFormHome';
 import WelcomeWithMap from './WelcomeWithMap';
 
 import bg from '../images/bg-with-road.jpg';

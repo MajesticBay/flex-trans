@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { NotificationContainer, NotificationManager } from 'react-notifications';
-import 'react-notifications/lib/notifications.css';
-import ReservationForm from './ReservationForm/ReservationForm';
 
 function ContactUs() {
   const [contactFormName, setContactFormName] = useState("");
@@ -51,7 +49,6 @@ function ContactUs() {
 
   return (
     <div className="contact-us">
-      {/* <ReservationForm/> */}
       <div className="contact-us__contact-us-content">
         <h3 className="contact-us__header">Contact Information</h3>
         <NotificationContainer/>

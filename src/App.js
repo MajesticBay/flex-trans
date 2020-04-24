@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBar from './components/NavBar';
 import Top from './components/Top';
-import ReservationForm from './components/ReservationForm/ReservationForm';
+import ReservationFormHome from './components/ReservationForm/ReservationForm';
 import WelcomeWithMap from './components/WelcomeWithMap';
 import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
@@ -18,7 +18,7 @@ function App() {
         <NavBar/>
         <div className="mobile">
           <Top/>
-          <ReservationForm/>
+          <ReservationFormHome/>
           <WelcomeWithMap/>
           <MissionMobile/>
           <AboutUs/>
