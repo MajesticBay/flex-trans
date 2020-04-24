@@ -18,12 +18,10 @@ function NavBar() {
     
     return (
         <div className="navbar">
-            <div className="navbar-mobile">
-                <Link to="/">
-                    <div className="navbar-mobile__logo-container">
-                        <img className="img-fluid--no-width" src={logo} alt="Flex-trans logo"/>
-                    </div>
-                </Link>
+            <nav className="navbar-mobile">
+                <div className="navbar-mobile__logo-container">
+                    <img className="img-fluid--no-width" src={logo} alt="Flex-trans logo"/>
+                </div>
                 <a href="tel:(425) 444 3905">
                     <div className="call-btn rounded pointer">
                         <div className="call-btn__phone-img-container">
@@ -37,8 +35,8 @@ function NavBar() {
                         <p>(425) 444 3905</p>
                     </a>
                 </div>
-            </div>
-            <div className="navbar-desktop">
+            </nav>
+            <nav className="navbar-desktop">
                 <div className="navbar-desktop__navbar-desktop-left">
                     <Link to="/">
                         <div className="navbar-desktop__logo-container pointer">
@@ -76,7 +74,7 @@ function NavBar() {
                         onClick={() => handleClick()}
                         >Contact Us</NavLink>
                 </div>
-            </div>
+            </nav>
         </div>
     );
 }
