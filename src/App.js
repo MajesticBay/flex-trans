@@ -32,7 +32,7 @@ function App() {
           backgroundImage: `url(${bg})`,
           backgroundPosition: 'center top',
           backgroundRepeat: 'no-repeat',
-          backgroundSize: '100% 60vh'
+          backgroundSize: '100% 61vh'
         }}>
           { routes }
           <Mission/>

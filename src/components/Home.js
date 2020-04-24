@@ -12,7 +12,7 @@ function Home() {
             flexDirection: 'column',
             alignItems: 'center',
             backgroundImage: `url(${bg})`,
-            backgroundPosition: 'center -55px',
+            backgroundPosition: 'center -5.2rem',
             backgroundRepeat: 'no-repeat',
             backgroundSize: '100%'
         }}>
