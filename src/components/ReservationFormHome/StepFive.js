@@ -6,7 +6,7 @@ function StepFive(props) {
     const { addressPick} = React.useContext(reservationFormContext);
     const { addressDrop } = React.useContext(reservationFormContext);
     const { passengerInfo, setPassengerInfo } = React.useContext(reservationFormContext);
-    const { price } = React.useContext(reservationFormContext);
+    const { price, setPrice } = React.useContext(reservationFormContext);
     let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&language=EN&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
 
     const handleNameChange = (e) => {
@@ -35,6 +35,9 @@ function StepFive(props) {
     }
 
     const handleRideBackNeededChange = (e) => {
+        if (e.target.value == "Yes") {
+            setPrice(price * 2);
+        }
         setPassengerInfo({ ...passengerInfo, rideBackNeeded: e.target.value });
         console.log('passengerInfo => ', passengerInfo.rideBackNeeded);
     }
