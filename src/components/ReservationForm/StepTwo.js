@@ -1,5 +1,5 @@
 import React from 'react';
-import { geocodeByAddress, getLatLng } from "react-places-autocomplete";
+import PlacesAutocomplete, { geocodeByAddress, getLatLng } from "react-places-autocomplete";
 
 import { reservationFormContext } from '../../contexts/reservationFormContext';
 

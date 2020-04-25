@@ -847,6 +847,9 @@ html {
     grid-column-gap: 1.5rem;
     grid-template-areas: 'date-left date-right' 'time-left time-right' 'submit-left submit-right'; }
 
+  .step-three__reservation-date-picker-container--reservation {
+    grid-template-columns: 1.5fr 1fr; }
+
   .reservation-date-picker-container__reservation-date-picker {
     grid-area: date-left; }
 

@@ -99,6 +99,10 @@
         'submit-left submit-right';
     }
 
+    .step-three__reservation-date-picker-container--reservation {
+        grid-template-columns: 1.5fr 1fr;
+    }
+
     .reservation-date-picker-container__reservation-date-picker {
         grid-area: date-left;
     }

@@ -21,8 +21,8 @@ function ReservationForm(props) {
         switch (currentStep) {
             case 1:
                 return <StepOne currentStep={currentStep} next={_next}/>
-            // case 2:
-            //     return <StepTwo currentStep={currentStep} next={_next}/>
+            case 2:
+                return <StepTwo currentStep={currentStep} next={_next}/>
             // case 3:
             //     return <StepThree currentStep={currentStep} next={_next}/>
             // case 4:
