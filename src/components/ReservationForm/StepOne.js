@@ -59,6 +59,7 @@ function StepOne(props) {
     return (
         <div className="reservation-form__step-one">
                 <div className="step-one__form rounded-desktop">
+                <span className="step-three__header">Pick-up date and time</span>
                 <div className="step-three__reservation-date-picker-container step-three__reservation-date-picker-container--reservation">
                     <input className="reservation-form__input reservation-form__input--no-margin rounded" type="date" onChange={e => handleDateChange(e)}/>
                     {/* <DateInput onChange={e => handleDateChange(e)}/> */}

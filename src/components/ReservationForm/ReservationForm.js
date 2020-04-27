@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import StepOne from './StepOne';
-import StepTwo from '../ReservationFormHome/StepTwo';
+import StepTwo from './StepTwo';
 import StepThree from '../ReservationFormHome/StepThree';
 import StepFour from '../ReservationFormHome/StepFour';
 import StepFive from '../ReservationFormHome/StepFive';
