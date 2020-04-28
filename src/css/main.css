@@ -811,6 +811,10 @@ html {
 .step-three__header {
   font-size: var(--font-2-6); }
 
+.step-three__header-pb-2 {
+  display: block;
+  padding-bottom: 2rem; }
+
 .step-three__reservation-date-picker-container {
   display: grid;
   grid-template-columns: 1fr;

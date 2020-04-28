@@ -53,13 +53,13 @@ function StepOne(props) {
     }
 
     const handleRadioChange = (e) => {
-        setTime ({ ...time, ampm: e.target.value });
+        setTime({ ...time, ampm: e.target.value });
         // console.log('time => ', time);
     }
 
     const nextStep = () => {
         if (!date || !time) {
-            alert ("Fill out all fields!");
+            alert("Fill out all fields!");
         } else {
             props.next();
         }
@@ -67,111 +67,96 @@ function StepOne(props) {
 
     return (
         <div className="reservation-form__step-one">
-                <div className="step-one__form rounded-desktop">
-                <div className="step-three__reservation-date-picker-container step-three__reservation-date-picker-container--reservation">
-                <div className="step-four__address-container">
+            <div className="step-one__form rounded-desktop">
+                <div className="new-form-step-three__container">
+                    <span className="step-three__header step-three__header-pb-2">Reservation Form</span>
+                    <div className="step-four__address-container">
                         <p className="step-four__address-input-header reservation-form__input-label">Pick-up location</p>
                         <PlacesAutocomplete value={addressPick} onChange={setAddressPick} onSelect={handleSelectPick}>
-                        {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
-                            <div style={{ gridArea: "address", position: "relative", display: "flex", flexDirection: "column"}}>
+                            {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
+                                <div style={{ gridArea: "address", position: "relative", display: "flex", flexDirection: "column" }}>
+                                    <input
+                                        className="reservation-form__input rounded"
+                                        {...getInputProps({ placeholder: "Pick-up location" })} />
 
-                                <input
-                                    className="reservation-form__input rounded" 
-                                    {...getInputProps({ placeholder: "Pick-up location" })} />
-
-                                <div style = {{ 
-                                            position: "absolute",
-                                            zIndex: "2",
-                                            top: "5.2rem",
-                                            width: "100%",
-                                            fontSize: "1.6rem",
-                                            cursor: "pointer"
-                                        }}>
-                                    {loading ? <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}><span style={{padding: "1.6rem 2rem"}}>...loading</span></div> : null}
-
-                                    {suggestions.map(suggestion => {
-                                    const style = {
+                                    <div style={{
+                                        position: "absolute",
+                                        zIndex: "2",
+                                        top: "5.2rem",
                                         width: "100%",
-                                        backgroundColor: suggestion.active ? "#41b6e6" : "#fff",
-                                        color: suggestion.active ? "#fff" : "#000",
-                                        padding: "1.6rem 2rem"
-                                    };
+                                        fontSize: "1.6rem",
+                                        cursor: "pointer"
+                                    }}>
+                                        {loading ? <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}><span style={{ padding: "1.6rem 2rem" }}>...loading</span></div> : null}
 
-                                    return (
-                                        <div {...getSuggestionItemProps(suggestion, { style })}>
-                                        {suggestion.description}
-                                        </div>
-                                    );
-                                    })}
+                                        {suggestions.map(suggestion => {
+                                            const style = {
+                                                width: "100%",
+                                                backgroundColor: suggestion.active ? "#41b6e6" : "#fff",
+                                                color: suggestion.active ? "#fff" : "#000",
+                                                padding: "1.6rem 2rem"
+                                            };
+
+                                            return (
+                                                <div {...getSuggestionItemProps(suggestion, { style })}>
+                                                    {suggestion.description}
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
                                 </div>
-                            </div>
-                        )}
+                            )}
                         </PlacesAutocomplete>
-                        <input className="step-four__apt-input reservation-form__input rounded" placeholder="Apt./Ste" onChange={e => handleBuildingInfoPick(e)}/>
+                        <input className="step-four__apt-input reservation-form__input rounded" placeholder="Apt./Ste" onChange={e => handleBuildingInfoPick(e)} />
                     </div>
                     <div className="step-four__address-container">
                         <p className="step-four__address-input-header reservation-form__input-label">Drop-off location</p>
                         <PlacesAutocomplete value={addressDrop} onChange={setAddressDrop} onSelect={handleSelectDrop}>
-                        {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
-                            <div style={{ gridArea: "address", position: "relative", display: "flex", flexDirection: "column"}}>
+                            {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
+                                <div style={{ gridArea: "address", position: "relative", display: "flex", flexDirection: "column" }}>
 
-                                <input
-                                    className="reservation-form__input rounded"
-                                    {...getInputProps({ placeholder: "Drop-off location" })} />
+                                    <input
+                                        className="reservation-form__input rounded"
+                                        {...getInputProps({ placeholder: "Drop-off location" })} />
 
-                                <div style = {{ 
-                                            position: "absolute",
-                                            top: "5.2rem",
-                                            width: "100%",
-                                            fontSize: "1.6rem",
-                                            cursor: "pointer"
-                                        }}>
-                                    {loading ? <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}><span style={{padding: "1.6rem 2rem"}}>...loading</span></div> : null}
-
-                                    {suggestions.map(suggestion => {
-                                    const style = {
+                                    <div style={{
+                                        position: "absolute",
+                                        top: "5.2rem",
                                         width: "100%",
-                                        backgroundColor: suggestion.active ? "#41b6e6" : "#fff",
-                                        color: suggestion.active ? "#fff" : "#000",
-                                        padding: "1.6rem 2rem"
-                                    };
+                                        fontSize: "1.6rem",
+                                        cursor: "pointer"
+                                    }}>
+                                        {loading ? <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}><span style={{ padding: "1.6rem 2rem" }}>...loading</span></div> : null}
 
-                                    return (
-                                        <div {...getSuggestionItemProps(suggestion, { style })}>
-                                        {suggestion.description}
-                                        </div>
-                                    );
-                                    })}
+                                        {suggestions.map(suggestion => {
+                                            const style = {
+                                                width: "100%",
+                                                backgroundColor: suggestion.active ? "#41b6e6" : "#fff",
+                                                color: suggestion.active ? "#fff" : "#000",
+                                                padding: "1.6rem 2rem"
+                                            };
+
+                                            return (
+                                                <div {...getSuggestionItemProps(suggestion, { style })}>
+                                                    {suggestion.description}
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
                                 </div>
-                            </div>
-                        )}
+                            )}
                         </PlacesAutocomplete>
-                        <input className="step-four__apt-input reservation-form__input rounded" placeholder="Apt./Ste" onChange={e => handleBuildingInfoDrop(e)}/>
-                    </div>
-                    <div className="reservation-date-picker-container__reservation-am-pm-picker">
-                        <div className="reservation-am-pm-picker__inner-container">
-                            <div className="reservation-date-picker-container__am-container">
-                                <input type="radio" id="time-am" name="gender" value="am" onChange={e => handleRadioChange(e)}/>
-                                <label for="time-am">am</label>
-                            </div>
-                            <div className="reservation-date-picker-container__pm-container">
-                                <input type="radio" id="time-pm" name="gender" value="pm" onChange={e => handleRadioChange(e)}/>
-                                <label for="time-pm">pm</label>
-                            </div>
-                        </div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </div>  
-                
-                    <div className="reservation-form__submit-btn rounded pointer" onClick={() => nextStep()}>
-                        <span className="reservation-form__submit-text">Reserve a trip</span>
-                        <div className="reservation-form__triangle"></div>
+                        <input className="step-four__apt-input reservation-form__input rounded" placeholder="Apt./Ste" onChange={e => handleBuildingInfoDrop(e)} />
                     </div>
                 </div>
-                <div className="step-one__car-photo-container">
-                    <img className="img-fluid" src={fordtransit} alt="Ford Transit Wheelchair Vagon"/>
+
+                <div className="reservation-form__submit-btn rounded pointer" onClick={() => nextStep()}>
+                    <span className="reservation-form__submit-text">Reserve a trip</span>
                 </div>
+            </div>
+            <div className="step-one__car-photo-container">
+                <img className="img-fluid" src={fordtransit} alt="Ford Transit Wheelchair Vagon" />
+            </div>
         </div>
     )
 }
