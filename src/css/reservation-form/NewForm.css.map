@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,yCAA0C;EACtC,mCAAoC;IAChC,KAAK,EAAE,IAAI;IACX,YAAY,EAAE,EAAE;IAChB,QAAQ,EAAE,QAAQ;IAGlB,gBAAgB,EAAE,kBAAkB;IACpC,UAAU,EAAE,iCAAiC;IAE7C,UAAU,EAAE,MAAM;IAClB,OAAO,EAAE,MAAM;IACf,UAAU,EAAE,2CAAuC",
+"sources": ["NewForm.scss"],
+"names": [],
+"file": "NewForm.css"
+}

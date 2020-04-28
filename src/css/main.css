@@ -1095,6 +1095,16 @@ html {
 
   .step-seven__form {
     padding: 2.5rem; } }
+@media only screen and (min-width: 768px) {
+  .new-form-step-two__outer-container {
+    width: 100%;
+    margin-right: 2%;
+    position: relative;
+    background-color: var(--color-white);
+    box-shadow: 0px 34px 64px rgba(0, 0, 0, 0.09);
+    margin-top: -130px;
+    padding: 2.5rem;
+    box-shadow: 0.5rem 1.25rem 1.75rem 0 rgba(0, 0, 0, 0.3); } }
 :root {
   --color-description: #9E9E9E;
   --color-button: #1F1D1D;

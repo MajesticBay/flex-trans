@@ -65,10 +65,13 @@ function StepOne(props) {
         }
     }
 
+    let mapUrl = `https://www.google.com/maps/embed/v1/place?key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE&q=Space+Needle,Seattle+WA`;
+    // let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&language=EN&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
+
     return (
-        <div className="reservation-form__step-one">
-            <div className="step-one__form rounded-desktop">
-                <div className="new-form-step-three__container">
+        <div>
+            <div className="new-form-step-two__outer-container rounded-desktop">
+                <div className="new-form-step-two__container">
                     <span className="step-three__header step-three__header-pb-2">Reservation Form</span>
                     <div className="step-four__address-container">
                         <p className="step-four__address-input-header reservation-form__input-label">Pick-up location</p>
@@ -154,8 +157,9 @@ function StepOne(props) {
                     <span className="reservation-form__submit-text">Reserve a trip</span>
                 </div>
             </div>
-            <div className="step-one__car-photo-container">
-                <img className="img-fluid" src={fordtransit} alt="Ford Transit Wheelchair Vagon" />
+            <div className="step-two__google-map-container">
+                <iframe title="google-map" frameBorder="0" style={{ width: "100%", height: "100%", borderTopRightRadius: "6px", borderBottomRightRadius: "6px" }} src={mapUrl}></iframe>
+                {/* <span>Distance {distance}</span> */}
             </div>
         </div>
     )
