@@ -1095,6 +1095,14 @@ html {
 
   .step-seven__form {
     padding: 2.5rem; } }
+.new-form-step-two__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+
+.new-form-step-two__new-form-step-form-container {
+  background-color: #fff;
+  padding: 2.5rem; }
+
 @media only screen and (min-width: 768px) {
   .new-form-step-two__outer-container {
     width: 100%;

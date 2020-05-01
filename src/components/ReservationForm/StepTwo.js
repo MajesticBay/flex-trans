@@ -69,12 +69,12 @@ function StepOne(props) {
     // let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&language=EN&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
 
     return (
-        <div>
-            <div className="new-form-step-two__outer-container rounded-desktop">
-                <div className="new-form-step-two__container">
-                    <span className="step-three__header step-three__header-pb-2">Reservation Form</span>
-                    <div className="step-four__address-container">
-                        <p className="step-four__address-input-header reservation-form__input-label">Pick-up location</p>
+        <div className="new-form-step-two__container">
+            <div className="new-form-step-two__new-form-step-form-container">
+                <div className="">
+                    <span className="">Reservation Form</span>
+                    <div className="">
+                        <p className=" reservation-form__input-label">Pick-up location</p>
                         <PlacesAutocomplete value={addressPick} onChange={setAddressPick} onSelect={handleSelectPick}>
                             {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
                                 <div style={{ gridArea: "address", position: "relative", display: "flex", flexDirection: "column" }}>
@@ -157,7 +157,7 @@ function StepOne(props) {
                     <span className="reservation-form__submit-text">Reserve a trip</span>
                 </div>
             </div>
-            <div className="step-two__google-map-container">
+            <div>
                 <iframe title="google-map" frameBorder="0" style={{ width: "100%", height: "100%", borderTopRightRadius: "6px", borderBottomRightRadius: "6px" }} src={mapUrl}></iframe>
                 {/* <span>Distance {distance}</span> */}
             </div>
