@@ -72,7 +72,7 @@ function StepOne(props) {
         <div className="new-form-step-two__container">
             <div className="new-form-step-two__new-form-step-form-container">
                 <div className="">
-                    <span className="">Reservation Form</span>
+                    <span className="new-form-step-two__header">Reservation Form</span>
                     <div className="">
                         <p className=" reservation-form__input-label">Pick-up location</p>
                         <PlacesAutocomplete value={addressPick} onChange={setAddressPick} onSelect={handleSelectPick}>
