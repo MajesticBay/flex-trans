@@ -1,10 +1,7 @@
 .new-form-step-two__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: var(--color-white);
     box-shadow: 0px 34px 64px rgba(0, 0, 0, 0.09);
-    border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;
 }
 
 // .new-form-step-two__new-form-step-form-container{
@@ -14,11 +11,16 @@
 
 .new-form-step-two__new-form-step-form-container {
     // background-color: #fff;
+    background-color: var(--color-white);
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
     padding: 2.5rem;
 }
 
 .new-form-step-two__header {
-    font-size: var(--font-2-6)
+    display: block;
+    margin-bottom: 2rem;
+    font-size: var(--font-2-6);
 }
 
 @media only screen and (min-width: 768px) {

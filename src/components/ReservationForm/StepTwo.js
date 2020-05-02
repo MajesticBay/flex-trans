@@ -12,8 +12,6 @@ function StepOne(props) {
     const { addressDrop, setAddressDrop } = React.useContext(reservationFormContext);
     const { setCoordinatesDrop } = React.useContext(reservationFormContext);
     const { buildingInfoDrop, setBuildingInfoDrop } = React.useContext(reservationFormContext);
-    const { date, setDate } = React.useContext(reservationFormContext);
-    const { time, setTime } = React.useContext(reservationFormContext);
 
     const handleSelectPick = async value => {
         const results = await geocodeByAddress(value);
@@ -37,28 +35,8 @@ function StepOne(props) {
         setBuildingInfoDrop(e.target.value);
     }
 
-    const handleDateChange = (e) => {
-        setDate(e.target.value);
-        // console.log('date => ', date);
-    }
-
-    const handleHoursChange = (e) => {
-        setTime({ ...time, hours: e.target.value });
-        // console.log('time => ', time);
-    }
-
-    const handleMinutesChange = (e) => {
-        setTime({ ...time, minutes: e.target.value });
-        // console.log('time => ', time);
-    }
-
-    const handleRadioChange = (e) => {
-        setTime({ ...time, ampm: e.target.value });
-        // console.log('time => ', time);
-    }
-
     const nextStep = () => {
-        if (!date || !time) {
+        if (!addressPick || !addressDrop) {
             alert("Fill out all fields!");
         } else {
             props.next();

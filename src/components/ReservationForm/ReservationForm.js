@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import StepOne from './StepOne';
 import StepTwo from './StepTwo';
-import StepThree from '../ReservationFormHome/StepThree';
+import StepThree from './StepThree';
 import StepFour from '../ReservationFormHome/StepFour';
 import StepFive from '../ReservationFormHome/StepFive';
 import StepSix from '../ReservationFormHome/StepSix';
@@ -19,12 +19,12 @@ function ReservationForm(props) {
 
     const switchForms = () => {
         switch (currentStep) {
-            // case 1:
-            //     return <StepOne currentStep={currentStep} next={_next}/>
             case 1:
+                return <StepOne currentStep={currentStep} next={_next}/>
+            case 2:
                 return <StepTwo currentStep={currentStep} next={_next}/>
-            // case 3:
-            //     return <StepThree currentStep={currentStep} next={_next}/>
+            case 3:
+                return <StepThree currentStep={currentStep} next={_next}/>
             // case 4:
             //     return <StepFour currentStep={currentStep} next={_next}/>
             // case 5:
