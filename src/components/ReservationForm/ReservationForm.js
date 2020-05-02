@@ -3,10 +3,8 @@ import React, { useState } from 'react';
 import StepOne from './StepOne';
 import StepTwo from './StepTwo';
 import StepThree from './StepThree';
-import StepFour from '../ReservationFormHome/StepFour';
+import StepFour from './StepFour';
 import StepFive from '../ReservationFormHome/StepFive';
-import StepSix from '../ReservationFormHome/StepSix';
-import StepSeven from '../ReservationFormHome/StepSeven';
 
 function ReservationForm(props) {
     const [currentStep, setCurrentStep] = useState(1);
@@ -25,8 +23,8 @@ function ReservationForm(props) {
                 return <StepTwo currentStep={currentStep} next={_next}/>
             case 3:
                 return <StepThree currentStep={currentStep} next={_next}/>
-            // case 4:
-            //     return <StepFour currentStep={currentStep} next={_next}/>
+            case 4:
+                return <StepFour currentStep={currentStep} next={_next}/>
             // case 5:
             //     return <StepFive currentStep={currentStep} next={_next}/>
             // case 6:
