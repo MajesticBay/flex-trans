@@ -15,7 +15,9 @@ function StepOne(props) {
     const { price, setPrice } = React.useContext(reservationFormContext);
     const { browserLocation, serBrowserLocation } = React.useContext(reservationFormContext);
 
-    const [ buttonText, setButtonText ] = useState("Calculate Trip Cost");
+    const [buttonText, setButtonText] = useState("Calculate Trip Cost");
+    const [distanceAndPriceCalculated, setDistanceAndPriceCalculated] = useState(false);
+    const [mapUrl, setMapUrl] = useState('https://maps.google.com/maps?q=seattle&t=&z=9&ie=UTF8&iwloc=&output=embed');
 
     const handleSelectPick = async value => {
         const results = await geocodeByAddress(value);
@@ -39,15 +41,23 @@ function StepOne(props) {
         setBuildingInfoDrop(e.target.value);
     }
 
+    const calculateDistanceAndPrice = () => {
+        setMapUrl(`https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&language=EN&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`);
+        setButtonText('Next Step');
+        setDistanceAndPriceCalculated(true)
+    }
+
     const nextStep = () => {
         if (!addressPick || !addressDrop) {
             alert("Fill out all fields!");
+        } else if (!distanceAndPriceCalculated) {
+            calculateDistanceAndPrice();
         } else {
             props.next();
         }
     }
 
-    let mapUrl = `https://maps.google.com/maps?q=seattle&t=&z=9&ie=UTF8&iwloc=&output=embed`;
+    //let mapUrl = `https://maps.google.com/maps?q=seattle&t=&z=9&ie=UTF8&iwloc=&output=embed`;
     // let mapUrl = `https://maps.google.com/maps?q=${browserLocation.browserLat}+${browserLocation.browserLong}&t=&z=9&ie=UTF8&iwloc=&output=embed`;
     // let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
 
@@ -140,7 +150,7 @@ function StepOne(props) {
                     <span className="reservation-footer-price-container__dollar">$</span>
                     <span className="reservation-footer-price-container__price">{price}</span>
                 </div>
-                <div className="reservation-form__submit-btn rounded pointer" onClick={() => nextStep()}>
+                <div style={{backgroundColor: distanceAndPriceCalculated ? 'red' : 'green'}} className="reservation-form__submit-btn rounded pointer" onClick={() => nextStep()}>
                     <span className="reservation-form__submit-text">{buttonText}</span>
                 </div>
             </div>

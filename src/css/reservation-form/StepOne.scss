@@ -83,7 +83,10 @@
 @media only screen and (min-width: 375px) {
     .reservation-form__submit-btn {
         padding: 1.6rem 2rem;
-        // margin-top: 2rem;
+    }
+
+    .reservation-form__submit-btn--new-form {
+        padding: 1.6rem 2rem;
     }
 
     .reservation-form__submit-btn--no-margin {

@@ -57,6 +57,9 @@
   .reservation-form__submit-btn {
     padding: 1.6rem 2rem; }
 
+  .reservation-form__submit-btn--new-form {
+    padding: 1.6rem 2rem; }
+
   .reservation-form__submit-btn--no-margin {
     margin-top: 0; }
 
