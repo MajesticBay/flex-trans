@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
-import GoogleMap from 'google-distance-matrix';
+// import GoogleMap from 'google-distance-matrix';
 import axios from 'axios';
 import { reservationFormContext } from '../../contexts/reservationFormContext';
 
 require('dotenv').config();
 
 function StepTwo(props) {
-    GoogleMap.key('AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE');
-    GoogleMap.units('imperial');
+    // GoogleMap.key('AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE');
+    // GoogleMap.units('imperial');
     const { addressPick } = React.useContext(reservationFormContext);
     const { addressDrop } = React.useContext(reservationFormContext);
     const { distance, setDistance } = React.useContext(reservationFormContext);
@@ -30,7 +30,6 @@ function StepTwo(props) {
             .catch(err => {
                 console.log(err);
             })
-        
     });
 
     let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&language=EN&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
