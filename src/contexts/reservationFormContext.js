@@ -17,19 +17,25 @@ export default ({ children }) => {
 
     const [date, setDate] = React.useState("");
     const [time, setTime] = React.useState({
-                                            fullTime: '',
-                                            hours: '',
-                                            minutes: '',
-                                            ampm: ''
+                                            fullTime: "",
+                                            hours: "",
+                                            minutes: "",
+                                            ampm: ""
                                         });
 
-    const [passengerInfo, setPassengerInfo] = React.useState({name: '',
-                                                        phone: '',
-                                                        email: '',
-                                                        additionalPassenger: 'None',
-                                                        wheelchairNeeded: 'No',
-                                                        rideBackNeeded: 'No'
+    const [passengerInfo, setPassengerInfo] = React.useState({name: "",
+                                                        phone: "",
+                                                        email: "",
+                                                        additionalPassenger: "None",
+                                                        wheelchairNeeded: "No",
+                                                        rideBackNeeded: "No"
                                                         });
+
+    const [browserLocation, setBrowserLocation] = React.useState({
+                                                                browserLat: "",
+                                                                browserLong: ""
+                                                            });
+
     const reservationForm = {
         addressPick, setAddressPick,
         coordinatesPick, setCoordinatesPick,
@@ -41,7 +47,8 @@ export default ({ children }) => {
         price, setPrice,
         date, setDate,
         time, setTime,
-        passengerInfo, setPassengerInfo
+        passengerInfo, setPassengerInfo,
+        browserLocation, setBrowserLocation
     }
 
 return <reservationFormContext.Provider value={reservationForm}>{ children }</reservationFormContext.Provider>

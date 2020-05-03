@@ -12,13 +12,7 @@ function StepOne(props) {
     const { addressDrop, setAddressDrop } = React.useContext(reservationFormContext);
     const { setCoordinatesDrop } = React.useContext(reservationFormContext);
     const { buildingInfoDrop, setBuildingInfoDrop } = React.useContext(reservationFormContext);
-
-    // useEffect(() => {
-    //     navigator.geolocation.getCurrentPosition(function(position) {
-    //         console.log("Latitude is :", position.coords.latitude);
-    //         console.log("Longitude is :", position.coords.longitude);
-    //     });
-    // });
+    const { browserLocation, serBrowserLocation } = React.useContext(reservationFormContext);
 
     const handleSelectPick = async value => {
         const results = await geocodeByAddress(value);
@@ -51,6 +45,7 @@ function StepOne(props) {
     }
 
     let mapUrl = `https://maps.google.com/maps?q=seattle&t=&z=9&ie=UTF8&iwloc=&output=embed`;
+    // let mapUrl = `https://maps.google.com/maps?q=${browserLocation.browserLat}+${browserLocation.browserLong}&t=&z=9&ie=UTF8&iwloc=&output=embed`;
     // let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
 
     return (
