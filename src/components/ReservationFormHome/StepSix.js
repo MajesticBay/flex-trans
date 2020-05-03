@@ -6,7 +6,6 @@ import 'react-notifications/lib/notifications.css';
 import { reservationFormContext } from '../../contexts/reservationFormContext';
 
 function StepSix(props) {
-
     const { addressPick } = React.useContext(reservationFormContext);
     const { buildingInfoPick } = React.useContext(reservationFormContext);
     const { addressDrop } = React.useContext(reservationFormContext);

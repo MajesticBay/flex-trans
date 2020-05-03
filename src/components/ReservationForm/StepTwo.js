@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 import PlacesAutocomplete, { geocodeByAddress, getLatLng } from "react-places-autocomplete";
 
 import { reservationFormContext } from '../../contexts/reservationFormContext';
@@ -12,7 +12,10 @@ function StepOne(props) {
     const { addressDrop, setAddressDrop } = React.useContext(reservationFormContext);
     const { setCoordinatesDrop } = React.useContext(reservationFormContext);
     const { buildingInfoDrop, setBuildingInfoDrop } = React.useContext(reservationFormContext);
+    const { price, setPrice } = React.useContext(reservationFormContext);
     const { browserLocation, serBrowserLocation } = React.useContext(reservationFormContext);
+
+    const [ buttonText, setButtonText ] = useState("Calculate Trip Cost");
 
     const handleSelectPick = async value => {
         const results = await geocodeByAddress(value);
@@ -132,9 +135,13 @@ function StepOne(props) {
                         <input className="step-four__apt-input reservation-form__input rounded" placeholder="Apt./Ste" onChange={e => handleBuildingInfoDrop(e)} />
                     </div>
                 </div>
-
+                <div className="reservation-form__reservation-footer-price-container mb-1">
+                    <span className="reservation-footer-price-container__total">Total: </span>
+                    <span className="reservation-footer-price-container__dollar">$</span>
+                    <span className="reservation-footer-price-container__price">{price}</span>
+                </div>
                 <div className="reservation-form__submit-btn rounded pointer" onClick={() => nextStep()}>
-                    <span className="reservation-form__submit-text">Reserve a trip</span>
+                    <span className="reservation-form__submit-text">{buttonText}</span>
                 </div>
             </div>
             <div>

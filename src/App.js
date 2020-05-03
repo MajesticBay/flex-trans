@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import NavBar from './components/NavBar';
 import Top from './components/Top';
 import ReservationFormHome from './components/ReservationFormHome/ReservationFormHome';
@@ -9,21 +9,9 @@ import Mission from './components/Mission';
 import MissionMobile from './components/MissionMobile'
 import Footer from './components/Footer';
 import routes from './routes';
-import { reservationFormContext } from './contexts/reservationFormContext';
 import bg from './images/bg.jpg';
 
 function App() {
-  const { browserLocation, setBrowserLocation } = React.useContext(reservationFormContext);
-
-  useEffect(() => {
-    navigator.geolocation.getCurrentPosition(function(position) {
-        console.log("Latitude is :", position.coords.latitude);
-        console.log("Longitude is :", position.coords.longitude);
-        setBrowserLocation({ ...browserLocation, browserLat: position.coords.latitude });
-        setBrowserLocation({ ...browserLocation, browserLong: position.coords.longitude });
-      });
-  });
-
   return (
     <div className="App">
         <NavBar/>

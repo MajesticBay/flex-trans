@@ -13,7 +13,7 @@ export default ({ children }) => {
 
     const [distance, setDistance] = React.useState("");
 
-    const [price, setPrice] = React.useState("");
+    const [price, setPrice] = React.useState(0);
 
     const [date, setDate] = React.useState("");
     const [time, setTime] = React.useState({
