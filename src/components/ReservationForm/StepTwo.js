@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PlacesAutocomplete, { geocodeByAddress, getLatLng } from "react-places-autocomplete";
 
 import { reservationFormContext } from '../../contexts/reservationFormContext';
@@ -12,6 +12,13 @@ function StepOne(props) {
     const { addressDrop, setAddressDrop } = React.useContext(reservationFormContext);
     const { setCoordinatesDrop } = React.useContext(reservationFormContext);
     const { buildingInfoDrop, setBuildingInfoDrop } = React.useContext(reservationFormContext);
+
+    // useEffect(() => {
+    //     navigator.geolocation.getCurrentPosition(function(position) {
+    //         console.log("Latitude is :", position.coords.latitude);
+    //         console.log("Longitude is :", position.coords.longitude);
+    //     });
+    // });
 
     const handleSelectPick = async value => {
         const results = await geocodeByAddress(value);
@@ -43,8 +50,8 @@ function StepOne(props) {
         }
     }
 
-    let mapUrl = `https://www.google.com/maps/embed/v1/place?key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE&q=Space+Needle,Seattle+WA`;
-    // let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&language=EN&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
+    let mapUrl = `https://maps.google.com/maps?q=seattle&t=&z=9&ie=UTF8&iwloc=&output=embed`;
+    // let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
 
     return (
         <div className="new-form-step-two__container">

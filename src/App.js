@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import NavBar from './components/NavBar';
 import Top from './components/Top';
 import ReservationFormHome from './components/ReservationFormHome/ReservationFormHome';
@@ -13,6 +13,13 @@ import routes from './routes';
 import bg from './images/bg.jpg';
 
 function App() {
+  // useEffect(() => {
+  //   navigator.geolocation.getCurrentPosition(function(position) {
+  //       console.log("Latitude is :", position.coords.latitude);
+  //       console.log("Longitude is :", position.coords.longitude);
+  //     });
+  // });
+
   return (
     <div className="App">
         <NavBar/>
