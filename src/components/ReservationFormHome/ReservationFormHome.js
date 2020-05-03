@@ -17,6 +17,10 @@ function ReservationForm(props) {
         // console.log("current step after -> ", currentStep);
     }
 
+    const _previous = () => {
+        setCurrentStep(currentStep - 1)
+    }
+
     const switchForms = () => {
         switch (currentStep) {
             case 1:
@@ -24,13 +28,13 @@ function ReservationForm(props) {
             case 2:
                 return <StepTwo currentStep={currentStep} next={_next}/>
             case 3:
-                return <StepThree currentStep={currentStep} next={_next}/>
+                return <StepThree currentStep={currentStep} next={_next} previous={_previous}/>
             case 4:
-                return <StepFour currentStep={currentStep} next={_next}/>
+                return <StepFour currentStep={currentStep} next={_next} previous={_previous}/>
             case 5:
-                return <StepFive currentStep={currentStep} next={_next}/>
+                return <StepFive currentStep={currentStep} next={_next} previous={_previous}/>
             case 6:
-                return <StepSix currentStep={currentStep} next={_next}/>
+                return <StepSix currentStep={currentStep} next={_next} previous={_previous}/>
             case 7:
                 return <StepSeven currentStep={currentStep} next={_next}/>
             default:
