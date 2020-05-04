@@ -10,9 +10,11 @@ function ReservationForm(props) {
     const [currentStep, setCurrentStep] = useState(1);
 
     const _next = () => {
-        // console.log("current step before -> ", currentStep);
-        setCurrentStep(currentStep + 1)
-        // console.log("current step after -> ", currentStep);
+        setCurrentStep(currentStep + 1);
+    }
+
+    const _previous = () => {
+        setCurrentStep(currentStep - 1);
     }
 
     const switchForms = () => {
@@ -21,17 +23,13 @@ function ReservationForm(props) {
             case 1:
                 return <StepOne currentStep={currentStep} next={_next}/>
             case 2:
-                return <StepTwo currentStep={currentStep} next={_next}/>
+                return <StepTwo currentStep={currentStep} next={_next} previous={_previous}/>
             case 3:
-                return <StepThree currentStep={currentStep} next={_next}/>
+                return <StepThree currentStep={currentStep} next={_next} previous={_previous}/>
             case 4:
-                return <StepFour currentStep={currentStep} next={_next}/>
+                return <StepFour currentStep={currentStep} next={_next} previous={_previous}/>
             case 5:
-                return <StepFive currentStep={currentStep} next={_next}/>
-            // case 6:
-            //     return <StepSix currentStep={currentStep} next={_next}/>
-            // case 7:
-            //     return <StepSeven currentStep={currentStep} next={_next}/>
+                return <StepFive currentStep={currentStep} next={_next} previous={_previous}/>
             default:
                 return <StepOne currentStep={currentStep} next={_next}/>
             }

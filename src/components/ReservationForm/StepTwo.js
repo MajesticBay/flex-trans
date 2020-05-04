@@ -77,14 +77,10 @@ function StepOne(props) {
         }
     }
 
-    //let mapUrl = `https://maps.google.com/maps?q=seattle&t=&z=9&ie=UTF8&iwloc=&output=embed`;
-    // let mapUrl = `https://maps.google.com/maps?q=${browserLocation.browserLat}+${browserLocation.browserLong}&t=&z=9&ie=UTF8&iwloc=&output=embed`;
-    // let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
-
     return (
         <div className="new-form-step-two__container">
             <div className="new-form-step-two__new-form-step-form-container">
-                <div className="">
+                <div className="new-form__step-header">
                     <span className="new-form-step-two__header">Reservation Form</span>
                     <div className="">
                         <p className=" reservation-form__input-label">Pick-up location</p>

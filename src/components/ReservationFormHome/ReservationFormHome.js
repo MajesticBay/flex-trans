@@ -12,9 +12,7 @@ function ReservationForm(props) {
     const [currentStep, setCurrentStep] = useState(1);
 
     const _next = () => {
-        // console.log("current step before -> ", currentStep);
-        setCurrentStep(currentStep + 1)
-        // console.log("current step after -> ", currentStep);
+        setCurrentStep(currentStep + 1);
     }
 
     const _previous = () => {
