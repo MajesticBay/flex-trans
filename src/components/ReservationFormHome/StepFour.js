@@ -50,10 +50,11 @@ function StepFour(props) {
             <div className="step-four__inner-container">
                 <div className="step-four__step-four-header">
                     <span className="step-four__header-text">Reservation form</span>
-                    {/* <div>
-                        <span>← Back</span>
-                        <span>Step 3 of 5</span>
-                    </div> */}
+                    <span className="reservation-form__back-container">
+                        <span className="back-container__back-text pointer" onClick={() => props.previous()}>← Back </span>
+                        <span className="back-container__step-text">Step 2</span>
+                        <span className="back-container__of-steps-text"> of 5</span>
+                    </span>
                 </div>
                 <div className="step-four__step-four-form">
                     <div className="step-four__address-container">
