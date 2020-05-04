@@ -50,7 +50,7 @@ function StepThree(props) {
                     <span className="reservation-form__back-container">
                         <span className="back-container__back-text pointer" onClick={() => props.previous()}>← Back </span>
                         <span className="back-container__step-text">Step 1</span>
-                        <span className="back-container__of-steps-text"> of 5</span>
+                        <span className="back-container__of-steps-text"> of 4</span>
                     </span>
                 </div>
                 <div className="step-three__reservation-date-picker-container">
