@@ -176,7 +176,6 @@ function StepOne(props) {
             </div>
             <div>
                 <iframe title="google-map" frameBorder="0" style={{ width: "100%", height: "100%", borderTopRightRadius: "6px", borderBottomRightRadius: "6px" }} src={mapUrl}></iframe>
-                {/* <span>Distance {distance}</span> */}
             </div>
         </div>
     )

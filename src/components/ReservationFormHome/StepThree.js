@@ -48,9 +48,9 @@ function StepThree(props) {
                 <div className="step-three__step-header">
                     <span className="step-three__header">Pick-up date and time</span>
                     <span className="reservation-form__back-container">
-                        <span onClick={() => props.previous()}>← Back</span>
-                        <span>Step 1</span>
-                        <span>of 5</span>
+                        <span className="back-container__back-text pointer" onClick={() => props.previous()}>← Back </span>
+                        <span className="back-container__step-text">Step 1</span>
+                        <span className="back-container__of-steps-text"> of 5</span>
                     </span>
                 </div>
                 <div className="step-three__reservation-date-picker-container">

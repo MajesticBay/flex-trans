@@ -1,13 +1,10 @@
 import React, { useEffect } from 'react';
-// import GoogleMap from 'google-distance-matrix';
 import axios from 'axios';
 import { reservationFormContext } from '../../contexts/reservationFormContext';
 
 require('dotenv').config();
 
 function StepTwo(props) {
-    // GoogleMap.key('AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE');
-    // GoogleMap.units('imperial');
     const { addressPick } = React.useContext(reservationFormContext);
     const { addressDrop } = React.useContext(reservationFormContext);
     const { distance, setDistance } = React.useContext(reservationFormContext);
@@ -58,7 +55,6 @@ function StepTwo(props) {
             </div>
             <div>
                 <iframe title="google-map" frameBorder="0" style={{ width: "100%", height: "100%", borderTopRightRadius: "6px", borderBottomRightRadius: "6px" }} src={mapUrl}></iframe>
-                {/* <span>Distance {distance}</span> */}
             </div>
         </div>
     )
