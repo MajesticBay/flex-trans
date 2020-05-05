@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PlacesAutocomplete, { geocodeByAddress, getLatLng } from "react-places-autocomplete";
+import axios from 'axios';
 
 import { reservationFormContext } from '../../contexts/reservationFormContext';
 
@@ -10,9 +11,15 @@ function StepFour(props) {
     const { addressDrop, setAddressDrop } = React.useContext(reservationFormContext);
     const { setCoordinatesDrop } = React.useContext(reservationFormContext);
     const { buildingInfoDrop, setBuildingInfoDrop } = React.useContext(reservationFormContext);
-    const { price } = React.useContext(reservationFormContext);
+    const { price, setPrice } = React.useContext(reservationFormContext);
+    const { distance, setDistance } = React.useContext(reservationFormContext);
+
+
+    const [buttonText, setButtonText] = useState("Calculate Trip Cost");
+    const [distanceAndPriceCalculated, setDistanceAndPriceCalculated] = useState(false);
+    const [mapUrl, setMapUrl] = useState('https://maps.google.com/maps?q=seattle&t=&z=9&ie=UTF8&iwloc=&output=embed');
     
-    let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&language=EN&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
+    // let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&language=EN&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
     
     const handleSelectPick = async value => {
         const results = await geocodeByAddress(value);
@@ -36,13 +43,38 @@ function StepFour(props) {
         setBuildingInfoDrop(e.target.value);
     }
 
+    const calculatePrice = () => {
+        let origins = [addressPick];
+        let destinations = [addressDrop];
+        axios.post('/distance', { origins, destinations })
+            .then(res => {
+                console.log('res.data = ', res.data);
+                let distanceStrArr = res.data[0].elements[0].distance.text.split(' ');
+                let distanceStr = distanceStrArr[0];
+                console.log('distanceStr = ', distanceStr);
+                let priceRes = (30 + (2.95 * parseInt(distanceStr))).toFixed(2);
+                setPrice(priceRes);
+                setDistance(distanceStr);
+                console.log(distance);
+            })
+            .catch(err => {
+                console.log(err);
+            })
+    }
+
+    const calculateDistanceAndPrice = () => {
+        calculatePrice();
+        setMapUrl(`https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&language=EN&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`);
+        setButtonText('Next Step');
+        setDistanceAndPriceCalculated(true);
+    }
+
     const nextStep = () => {
-        // if (!buildingInfoPick || !buildingInfoDrop) {
-        //     alert ("Fill out all fields!");
-        // } else {
-        //     props.next();
-        // }
-        props.next();
+        if (!distanceAndPriceCalculated) {
+            calculateDistanceAndPrice();
+        } else {
+            props.next();
+        }
     }
     
     return (
@@ -143,8 +175,8 @@ function StepFour(props) {
                         <span className="reservation-footer-price-container__dollar">$</span>
                         <span className="reservation-footer-price-container__price">{price}</span>
                     </div>
-                    <div className="reservation-form__submit-btn rounded pointer" onClick={() => nextStep()}>
-                        <span className="reservation-form__submit-text">Next Step →</span>
+                    <div style={{backgroundColor: distanceAndPriceCalculated ? '#df2c21' : '#4FC770'}} className="reservation-form__submit-btn rounded pointer" onClick={() => nextStep()}>
+                        <span className="reservation-form__submit-text">{buttonText}</span>
                     </div>
                 </div>
             </div>

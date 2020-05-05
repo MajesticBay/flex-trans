@@ -4,7 +4,7 @@ import PlacesAutocomplete, { geocodeByAddress, getLatLng } from "react-places-au
 
 import { reservationFormContext } from '../../contexts/reservationFormContext';
 
-function StepOne(props) {
+function StepTwo(props) {
     const { addressPick, setAddressPick } = React.useContext(reservationFormContext);
     const { setCoordinatesPick } = React.useContext(reservationFormContext);
     const { buildingInfoPick, setBuildingInfoPick } = React.useContext(reservationFormContext);
@@ -177,4 +177,4 @@ function StepOne(props) {
     )
 }
 
-export default StepOne;
+export default StepTwo;
