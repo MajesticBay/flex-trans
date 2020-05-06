@@ -82,8 +82,10 @@ function StepTwo(props) {
             <div className="new-form-step-two__new-form-step-form-container">
                 <div className="new-form__step-header">
                     <span className="new-form-step-two__header">Reservation Form</span>
+                </div>
+                <div>
                     <div className="">
-                        <p className=" reservation-form__input-label">Pick-up location</p>
+                        <p className="reservation-form__input-label">Pick-up location</p>
                         <PlacesAutocomplete value={addressPick} onChange={setAddressPick} onSelect={handleSelectPick}>
                             {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
                                 <div style={{ gridArea: "address", position: "relative", display: "flex", flexDirection: "column" }}>
