@@ -6,27 +6,8 @@ import { reservationFormContext } from '../../contexts/reservationFormContext';
 import fordtransit from '../../images/car-left-shadow.png';
 
 function StepOne(props) {
-    const { addressPick, setAddressPick } = React.useContext(reservationFormContext);
-    const { setCoordinatesPick } = React.useContext(reservationFormContext);
-    const { addressDrop, setAddressDrop } = React.useContext(reservationFormContext);
-    const { setCoordinatesDrop } = React.useContext(reservationFormContext);
-
     const { date, setDate } = React.useContext(reservationFormContext);
     const { time, setTime } = React.useContext(reservationFormContext);
-
-    const handleSelectPick = async value => {
-        const results = await geocodeByAddress(value);
-        const latLng = await getLatLng(results[0]);
-        setAddressPick(value);
-        setCoordinatesPick(latLng);
-    };
-
-    const handleSelectDrop = async value => {
-        const results = await geocodeByAddress(value);
-        const latLng = await getLatLng(results[0]);
-        setAddressDrop(value);
-        setCoordinatesDrop(latLng);
-    };
 
     const handleDateChange = (e) => {
         setDate(e.target.value);
@@ -49,6 +30,8 @@ function StepOne(props) {
     }
 
     const nextStep = () => {
+        let timeStr = time.hours + ':' + time.minutes + ' ' + time.ampm;
+        setTime ({ ...time, fullTime: timeStr });
         if (!date || !time) {
             alert ("Fill out all fields!");
         } else {
