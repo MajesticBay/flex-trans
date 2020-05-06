@@ -84,8 +84,8 @@ function StepTwo(props) {
                     <span className="new-form-step-two__header">Reservation Form</span>
                     <span className="reservation-form__back-container">
                         <span className="back-container__back-text pointer" onClick={() => props.previous()}>← Back </span>
-                        <span className="back-container__step-text">Step 1</span>
-                        <span className="back-container__of-steps-text"> of 4</span>
+                        <span className="back-container__step-text">Step 2</span>
+                        <span className="back-container__of-steps-text"> of 5</span>
                     </span>
                 </div>
                 <div>
