@@ -5,6 +5,8 @@ import { reservationFormContext } from '../../contexts/reservationFormContext';
 
 import fordtransit from '../../images/car-left-shadow.png';
 
+import DateInput from 'react-date-picker';
+
 function StepOne(props) {
     const { date, setDate } = React.useContext(reservationFormContext);
     const { time, setTime } = React.useContext(reservationFormContext);
@@ -45,7 +47,7 @@ function StepOne(props) {
                 <span className="step-three__header step-three__header-pb-2">Pick-up date and time</span>
                 <div className="step-three__reservation-date-picker-container step-three__reservation-date-picker-container--reservation">
                     <input className="reservation-form__input reservation-form__input--no-margin rounded" type="date" onChange={e => handleDateChange(e)}/>
-                    {/* <DateInput onChange={e => handleDateChange(e)}/> */}
+                    {/* <DateInput onChange={e => handleDateChange(e)} value={date}/> */}
                     <div className="reservation-date-picker-container__reservation-time-picker">
                         <select className="reservation-form__input reservation-form__input--no-margin rounded" onChange={e => handleHoursChange(e)}>
                             <option>0</option>

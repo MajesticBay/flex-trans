@@ -6,8 +6,9 @@
 
 .new-form__step-header {
     display: flex;
-    // justify-content: space-between;
-    // margin-bottom: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
 }
 
 .new-form-step-two__new-form-step-form-container {
@@ -19,8 +20,8 @@
 }
 
 .new-form-step-two__header {
-    display: block;
-    margin-bottom: 2rem;
+    // display: block;
+    // margin-bottom: 2rem;
     font-size: var(--font-2-6);
 }
 

@@ -44,8 +44,8 @@ function StepFour(props) {
         const additionalPassenger = passengerInfo.additionalPassenger;
         const wheelchairNeeded = passengerInfo.wheelchairNeeded;
         const rideBackNeeded = passengerInfo.rideBackNeeded;
-        console.log(priceStr);
-        console.log(distanceStr);
+        // console.log(priceStr);
+        // console.log(distanceStr);
         const formValues = {
                             dateStr,
                             timeStr,

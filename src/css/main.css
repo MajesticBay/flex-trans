@@ -1119,7 +1119,10 @@ html {
   box-shadow: 0px 34px 64px rgba(0, 0, 0, 0.09); }
 
 .new-form__step-header {
-  display: flex; }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem; }
 
 .new-form-step-two__new-form-step-form-container {
   background-color: var(--color-white);
@@ -1128,8 +1131,6 @@ html {
   padding: 2.5rem; }
 
 .new-form-step-two__header {
-  display: block;
-  margin-bottom: 2rem;
   font-size: var(--font-2-6); }
 
 @media only screen and (min-width: 768px) {
