@@ -18,8 +18,8 @@ export default ({ children }) => {
     const [date, setDate] = React.useState("");
     const [time, setTime] = React.useState({
                                             fullTime: "",
-                                            hours: "",
-                                            minutes: "",
+                                            hours: "0",
+                                            minutes: "00",
                                             ampm: ""
                                         });
 
