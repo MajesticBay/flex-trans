@@ -43,9 +43,9 @@ function StepFive(props) {
     }
 
     const nextStep = () => {
-        var hasFalseKeys = Object.keys(passengerInfo).some(k => !passengerInfo[k]);
+        // var hasFalseKeys = Object.keys(passengerInfo).some(k => !passengerInfo[k]);
 
-        if (hasFalseKeys) { 
+        if (!passengerInfo.name || !passengerInfo.phone || !passengerInfo.email) { 
             alert ("Fill out all fields!");
         } else {
             props.next();

@@ -34,7 +34,7 @@ function StepOne(props) {
     const nextStep = () => {
         let timeStr = time.hours + ':' + time.minutes + ' ' + time.ampm;
         setTime ({ ...time, fullTime: timeStr });
-        if (!date || !time) {
+        if (!date || !time.ampm) {
             alert ("Fill out all fields!");
         } else {
             props.next();
