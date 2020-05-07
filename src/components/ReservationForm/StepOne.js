@@ -32,8 +32,20 @@ function StepOne(props) {
     }
 
     const nextStep = () => {
+        let today = new Date();
+        console.log('today ', today);
         let timeStr = time.hours + ':' + time.minutes + ' ' + time.ampm;
         setTime ({ ...time, fullTime: timeStr });
+        // if (date > today) {
+        //     if (!date || !time.ampm) {
+        //         alert ("Fill out all fields!");
+        //     } else {
+        //         props.next();
+        //     }
+        // } else {
+        //     alert ("The reservation has to be scheduled 24 hours in advance.");
+        // }   
+
         if (!date || !time.ampm) {
             alert ("Fill out all fields!");
         } else {
