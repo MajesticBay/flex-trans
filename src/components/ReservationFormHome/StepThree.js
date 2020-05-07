@@ -104,7 +104,7 @@ function StepThree(props) {
                 
             </div>
             <div>
-                <iframe title="google-map" frameBorder="0" style={{ width: "100%", height: "100%", minHeight: "30rem", borderTopRightRadius: "6px", borderBottomRightRadius: "6px" }} src={mapUrl}>
+                <iframe className="google-map-iframe" title="google-map" frameBorder="0" style={{orderBottomRightRadius: "6px" }} src={mapUrl}>
                 </iframe>
             </div>
         </div>
