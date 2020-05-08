@@ -95,7 +95,7 @@ function StepFour(props) {
                     <div className="step-six__step-six-form-container">
                         <div className="step-six-form-container__step-six-line-container">
                             <span className="step-six-line-container__step-six-line-title">Pick-up date: </span>
-                            <span className="step-six-line-container__step-six-line-content">{date}</span>
+                            <span className="step-six-line-container__step-six-line-content">{date.toISOString()}</span>
                         </div>
                         <div className="step-six-form-container__step-six-line-container">
                             <span className="step-six-line-container__step-six-line-title">Pick-up time: </span>

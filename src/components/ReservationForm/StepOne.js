@@ -11,8 +11,8 @@ function StepOne(props) {
     const { date, setDate } = React.useContext(reservationFormContext);
     const { time, setTime } = React.useContext(reservationFormContext);
 
-    const handleDateChange = (e) => {
-        setDate(e.target.value);
+    const handleDateChange = (date) => {
+        setDate(date);
         // console.log('date => ', date);
     }
 
@@ -29,6 +29,12 @@ function StepOne(props) {
     const handleRadioChange = (e) => {
         setTime ({ ...time, ampm: e.target.value });
         // console.log('time => ', time);
+    }
+
+    const getTomorrow = () => {
+        var tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        return new Date(tomorrow);
     }
 
     const nextStep = () => {
@@ -58,8 +64,8 @@ function StepOne(props) {
                 <div className="step-one__form rounded-desktop">
                 <span className="step-three__header step-three__header-pb-2">Pick-up date and time</span>
                 <div className="step-three__reservation-date-picker-container step-three__reservation-date-picker-container--reservation">
-                    <input className="reservation-form__input reservation-form__input--no-margin rounded" type="date" onChange={e => handleDateChange(e)}/>
-                    {/* <DateInput onChange={e => handleDateChange(e)} value={date}/> */}
+                    {/* <input className="reservation-form__input reservation-form__input--no-margin rounded" type="date" onChange={e => handleDateChange(e)}/> */}
+                    <DateInput minDate={getTomorrow()} onChange={e => handleDateChange(e)} value={date}/>
                     <div className="reservation-date-picker-container__reservation-time-picker">
                         <select className="reservation-form__input reservation-form__input--no-margin rounded" onChange={e => handleHoursChange(e)}>
                             <option>0</option>
