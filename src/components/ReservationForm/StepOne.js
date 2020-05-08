@@ -1,17 +1,15 @@
 import React from 'react';
-import { geocodeByAddress, getLatLng } from "react-places-autocomplete";
-
 import { reservationFormContext } from '../../contexts/reservationFormContext';
-
 import fordtransit from '../../images/car-left-shadow.png';
-
 import DateInput from 'react-date-picker';
 
 function StepOne(props) {
-    const { date, setDate } = React.useContext(reservationFormContext);
-    const { time, setTime } = React.useContext(reservationFormContext);
+    const { date, setDate, time, setTime } = React.useContext(reservationFormContext);
+    // const { time, setTime } = React.useContext(reservationFormContext);
 
+    /** @param {Date} date @type void */
     const handleDateChange = (date) => {
+        console.log('date ', date)
         setDate(date);
         // console.log('date => ', date);
     }
@@ -38,19 +36,10 @@ function StepOne(props) {
     }
 
     const nextStep = () => {
-        let today = new Date();
-        console.log('today ', today);
+        // let today = new Date();
+        console.log('date ', date);
         let timeStr = time.hours + ':' + time.minutes + ' ' + time.ampm;
         setTime ({ ...time, fullTime: timeStr });
-        // if (date > today) {
-        //     if (!date || !time.ampm) {
-        //         alert ("Fill out all fields!");
-        //     } else {
-        //         props.next();
-        //     }
-        // } else {
-        //     alert ("The reservation has to be scheduled 24 hours in advance.");
-        // }   
 
         if (!date || !time.ampm) {
             alert ("Fill out all fields!");
@@ -89,9 +78,6 @@ function StepOne(props) {
                             <option>30</option>
                             <option>45</option>
                         </select>
-                        {/* <TimeInput onChange={e => handleHoursChange(e)}/>
-                        <span> : </span>
-                        <TimeInput onChange={e => handleMinutesChange(e)}/> */}
                     </div>
                     <div className="reservation-date-picker-container__reservation-am-pm-picker">
                         <div className="reservation-am-pm-picker__inner-container">
