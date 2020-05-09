@@ -36,7 +36,7 @@ function StepFive(props) {
 
     const handleRideBackNeededChange = (e) => {
         if (e.target.value == "Yes") {
-            setPrice(price * 2);
+            setPrice((price * 2).toFixed(2));
         }
         setPassengerInfo({ ...passengerInfo, rideBackNeeded: e.target.value });
         console.log('passengerInfo => ', passengerInfo.rideBackNeeded);
