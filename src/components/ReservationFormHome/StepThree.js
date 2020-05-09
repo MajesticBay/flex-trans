@@ -1,5 +1,5 @@
 import React from 'react';
-import Calendar from "react-date-picker";
+import DateInput from 'react-date-picker';
 
 import { reservationFormContext } from '../../contexts/reservationFormContext';
 
@@ -12,9 +12,17 @@ function StepThree(props) {
     
     let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
 
-    const handleDateChange = (e) => {
-        setDate(e.target.value);
+    /** @param {Date} date @type void */
+    const handleDateChange = (date) => {
+        console.log('date ', date)
+        setDate(date);
         // console.log('date => ', date);
+    }
+
+    const getTomorrow = () => {
+        var tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        return new Date(tomorrow);
     }
 
     const handleHoursChange = (e) => {
@@ -54,8 +62,7 @@ function StepThree(props) {
                     </span>
                 </div>
                 <div className="step-three__reservation-date-picker-container">
-                    {/* <Calendar className="reservation-form__input reservation-form__input--no-margin rounded" onChange={e => handleDateChange(e)} value={date}/> */}
-                    <input className="reservation-form__input reservation-form__input--no-margin rounded" type="date" onChange={e => handleDateChange(e)}/>
+                <DateInput minDate={getTomorrow()} onChange={e => handleDateChange(e)} value={date}/>
                     <div className="reservation-date-picker-container__reservation-time-picker">
                         <select className="reservation-form__input reservation-form__input--no-margin rounded" onChange={e => handleHoursChange(e)}>
                             <option>0</option>
@@ -79,9 +86,6 @@ function StepThree(props) {
                             <option>30</option>
                             <option>45</option>
                         </select>
-                        {/* <TimeInput onChange={e => handleHoursChange(e)}/>
-                        <span> : </span>
-                        <TimeInput onChange={e => handleMinutesChange(e)}/> */}
                     </div>
                     <div className="reservation-date-picker-container__reservation-am-pm-picker">
                         <div className="reservation-am-pm-picker__inner-container">

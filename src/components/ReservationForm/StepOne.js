@@ -13,6 +13,11 @@ function StepOne(props) {
         setDate(date);
         // console.log('date => ', date);
     }
+    const getTomorrow = () => {
+        var tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        return new Date(tomorrow);
+    }
 
     const handleHoursChange = (e) => {
         setTime({ ...time, hours: e.target.value });
@@ -27,12 +32,6 @@ function StepOne(props) {
     const handleRadioChange = (e) => {
         setTime ({ ...time, ampm: e.target.value });
         // console.log('time => ', time);
-    }
-
-    const getTomorrow = () => {
-        var tomorrow = new Date();
-        tomorrow.setDate(tomorrow.getDate() + 1);
-        return new Date(tomorrow);
     }
 
     const nextStep = () => {
