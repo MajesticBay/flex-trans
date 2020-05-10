@@ -107,11 +107,19 @@ function StepThree(props) {
                             <option selected>No</option>
                         </select>
                     </div>
-                    <div style={{display: 'none'}}>
-                        <p>Do you know return time?</p>
-                        <div>
-                            <span>Text</span>
-                        </div>
+                    <div className="step-five__additional-info-form-group">
+                        <p className="step-five__additional-info-header reservation-form__input-label reservation-form__input-label--no-margin">Do you know<br/>your return time?</p>
+                        <select className="step-five__additional-info-input reservation-form__input reservation-form__input--no-margin rounded"onChange={e => handleRideBackNeededChange(e)}>
+                            <option>Yes</option>
+                            <option selected>No</option>
+                        </select>
+                    </div>
+                    <div className="step-five__additional-info-form-group">
+                        <p className="step-five__additional-info-header reservation-form__input-label reservation-form__input-label--no-margin">Please, select<br/>your return time</p>
+                        <select className="step-five__additional-info-input reservation-form__input reservation-form__input--no-margin rounded"onChange={e => handleRideBackNeededChange(e)}>
+                            <option>Yes</option>
+                            <option selected>No</option>
+                        </select>
                     </div>
                 </div>
                 <div className="step-five__step-five-footer">
