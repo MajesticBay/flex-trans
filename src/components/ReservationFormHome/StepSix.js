@@ -6,15 +6,18 @@ import 'react-notifications/lib/notifications.css';
 import { reservationFormContext } from '../../contexts/reservationFormContext';
 
 function StepSix(props) {
-    const { addressPick } = React.useContext(reservationFormContext);
-    const { buildingInfoPick } = React.useContext(reservationFormContext);
-    const { addressDrop } = React.useContext(reservationFormContext);
-    const { buildingInfoDrop } = React.useContext(reservationFormContext);
-    const { distance } = React.useContext(reservationFormContext);
-    const { price } = React.useContext(reservationFormContext);
-    const { date } = React.useContext(reservationFormContext);
-    const { time } = React.useContext(reservationFormContext);
-    const { passengerInfo } = React.useContext(reservationFormContext);
+    const {
+        addressPick, buildingInfoPick, addressDrop, buildingInfoDrop,
+        distance, price, date, time, passengerInfo
+    } = React.useContext(reservationFormContext);
+    // const { buildingInfoPick } = React.useContext(reservationFormContext);
+    // const { addressDrop } = React.useContext(reservationFormContext);
+    // const { buildingInfoDrop } = React.useContext(reservationFormContext);
+    // const { distance } = React.useContext(reservationFormContext);
+    // const { price } = React.useContext(reservationFormContext);
+    // const { date } = React.useContext(reservationFormContext);
+    // const { time } = React.useContext(reservationFormContext);
+    // const { passengerInfo } = React.useContext(reservationFormContext);
 
     const createNotification = (type) => {
         console.log(type)

@@ -6,10 +6,13 @@ import { reservationFormContext } from '../../contexts/reservationFormContext';
 import fordtransit from '../../images/car-left-shadow.png';
 
 function StepOne(props) {
-    const { addressPick, setAddressPick } = React.useContext(reservationFormContext);
-    const { setCoordinatesPick } = React.useContext(reservationFormContext);
-    const { addressDrop, setAddressDrop } = React.useContext(reservationFormContext);
-    const { setCoordinatesDrop } = React.useContext(reservationFormContext);
+    const {
+        addressPick, setAddressPick, setCoordinatesPick,
+        addressDrop, setAddressDrop, setCoordinatesDrop
+    } = React.useContext(reservationFormContext);
+    // const { setCoordinatesPick } = React.useContext(reservationFormContext);
+    // const { addressDrop, setAddressDrop } = React.useContext(reservationFormContext);
+    // const { setCoordinatesDrop } = React.useContext(reservationFormContext);
 
     const handleSelectPick = async value => {
         const results = await geocodeByAddress(value);

@@ -4,11 +4,12 @@ import DateInput from 'react-date-picker';
 import { reservationFormContext } from '../../contexts/reservationFormContext';
 
 function StepThree(props) {
-    const { addressPick } = React.useContext(reservationFormContext);
-    const { addressDrop } = React.useContext(reservationFormContext);
-
-    const { date, setDate } = React.useContext(reservationFormContext);
-    const { time, setTime } = React.useContext(reservationFormContext);
+    const {
+        addressPick, addressDrop,
+        date, setDate, time, setTime } = React.useContext(reservationFormContext);
+    // const { addressDrop } = React.useContext(reservationFormContext);
+    // const { date, setDate } = React.useContext(reservationFormContext);
+    // const { time, setTime } = React.useContext(reservationFormContext);
     
     let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
 

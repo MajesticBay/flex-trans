@@ -3,10 +3,10 @@ import React from 'react';
 import { reservationFormContext } from '../../contexts/reservationFormContext';
 
 function StepFive(props) {
-    const { addressPick} = React.useContext(reservationFormContext);
-    const { addressDrop } = React.useContext(reservationFormContext);
-    const { passengerInfo, setPassengerInfo } = React.useContext(reservationFormContext);
-    const { price, setPrice } = React.useContext(reservationFormContext);
+    const { addressPick, addressDrop, passengerInfo, setPassengerInfo, price, setPrice } = React.useContext(reservationFormContext);
+    // const { addressDrop } = React.useContext(reservationFormContext);
+    // const { passengerInfo, setPassengerInfo } = React.useContext(reservationFormContext);
+    // const { price, setPrice } = React.useContext(reservationFormContext);
     let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&language=EN&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
 
     const handleNameChange = (e) => {
