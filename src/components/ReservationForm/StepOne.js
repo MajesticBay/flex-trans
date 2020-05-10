@@ -5,7 +5,6 @@ import DateInput from 'react-date-picker';
 
 function StepOne(props) {
     const { date, setDate, time, setTime } = React.useContext(reservationFormContext);
-    // const { time, setTime } = React.useContext(reservationFormContext);
 
     /** @param {Date} date @type void */
     const handleDateChange = (date) => {
