@@ -179,7 +179,7 @@ function StepFour(props) {
                         <span className="reservation-footer-price-container__dollar">$</span>
                         <span className="reservation-footer-price-container__price">{price}</span>
                     </div>
-                    <div style={{backgroundColor: distanceAndPriceCalculated ? '#df2c21' : '#4FC770'}} className="reservation-form__submit-btn rounded pointer" onClick={() => nextStep()}>
+                    <div style={{backgroundColor: distanceAndPriceCalculated ? '#DF2C21' : '#4FC770'}} className="reservation-form__submit-btn rounded pointer" onClick={() => nextStep()}>
                         <span className="reservation-form__submit-text">{buttonText}</span>
                     </div>
                 </div>

@@ -107,6 +107,12 @@ function StepThree(props) {
                             <option selected>No</option>
                         </select>
                     </div>
+                    <div style={{display: 'none'}}>
+                        <p>Do you know return time?</p>
+                        <div>
+                            <span>Text</span>
+                        </div>
+                    </div>
                 </div>
                 <div className="step-five__step-five-footer">
                     <div className="reservation-form__reservation-footer-price-container">
