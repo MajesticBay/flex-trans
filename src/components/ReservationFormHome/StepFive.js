@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { reservationFormContext } from '../../contexts/reservationFormContext';
 
 function StepFive(props) {

@@ -1,14 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-// import { reservationFormContext } from '../../contexts/reservationFormContext';
-
 import map from '../images/map.png';
 
 function WelcomeWithMap() {
-    // const { addressPick} = React.useContext(reservationFormContext);
-    // const { addressDrop } = React.useContext(reservationFormContext);
-    // let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&language=EN&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
     return (
         <div className="home-content__outside-welcome-container">
             <div className="home-content__welcome-container">

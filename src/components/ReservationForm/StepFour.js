@@ -7,7 +7,6 @@ import 'react-notifications/lib/notifications.css';
 import { reservationFormContext } from '../../contexts/reservationFormContext';
 
 function StepFour(props) {
-
     const {
         addressPick, buildingInfoPick, addressDrop, buildingInfoDrop,
         distance, price, date, time, passengerInfo

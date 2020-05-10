@@ -12,6 +12,7 @@ function StepOne(props) {
         setDate(date);
         // console.log('date => ', date);
     }
+    
     const getTomorrow = () => {
         var tomorrow = new Date();
         tomorrow.setDate(tomorrow.getDate() + 1);

@@ -5,10 +5,13 @@ import { reservationFormContext } from '../../contexts/reservationFormContext';
 require('dotenv').config();
 
 function StepTwo(props) {
-    const { addressPick } = React.useContext(reservationFormContext);
-    const { addressDrop } = React.useContext(reservationFormContext);
-    const { distance, setDistance } = React.useContext(reservationFormContext);
-    const { price, setPrice } = React.useContext(reservationFormContext);
+    const {
+        addressPick, addressDrop,
+        distance, setDistance, price, setPrice
+    } = React.useContext(reservationFormContext);
+    // const { addressDrop } = React.useContext(reservationFormContext);
+    // const { distance, setDistance } = React.useContext(reservationFormContext);
+    // const { price, setPrice } = React.useContext(reservationFormContext);
 
     useEffect(() => {
         let origins = [addressPick];
