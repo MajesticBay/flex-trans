@@ -115,7 +115,7 @@ function StepFive(props) {
                     </div>
                 </div>
             </div>
-            <iframe className="google-map-iframe" title="google-map" frameBorder="0" style={{ borderBottomRightRadius: "6px" }} src={mapUrl}></iframe>
+            <iframe className="google-map-iframe" title="google-map" frameBorder="0" style={{ borderBottomLeftRadius: "6px", borderBottomRightRadius: "6px" }} src={mapUrl}></iframe>
         </div>
     )
 }
