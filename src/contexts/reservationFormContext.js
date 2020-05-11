@@ -28,7 +28,14 @@ export default ({ children }) => {
                                                         email: "",
                                                         additionalPassenger: "None",
                                                         wheelchairNeeded: "No",
-                                                        rideBackNeeded: "No"
+                                                        rideBackNeeded: "No",
+                                                        knowReturnTime: "No, I will call",
+                                                        returnTime: {
+                                                            fullTime: "time",
+                                                            hours: "0",
+                                                            minutes: "00",
+                                                            ampm: ""
+                                                        }
                                                         });
 
     const [browserLocation, setBrowserLocation] = React.useState({

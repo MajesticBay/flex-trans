@@ -37,20 +37,31 @@ function StepThree(props) {
     }
 
     const handleRideBackNeededChange = (e) => {
+        let element = document.getElementById("do-you-know-time-additional-div");
+        let elementTwo = document.getElementById("submit-return-time-additional-div");
         if (e.target.value == "Yes") {
-            let element = document.getElementById("do-you-know-time-additional-div");
             ReactDOM.findDOMNode(element).style.display = "flex";
             setPrice(price * 2);
+        } else {
+            ReactDOM.findDOMNode(element).style.display = "none";
+            ReactDOM.findDOMNode(elementTwo).style.display = "none";
         }
         setPassengerInfo({ ...passengerInfo, rideBackNeeded: e.target.value });
         console.log('passengerInfo => ', passengerInfo.rideBackNeeded);
     }
 
     const handleKnowReturnTimeChange = (e) => {
+        let element = document.getElementById("submit-return-time-additional-div");
         if (e.target.value == "Yes, I know") {
-            let element = document.getElementById("submit-return-time-additional-div");
             ReactDOM.findDOMNode(element).style.display = "flex";
+        } else {
+            ReactDOM.findDOMNode(element).style.display = "none";
         }
+        setPassengerInfo({ ...passengerInfo, knowReturnTime: e.target.value });
+    }
+
+    const handleSelectReturnTimeChange = (e) => {
+        
     }
 
     const nextStep = () => {
@@ -122,7 +133,7 @@ function StepThree(props) {
                     </div>
                     <div style={{display: 'none'}} id="submit-return-time-additional-div" className="step-five__additional-info-form-group">
                         <p className="step-five__additional-info-header reservation-form__input-label reservation-form__input-label--no-margin">Please, select<br/>your return time</p>
-                        <select className="step-five__additional-info-input reservation-form__input reservation-form__input--no-margin rounded"onChange={e => test(e)}>
+                        <select className="step-five__additional-info-input reservation-form__input reservation-form__input--no-margin rounded"onChange={e => handleSelectReturnTimeChange(e)}>
                             <option>Yes</option>
                             <option selected>No</option>
                         </select>

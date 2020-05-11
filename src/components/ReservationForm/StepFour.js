@@ -11,14 +11,6 @@ function StepFour(props) {
         addressPick, buildingInfoPick, addressDrop, buildingInfoDrop,
         distance, price, date, time, passengerInfo
     } = React.useContext(reservationFormContext);
-    // const { buildingInfoPick } = React.useContext(reservationFormContext);
-    // const { addressDrop } = React.useContext(reservationFormContext);
-    // const { buildingInfoDrop } = React.useContext(reservationFormContext);
-    // const { distance } = React.useContext(reservationFormContext);
-    // const { price } = React.useContext(reservationFormContext);
-    // const { date } = React.useContext(reservationFormContext);
-    // const { time } = React.useContext(reservationFormContext);
-    // const { passengerInfo } = React.useContext(reservationFormContext);
 
     const createNotification = (type) => {
         console.log(type)
@@ -47,6 +39,8 @@ function StepFour(props) {
         const additionalPassenger = passengerInfo.additionalPassenger;
         const wheelchairNeeded = passengerInfo.wheelchairNeeded;
         const rideBackNeeded = passengerInfo.rideBackNeeded;
+        const knowReturnTime = passengerInfo.knowReturnTime;
+        const returnTime = passengerInfo.returnTime;
         // console.log(priceStr);
         // console.log(distanceStr);
         const formValues = {
@@ -63,7 +57,9 @@ function StepFour(props) {
                             email,
                             additionalPassenger,
                             wheelchairNeeded,
-                            rideBackNeeded
+                            rideBackNeeded,
+                            knowReturnTime,
+                            returnTime
                         };
         const templateId = 'reservation_form';
         sendFeedback(templateId, formValues);
@@ -145,6 +141,14 @@ function StepFour(props) {
                         <div className="step-six-form-container__step-six-line-container">
                             <span className="step-six-line-container__step-six-line-title">Do you need a ride back? </span>
                             <span className="step-six-line-container__step-six-line-content">{passengerInfo.rideBackNeeded}</span>
+                        </div>
+                        <div className="step-six-form-container__step-six-line-container">
+                            <span className="step-six-line-container__step-six-line-title">Do you know your return time? </span>
+                            <span className="step-six-line-container__step-six-line-content">{passengerInfo.knowReturnTime}</span>
+                        </div>
+                        <div className="step-six-form-container__step-six-line-container">
+                            <span className="step-six-line-container__step-six-line-title">Return time </span>
+                            <span className="step-six-line-container__step-six-line-content">{passengerInfo.returnTime.fullTime}</span>
                         </div>
                     </div>
                 </div>
