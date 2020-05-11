@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 import { reservationFormContext } from '../../contexts/reservationFormContext';
 
@@ -7,9 +8,6 @@ function StepThree(props) {
         addressPick, addressDrop, passengerInfo, setPassengerInfo,
         price, setPrice
     } = React.useContext(reservationFormContext);
-    // const { addressDrop } = React.useContext(reservationFormContext);
-    // const { passengerInfo, setPassengerInfo } = React.useContext(reservationFormContext);
-    // const { price, setPrice } = React.useContext(reservationFormContext);
     
     let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&language=EN&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
 
@@ -40,6 +38,8 @@ function StepThree(props) {
 
     const handleRideBackNeededChange = (e) => {
         if (e.target.value == "Yes") {
+            let element = document.getElementById('do-you-know-time-additional-div');
+            ReactDOM.findDOMNode(element).style.display = 'flex';
             setPrice(price * 2);
         }
         setPassengerInfo({ ...passengerInfo, rideBackNeeded: e.target.value });
@@ -48,7 +48,6 @@ function StepThree(props) {
 
     const nextStep = () => {
         var hasFalseKeys = Object.keys(passengerInfo).some(k => !passengerInfo[k]);
-
         if (hasFalseKeys) { 
             alert ("Fill out all fields!");
         } else {
@@ -107,14 +106,14 @@ function StepThree(props) {
                             <option selected>No</option>
                         </select>
                     </div>
-                    <div className="step-five__additional-info-form-group">
+                    <div style={{display: 'none'}} id="do-you-know-time-additional-div" className="step-five__additional-info-form-group">
                         <p className="step-five__additional-info-header reservation-form__input-label reservation-form__input-label--no-margin">Do you know<br/>your return time?</p>
                         <select className="step-five__additional-info-input reservation-form__input reservation-form__input--no-margin rounded"onChange={e => handleRideBackNeededChange(e)}>
-                            <option>Yes</option>
-                            <option selected>No</option>
+                            <option>Yes, I know</option>
+                            <option selected>No, I will call</option>
                         </select>
                     </div>
-                    <div className="step-five__additional-info-form-group">
+                    <div style={{display: 'none'}} id="submit-return-time-additional-div" className="step-five__additional-info-form-group">
                         <p className="step-five__additional-info-header reservation-form__input-label reservation-form__input-label--no-margin">Please, select<br/>your return time</p>
                         <select className="step-five__additional-info-input reservation-form__input reservation-form__input--no-margin rounded"onChange={e => handleRideBackNeededChange(e)}>
                             <option>Yes</option>
