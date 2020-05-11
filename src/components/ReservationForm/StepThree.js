@@ -38,12 +38,19 @@ function StepThree(props) {
 
     const handleRideBackNeededChange = (e) => {
         if (e.target.value == "Yes") {
-            let element = document.getElementById('do-you-know-time-additional-div');
-            ReactDOM.findDOMNode(element).style.display = 'flex';
+            let element = document.getElementById("do-you-know-time-additional-div");
+            ReactDOM.findDOMNode(element).style.display = "flex";
             setPrice(price * 2);
         }
         setPassengerInfo({ ...passengerInfo, rideBackNeeded: e.target.value });
         console.log('passengerInfo => ', passengerInfo.rideBackNeeded);
+    }
+
+    const handleKnowReturnTimeChange = (e) => {
+        if (e.target.value == "Yes, I know") {
+            let element = document.getElementById("submit-return-time-additional-div");
+            ReactDOM.findDOMNode(element).style.display = "flex";
+        }
     }
 
     const nextStep = () => {
@@ -108,14 +115,14 @@ function StepThree(props) {
                     </div>
                     <div style={{display: 'none'}} id="do-you-know-time-additional-div" className="step-five__additional-info-form-group">
                         <p className="step-five__additional-info-header reservation-form__input-label reservation-form__input-label--no-margin">Do you know<br/>your return time?</p>
-                        <select className="step-five__additional-info-input reservation-form__input reservation-form__input--no-margin rounded"onChange={e => handleRideBackNeededChange(e)}>
+                        <select className="step-five__additional-info-input reservation-form__input reservation-form__input--no-margin rounded"onChange={e => handleKnowReturnTimeChange(e)}>
                             <option>Yes, I know</option>
                             <option selected>No, I will call</option>
                         </select>
                     </div>
                     <div style={{display: 'none'}} id="submit-return-time-additional-div" className="step-five__additional-info-form-group">
                         <p className="step-five__additional-info-header reservation-form__input-label reservation-form__input-label--no-margin">Please, select<br/>your return time</p>
-                        <select className="step-five__additional-info-input reservation-form__input reservation-form__input--no-margin rounded"onChange={e => handleRideBackNeededChange(e)}>
+                        <select className="step-five__additional-info-input reservation-form__input reservation-form__input--no-margin rounded"onChange={e => test(e)}>
                             <option>Yes</option>
                             <option selected>No</option>
                         </select>
