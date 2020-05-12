@@ -1263,6 +1263,7 @@ html {
   align-items: center; }
 
 .navbar-links__navbar-link {
+  height: 100%;
   font-size: var(--font-1-6);
   text-decoration: underline;
   padding-right: 16px;
