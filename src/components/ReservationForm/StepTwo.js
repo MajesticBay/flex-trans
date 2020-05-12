@@ -10,14 +10,6 @@ function StepTwo(props) {
         addressDrop, setAddressDrop, setCoordinatesDrop, setBuildingInfoDrop,
         distance, setDistance, price, setPrice
     } = React.useContext(reservationFormContext);
-    // const { setCoordinatesPick } = React.useContext(reservationFormContext);
-    // const { buildingInfoPick, setBuildingInfoPick } = React.useContext(reservationFormContext);
-    // const { addressDrop, setAddressDrop } = React.useContext(reservationFormContext);
-    // const { setCoordinatesDrop } = React.useContext(reservationFormContext);
-    // const { buildingInfoDrop, setBuildingInfoDrop } = React.useContext(reservationFormContext);
-    // const { distance, setDistance } = React.useContext(reservationFormContext);
-    // const { price, setPrice } = React.useContext(reservationFormContext);
-    // const { browserLocation, serBrowserLocation } = React.useContext(reservationFormContext);
 
     const [buttonText, setButtonText] = useState("Calculate Trip Cost");
     const [distanceAndPriceCalculated, setDistanceAndPriceCalculated] = useState(false);

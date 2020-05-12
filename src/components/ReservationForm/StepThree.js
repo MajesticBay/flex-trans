@@ -60,11 +60,52 @@ function StepThree(props) {
         setPassengerInfo({ ...passengerInfo, knowReturnTime: e.target.value });
     }
 
-    const handleSelectReturnTimeChange = (e) => {
+    // const changeReturnTime = (attr, value) => {
+    const handleReturnTimeChange = (event) => {
+        // Gets input name and value
+        const { name: attr, value } = event.target;
+
+        // Gets info
+        const info = { ...passengerInfo };
         
+        // Updates info return time attr
+        info.returnTime[attr] = value;
+
+        // Updates state with updated info
+        setPassengerInfo(info);
+    };
+/*
+    const handleHoursChange = (e) => {
+        const info = { ...passengerInfo };
+        info.returnTime.hours = e.target.value;
+
+        setPassengerInfo(info);
+        console.log('hours => ', passengerInfo.returnTime.hours);
     }
 
+    const handleMinutesChange = (e) => {
+        const info = { ...passengerInfo };
+        info.returnTime.minutes = e.target.value;
+
+        setPassengerInfo(info);
+        console.log('minutes => ', passengerInfo.returnTime.minutes);
+    }
+
+    const handleRadioChange = (e) => {
+        const info = { ...passengerInfo };
+        info.returnTime.ampm = e.target.value;
+
+        setPassengerInfo(info);
+
+        console.log('ampm => ', passengerInfo.returnTime.ampm);
+    }*/
+
     const nextStep = () => {
+        let info = { ...passengerInfo };
+        let timeStr = info.returnTime[hours] + ':' + info.returnTime[minutes] + ' ' + info.returnTime[ampm];
+        info.returnTime[fullTime] = timeStr;
+        setPassengerInfo ({info});
+
         var hasFalseKeys = Object.keys(passengerInfo).some(k => !passengerInfo[k]);
         if (hasFalseKeys) { 
             alert ("Fill out all fields!");
@@ -131,12 +172,44 @@ function StepThree(props) {
                             <option selected>No, I will call</option>
                         </select>
                     </div>
-                    <div style={{display: 'none'}} id="submit-return-time-additional-div" className="step-five__additional-info-form-group">
+                    <div style={{display: 'none'}} id="submit-return-time-additional-div" className="new-form__return-time-container">
                         <p className="step-five__additional-info-header reservation-form__input-label reservation-form__input-label--no-margin">Please, select<br/>your return time</p>
-                        <select className="step-five__additional-info-input reservation-form__input reservation-form__input--no-margin rounded"onChange={e => handleSelectReturnTimeChange(e)}>
-                            <option>Yes</option>
-                            <option selected>No</option>
-                        </select>
+                        <div className="reservation-date-picker-container__reservation-time-picker">
+                            <select className="reservation-form__input reservation-form__input--no-margin rounded" onChange={e => handleReturnTimeChange(e)}>
+                                <option>0</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                            </select>
+                            <span> : </span>
+                            <select className="reservation-form__input reservation-form__input--no-margin rounded" onChange={e => handleReturnTimeChange(e)}>
+                                <option>00</option>
+                                <option>15</option>
+                                <option>30</option>
+                                <option>45</option>
+                            </select>
+                        </div>
+                        <div className="reservation-date-picker-container__reservation-am-pm-picker">
+                            <div className="reservation-am-pm-picker__inner-container">
+                                <div className="reservation-date-picker-container__am-container">
+                                    <input type="radio" id="time-am" name="ampm" value="am" onChange={e => handleReturnTimeChange(e)}/>
+                                    <label for="time-am">am</label>
+                                </div>
+                                <div className="reservation-date-picker-container__pm-container">
+                                    <input type="radio" id="time-pm" name="ampm" value="pm" onChange={e => handleReturnTimeChange(e)}/>
+                                    <label for="time-pm">pm</label>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className="step-five__step-five-footer">

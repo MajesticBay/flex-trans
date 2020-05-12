@@ -23,7 +23,8 @@ export default ({ children }) => {
                                             ampm: ""
                                         });
 
-    const [passengerInfo, setPassengerInfo] = React.useState({name: "",
+    const [passengerInfo, setPassengerInfo] = React.useState({
+                                                        name: "",
                                                         phone: "",
                                                         email: "",
                                                         additionalPassenger: "None",

@@ -1138,6 +1138,11 @@ html {
 .new-form-step-two__header {
   font-size: var(--font-2-6); }
 
+.new-form__return-time-container {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  align-items: center; }
+
 @media only screen and (min-width: 768px) {
   .new-form-step-two__outer-container {
     width: 100%;
