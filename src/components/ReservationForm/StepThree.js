@@ -62,6 +62,7 @@ function StepThree(props) {
 
     // const changeReturnTime = (attr, value) => {
     const handleReturnTimeChange = (event) => {
+        console.log('passengerInfo => ', passengerInfo);
         // Gets input name and value
         const { name: attr, value } = event.target;
 
@@ -71,43 +72,23 @@ function StepThree(props) {
         // Updates info return time attr
         info.returnTime[attr] = value;
 
+        console.log({info})
+
         // Updates state with updated info
         setPassengerInfo(info);
     };
-/*
-    const handleHoursChange = (e) => {
-        const info = { ...passengerInfo };
-        info.returnTime.hours = e.target.value;
-
-        setPassengerInfo(info);
-        console.log('hours => ', passengerInfo.returnTime.hours);
-    }
-
-    const handleMinutesChange = (e) => {
-        const info = { ...passengerInfo };
-        info.returnTime.minutes = e.target.value;
-
-        setPassengerInfo(info);
-        console.log('minutes => ', passengerInfo.returnTime.minutes);
-    }
-
-    const handleRadioChange = (e) => {
-        const info = { ...passengerInfo };
-        info.returnTime.ampm = e.target.value;
-
-        setPassengerInfo(info);
-
-        console.log('ampm => ', passengerInfo.returnTime.ampm);
-    }*/
 
     const nextStep = () => {
+        console.log({passengerInfo})
         let info = { ...passengerInfo };
-        let timeStr = info.returnTime[hours] + ':' + info.returnTime[minutes] + ' ' + info.returnTime[ampm];
-        info.returnTime[fullTime] = timeStr;
-        setPassengerInfo ({info});
+        let timeStr = info.returnTime.hours + ':' + info.returnTime.minutes + ' ' + info.returnTime.ampm;
+        console.log(timeStr);
+        info.returnTime.fullTime = timeStr;
+        setPassengerInfo(info);
 
-        var hasFalseKeys = Object.keys(passengerInfo).some(k => !passengerInfo[k]);
-        if (hasFalseKeys) { 
+        var hasFalseValues = Object.keys(passengerInfo).some(k => !passengerInfo[k]);
+
+        if (hasFalseValues) { 
             alert ("Fill out all fields!");
         } else {
             props.next();
@@ -175,7 +156,7 @@ function StepThree(props) {
                     <div style={{display: 'none'}} id="submit-return-time-additional-div" className="new-form__return-time-container">
                         <p className="step-five__additional-info-header reservation-form__input-label reservation-form__input-label--no-margin">Please, select<br/>your return time</p>
                         <div className="reservation-date-picker-container__reservation-time-picker">
-                            <select className="reservation-form__input reservation-form__input--no-margin rounded" onChange={e => handleReturnTimeChange(e)}>
+                            <select name="hours" className="reservation-form__input reservation-form__input--no-margin rounded" onChange={e => handleReturnTimeChange(e)}>
                                 <option>0</option>
                                 <option>1</option>
                                 <option>2</option>
@@ -191,7 +172,7 @@ function StepThree(props) {
                                 <option>12</option>
                             </select>
                             <span> : </span>
-                            <select className="reservation-form__input reservation-form__input--no-margin rounded" onChange={e => handleReturnTimeChange(e)}>
+                            <select name="minutes" className="reservation-form__input reservation-form__input--no-margin rounded" onChange={e => handleReturnTimeChange(e)}>
                                 <option>00</option>
                                 <option>15</option>
                                 <option>30</option>
