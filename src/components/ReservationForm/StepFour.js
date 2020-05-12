@@ -41,8 +41,6 @@ function StepFour(props) {
         const rideBackNeeded = passengerInfo.rideBackNeeded;
         const knowReturnTime = passengerInfo.knowReturnTime;
         const returnTimeFull = passengerInfo.returnTime.fullTime;
-        // console.log(priceStr);
-        // console.log(distanceStr);
         const formValues = {
                             dateStr,
                             timeStr,

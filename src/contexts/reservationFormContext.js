@@ -32,7 +32,7 @@ export default ({ children }) => {
                                                         rideBackNeeded: "No",
                                                         knowReturnTime: "No, I will call",
                                                         returnTime: {
-                                                            fullTime: "time",
+                                                            fullTime: "",
                                                             hours: "0",
                                                             minutes: "00",
                                                             ampm: ""

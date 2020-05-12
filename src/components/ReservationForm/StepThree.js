@@ -79,10 +79,8 @@ function StepThree(props) {
     };
 
     const nextStep = () => {
-        console.log({passengerInfo})
         let info = { ...passengerInfo };
         let timeStr = info.returnTime.hours + ':' + info.returnTime.minutes + ' ' + info.returnTime.ampm;
-        console.log(timeStr);
         info.returnTime.fullTime = timeStr;
         setPassengerInfo(info);
 

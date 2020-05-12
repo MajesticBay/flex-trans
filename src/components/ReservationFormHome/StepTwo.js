@@ -9,9 +9,6 @@ function StepTwo(props) {
         addressPick, addressDrop,
         distance, setDistance, price, setPrice
     } = React.useContext(reservationFormContext);
-    // const { addressDrop } = React.useContext(reservationFormContext);
-    // const { distance, setDistance } = React.useContext(reservationFormContext);
-    // const { price, setPrice } = React.useContext(reservationFormContext);
 
     useEffect(() => {
         let origins = [addressPick];
