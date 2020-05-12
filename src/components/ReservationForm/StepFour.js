@@ -40,7 +40,7 @@ function StepFour(props) {
         const wheelchairNeeded = passengerInfo.wheelchairNeeded;
         const rideBackNeeded = passengerInfo.rideBackNeeded;
         const knowReturnTime = passengerInfo.knowReturnTime;
-        const returnTime = passengerInfo.returnTime;
+        const returnTimeFull = passengerInfo.returnTime.fullTime;
         // console.log(priceStr);
         // console.log(distanceStr);
         const formValues = {
@@ -59,7 +59,7 @@ function StepFour(props) {
                             wheelchairNeeded,
                             rideBackNeeded,
                             knowReturnTime,
-                            returnTime
+                            returnTimeFull
                         };
         const templateId = 'reservation_form';
         sendFeedback(templateId, formValues);
