@@ -33,7 +33,7 @@ function StepTwo(props) {
 
     return (
         <div className="reservation-form__step-two">
-            <div>
+            <div className="step-two__outer-container">
                 <div className="step-two__form rounded-desktop">
                     <div className="step-two__locations">
                         <span className="step-two__locations-text--red">A: </span><span className="step-two__locations-text">{addressPick}</span>
@@ -53,7 +53,7 @@ function StepTwo(props) {
                     </div>
                 </div>
             </div>
-            <div>
+            <div className="step-two__outer-container">
                 <iframe className="google-map-iframe" title="google-map" frameBorder="0" style={{ borderTopRightRadius: "6px", borderBottomRightRadius: "6px" }} src={mapUrl}></iframe>
             </div>
         </div>
