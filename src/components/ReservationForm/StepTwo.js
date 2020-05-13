@@ -174,7 +174,7 @@ function StepTwo(props) {
                 </div>
             </div>
             <div>
-                <iframe className="google-map-iframe" title="google-map" frameBorder="0" style={{orderBottomRightRadius: "6px" }} src={mapUrl}></iframe>
+                <iframe className="google-map-iframe" title="google-map" frameBorder="0" style={{ borderBottomRightRadius: "6px" }} src={mapUrl}></iframe>
             </div>
         </div>
     )
