@@ -29,6 +29,6 @@ body, p {
     border-radius: 6px; }
 
   .google-map-iframe {
-    min-height: auto; } }
+    min-height: 20rem; } }
 
 /*# sourceMappingURL=components.css.map */

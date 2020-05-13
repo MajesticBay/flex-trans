@@ -1,5 +1,6 @@
 .reservation-form__step-three {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     background-color: var(--color-white);
     box-shadow: 0px 34px 64px rgba(0, 0, 0, 0.09);
 }
@@ -58,12 +59,18 @@
 
 @media only screen and (min-width: 768px) {
     .reservation-form__step-three {
-        grid-template-columns: 1fr 1fr;
+        // grid-template-columns: 1fr 1fr;
+        flex-direction: row;
         border-radius: 6px;
     }
 
     .step-three__step-three-container {
+        width: 50%;
         padding: 2.5rem;
+    }
+
+    .step-three__step-three__outer-container {
+        width: 50%;
     }
 
     .step-three__reservation-date-picker-container {
