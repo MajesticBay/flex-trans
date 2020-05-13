@@ -34,8 +34,6 @@
 
 .reservation-date-picker-container__reservation-am-pm-picker {
   display: grid;
-  grid-template-columns: 4fr 1fr 4fr;
-  grid-template-areas: 'left middle right';
   font-size: 2.5rem; }
 
 .reservation-am-pm-picker__inner-container {
@@ -71,7 +69,8 @@
 
   .reservation-date-picker-container__reservation-am-pm-picker {
     grid-area: time-right;
-    grid-template-columns: 1fr; }
+    grid-template-columns: 4fr 1fr 4fr;
+    grid-template-areas: 'left middle right'; }
 
   .reservation-am-pm-picker__inner-container {
     justify-content: space-evenly; }

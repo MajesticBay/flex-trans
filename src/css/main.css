@@ -862,8 +862,6 @@ html {
 
 .reservation-date-picker-container__reservation-am-pm-picker {
   display: grid;
-  grid-template-columns: 4fr 1fr 4fr;
-  grid-template-areas: 'left middle right';
   font-size: 2.5rem; }
 
 .reservation-am-pm-picker__inner-container {
@@ -899,7 +897,8 @@ html {
 
   .reservation-date-picker-container__reservation-am-pm-picker {
     grid-area: time-right;
-    grid-template-columns: 1fr; }
+    grid-template-columns: 4fr 1fr 4fr;
+    grid-template-areas: 'left middle right'; }
 
   .reservation-am-pm-picker__inner-container {
     justify-content: space-evenly; }
@@ -1152,11 +1151,6 @@ html {
 .new-form-step-two__header {
   font-size: var(--font-2-6); }
 
-.new-form__return-time-container {
-  grid-column-start: 2;
-  grid-column-end: 4;
-  align-items: center; }
-
 @media only screen and (min-width: 768px) {
   .new-form-step-two__outer-container {
     width: 100%;
@@ -1165,7 +1159,12 @@ html {
     box-shadow: 0px 34px 64px rgba(0, 0, 0, 0.09);
     margin-top: -130px;
     padding: 2.5rem;
-    box-shadow: 0.5rem 1.25rem 1.75rem 0 rgba(0, 0, 0, 0.3); } }
+    box-shadow: 0.5rem 1.25rem 1.75rem 0 rgba(0, 0, 0, 0.3); }
+
+  .new-form__return-time-container {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    align-items: center; } }
 :root {
   --color-description: #9E9E9E;
   --color-button: #1F1D1D;
