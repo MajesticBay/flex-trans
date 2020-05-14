@@ -1,19 +1,37 @@
-import React, { useEffect, useState, useReducer } from 'react';
+import React, { useEffect, useState, useReducer, useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../images/logo-cabulance.png';
 import phone from '../images/phone.svg';
+import { reservationFormContext } from '../contexts/reservationFormContext';
 
-// function useForceUpdate(){
-//     const [value, setValue] = useState(0); // integer state
-//     return () => setValue(value => ++value); // update the state to force render
-// }
+function useForceUpdate(){
+    const [value, setValue] = useState(0); // integer state
+    return () => setValue(value => ++value); // update the state to force render
+}
 
 function NavBar() {
-    // const forceUpdate = useForceUpdate();
-    const [ignored, forceUpdate] = useReducer(x => x + 1, 0);
+    const forceUpdate = useForceUpdate();
+    // const [ignored, forceUpdate] = useReducer(x => x + 1, 0);
+    const {
+        setAddressPick, setAddressDrop, setDate, setTime
+    } = React.useContext(reservationFormContext);
 
-    const handleClick = () => {
-        forceUpdate();
+    const handleNavLinkClick = (value) => {
+        if (value === "home") {
+            setAddressPick("");
+            setAddressDrop("");
+        } else if (value === "reserve") {
+            setDate("");
+            setTime({
+                fullTime: "",
+                hours: "0",
+                minutes: "00",
+                ampm: ""
+        })}
+    }
+
+    const reloadHome = () => {
+        window.location.reload();
     }
     
     return (
@@ -38,7 +56,7 @@ function NavBar() {
             </nav>
             <nav className="navbar-desktop">
                 <div className="navbar-desktop__navbar-desktop-left">
-                    <Link to="/">
+                    <Link to="/" onClick={() => handleNavLinkClick("home")}>
                         <div className="navbar-desktop__logo-container pointer">
                             <img className="img-fluid--no-width" src={logo} alt="Flex-trans logo"/>
                         </div>
@@ -56,22 +74,22 @@ function NavBar() {
                     <NavLink
                         activeStyle={{ backgroundColor: 'rgb(223, 44, 33)', color: 'white', textDecoration: 'none'}}
                         className="navbar-links__navbar-link" exact to="/"
-                        onClick={() => handleClick()}
+                        onClick={() => handleNavLinkClick("home")}
                         >Home</NavLink>
                     <NavLink
                         activeStyle={{ backgroundColor: 'rgb(223, 44, 33)', color: 'white', textDecoration: 'none'}}
                         className="navbar-links__navbar-link" to="/about"
-                        onClick={() => handleClick()}
+                        onClick={() => handleNavLinkClick("about")}
                         >About Us</NavLink>
                     <NavLink
                         activeStyle={{ backgroundColor: 'rgb(223, 44, 33)', color: 'white', textDecoration: 'none'}}
                         className="navbar-links__navbar-link" to="/reserve"
-                        onClick={() => handleClick()}
+                        onClick={() => handleNavLinkClick("reserve")}
                         >Reserve a trip</NavLink>
                     <NavLink
                         activeStyle={{ backgroundColor: 'rgb(223, 44, 33)', color: 'white', textDecoration: 'none'}}
                         className="navbar-links__navbar-link" to="/contact"
-                        onClick={() => handleClick()}
+                        onClick={() => handleNavLinkClick()}
                         >Contact Us</NavLink>
                 </div>
             </nav>
