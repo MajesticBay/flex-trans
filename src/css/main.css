@@ -869,6 +869,9 @@ html {
   justify-content: space-between;
   align-items: center; }
 
+.reservation-date-picker-container__am-container {
+  margin-right: 1rem; }
+
 @media only screen and (min-width: 768px) {
   .reservation-form__step-three {
     flex-direction: row;
