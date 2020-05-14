@@ -17,6 +17,9 @@ function NavBar() {
     } = React.useContext(reservationFormContext);
 
     const handleNavLinkClick = (value) => {
+        if (value == window.location.pathname) {
+            window.location.reload();
+        }
         if (value === "home") {
             setAddressPick("");
             setAddressDrop("");
@@ -56,7 +59,7 @@ function NavBar() {
             </nav>
             <nav className="navbar-desktop">
                 <div className="navbar-desktop__navbar-desktop-left">
-                    <Link to="/" onClick={() => handleNavLinkClick("home")}>
+                    <Link to="/" onClick={() => handleNavLinkClick("/")}>
                         <div className="navbar-desktop__logo-container pointer">
                             <img className="img-fluid--no-width" src={logo} alt="Flex-trans logo"/>
                         </div>
@@ -74,17 +77,17 @@ function NavBar() {
                     <NavLink
                         activeStyle={{ backgroundColor: 'rgb(223, 44, 33)', color: 'white', textDecoration: 'none'}}
                         className="navbar-links__navbar-link" exact to="/"
-                        onClick={() => handleNavLinkClick("home")}
+                        onClick={() => handleNavLinkClick("/")}
                         >Home</NavLink>
                     <NavLink
                         activeStyle={{ backgroundColor: 'rgb(223, 44, 33)', color: 'white', textDecoration: 'none'}}
                         className="navbar-links__navbar-link" to="/about"
-                        onClick={() => handleNavLinkClick("about")}
+                        onClick={() => handleNavLinkClick("/about")}
                         >About Us</NavLink>
                     <NavLink
                         activeStyle={{ backgroundColor: 'rgb(223, 44, 33)', color: 'white', textDecoration: 'none'}}
                         className="navbar-links__navbar-link" to="/reserve"
-                        onClick={() => handleNavLinkClick("reserve")}
+                        onClick={() => handleNavLinkClick("/reserve")}
                         >Reserve a trip</NavLink>
                     <NavLink
                         activeStyle={{ backgroundColor: 'rgb(223, 44, 33)', color: 'white', textDecoration: 'none'}}
