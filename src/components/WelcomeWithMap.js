@@ -1,8 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import map from '../images/map.png';
+import {useHistory} from "react-router-dom"
 
-function WelcomeWithMap() {
+function WelcomeWithMap(props) {
+    const reserve = () => {
+        console.log(props)
+        props.history.push("/reserve");
+        window.scroll(0, 0);
+    }
+
     return (
         <div className="home-content__outside-welcome-container">
             <div className="home-content__welcome-container">
@@ -17,7 +24,7 @@ function WelcomeWithMap() {
                         <p className="welcome-content-container__reduced-prices">Reduced/Flat rates available for long-distance transfers</p>
                     </div>
                     <div className="welcome-content-container__map-container">
-                        <Link to="/reserve">
+                        <Link onClick={reserve}>
                             <div className="welcome-content-container__reservation-btn reservation-form__submit-btn rounded pointer">
                                 <span className="reservation-form__submit-text">Reservation</span>
                             </div>

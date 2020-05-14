@@ -4,7 +4,7 @@ import WelcomeWithMap from './WelcomeWithMap';
 
 import bg from '../images/bg-with-road.jpg';
 
-function Home() {
+function Home(props) {
     return (
         <div className="home" style={{
             position: 'relative',
@@ -18,7 +18,7 @@ function Home() {
         }}>
             <ReservationFormHome/>
             <div className="home__home-content">
-                <WelcomeWithMap/>
+                <WelcomeWithMap {...props}/>
             </div>
         </div>
     );

@@ -20,10 +20,10 @@ function NavBar() {
         if (value == window.location.pathname) {
             window.location.reload();
         }
-        if (value === "home") {
+        if (value === "/") {
             setAddressPick("");
             setAddressDrop("");
-        } else if (value === "reserve") {
+        } else if (value === "/reserve") {
             setDate("");
             setTime({
                 fullTime: "",
