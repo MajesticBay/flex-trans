@@ -1,9 +1,8 @@
 import React from 'react';
 import PlacesAutocomplete, { geocodeByAddress, getLatLng } from "react-places-autocomplete";
-
 import { reservationFormContext } from '../../contexts/reservationFormContext';
-
 import fordtransit from '../../images/car-left-shadow.png';
+const google = window.google;
 
 function StepOne(props) {
     const {
@@ -33,11 +32,23 @@ function StepOne(props) {
         }
     }
 
+    const searchOptions = {
+        location: new google.maps.LatLng(47, -122),
+        radius: 300,
+        types: ['address']
+    }
+
+    // const searchOptions = {
+    //     componentRestrictions: { country: ['us'] },
+    //     types: ['city']
+    // }
+
     return (
         <div className="reservation-form__step-one">
                 <div className="step-one__form rounded-desktop">
-                    <PlacesAutocomplete value={addressPick} onChange={setAddressPick} onSelect={handleSelectPick}>
+                    <PlacesAutocomplete value={addressPick} onChange={setAddressPick} onSelect={handleSelectPick} searchOptions={searchOptions}>
                         {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
+
                             <div style={{position: "relative", display: "flex", flexDirection: "column"}}>
 
                             <input
@@ -54,7 +65,7 @@ function StepOne(props) {
                                     }}>
                                 {loading ? <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}><span style={{padding: "1.6rem 2rem"}}>...loading</span></div> : null}
 
-                                {suggestions.map(suggestion => {
+                                {suggestions.filter(s => s.terms.filter(t => t.value.toUpperCase().trim() === 'WA').length > 0).map(suggestion => {
                                 const style = {
                                     width: "100%",
                                     backgroundColor: suggestion.active ? "#41b6e6" : "#fff",
