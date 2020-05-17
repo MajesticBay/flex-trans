@@ -105,7 +105,7 @@ function StepFour(props) {
                                         }}>
                                     {loading ? <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}><span style={{padding: "1.6rem 2rem"}}>...loading</span></div> : null}
 
-                                    {suggestions.map(suggestion => {
+                                    {suggestions.filter(s => s.terms.filter(t => t.value.toUpperCase().trim() === 'WA').length > 0).map(suggestion => {
                                     const style = {
                                         width: "100%",
                                         backgroundColor: suggestion.active ? "#41b6e6" : "#fff",
@@ -144,7 +144,7 @@ function StepFour(props) {
                                         }}>
                                     {loading ? <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}><span style={{padding: "1.6rem 2rem"}}>...loading</span></div> : null}
 
-                                    {suggestions.map(suggestion => {
+                                    {suggestions.filter(s => s.terms.filter(t => t.value.toUpperCase().trim() === 'WA').length > 0).map(suggestion => {
                                     const style = {
                                         width: "100%",
                                         backgroundColor: suggestion.active ? "#41b6e6" : "#fff",
