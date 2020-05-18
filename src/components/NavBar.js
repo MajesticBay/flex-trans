@@ -83,7 +83,7 @@ function NavBar() {
                         activeStyle={{ backgroundColor: 'rgb(223, 44, 33)', color: 'white', textDecoration: 'none'}}
                         className="navbar-links__navbar-link" to="/about"
                         onClick={() => handleNavLinkClick("/about")}
-                        >About Us</NavLink>
+                        >About us</NavLink>
                     <NavLink
                         activeStyle={{ backgroundColor: 'rgb(223, 44, 33)', color: 'white', textDecoration: 'none'}}
                         className="navbar-links__navbar-link" to="/reserve"

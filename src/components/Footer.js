@@ -17,7 +17,7 @@ function Footer() {
                 <div className="footer-info">
                     <div className="footer-info__mobile">
                         <p>© 2020 Flex-trans Inc. All rights reserved.</p>
-                        <p>Phone number: <a href="tel:(425) 444 3905">(425) 444 3905</a></p>
+                        <p><a href="tel:(425) 444 3905">(425) 444 3905</a></p>
                         <a href="mailto:flextranswa@gmail.com" target="_blank" rel="noopener noreferrer"><p>flextranswa@gmail.com</p></a>
                     </div>
                     <div className="footer-info__desktop">
