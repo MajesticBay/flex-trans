@@ -18,7 +18,7 @@ function AboutUs() {
           <div className="about-us-services__services-container">
             <div className="services-container__item">
               <img className="img-fluid rounded-desktop" src={aboutUsOne} alt="Transportation to Doctor's appointment"/>
-              <p className="services-container__service-header">Transportation to<br/>Doctor's appointment</p>
+              <p className="services-container__service-header">Transportation to<br/>Doctor's Appointment</p>
             </div>
             <div className="services-container__item">
               <img className="img-fluid rounded-desktop" src={aboutUsTwo} alt="Transportation from Hospital to Home"/>

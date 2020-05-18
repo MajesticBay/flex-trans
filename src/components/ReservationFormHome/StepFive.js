@@ -100,7 +100,7 @@ function StepFive(props) {
                 </div>
                 <div className="step-five__step-five-form">
                     <div className="step-five__pickup-container">
-                        <p className="reservation-form__input-label">First & Last Name</p>
+                        <p className="reservation-form__input-label">First and Last Name</p>
                         <input className="reservation-form__input rounded" onChange={e => handleNameChange(e)}/>
                     </div>
                     <div className="step-five__dropoff-container">
@@ -108,7 +108,7 @@ function StepFive(props) {
                         <input className="reservation-form__input rounded" onChange={e => handlePhoneChange(e)}/>
                     </div>
                     <div className="step-five__dropoff-container">
-                        <p className="reservation-form__input-label">Email Adress</p>
+                        <p className="reservation-form__input-label">Email Address</p>
                         <input className="reservation-form__input rounded" onChange={e => handleEmailChange(e)}/>
                     </div>
                 </div>
