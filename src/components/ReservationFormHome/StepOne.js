@@ -32,11 +32,11 @@ function StepOne(props) {
         }
     }
 
-    const searchOptions = {
-        location: new google.maps.LatLng(47, -122),
-        radius: 300,
-        types: ['address']
-    }
+    // const searchOptions = {
+    //     location: new google.maps.LatLng(47, -122),
+    //     radius: 300,
+    //     types: ['address']
+    // }
 
     // const searchOptions = {
     //     componentRestrictions: { country: ['us'] },
@@ -46,7 +46,7 @@ function StepOne(props) {
     return (
         <div className="reservation-form__step-one">
                 <div className="step-one__form rounded-desktop">
-                    <PlacesAutocomplete value={addressPick} onChange={setAddressPick} onSelect={handleSelectPick} searchOptions={searchOptions}>
+                    <PlacesAutocomplete value={addressPick} onChange={setAddressPick} onSelect={handleSelectPick}>
                         {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
 
                             <div style={{position: "relative", display: "flex", flexDirection: "column"}}>
