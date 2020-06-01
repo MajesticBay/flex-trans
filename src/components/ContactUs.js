@@ -30,11 +30,13 @@ function ContactUs() {
     const message = contactFormMessage;
     const formValues = { name, phone, email, message };
     console.log ('formValues => ', formValues);
-    const templateId = 'contact_form';
+    const templateId = 'contact_form_flextrans';
+    console.log("templateId = ", templateId);
     sendFeedback(templateId, formValues);
   }
 
   const sendFeedback = (templateId, variables) => {
+    console.log ("templateId sendFeedback = ", templateId);
     window.emailjs.send('gmail', templateId, variables)
     .then(res => {
         createNotification('success')
