@@ -30,7 +30,7 @@ function ContactUs() {
     const message = contactFormMessage;
     const formValues = { name, phone, email, message };
     console.log ('formValues => ', formValues);
-    const templateId = 'contact-us_zxl0pk0o';
+    const templateId = 'contact_form';
     sendFeedback(templateId, formValues);
   }
 
