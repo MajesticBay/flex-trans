@@ -17,7 +17,6 @@ function ReservationForm(props) {
     }
 
     const switchForms = () => {
-        
         switch (currentStep) {
             case 1:
                 return <StepOne currentStep={currentStep} next={_next}/>
@@ -33,7 +32,7 @@ function ReservationForm(props) {
                 return <StepOne currentStep={currentStep} next={_next}/>
             }
     }
-    
+
     return (
         <form className="reservation-form rounded">
             {switchForms()}
