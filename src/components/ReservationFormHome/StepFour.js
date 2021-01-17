@@ -14,9 +14,9 @@ function StepFour(props) {
     const [buttonText, setButtonText] = useState("Calculate Trip Cost");
     const [distanceAndPriceCalculated, setDistanceAndPriceCalculated] = useState(false);
     const [mapUrl, setMapUrl] = useState('https://maps.google.com/maps?q=seattle&t=&z=9&ie=UTF8&iwloc=&output=embed');
-    
+
     // let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&language=EN&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
-    
+
     const handleSelectPick = async value => {
         const results = await geocodeByAddress(value);
         const latLng = await getLatLng(results[0]);
@@ -72,7 +72,7 @@ function StepFour(props) {
             props.next();
         }
     }
-    
+
     return (
         <div className="reservation-form__step-four">
             <div className="step-four__inner-container">
@@ -95,7 +95,7 @@ function StepFour(props) {
                                     className="reservation-form__input rounded" 
                                     {...getInputProps({ placeholder: "Pick-up location" })} />
 
-                                <div style = {{ 
+                                <div style = {{
                                             position: "absolute",
                                             zIndex: "2",
                                             top: "5.2rem",
@@ -135,7 +135,7 @@ function StepFour(props) {
                                     className="reservation-form__input rounded"
                                     {...getInputProps({ placeholder: "Drop-off location" })} />
 
-                                <div style = {{ 
+                                <div style = {{
                                             position: "absolute",
                                             top: "5.2rem",
                                             width: "100%",

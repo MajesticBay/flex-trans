@@ -25,7 +25,7 @@ function StepFive(props) {
         setPassengerInfo({ ...passengerInfo, additionalPassenger: e.target.value });
         console.log('passengerInfo => ', passengerInfo.additionalPassenger);
     }
-    
+
     const handleWheelchairNeededChange = (e) => {
         setPassengerInfo({ ...passengerInfo, wheelchairNeeded: e.target.value });
         console.log('passengerInfo => ', passengerInfo.wheelchairNeeded);

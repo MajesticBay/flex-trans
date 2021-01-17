@@ -4,11 +4,11 @@ import ReactDOM from 'react-dom';
 import { reservationFormContext } from '../../contexts/reservationFormContext';
 
 function StepThree(props) {
-    const { 
+    const {
         addressPick, addressDrop, passengerInfo, setPassengerInfo,
         price, setPrice
     } = React.useContext(reservationFormContext);
-    
+
     let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&language=EN&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
 
     const handleNameChange = (e) => {
@@ -30,7 +30,7 @@ function StepThree(props) {
         setPassengerInfo({ ...passengerInfo, additionalPassenger: e.target.value });
         console.log('passengerInfo => ', passengerInfo.additionalPassenger);
     }
-    
+
     const handleWheelchairNeededChange = (e) => {
         setPassengerInfo({ ...passengerInfo, wheelchairNeeded: e.target.value });
         console.log('passengerInfo => ', passengerInfo.wheelchairNeeded);
@@ -68,7 +68,7 @@ function StepThree(props) {
 
         // Gets info
         const info = { ...passengerInfo };
-        
+
         // Updates info return time attr
         info.returnTime[attr] = value;
 
@@ -86,7 +86,7 @@ function StepThree(props) {
 
         var hasFalseValues = Object.keys(passengerInfo).some(k => !passengerInfo[k]);
 
-        if (hasFalseValues) { 
+        if (hasFalseValues) {
             alert ("Fill out all fields!");
         } else {
             props.next();

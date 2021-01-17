@@ -55,7 +55,7 @@ function StepOne(props) {
                                 className="reservation-form__input rounded" 
                                 {...getInputProps({ placeholder: "Pick-up location" })} />
 
-                            <div style = {{ 
+                            <div style = {{
                                         position: "absolute",
                                         zIndex: "2",
                                         top: "5.2rem",
@@ -91,7 +91,7 @@ function StepOne(props) {
                                 className="reservation-form__input rounded"
                                 {...getInputProps({ placeholder: "Drop-off location" })} />
 
-                            <div style = {{ 
+                            <div style = {{
                                         position: "absolute",
                                         top: "5.2rem",
                                         width: "100%",

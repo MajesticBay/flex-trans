@@ -12,7 +12,7 @@ function StepOne(props) {
         setDate(date);
         // console.log('date => ', date);
     }
-    
+
     const getTomorrow = () => {
         var tomorrow = new Date();
         tomorrow.setDate(tomorrow.getDate() + 1);
@@ -92,8 +92,8 @@ function StepOne(props) {
                         <div></div>
                         <div></div>
                     </div>
-                </div>  
-                
+                </div>
+
                     <div className="reservation-form__submit-btn rounded pointer" onClick={() => nextStep()}>
                         <span className="reservation-form__submit-text">Reserve a trip</span>
                         <div className="reservation-form__triangle"></div>

@@ -8,7 +8,7 @@ function StepSeven(props) {
     let mapUrl = `https://www.google.com/maps/embed/v1/directions?origin=${addressPick}&destination=${addressDrop}&language=EN&key=AIzaSyA97rzK2Y0x79nYrp4ozU5NzB7acY8MASE`;
 
     const refreshPage = () => {
-        window.location.reload(); 
+        window.location.reload();
     }
 
     return (

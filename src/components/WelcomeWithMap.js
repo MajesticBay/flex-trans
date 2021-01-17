@@ -29,7 +29,6 @@ function WelcomeWithMap(props) {
                                 <span className="reservation-form__submit-text">Reservation</span>
                             </div>
                         </Link>
-                        
                         <img className="welcome-content-container__map-image" src={map} alt="working area map"/>
                     </div>
                 </div>
