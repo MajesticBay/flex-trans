@@ -43,17 +43,17 @@ function NavBar() {
                 <div className="navbar-mobile__logo-container">
                     <img className="img-fluid--no-width" src={logo} alt="Flex-trans logo"/>
                 </div>
-                <a href="tel:(425) 444 3905">
+                <a href="tel:(425) 444 9350">
                     <div className="call-btn rounded pointer">
                         <div className="call-btn__phone-img-container">
                             <img className="call-btn__phone-img" src={phone} alt="Press to call us"/>
                         </div>
-                        <span className="call-btn__text">(425) 444 3905</span>
+                        <span className="call-btn__text">(425) 444 9350</span>
                     </div>
                 </a>
                 <div className="navbar-mobile__menu">
-                    <a href="tel:(425) 444 3905">
-                        <p>(425) 444 3905</p>
+                    <a href="tel:(425) 444 9350">
+                        <p>(425) 444 9350</p>
                     </a>
                 </div>
             </nav>
@@ -64,12 +64,12 @@ function NavBar() {
                             <img className="img-fluid--no-width" src={logo} alt="Flex-trans logo"/>
                         </div>
                     </Link>
-                    <a href="tel:(425) 444 3905">
+                    <a href="tel:(425) 444 9350">
                         <div className="call-btn call-btn--desktop-navbar rounded pointer">
                             <div className="call-btn__phone-img-container">
                                 <img className="img-fluid--no-width" src={phone} alt="Press to call us"/>
                             </div>
-                            <span className="call-btn__text">(425) 444 3905</span>
+                            <span className="call-btn__text">(425) 444 9350</span>
                         </div>
                     </a>
                 </div>
