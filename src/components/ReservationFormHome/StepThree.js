@@ -105,8 +105,8 @@ function StepThree(props) {
                     <div className="reservation-form__submit-btn reservation-form__submit-btn--no-margin reservation-form__submit-btn--step-three rounded pointer" onClick={() => goToStepFour()}>
                         <span className="reservation-form__submit-text">Next Step →</span>
                     </div>
-                </div>  
-                
+                </div>
+
             </div>
             <div className="step-three__step-three__outer-container">
                 <iframe className="google-map-iframe" title="google-map" frameBorder="0" style={{ borderTopRightRadius: "6px", borderBottomRightRadius: "6px" }} src={mapUrl}>
