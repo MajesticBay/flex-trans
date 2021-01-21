@@ -1,5 +1,4 @@
 import React from 'react';
-
 import car from '../images/ford-transit-right.png';
 
 function WelcomeWithoutMap() {

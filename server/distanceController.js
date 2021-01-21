@@ -8,7 +8,7 @@ module.exports = {
         distance.key(process.env.GOOGLE_API_KEY);
         distance.mode('driving');
         distance.units('imperial');
-    
+
         distance.matrix(origins, destinations, function(err, distances) {
             if (err) {
                 console.log ('error here', err)

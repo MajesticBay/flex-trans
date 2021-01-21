@@ -1,5 +1,4 @@
 import React from 'react';
-
 import missionPhoto from '../images/mission-photo.png';
 
 function Mission() {

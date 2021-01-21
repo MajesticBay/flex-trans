@@ -1,5 +1,4 @@
 import React from 'react';
-
 export const reservationFormContext = React.createContext({});
 
 export default ({ children }) => {
@@ -59,7 +58,7 @@ export default ({ children }) => {
         browserLocation, setBrowserLocation
     }
 
-return <reservationFormContext.Provider value={reservationForm}>{ children }</reservationFormContext.Provider>
+    return <reservationFormContext.Provider value={reservationForm}>{ children }</reservationFormContext.Provider>
 }
 
 
