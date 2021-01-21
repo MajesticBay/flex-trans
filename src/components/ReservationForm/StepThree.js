@@ -39,7 +39,7 @@ function StepThree(props) {
     const handleRideBackNeededChange = (e) => {
         let element = document.getElementById("do-you-know-time-additional-div");
         let elementTwo = document.getElementById("submit-return-time-additional-div");
-        if (e.target.value == "Yes") {
+        if (e.target.value === "Yes") {
             ReactDOM.findDOMNode(element).style.display = "flex";
             setPrice(price * 2);
         } else {
@@ -52,7 +52,7 @@ function StepThree(props) {
 
     const handleKnowReturnTimeChange = (e) => {
         let element = document.getElementById("submit-return-time-additional-div");
-        if (e.target.value == "Yes, I know") {
+        if (e.target.value === "Yes, I know") {
             ReactDOM.findDOMNode(element).style.display = "flex";
         } else {
             ReactDOM.findDOMNode(element).style.display = "none";

@@ -34,7 +34,7 @@ function StepFive(props) {
     const handleRideBackNeededChange = (e) => {
         let element = document.getElementById("do-you-know-time-additional-div");
         let elementTwo = document.getElementById("submit-return-time-additional-div");
-        if (e.target.value == "Yes") {
+        if (e.target.value === "Yes") {
             ReactDOM.findDOMNode(element).style.display = "flex";
             setPrice(price * 2);
         } else {
@@ -47,7 +47,7 @@ function StepFive(props) {
 
     const handleKnowReturnTimeChange = (e) => {
         let element = document.getElementById("submit-return-time-additional-div");
-        if (e.target.value == "Yes, I know") {
+        if (e.target.value === "Yes, I know") {
             ReactDOM.findDOMNode(element).style.display = "flex";
         } else {
             ReactDOM.findDOMNode(element).style.display = "none";
@@ -63,7 +63,7 @@ function StepFive(props) {
 
         // Gets info
         const info = { ...passengerInfo };
-        
+
         // Updates info return time attr
         info.returnTime[attr] = value;
 
@@ -79,7 +79,7 @@ function StepFive(props) {
         let timeStr = info.returnTime.hours + ':' + info.returnTime.minutes + ' ' + info.returnTime.ampm;
         info.returnTime.fullTime = timeStr;
         setPassengerInfo(info);
-        
+
         if (!passengerInfo.name || !passengerInfo.phone || !passengerInfo.email) { 
             alert ("Fill out all fields!");
         } else {

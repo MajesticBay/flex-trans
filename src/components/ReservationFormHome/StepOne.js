@@ -2,9 +2,11 @@ import React from 'react';
 import PlacesAutocomplete, { geocodeByAddress, getLatLng } from "react-places-autocomplete";
 import { reservationFormContext } from '../../contexts/reservationFormContext';
 import fordtransit from '../../images/car-left-shadow.png';
-const google = window.google;
+
 
 function StepOne(props) {
+    // const google = window.google;
+
     const {
         addressPick, setAddressPick, setCoordinatesPick,
         addressDrop, setAddressDrop, setCoordinatesDrop

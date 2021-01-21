@@ -1,23 +1,23 @@
-import React, { useEffect, useState, useReducer, useContext } from 'react';
+import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../images/logo-cabulance.png';
 import phone from '../images/phone.svg';
 import { reservationFormContext } from '../contexts/reservationFormContext';
 
-function useForceUpdate(){
-    const [value, setValue] = useState(0); // integer state
-    return () => setValue(value => ++value); // update the state to force render
-}
+// function useForceUpdate(){
+//     // const [value, setValue] = useState(0); // integer state
+//     return () => setValue(value => ++value); // update the state to force render
+// }
 
 function NavBar() {
-    const forceUpdate = useForceUpdate();
+    // const forceUpdate = useForceUpdate();
     // const [ignored, forceUpdate] = useReducer(x => x + 1, 0);
     const {
         setAddressPick, setAddressDrop, setDate, setTime
     } = React.useContext(reservationFormContext);
 
     const handleNavLinkClick = (value) => {
-        if (value == window.location.pathname) {
+        if (value === window.location.pathname) {
             window.location.reload();
         }
         if (value === "/") {
@@ -33,10 +33,10 @@ function NavBar() {
         })}
     }
 
-    const reloadHome = () => {
-        window.location.reload();
-    }
-    
+    // const reloadHome = () => {
+    //     window.location.reload();
+    // }
+
     return (
         <div className="navbar">
             <nav className="navbar-mobile">
